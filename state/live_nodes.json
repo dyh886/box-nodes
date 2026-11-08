@@ -1,16 +1,16 @@
 {
- "fetchedAt": 1794151864,
+ "fetchedAt": 1794154011,
  "sources": [
   {
    "label": "测试",
    "ok": true,
-   "nodes": 31,
+   "nodes": 30,
    "kind": "clash"
   },
   {
    "label": "家宽",
    "ok": true,
-   "nodes": 204,
+   "nodes": 209,
    "kind": "clash"
   },
   {
@@ -23,9 +23,24 @@
  "count": 20,
  "nodes": [
   {
-   "name": "CH-Zurich-171810-hhph",
+   "name": "AL-Tirana-h-1827022-hltp",
    "type": "vless",
-   "server": "46.19.138.214",
+   "server": "5d0319t.nl7.h1clayd.click",
+   "port": 443,
+   "uuid": "cda0862a-0f87-4be9-8ed8-1d0c9e382839",
+   "tls": true,
+   "servername": "5d0319t.nl7.h1clayd.click",
+   "client-fingerprint": "firefox",
+   "reality-opts": {
+    "public-key": "l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs",
+    "short-id": "361d0dd59c70516f"
+   },
+   "qscore": -3
+  },
+  {
+   "name": "CH-Zurich-171810-hhxw",
+   "type": "vless",
+   "server": "prvtch.titun.su",
    "port": 443,
    "uuid": "90157e25-cee1-4217-921e-91f300bc1a24",
    "flow": "xtls-rprx-vision",
@@ -40,7 +55,7 @@
    "qscore": -3
   },
   {
-   "name": "CH-Zurich-h-76025-haat",
+   "name": "CH-Zurich-h-76025-hhxm",
    "type": "vless",
    "server": "179.43.166.190",
    "port": 443,
@@ -48,22 +63,7 @@
    "flow": "xtls-rprx-vision",
    "tls": true,
    "servername": "perevodchiki.su",
-   "client-fingerprint": "firefox",
-   "reality-opts": {
-    "public-key": "1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs",
-    "short-id": "428ef87fd47a3a32"
-   },
-   "qscore": -3
-  },
-  {
-   "name": "CH-Zurich-h-76025-hhla",
-   "type": "vless",
-   "server": "prvtch.titun.su",
-   "port": 443,
-   "uuid": "90157e25-cee1-4217-921e-91f300bc1a24",
-   "flow": "xtls-rprx-vision",
-   "tls": true,
-   "servername": "perevodchiki.su",
+   "skip-cert-verify": true,
    "client-fingerprint": "firefox",
    "reality-opts": {
     "public-key": "1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs",
@@ -107,25 +107,6 @@
    "network": "tcp",
    "udp": true,
    "qscore": -3
-  },
-  {
-   "name": "DE-Düsseldorf-96114516-hhly",
-   "type": "vless",
-   "server": "cdn.kavosiprotocol.shop",
-   "port": 443,
-   "uuid": "5bb1fda3-0b8a-41d5-a803-b48e180ad718",
-   "tls": true,
-   "servername": "cdn.kavosiprotocol.shop",
-   "skip-cert-verify": true,
-   "client-fingerprint": "chrome",
-   "network": "ws",
-   "ws-opts": {
-    "path": "/@KVPROTOCOlVPN--@KVPROTOCOlVPN--@KVPROTOCOlVPN--@KVPROTOCOlVPN--ws/s_48738e13cc",
-    "headers": {
-     "Host": "cdn.kavosiprotocol.shop"
-    }
-   },
-   "qscore": -2
   },
   {
    "name": "JP-Minato-ku-h-61713914-hhpt",
@@ -284,13 +265,25 @@
    "qscore": -2
   },
   {
-   "name": "FR-Paris-h-23610918-hapj",
+   "name": "DE-Frankfurt am Main-h-41052317-hawy",
+   "type": "trojan",
+   "server": "jp1.8b1c7c70-ecf1-6891-9fa7-68a86662f902.cheathub.net",
+   "port": 443,
+   "password": "6cddea99-9b18-4d42-8638-131bd9f5374f",
+   "tls": true,
+   "sni": "8b1c7c70-ecf1-6891-9fa7-68a86662f902.cheathub.net",
+   "skip-cert-verify": true,
+   "qscore": -1
+  },
+  {
+   "name": "FR-Paris-h-23610918-hlmj",
    "type": "vless",
    "server": "w.geogame.ir",
    "port": 2053,
    "uuid": "fbda2834-b1e7-4148-afb9-deda31036a30",
    "tls": true,
    "servername": "w.geogame.ir",
+   "client-fingerprint": "chrome",
    "qscore": -1
   },
   {
@@ -370,9 +363,9 @@
    "qscore": -1
   }
  ],
- "rankedAt": 1794151865,
+ "rankedAt": 1794154012,
  "stats": {
-  "raw": 280,
+  "raw": 285,
   "kept": 20
  }
 }

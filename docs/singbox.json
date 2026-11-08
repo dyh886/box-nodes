@@ -42,7 +42,27 @@
     {
       "tag": "n00",
       "type": "vless",
-      "server": "46.19.138.214",
+      "server": "5d0319t.nl7.h1clayd.click",
+      "server_port": 443,
+      "uuid": "cda0862a-0f87-4be9-8ed8-1d0c9e382839",
+      "tls": {
+        "enabled": true,
+        "server_name": "5d0319t.nl7.h1clayd.click",
+        "reality": {
+          "enabled": true,
+          "public_key": "l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs",
+          "short_id": "361d0dd59c70516f"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "n01",
+      "type": "vless",
+      "server": "prvtch.titun.su",
       "server_port": 443,
       "uuid": "90157e25-cee1-4217-921e-91f300bc1a24",
       "flow": "xtls-rprx-vision",
@@ -62,7 +82,7 @@
       }
     },
     {
-      "tag": "n01",
+      "tag": "n02",
       "type": "vless",
       "server": "179.43.166.190",
       "server_port": 443,
@@ -71,27 +91,7 @@
       "tls": {
         "enabled": true,
         "server_name": "perevodchiki.su",
-        "reality": {
-          "enabled": true,
-          "public_key": "1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs",
-          "short_id": "428ef87fd47a3a32"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "n02",
-      "type": "vless",
-      "server": "prvtch.titun.su",
-      "server_port": 443,
-      "uuid": "90157e25-cee1-4217-921e-91f300bc1a24",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "perevodchiki.su",
+        "insecure": true,
         "reality": {
           "enabled": true,
           "public_key": "1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs",
@@ -151,29 +151,6 @@
     {
       "tag": "n05",
       "type": "vless",
-      "server": "cdn.kavosiprotocol.shop",
-      "server_port": 443,
-      "uuid": "5bb1fda3-0b8a-41d5-a803-b48e180ad718",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdn.kavosiprotocol.shop",
-        "insecure": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/@KVPROTOCOlVPN--@KVPROTOCOlVPN--@KVPROTOCOlVPN--@KVPROTOCOlVPN--ws/s_48738e13cc",
-        "headers": {
-          "Host": "cdn.kavosiprotocol.shop"
-        }
-      }
-    },
-    {
-      "tag": "n06",
-      "type": "vless",
       "server": "saas.sin.fan",
       "server_port": 443,
       "uuid": "5d7b401c-78fa-4254-872e-6d42bf7e75ec",
@@ -195,7 +172,7 @@
       }
     },
     {
-      "tag": "n07",
+      "tag": "n06",
       "type": "vless",
       "server": "2407:cdc0:d010:27bd::",
       "server_port": 30454,
@@ -216,7 +193,7 @@
       }
     },
     {
-      "tag": "n08",
+      "tag": "n07",
       "type": "vless",
       "server": "198.16.113.219",
       "server_port": 8443,
@@ -237,7 +214,7 @@
       }
     },
     {
-      "tag": "n09",
+      "tag": "n08",
       "type": "vless",
       "server": "51.158.206.80",
       "server_port": 23576,
@@ -258,7 +235,7 @@
       }
     },
     {
-      "tag": "n10",
+      "tag": "n09",
       "type": "vless",
       "server": "45.76.155.179",
       "server_port": 443,
@@ -273,7 +250,7 @@
       }
     },
     {
-      "tag": "n11",
+      "tag": "n10",
       "type": "vless",
       "server": "ww13.levikogjgfdd.ir",
       "server_port": 23576,
@@ -294,7 +271,7 @@
       }
     },
     {
-      "tag": "n12",
+      "tag": "n11",
       "type": "vless",
       "server": "15.204.97.197",
       "server_port": 23576,
@@ -315,7 +292,7 @@
       }
     },
     {
-      "tag": "n13",
+      "tag": "n12",
       "type": "vless",
       "server": "161.114.15.215",
       "server_port": 8443,
@@ -336,7 +313,7 @@
       }
     },
     {
-      "tag": "n14",
+      "tag": "n13",
       "type": "vless",
       "server": "161.114.15.215",
       "server_port": 30449,
@@ -357,6 +334,18 @@
       }
     },
     {
+      "tag": "n14",
+      "type": "trojan",
+      "server": "jp1.8b1c7c70-ecf1-6891-9fa7-68a86662f902.cheathub.net",
+      "server_port": 443,
+      "password": "6cddea99-9b18-4d42-8638-131bd9f5374f",
+      "tls": {
+        "enabled": true,
+        "server_name": "8b1c7c70-ecf1-6891-9fa7-68a86662f902.cheathub.net",
+        "insecure": true
+      }
+    },
+    {
       "tag": "n15",
       "type": "vless",
       "server": "w.geogame.ir",
@@ -364,7 +353,11 @@
       "uuid": "fbda2834-b1e7-4148-afb9-deda31036a30",
       "tls": {
         "enabled": true,
-        "server_name": "w.geogame.ir"
+        "server_name": "w.geogame.ir",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     },
     {
