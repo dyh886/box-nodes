@@ -1,0 +1,4 @@
+trojan://placeholder-password@example.com:443?sni=example.com#SEED-TROJAN
+vless://11111111-2222-3333-4444-555555555555@1.1.1.1:443?type=ws&security=tls&sni=example.com&path=%2Fws&host=example.com#SEED-VLESS
+ss://YWVzLTI1Ni1nY206cGxhY2Vob2xkZXItcGFzc3dvcmQ=@8.8.8.8:443#SEED-SS
+vmess://eyJ2IjogIjIiLCAicHMiOiAiU0VFRC1WTUVTUyIsICJhZGQiOiAid3d3LmNsb3VkZmxhcmUuY29tIiwgInBvcnQiOiAiNDQzIiwgImlkIjogIjExMTExMTExLTIyMjItMzMzMy00NDQ0LTU1NTU1NTU1NTU1NSIsICJhaWQiOiAiMCIsICJzY3kiOiAiYXV0byIsICJuZXQiOiAid3MiLCAidHlwZSI6ICJub25lIiwgImhvc3QiOiAiZXhhbXBsZS5jb20iLCAicGF0aCI6ICIvd3MiLCAidGxzIjogInRscyIsICJzbmkiOiAiZXhhbXBsZS5jb20ifQ==

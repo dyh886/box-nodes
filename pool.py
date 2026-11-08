@@ -956,23 +956,16 @@ def cmd_export(_args):
         log("export: no nodes, nothing written")
         return 1
 
-    dist = os.path.join(ROOT, "dist")
-    os.makedirs(dist, exist_ok=True)
-    stamp = int(time.time())
+    # 同时写两份：
+    #   dist/  —— jsDelivr 镜像（按 commit sha 固定引用）
+    #   docs/  —— GitHub Pages 直出（无 CDN 缓存，秒级生效）
+    targets = [os.path.join(ROOT, "dist"), os.path.join(ROOT, "docs")]
 
     clash = build_clash(nodes)
-    with open(os.path.join(dist, "clash.yaml"), "w", encoding="utf-8") as f:
-        f.write(clash)
-
     links = build_links(nodes)
-    with open(os.path.join(dist, "links.txt"), "w", encoding="utf-8") as f:
-        f.write("\n".join(links) + "\n")
-
-    with open(os.path.join(dist, "sub.base64.txt"), "w", encoding="utf-8") as f:
-        f.write(b64encode("\n".join(links)))
-
-    with open(os.path.join(dist, "singbox.json"), "w", encoding="utf-8") as f:
-        f.write(build_singbox(nodes))
+    singbox = build_singbox(nodes)
+    b64 = b64encode("\n".join(links))
+    stamp = int(time.time())
 
     meta = {
         "updatedAt": stamp,
@@ -981,20 +974,30 @@ def cmd_export(_args):
         "avgLatencyMs": round(
             sum(n.get("latencyMs") or 0 for n in nodes) / max(len(nodes), 1), 1),
         "byProtocol": {},
-        "files": {
-            "clash": "dist/clash.yaml",
-            "links": "dist/links.txt",
-            "base64": "dist/sub.base64.txt",
-            "singbox": "dist/singbox.json",
+        "endpoints": {
+            "pages": "https://dyh886.github.io/box-nodes/",
+            "jsdelivr": "https://cdn.jsdelivr.net/gh/dyh886/box-nodes@main/dist/",
         },
     }
     for n in nodes:
         p = n["protocol"]
         meta["byProtocol"][p] = meta["byProtocol"].get(p, 0) + 1
-    with open(os.path.join(ROOT, "dist", "meta.json"), "w", encoding="utf-8") as f:
-        json.dump(meta, f, ensure_ascii=False, indent=2)
 
-    log(f"export done: {len(nodes)} nodes -> dist/ ({', '.join(meta['byProtocol'])})")
+    for d in targets:
+        os.makedirs(d, exist_ok=True)
+        with open(os.path.join(d, "clash.yaml"), "w", encoding="utf-8") as f:
+            f.write(clash)
+        with open(os.path.join(d, "links.txt"), "w", encoding="utf-8") as f:
+            f.write("\n".join(links) + "\n")
+        with open(os.path.join(d, "sub.base64.txt"), "w", encoding="utf-8") as f:
+            f.write(b64)
+        with open(os.path.join(d, "singbox.json"), "w", encoding="utf-8") as f:
+            f.write(singbox)
+        with open(os.path.join(d, "meta.json"), "w", encoding="utf-8") as f:
+            json.dump(meta, f, ensure_ascii=False, indent=2)
+
+    log(f"export done: {len(nodes)} nodes -> dist/ + docs/ "
+        f"({', '.join(f'{k}:{v}' for k, v in meta['byProtocol'].items())})")
     return 0
 
 
