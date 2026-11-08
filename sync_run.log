@@ -1,0 +1,14 @@
+[12:58:02] step 1/4 fetch subscriptions
+[12:58:49] step 2/4 probe + pick top 20
+[12:58:59]   [12:58:59]   51.5ms  EE-Tallinn-15332-tvjj
+[12:58:59]   [12:58:59]   51.5ms  FR-Paris-91316521-twun
+[12:58:59]   [12:58:59]   51.5ms  IN-Mumbai-017318822-ttjl
+[12:58:59]   [12:58:59]   51.5ms  US-Fremont-82602-tvon
+[12:58:59]   [12:58:59]   51.6ms  DE-Frankfurt am Main-717217219-ttll
+[12:58:59]   [12:58:59]   51.6ms  US-Hilton Head Island-7530-twwv
+[12:58:59]   [12:58:59]   51.7ms  US-San Jose-82214-ttwu
+[12:58:59]   [12:58:59]   51.8ms  RU-Moscow-82194322-tvvn
+[12:58:59] step 3/4 build chain
+[12:59:00] chain.yaml built
+[12:59:00] stats: raw=197 reachable=64 kept=20
+[12:59:00] step 4/4 publish
