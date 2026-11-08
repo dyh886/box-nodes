@@ -1,13 +1,13 @@
 {
-  "updatedAt": 1794134048,
-  "updatedAtISO": "2026-11-08T10:34:08Z",
+  "updatedAt": 1794134319,
+  "updatedAtISO": "2026-11-08T10:38:39Z",
   "count": 4,
-  "avgLatencyMs": 375.9,
+  "avgLatencyMs": 721.1,
   "byProtocol": {
     "trojan": 1,
     "vless": 1,
-    "vmess": 1,
-    "ss": 1
+    "ss": 1,
+    "vmess": 1
   },
   "files": {
     "clash": "dist/clash.yaml",
