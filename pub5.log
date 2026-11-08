@@ -1,0 +1,24 @@
+[16:07:36] step 1/4 fetch
+[16:07:37]   [16:07:36] fetch: 3 subscriptions
+[16:07:37]   [16:07:37]   OK  测试: 30 (clash)
+[16:07:37]   [16:07:37]   OK  家宽: 209 (clash)
+[16:07:37]   [16:07:37]   OK  7x24可用100: 120 (clash/mirror)
+[16:07:37]   [16:07:37] aggregate: 359 -> 285 unique
+[16:07:37] step 2/4 rank top 20
+[16:07:37]   [16:07:37] rank: 285 candidates
+[16:07:37]   [16:07:37] rank: kept 20 (excluded plaintext/poor protocols)
+[16:07:37]   [16:07:37]   q=-3  AL-Tirana-h-1827022-hltp
+[16:07:37]   [16:07:37]   q=-3  CH-Zurich-171810-hhxw
+[16:07:37]   [16:07:37]   q=-3  CH-Zurich-h-76025-hhxm
+[16:07:37]   [16:07:37]   q=-3  NL-Kerkrade-h-43722410-hlyt
+[16:07:37]   [16:07:37]   q=-3  🇨🇭 CH 03 | 参考4.0M | vless
+[16:07:37]   [16:07:37]   q=-2  JP-Minato-ku-h-61713914-hhpt
+[16:07:37]   [16:07:37]   q=-2  SG-Singapore-825312510-haxt
+[16:07:37]   [16:07:37]   q=-2  🇮🇷 IR 01 | 参考2.8M | vless
+[16:07:37]   [16:07:37]   q=-2  🇳🇱 NL 10 | 参考2.6M | vless
+[16:07:37]   [16:07:37]   q=-2  🇸🇬 SG 04 | 参考31.9M | vless
+[16:07:37] step 3/5 build clash yaml
+[16:07:38] chain.yaml built
+[16:07:38] step 4/5 build sing-box json
+[16:07:39] singbox.json built
+[16:07:39] step 5/5 publish
