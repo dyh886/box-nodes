@@ -1,5 +1,5 @@
 {
- "updatedAt": 1794133992,
+ "updatedAt": 1794134035,
  "count": 4,
  "nodes": [
   {
@@ -16,10 +16,10 @@
    "allowInsecure": false,
    "source_link": "trojan://placeholder-password@example.com:443?sni=example.com&type=tcp#SEED-TROJAN",
    "id": "dc3ccb728e95",
-   "collectedAt": 1794133992,
+   "collectedAt": 1794134035,
    "alive": true,
-   "latencyMs": 3.9,
-   "probedAt": 1794133992,
+   "latencyMs": 361.4,
+   "probedAt": 1794134038,
    "probeMode": "proxy"
   },
   {
@@ -42,10 +42,10 @@
    "clientFingerprint": "",
    "source_link": "vless://11111111-2222-3333-4444-555555555555@1.1.1.1:443?encryption=none&security=tls&sni=example.com&type=ws&host=example.com&path=%2Fws#SEED-VLESS",
    "id": "cab80df3c117",
-   "collectedAt": 1794133992,
+   "collectedAt": 1794134035,
    "alive": true,
-   "latencyMs": 4.2,
-   "probedAt": 1794133992,
+   "latencyMs": 362.9,
+   "probedAt": 1794134038,
    "probeMode": "proxy"
   },
   {
@@ -63,10 +63,10 @@
    "path": "/ws",
    "source_link": "vmess://eyJ2IjoiMiIsInBzIjoiU0VFRC1WTUVTUyIsImFkZCI6Ind3dy5jbG91ZGZsYXJlLmNvbSIsInBvcnQiOiI0NDMiLCJpZCI6IjExMTExMTExLTIyMjItMzMzMy00NDQ0LTU1NTU1NTU1NTU1NSIsImFpZCI6IjAiLCJzY3kiOiJhdXRvIiwibmV0Ijoid3MiLCJ0eXBlIjoibm9uZSIsImhvc3QiOiJleGFtcGxlLmNvbSIsInBhdGgiOiIvd3MiLCJ0bHMiOiJ0bHMiLCJzbmkiOiJleGFtcGxlLmNvbSJ9",
    "id": "5b29e852c3c1",
-   "collectedAt": 1794133992,
+   "collectedAt": 1794134035,
    "alive": true,
-   "latencyMs": 4.5,
-   "probedAt": 1794133992,
+   "latencyMs": 384.2,
+   "probedAt": 1794134038,
    "probeMode": "proxy"
   },
   {
@@ -80,12 +80,12 @@
    "tls": false,
    "source_link": "ss://YWVzLTI1Ni1nY206cGxhY2Vob2xkZXItcGFzc3dvcmQ=@8.8.8.8:443#SEED-SS",
    "id": "1b5082e4b1dc",
-   "collectedAt": 1794133992,
+   "collectedAt": 1794134035,
    "alive": true,
-   "latencyMs": 4.8,
-   "probedAt": 1794133992,
+   "latencyMs": 395.2,
+   "probedAt": 1794134038,
    "probeMode": "proxy"
   }
  ],
- "probedAt": 1794133992
+ "probedAt": 1794134038
 }

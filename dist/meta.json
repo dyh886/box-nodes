@@ -1,8 +1,8 @@
 {
-  "updatedAt": 1794133992,
-  "updatedAtISO": "2026-11-08T10:33:12Z",
+  "updatedAt": 1794134048,
+  "updatedAtISO": "2026-11-08T10:34:08Z",
   "count": 4,
-  "avgLatencyMs": 4.3,
+  "avgLatencyMs": 375.9,
   "byProtocol": {
     "trojan": 1,
     "vless": 1,

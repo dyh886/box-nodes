@@ -4,14 +4,14 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-  - name: "01 SEED-TROJAN 3ms"
+  - name: "01 SEED-TROJAN 361ms"
     server: "example.com"
     port: 443
     type: "trojan"
     password: "placeholder-password"
     udp: true
     sni: "example.com"
-  - name: "02 SEED-VLESS 4ms"
+  - name: "02 SEED-VLESS 362ms"
     server: "1.1.1.1"
     port: 443
     type: "vless"
@@ -24,7 +24,7 @@ proxies:
       path: "/ws"
       headers:
         Host: "example.com"
-  - name: "03 SEED-VMESS 4ms"
+  - name: "03 SEED-VMESS 384ms"
     server: "www.cloudflare.com"
     port: 443
     type: "vmess"
@@ -39,7 +39,7 @@ proxies:
       path: "/ws"
       headers:
         Host: "example.com"
-  - name: "04 SEED-SS 4ms"
+  - name: "04 SEED-SS 395ms"
     server: "8.8.8.8"
     port: 443
     type: "ss"
@@ -53,17 +53,17 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "01 SEED-TROJAN 3ms"
-      - "02 SEED-VLESS 4ms"
-      - "03 SEED-VMESS 4ms"
-      - "04 SEED-SS 4ms"
+      - "01 SEED-TROJAN 361ms"
+      - "02 SEED-VLESS 362ms"
+      - "03 SEED-VMESS 384ms"
+      - "04 SEED-SS 395ms"
   - name: "SELECT"
     type: select
     proxies:
       - "AUTO"
-      - "01 SEED-TROJAN 3ms"
-      - "02 SEED-VLESS 4ms"
-      - "03 SEED-VMESS 4ms"
-      - "04 SEED-SS 4ms"
+      - "01 SEED-TROJAN 361ms"
+      - "02 SEED-VLESS 362ms"
+      - "03 SEED-VMESS 384ms"
+      - "04 SEED-SS 395ms"
 rules:
   - MATCH,SELECT
