@@ -1,20 +1,42 @@
 {
-  "sources": [
+  "subscriptions": [
     {
-      "name": "local-seed",
-      "file": "state/seed.txt",
-      "kind": "auto",
-      "enabled": true
+      "label": "测试",
+      "url": "https://234.qzz.io/fsllistyaml",
+      "enabled": true,
+      "timeout": 35
+    },
+    {
+      "label": "家宽",
+      "url": "https://purens.qzz.io/fslyaml?d5d01f15be8dcccaf5d71fc4",
+      "enabled": true,
+      "timeout": 40
+    },
+    {
+      "label": "7x24可用100",
+      "url": "https://7x24.alwaysdata.net/sub/4c38681088ce1c035e99e3016eb1f440e772685a353b5d44e5116d1d1ee2c22e/available/mihomo?top=100&sort=quality&status=available",
+      "enabled": true,
+      "timeout": 45
+    },
+    {
+      "label": "10-EnO21oTD",
+      "url": "https://3x.csg.dpdns.org:2096/sub/10-EnO21oTD?format=clash",
+      "enabled": true,
+      "timeout": 45
     }
   ],
-  "probe": {
-    "workers": 64,
-    "timeoutSeconds": 5,
-    "keep": 60
+  "landing": {
+    "server": "107.172.186.223",
+    "port": 443
+  },
+  "pick": {
+    "top": 20,
+    "workers": 32,
+    "timeoutSeconds": 8
   },
   "publish": {
     "repo": "dyh886/box-nodes",
-    "branch": "main",
-    "cdnBase": "https://cdn.jsdelivr.net/gh/dyh886/box-nodes@main"
+    "pages": "https://dyh886.github.io/box-nodes",
+    "jsdelivr": "https://cdn.jsdelivr.net/gh/dyh886/box-nodes@main/dist"
   }
 }

@@ -1,22 +1,21 @@
 #!/usr/bin/env python3
 """
-box-nodes / sync.py — 一键更新并发布
+box-nodes / sync.py — 全自动更新并发布
 
-两条产物线：
-  1. 链式代理（主产物）   extract_source.py → build_chain.py → docs/chain.yaml
-       本机 → 前置(前置总控) → 落地 107.172.186.223 → 外网
-       节点来自本地机场配置，不需要联网探测。
-  2. 通用节点池（可选）   pool.py collect/probe/export → dist/*
-       只有配了 sources 或 seed 里真有节点时才跑。
+流程（全部在云机上完成，不依赖本地文件）：
+  1. build_live.py fetch   拉所有订阅 URL
+  2. build_live.py probe   聚合 + 测「到落地 IP」延迟 + 挑前 N
+  3. build_live.py build   生成四层链式配置
+  4. 推 main + gh-pages    双通道发布
 
-发布：
-  main 分支   —— 源码 + dist/ + docs/（jsDelivr 镜像）
-  gh-pages    —— 只有 docs/ 内容（GitHub Pages 直出，秒级生效）
+产物：
+  docs/chain.yaml  —— GitHub Pages 直出（主入口，秒级生效）
+  dist/chain.yaml  —— jsDelivr 镜像
 
 用法:
-  python sync.py              全流程 + 发布
-  python sync.py --dry-run    只本地生成，不推
-  python sync.py --no-probe   跳过通用池探活
+  python3 sync.py              全流程 + 发布
+  python3 sync.py --dry-run    只生成，不推
+  python3 sync.py --top 30     改精选数量
 """
 
 import argparse
@@ -30,12 +29,8 @@ import time
 import urllib.request
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-
-# GitHub Pages 直出（主入口，无 CDN 缓存）
 PAGES_BASE = "https://dyh886.github.io/box-nodes"
-# jsDelivr 镜像（备用，@main 有缓存，purge 可刷新）
 CDN_BASE = "https://cdn.jsdelivr.net/gh/dyh886/box-nodes@main/dist"
-PURGE = "https://purge.jsdelivr.net/gh/dyh886/box-nodes@main"
 
 
 def log(m):
@@ -43,10 +38,6 @@ def log(m):
 
 
 def run(cmd, cwd=ROOT, check=True, env=None):
-    """
-    跑子进程。显式 UTF-8 解码，避免 Windows 默认 GBK 在遇到
-    emoji / 中文 stderr 时抛 UnicodeDecodeError。
-    """
     e = dict(os.environ)
     e.setdefault("PYTHONIOENCODING", "utf-8")
     e.setdefault("PYTHONUTF8", "1")
@@ -55,7 +46,7 @@ def run(cmd, cwd=ROOT, check=True, env=None):
     p = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True,
                        encoding="utf-8", errors="replace", env=e)
     if check and p.returncode != 0:
-        raise RuntimeError(f"{' '.join(cmd)} -> {p.returncode}\n{p.stdout}\n{p.stderr}")
+        raise RuntimeError(f"{' '.join(cmd)} -> {p.returncode}\n{p.stderr[-800:]}")
     return p
 
 
@@ -63,112 +54,85 @@ def git(*args, check=True, cwd=ROOT):
     return run(["git", *args], cwd=cwd, check=check)
 
 
-def purge_cdn(paths):
-    for p in paths:
-        url = f"{PURGE}/{p}"
-        try:
-            req = urllib.request.Request(url, headers={"User-Agent": "box-nodes/1.0"})
-            with urllib.request.urlopen(req, timeout=20) as r:
-                log(f"purge {p} -> {r.status}")
-        except Exception as e:  # noqa: BLE001
-            log(f"purge {p} -> {e}")
-
-
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
-    ap.add_argument("--no-probe", action="store_true")
-    ap.add_argument("--keep", type=int, default=None)
+    ap.add_argument("--top", type=int, default=None)
+    ap.add_argument("--workers", type=int, default=40)
+    ap.add_argument("--timeout", type=float, default=6.0)
     args = ap.parse_args()
 
     py = sys.executable
 
-    # ---------- 产物线 1：链式代理（主产物）----------
-    log("step 0/4 extract + build chain")
-    if os.path.exists(os.path.join(ROOT, "extract_source.py")):
-        p = run([py, "extract_source.py"], check=False)
-        if p.returncode != 0:
-            log(f"extract skipped: {p.stderr.strip()[-200:]}")
-    p = run([py, "build_chain.py"], check=False)
+    # 读 config 里的精选数量
+    top = args.top
+    if top is None:
+        try:
+            with open(os.path.join(ROOT, "config.json"), encoding="utf-8") as f:
+                top = json.load(f).get("pick", {}).get("top", 20)
+        except Exception:  # noqa: BLE001
+            top = 20
+
+    # ---- 1. fetch ----
+    log("step 1/4 fetch subscriptions")
+    p = run([py, "build_live.py", "fetch"], check=False)
     if p.returncode != 0:
-        log(f"build_chain FAILED: {p.stderr.strip()[-300:]}")
-    else:
-        log("chain.yaml built")
+        log(f"fetch FAILED: {p.stderr[-300:]}")
+        return 1
 
-    # ---------- 产物线 2：通用节点池（可选）----------
-    seed = os.path.join(ROOT, "state", "seed.txt")
-    seed_has_nodes = False
-    if os.path.exists(seed):
-        with open(seed, encoding="utf-8", errors="replace") as f:
-            for ln in f:
-                if ln.strip() and not ln.lstrip().startswith("#"):
-                    seed_has_nodes = True
-                    break
+    # ---- 2. probe ----
+    log(f"step 2/4 probe + pick top {top}")
+    p = run([py, "build_live.py", "probe",
+             "--workers", str(args.workers),
+             "--timeout", str(args.timeout),
+             "--top", str(top)], check=False)
+    if p.returncode != 0:
+        log(f"probe FAILED: {p.stderr[-300:]}")
+        return 1
+    for line in p.stderr.strip().splitlines()[-8:]:
+        log("  " + line)
 
-    cfg_has_url = False
-    cfg_path = os.path.join(ROOT, "config.json")
-    if os.path.exists(cfg_path):
-        with open(cfg_path, encoding="utf-8") as f:
-            cfg = json.load(f)
-        cfg_has_url = any(s.get("url") and s.get("enabled", True)
-                          for s in cfg.get("sources", []))
+    # ---- 3. build ----
+    log("step 3/4 build chain")
+    p = run([py, "build_live.py", "build"], check=False)
+    if p.returncode != 0:
+        log(f"build FAILED: {p.stderr[-400:]}")
+        return 1
+    log("chain.yaml built")
 
-    pool_meta = None
-    if seed_has_nodes or cfg_has_url:
-        log("step 1/4 collect")
-        run([py, "pool.py", "collect"], check=False)
-
-        if not args.no_probe:
-            log("step 2/4 probe")
-            cmd = [py, "pool.py", "probe"]
-            if args.keep:
-                cmd += ["--keep", str(args.keep)]
-            run(cmd, check=False)
-        else:
-            log("step 2/4 probe skipped")
-
-        log("step 3/4 export")
-        p = run([py, "pool.py", "export"], check=False)
-        mp = os.path.join(ROOT, "dist", "meta.json")
-        if p.returncode == 0 and os.path.exists(mp):
-            with open(mp, encoding="utf-8") as f:
-                pool_meta = json.load(f)
-            log(f"pool: nodes={pool_meta['count']} "
-                f"avg={pool_meta['avgLatencyMs']}ms")
-        else:
-            log("pool: export skipped (no nodes)")
-    else:
-        log("pool: no sources configured — skipping (chain.yaml is primary)")
-
-    stamp_iso = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+    # 统计
+    try:
+        with open(os.path.join(ROOT, "state", "live_nodes.json"), encoding="utf-8") as f:
+            st = json.load(f).get("stats", {})
+        log(f"stats: raw={st.get('raw')} reachable={st.get('reachable')} "
+            f"kept={st.get('kept')}")
+    except Exception:  # noqa: BLE001
+        st = {}
 
     if args.dry_run:
         log("dry-run: skipping publish")
         return 0
 
-    # ---------- 发布：main ----------
+    # ---- 4. publish ----
+    log("step 4/4 publish")
+    stamp = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+
     git("add", "-A")
     if git("status", "--porcelain").stdout.strip():
-        pool_part = f"pool={pool_meta['count']} nodes" if pool_meta else "pool=n/a"
-        git("commit", "-m", f"chore: refresh chain + {pool_part} @ {stamp_iso}")
+        msg = (f"chore: refresh chain — {st.get('kept','?')} nodes "
+               f"(from {st.get('reachable','?')}/{st.get('raw','?')}) @ {stamp}")
+        git("commit", "-m", msg)
         p = git("push", "origin", "HEAD:main", check=False)
         log("main pushed" if p.returncode == 0
-            else f"main push FAILED: {p.stderr.strip()[-200:]}")
+            else f"main push FAILED: {p.stderr[-200:]}")
     else:
         log("main: no changes")
 
-    # ---------- 发布：gh-pages（Pages 直出）----------
     publish_pages()
     return 0
 
 
 def publish_pages():
-    """
-    把 docs/ 作为 gh-pages 分支根目录发布。
-
-    用临时 worktree：只放 docs/ 的文件，提交后强推。
-    gh-pages 永远只含产物，不含源码；Pages 每次 build 秒级生效。
-    """
     work = os.path.join(tempfile.gettempdir(), "box-nodes-pages")
     if os.path.isdir(work):
         subprocess.run(["git", "worktree", "remove", "--force", work],
@@ -178,7 +142,7 @@ def publish_pages():
     p = run(["git", "worktree", "add", "--force", "-B", "gh-pages", work],
             check=False)
     if p.returncode != 0:
-        log(f"worktree add -> {p.stderr.strip()[-200:]}")
+        log(f"worktree add -> {p.stderr[-200:]}")
         return
 
     docs = os.path.join(ROOT, "docs")
@@ -207,7 +171,7 @@ def publish_pages():
         p = run(["git", "push", "--force", "origin", "gh-pages"],
                 cwd=work, check=False)
         log("pages pushed" if p.returncode == 0
-            else f"pages push -> {p.stderr.strip()[-200:]}")
+            else f"pages push -> {p.stderr[-200:]}")
     else:
         log("pages: no changes")
 
@@ -217,7 +181,7 @@ def publish_pages():
 
     time.sleep(6)
     ok = 0
-    for f in ("chain.yaml", "meta.json"):
+    for f in ("chain.yaml",):
         url = f"{PAGES_BASE}/{f}"
         try:
             req = urllib.request.Request(
@@ -229,7 +193,7 @@ def publish_pages():
             ok += 1
         except Exception as e:  # noqa: BLE001
             log(f"pages {f} -> FAIL {e}")
-    log(f"pages verified {ok}/2")
+    log(f"pages verified {ok}/1")
 
 
 if __name__ == "__main__":

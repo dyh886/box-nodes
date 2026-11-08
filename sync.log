@@ -51,3 +51,8 @@ RuntimeError: /usr/bin/python3 pool.py export -> 1
 [12:25:31] extract skipped: source profile not found: %APPDATA%\com.follow\clash\profiles\377007008550752256.yaml
 [12:25:34] chain.yaml built
 [12:25:34] pool: no sources configured — skipping (chain.yaml is primary)
+[12:25:38] main pushed
+[12:25:43] pages pushed
+[12:25:50] pages chain.yaml -> 200 73502B
+[12:25:50] pages meta.json -> 200 342B
+[12:25:50] pages verified 2/2
