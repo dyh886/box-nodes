@@ -70,3 +70,17 @@ RuntimeError: /usr/bin/python3 pool.py export -> 1
 [13:02:19] chain.yaml built
 [13:02:19] stats: raw=197 reachable=64 kept=20
 [13:02:19] step 4/4 publish
+[14:05:40] step 1/4 fetch subscriptions
+[14:05:42] step 2/4 probe + pick top 20
+[14:05:55]   [14:05:55]   51.1ms  JP-Tokyo-1372379-tvdj
+[14:05:55]   [14:05:55]   51.1ms  US-Fremont-82602-tvon
+[14:05:55]   [14:05:55]   51.1ms  US-West Wendover-49686-ttot
+[14:05:55]   [14:05:55]   51.2ms  CH-Zurich-7625-twdw
+[14:05:55]   [14:05:55]   51.2ms  DE-Falkenstein-62021729-tvlt
+[14:05:55]   [14:05:55]   51.3ms  SG-Singapore-4261392-tvwt
+[14:05:55]   [14:05:55]   51.4ms  RU-Moscow-2428518-tvvj
+[14:05:55]   [14:05:55]   51.5ms  CH-Zurich-h-76025-tvoj
+[14:05:55] step 3/4 build chain
+[14:05:55] chain.yaml built
+[14:05:55] stats: raw=277 reachable=64 kept=20
+[14:05:55] step 4/4 publish
