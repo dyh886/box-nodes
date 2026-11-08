@@ -1,0 +1,22 @@
+[14:54:08] step 1/4 fetch
+[14:54:13]   [14:54:10] fetch: 3 subscriptions
+[14:54:13]   [14:54:11]   OK  测试: 29 (clash)
+[14:54:13]   [14:54:12]   OK  家宽: 206 (clash)
+[14:54:13]   [14:54:12]   OK  7x24可用100: 120 (clash/mirror)
+[14:54:13]   [14:54:12] aggregate: 355 -> 285 unique
+[14:54:13] step 2/4 rank top 20
+[14:54:14]   [14:54:14] rank: 285 candidates
+[14:54:14]   [14:54:14] rank: kept 20 (excluded plaintext/poor protocols)
+[14:54:14]   [14:54:14]   q=-3  CH-Zurich-171810-tteu
+[14:54:14]   [14:54:14]   q=-3  CH-Zurich-h-76025-ttee
+[14:54:14]   [14:54:14]   q=-3  CH-Zurich-h-76025-ttnt
+[14:54:14]   [14:54:14]   q=-3  DE-Frankfurt am Main-h-7712-ttnu
+[14:54:14]   [14:54:14]   q=-3  RU-Moscow-243667-twvv
+[14:54:14]   [14:54:14]   q=-3  🇨🇭 CH 03 | 参考4.0M | vless
+[14:54:14]   [14:54:14]   q=-2  CH-Geneva-h-905615-ttoj
+[14:54:14]   [14:54:14]   q=-2  DK-Rødding-323325318-ttlj
+[14:54:14]   [14:54:14]   q=-2  SG-Singapore-825312510-ttvd
+[14:54:14]   [14:54:14]   q=-2  🇮🇷 IR 01 | 参考2.8M | vless
+[14:54:14] step 3/4 build
+[14:54:15] chain.yaml built
+[14:54:15] step 4/4 publish

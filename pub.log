@@ -1,0 +1,3 @@
+usage: sync.py [-h] [--dry-run] [--top TOP] [--workers WORKERS]
+               [--timeout TIMEOUT]
+sync.py: error: unrecognized arguments: --skip-fetch
