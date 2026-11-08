@@ -326,6 +326,31 @@ def cmd_fetch():
     report = []
     for s in subs:
         label = s.get("label") or s["url"][:50]
+        kind_hint = s.get("type", "direct")
+
+        # 镜像源：内容由本地机器推送（云机被上游封锁时的中转）
+        if kind_hint == "mirror":
+            local = os.path.join(ROOT, s["file"])
+            try:
+                if not os.path.exists(local):
+                    log(f"  MISS {label}: {s['file']} not pushed yet")
+                    report.append({"label": label, "ok": False,
+                                   "error": "mirror missing"})
+                    continue
+                with io.open(local, "rb") as f:
+                    raw = f.read()
+                nodes, kind = parse_subscription(raw)
+                log(f"  OK  {label}: {len(nodes)} nodes ({kind}, mirror)")
+                report.append({"label": label, "ok": True,
+                               "nodes": len(nodes), "kind": f"mirror/{kind}"})
+                all_nodes.extend(nodes)
+            except Exception as e:  # noqa: BLE001
+                log(f"  FAIL {label}: {type(e).__name__}")
+                report.append({"label": label, "ok": False,
+                               "error": type(e).__name__})
+            continue
+
+        # 直连源
         try:
             raw = http_get(s["url"], timeout=s.get("timeout", 35))
             nodes, kind = parse_subscription(raw)
