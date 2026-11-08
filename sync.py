@@ -20,8 +20,8 @@ import time
 import urllib.request
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-CDN_BASE = "https://cdn.jsdelivr.net/gh/dyh886/box-nodes@main"
-PURGE = "https://purge.jsdelivr.net/gh/dyh886/box-nodes@main"
+CDN_BASE = "https://cdn.jsdelivr.net/gh/dyh886/box-nodes@latest"
+PURGE = "https://purge.jsdelivr.net/gh/dyh886/box-nodes@latest"
 
 
 def log(m):

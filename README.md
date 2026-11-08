@@ -6,13 +6,17 @@
 
 | 格式 | URL |
 |---|---|
-| Clash / Clash Verge / Mihomo | `https://cdn.jsdelivr.net/gh/dyh886/box-nodes@main/dist/clash.yaml` |
-| v2rayN / Shadowrocket / NekoBox（base64 订阅） | `https://cdn.jsdelivr.net/gh/dyh886/box-nodes@main/dist/sub.base64.txt` |
-| 明文链接列表 | `https://cdn.jsdelivr.net/gh/dyh886/box-nodes@main/dist/links.txt` |
-| sing-box | `https://cdn.jsdelivr.net/gh/dyh886/box-nodes@main/dist/singbox.json` |
-| 状态元信息 | `https://cdn.jsdelivr.net/gh/dyh886/box-nodes@main/dist/meta.json` |
+| Clash / Clash Verge / Mihomo | `https://cdn.jsdelivr.net/gh/dyh886/box-nodes@latest/dist/clash.yaml` |
+| v2rayN / Shadowrocket / NekoBox（base64 订阅） | `https://cdn.jsdelivr.net/gh/dyh886/box-nodes@latest/dist/sub.base64.txt` |
+| 明文链接列表 | `https://cdn.jsdelivr.net/gh/dyh886/box-nodes@latest/dist/links.txt` |
+| sing-box | `https://cdn.jsdelivr.net/gh/dyh886/box-nodes@latest/dist/singbox.json` |
+| 状态元信息 | `https://cdn.jsdelivr.net/gh/dyh886/box-nodes@latest/dist/meta.json` |
 
-> 客户端只需配置一次；上游每两小时提交一次，jsDelivr 自动回源，客户端按自己的间隔拉取即可。
+> **必须用 `@latest`，不要用 `@main`。** jsDelivr 对 `@main` 分支引用有长 TTL 缓存（实测数十分钟不更新，`?v=` 之类的 query 也无效）；`@latest` 会解析到最新 release/commit，实测提交后立即生效。详见下方「CDN 缓存」。
+>
+> 客户端只需配置一次；上游每两小时刷新，客户端按自己的间隔拉取即可。
+
+**备用入口（CDN 出问题时）**：`https://raw.githubusercontent.com/dyh886/box-nodes/main/dist/...` — 无缓存，永远最新，但国内可能不稳。
 
 ## 架构
 
@@ -85,7 +89,32 @@ python sync.py --no-probe   # 跳过探活
 
 ## 定时
 
-节点池每两小时刷新，由云电脑（box）上的调度器触发 `sync.py`。云机时区为 UTC，`0 */2 * * *` 即每两小时整点。
+节点池每两小时刷新，由云电脑（box）上的 **systemd timer** 触发：
+
+```
+box-nodes-sync.timer   →  OnCalendar=*-*-* 00/2:05:00  (UTC), Persistent=true
+box-nodes-sync.service →  User=user, WorkingDirectory=~/box-nodes
+```
+
+`Persistent=true` 保证机器休眠/重启后补跑错过的那次；`RandomizedDelaySec=120` 避免整点堆积。
+
+```bash
+systemctl list-timers box-nodes-sync.timer      # 看下次运行
+sudo systemctl start box-nodes-sync.service     # 立即手动跑一次
+tail -f ~/box-nodes/sync.log                    # 看日志
+```
+
+> 云机时区是 UTC，`00/2:05` 即北京时间 08:05 / 10:05 / 12:05 …（每两小时）。
+
+## 环境适配要点（沙箱云机特有）
+
+这套东西能跑起来，踩了三个坑，全部已在代码里处理：
+
+1. **没有直连出口**。云机所有流量强制经 `127.0.0.1:3128` 出口代理，本地 DNS 不可用（`nameserver 8.8.8.8` 但解析必失败）。所以直接 `socket.connect` 探活会 100% 失败 —— `probe` 改为走代理的 **CONNECT 隧道**打到节点真实 `host:port`，由代理侧完成 DNS + TCP，既不发送协议数据也能验证「域名可解析 + 端口可达」。
+
+2. **systemd 不继承 shell 环境**。代理变量只在交互式 shell 里存在，`Environment=` 必须显式写进 unit 文件，否则定时任务里探活全灭、`export` 直接以 `no nodes` 退出。
+
+3. **jsDelivr 的 `@main` 缓存不可控**。实测 `@main` 数十分钟不回源，`purge` 接口返回 200 但无效，加 query 参数也无效。`@latest` 立即生效，所以全部入口改用 `@latest`。
 
 ## 注意
 
