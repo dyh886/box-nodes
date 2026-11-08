@@ -12,3 +12,7 @@
 [12:59:00] chain.yaml built
 [12:59:00] stats: raw=197 reachable=64 kept=20
 [12:59:00] step 4/4 publish
+[12:59:01] main pushed
+[12:59:02] pages pushed
+[12:59:09] pages chain.yaml -> 200 73502B
+[12:59:09] pages verified 1/1

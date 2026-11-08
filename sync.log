@@ -56,3 +56,17 @@ RuntimeError: /usr/bin/python3 pool.py export -> 1
 [12:25:50] pages chain.yaml -> 200 73502B
 [12:25:50] pages meta.json -> 200 342B
 [12:25:50] pages verified 2/2
+[13:01:16] step 1/4 fetch subscriptions
+[13:02:03] step 2/4 probe + pick top 20
+[13:02:18]   [13:02:18]   79.4ms  US-Dallas-1331761-twvj
+[13:02:18]   [13:02:18]   81.1ms  ID-Lenteng-38611611-tvdu
+[13:02:18]   [13:02:18]   86.1ms  IT-Rome-229158-tvdn
+[13:02:18]   [13:02:18]   89.0ms  US-Phoenix-91539318-twdt
+[13:02:18]   [13:02:18]   92.0ms  RU-Moscow-243667-twvv
+[13:02:18]   [13:02:18]   106.2ms  ID-Jakarta-h-917617-tvnn
+[13:02:18]   [13:02:18]   110.4ms  JP-Tokyo-1372379-tvdj
+[13:02:18]   [13:02:18]   114.6ms  RU-Moscow-82194322-tvvn
+[13:02:18] step 3/4 build chain
+[13:02:19] chain.yaml built
+[13:02:19] stats: raw=197 reachable=64 kept=20
+[13:02:19] step 4/4 publish

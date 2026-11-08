@@ -1,6 +1,6 @@
 # ============================================================
 # box-nodes 链式代理订阅（自动更新）
-# 生成: 2026-11-08T12:59:00Z
+# 生成: 2026-11-08T13:02:18Z
 # 抓取: 197 个节点 → 可达 64 → 精选 20 个
 # 唯一出口: 107.172.186.223
 #
@@ -13,26 +13,26 @@
 #   代理      最终出口
 #
 # 精选节点（按到落地的延迟升序）:
-#    1. 50.9ms  US-San Jose-622196-twvd
-#    2. 51.2ms  US-Chicago-h-1127348-tewv
-#    3. 51.5ms  EE-Tallinn-15332-tvjj
-#    4. 51.5ms  FR-Paris-91316521-twun
-#    5. 51.5ms  IN-Mumbai-017318822-ttjl
-#    6. 51.5ms  US-Fremont-82602-tvon
-#    7. 51.6ms  DE-Frankfurt am Main-717217219-ttll
-#    8. 51.6ms  US-Hilton Head Island-7530-twwv
-#    9. 51.7ms  US-San Jose-82214-ttwu
-#   10. 51.8ms  RU-Moscow-82194322-tvvn
-#   11. 51.8ms  US-Ashburn-81561582-twwe
-#   12. 52.0ms  IT-Rome-229158-tvdn
-#   13. 52.0ms  US-Cheyenne-4923-ttud
-#   14. 52.2ms  IE-Dublin-20320422-twlo
-#   15. 52.2ms  SG-Singapore-h-61465610-tvww
-#   16. 52.3ms  CA-Beauharnois-h-24421012-ttnd
-#   17. 52.7ms  US-Miami-71512382-tvun
-#   18. 52.7ms  US-West Wendover-49686-tvwe
-#   19. 52.8ms  DK-Christianshavn-5245846-tttw
-#   20. 52.8ms  PL-Warsaw-11155413-twtu
+#    1. 71.0ms  DE-Frankfurt am Main-h-9365016-teev
+#    2. 78.6ms  US-Boardman-19017622-tete
+#    3. 79.4ms  US-Dallas-1331761-twvj
+#    4. 81.1ms  ID-Lenteng-38611611-tvdu
+#    5. 86.1ms  IT-Rome-229158-tvdn
+#    6. 89.0ms  US-Phoenix-91539318-twdt
+#    7. 92.0ms  RU-Moscow-243667-twvv
+#    8. 106.2ms  ID-Jakarta-h-917617-tvnn
+#    9. 110.4ms  JP-Tokyo-1372379-tvdj
+#   10. 114.6ms  RU-Moscow-82194322-tvvn
+#   11. 115.6ms  HK-Tai Po-285532-twln
+#   12. 119.1ms  CH-Zurich-7625-twdw
+#   13. 119.3ms  GB-London-175020-tetw
+#   14. 122.3ms  US-San Jose-622194-tejw
+#   15. 126.7ms  US-Cheyenne-4924-twwd
+#   16. 137.4ms  US-Seattle-1457212-tvee
+#   17. 142.3ms  US-Los Angeles-28193-twen
+#   18. 142.9ms  DE-Berlin-10622315-teul
+#   19. 142.9ms  US-Hilton Head Island-7530-twwv
+#   20. 153.4ms  FR-Paris-91316521-tevn
 # ============================================================
 mixed-port: 7890
 allow-lan: false
@@ -72,81 +72,30 @@ dns:
     - 240.0.0.0/4
     - 0.0.0.0/32
 proxies:
-- name: US-San Jose-622196-twvd
+- name: DE-Frankfurt am Main-h-9365016-teev
   type: http
-  server: tzoa.fun
-  port: 443
-  tls: true
-  sni: tzoa.fun
-  skip-cert-verify: true
-- name: US-Chicago-h-1127348-tewv
-  type: http
-  server: 121.127.34.82
+  server: 149.36.50.157
   port: 443
   tls: true
   skip-cert-verify: true
-- name: EE-Tallinn-15332-tvjj
+- name: US-Boardman-19017622-tete
   type: http
-  server: 95.153.32.2
-  port: 443
-  tls: true
-  skip-cert-verify: true
-- name: FR-Paris-91316521-twun
-  type: http
-  server: fan.132031.xyz
-  port: 443
+  server: 54.190.176.228
+  port: 8443
   username: 'null'
   password: 'null'
   tls: true
-  sni: fan.132031.xyz
   skip-cert-verify: true
-- name: IN-Mumbai-017318822-ttjl
+- name: US-Dallas-1331761-twvj
   type: http
-  server: 110.173.188.221
+  server: 23.133.176.14
   port: 443
   tls: true
-  sni: 110.173.188.221
+  sni: 23.133.176.14
   skip-cert-verify: true
-- name: US-Fremont-82602-tvon
+- name: ID-Lenteng-38611611-tvdu
   type: http
-  server: voteshirleysew.club
-  port: 443
-  username: bnVsbDpudWxs
-  tls: true
-- name: DE-Frankfurt am Main-717217219-ttll
-  type: http
-  server: 167.172.172.190
-  port: 443
-  username: testuser1
-  password: e4b72b531a2d10900519
-  tls: true
-  sni: 167.172.172.190
-  skip-cert-verify: true
-- name: US-Hilton Head Island-7530-twwv
-  type: http
-  server: 207.5.30.9
-  port: 443
-  tls: true
-  sni: 207.5.30.9
-  skip-cert-verify: true
-- name: US-San Jose-82214-ttwu
-  type: http
-  server: fan.365747.xyz
-  port: 443
-  tls: true
-  skip-cert-verify: true
-- name: RU-Moscow-82194322-tvvn
-  type: http
-  server: 178.219.43.226
-  port: 443
-  username: 'null'
-  password: 'null'
-  tls: true
-  sni: 178.219.43.226
-  skip-cert-verify: true
-- name: US-Ashburn-81561582-twwe
-  type: http
-  server: 178.156.158.24
+  server: 103.86.117.202
   port: 443
   tls: true
   skip-cert-verify: true
@@ -159,63 +108,118 @@ proxies:
   tls: true
   sni: 95.229.15.89
   skip-cert-verify: true
-- name: US-Cheyenne-4923-ttud
+- name: US-Phoenix-91539318-twdt
   type: http
-  server: goedkoopgeluid.icu
-  port: 443
-  tls: true
-  sni: goedkoopgeluid.icu
-- name: IE-Dublin-20320422-twlo
-  type: http
-  server: 18.200.158.139
+  server: 129.153.93.183
   port: 443
   tls: true
   skip-cert-verify: true
-- name: SG-Singapore-h-61465610-tvww
-  type: http
-  server: 156.146.56.97
+- name: RU-Moscow-243667-twvv
+  type: vless
+  server: 92.243.66.79
   port: 443
+  uuid: c5f59ef3-9540-49fa-bd1e-c6c2f79df49a
+  flow: xtls-rprx-vision
   tls: true
-  skip-cert-verify: true
-- name: CA-Beauharnois-h-24421012-ttnd
+  servername: ru-mow.probe.geomyip.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: siD4oj2gdtLLEphV6fUXb8ueIc2WHVn7msOUhNGPf2o
+    short-id: 8d03c10b6a874a9c
+- name: ID-Jakarta-h-917617-tvnn
   type: http
-  server: 142.44.210.129
-  port: 443
-  tls: true
-  sni: 142.44.210.129
-  skip-cert-verify: true
-- name: US-Miami-71512382-tvun
-  type: http
-  server: 107.151.238.27
-  port: 443
-  username: testuser1
-  password: e4b72b531a2d10900519
-  tls: true
-  sni: 6b97ee1b.acsnet.co
-- name: US-West Wendover-49686-tvwe
-  type: http
-  server: jewelscollecti.icu
+  server: 178.248.73.58
   port: 443
   username: 'null'
   password: 'null'
   tls: true
-  sni: jewelscollecti.icu
   skip-cert-verify: true
-- name: DK-Christianshavn-5245846-tttw
+- name: JP-Tokyo-1372379-tvdj
   type: http
-  server: 185.245.84.50
+  server: fan.571589.xyz
   port: 443
+  username: bnVsbDpudWxs
   tls: true
-  skip-cert-verify: true
-- name: PL-Warsaw-11155413-twtu
+- name: RU-Moscow-82194322-tvvn
   type: http
-  server: 151.115.54.133
+  server: 178.219.43.226
   port: 443
   username: 'null'
   password: 'null'
   tls: true
-  sni: 151.115.54.133
+  sni: 178.219.43.226
   skip-cert-verify: true
+- name: HK-Tai Po-285532-twln
+  type: http
+  server: fan.240104.xyz
+  port: 443
+  tls: true
+  sni: fan.240104.xyz
+- name: CH-Zurich-7625-twdw
+  type: http
+  server: 31.7.62.50
+  port: 443
+  tls: true
+  skip-cert-verify: true
+- name: GB-London-175020-tetw
+  type: http
+  server: 84.17.50.193
+  port: 443
+  tls: true
+  sni: 84.17.50.193
+  skip-cert-verify: true
+- name: US-San Jose-622194-tejw
+  type: http
+  server: efr-marktplatz.club
+  port: 443
+  username: bnVsbDpudWxs
+  tls: true
+- name: US-Cheyenne-4924-twwd
+  type: http
+  server: mmgr.club
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  skip-cert-verify: true
+- name: US-Seattle-1457212-tvee
+  type: http
+  server: 45.145.72.122
+  port: 8443
+  tls: true
+  sni: 45.145.72.122
+  skip-cert-verify: true
+- name: US-Los Angeles-28193-twen
+  type: http
+  server: 38.28.193.188
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  skip-cert-verify: true
+- name: DE-Berlin-10622315-teul
+  type: http
+  server: 87.106.223.158
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  sni: 87.106.223.158
+  skip-cert-verify: true
+- name: US-Hilton Head Island-7530-twwv
+  type: http
+  server: 207.5.30.9
+  port: 443
+  tls: true
+  sni: 207.5.30.9
+  skip-cert-verify: true
+- name: FR-Paris-91316521-tevn
+  type: http
+  server: fan.132031.xyz
+  port: 443
+  username: bnVsbDpudWxs
+  tls: true
+  sni: fan.132031.xyz
 - name: DediRock-LA
   type: vless
   server: 107.172.186.223
@@ -235,26 +239,26 @@ proxy-groups:
 - name: 前置
   type: select
   proxies: &id001
-  - US-San Jose-622196-twvd
-  - US-Chicago-h-1127348-tewv
-  - EE-Tallinn-15332-tvjj
-  - FR-Paris-91316521-twun
-  - IN-Mumbai-017318822-ttjl
-  - US-Fremont-82602-tvon
-  - DE-Frankfurt am Main-717217219-ttll
-  - US-Hilton Head Island-7530-twwv
-  - US-San Jose-82214-ttwu
-  - RU-Moscow-82194322-tvvn
-  - US-Ashburn-81561582-twwe
+  - DE-Frankfurt am Main-h-9365016-teev
+  - US-Boardman-19017622-tete
+  - US-Dallas-1331761-twvj
+  - ID-Lenteng-38611611-tvdu
   - IT-Rome-229158-tvdn
-  - US-Cheyenne-4923-ttud
-  - IE-Dublin-20320422-twlo
-  - SG-Singapore-h-61465610-tvww
-  - CA-Beauharnois-h-24421012-ttnd
-  - US-Miami-71512382-tvun
-  - US-West Wendover-49686-tvwe
-  - DK-Christianshavn-5245846-tttw
-  - PL-Warsaw-11155413-twtu
+  - US-Phoenix-91539318-twdt
+  - RU-Moscow-243667-twvv
+  - ID-Jakarta-h-917617-tvnn
+  - JP-Tokyo-1372379-tvdj
+  - RU-Moscow-82194322-tvvn
+  - HK-Tai Po-285532-twln
+  - CH-Zurich-7625-twdw
+  - GB-London-175020-tetw
+  - US-San Jose-622194-tejw
+  - US-Cheyenne-4924-twwd
+  - US-Seattle-1457212-tvee
+  - US-Los Angeles-28193-twen
+  - DE-Berlin-10622315-teul
+  - US-Hilton Head Island-7530-twwv
+  - FR-Paris-91316521-tevn
 - name: 前置自动
   type: url-test
   proxies: *id001
@@ -266,26 +270,26 @@ proxy-groups:
   proxies:
   - 前置自动
   - 前置
-  - US-San Jose-622196-twvd
-  - US-Chicago-h-1127348-tewv
-  - EE-Tallinn-15332-tvjj
-  - FR-Paris-91316521-twun
-  - IN-Mumbai-017318822-ttjl
-  - US-Fremont-82602-tvon
-  - DE-Frankfurt am Main-717217219-ttll
-  - US-Hilton Head Island-7530-twwv
-  - US-San Jose-82214-ttwu
-  - RU-Moscow-82194322-tvvn
-  - US-Ashburn-81561582-twwe
+  - DE-Frankfurt am Main-h-9365016-teev
+  - US-Boardman-19017622-tete
+  - US-Dallas-1331761-twvj
+  - ID-Lenteng-38611611-tvdu
   - IT-Rome-229158-tvdn
-  - US-Cheyenne-4923-ttud
-  - IE-Dublin-20320422-twlo
-  - SG-Singapore-h-61465610-tvww
-  - CA-Beauharnois-h-24421012-ttnd
-  - US-Miami-71512382-tvun
-  - US-West Wendover-49686-tvwe
-  - DK-Christianshavn-5245846-tttw
-  - PL-Warsaw-11155413-twtu
+  - US-Phoenix-91539318-twdt
+  - RU-Moscow-243667-twvv
+  - ID-Jakarta-h-917617-tvnn
+  - JP-Tokyo-1372379-tvdj
+  - RU-Moscow-82194322-tvvn
+  - HK-Tai Po-285532-twln
+  - CH-Zurich-7625-twdw
+  - GB-London-175020-tetw
+  - US-San Jose-622194-tejw
+  - US-Cheyenne-4924-twwd
+  - US-Seattle-1457212-tvee
+  - US-Los Angeles-28193-twen
+  - DE-Berlin-10622315-teul
+  - US-Hilton Head Island-7530-twwv
+  - FR-Paris-91316521-tevn
 - name: 代理
   type: select
   proxies:
