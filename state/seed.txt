@@ -1,8 +1,7 @@
-# box-nodes seed — 占位节点，用于验证管线；替换成你自己的订阅链接后即可产出真实节点
-# 支持逐行：vmess:// vless:// trojan:// ss:// ssr:// hysteria2:// tuic://
-# 也支持整段 base64 订阅体直接粘贴进来
-
-vmess://eyJ2IjoiMiIsInBzIjoiU0VFRC1WTUVTUyIsImFkZCI6Ind3dy5jbG91ZGZsYXJlLmNvbSIsInBvcnQiOiI0NDMiLCJpZCI6IjExMTExMTExLTIyMjItMzMzMy00NDQ0LTU1NTU1NTU1NTU1NSIsImFpZCI6IjAiLCJzY3kiOiJhdXRvIiwibmV0Ijoid3MiLCJ0eXBlIjoibm9uZSIsImhvc3QiOiJleGFtcGxlLmNvbSIsInBhdGgiOiIvd3MiLCJ0bHMiOiJ0bHMiLCJzbmkiOiJleGFtcGxlLmNvbSJ9
-vless://11111111-2222-3333-4444-555555555555@1.1.1.1:443?encryption=none&security=tls&sni=example.com&type=ws&host=example.com&path=%2Fws#SEED-VLESS
-trojan://placeholder-password@example.com:443?sni=example.com&type=tcp#SEED-TROJAN
-ss://YWVzLTI1Ni1nY206cGxhY2Vob2xkZXItcGFzc3dvcmQ=@8.8.8.8:443#SEED-SS
+# box-nodes seed — 真实订阅源填这里，或写进 config.json 的 sources
+# 逐行支持: vmess:// vless:// trojan:// ss:// ssr:// hysteria2:// tuic://
+# 也支持整段 base64 订阅体
+#
+# 这里只用于「通用节点池」产物（dist/clash.yaml 等）。
+# 主产物 docs/chain.yaml 的链式代理节点来自 extract_source.py，
+# 从本地机场配置提取，不依赖本文件。
