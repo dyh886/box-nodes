@@ -1,16 +1,16 @@
 {
- "fetchedAt": 1794150368,
+ "fetchedAt": 1794151864,
  "sources": [
   {
    "label": "测试",
    "ok": true,
-   "nodes": 29,
+   "nodes": 31,
    "kind": "clash"
   },
   {
    "label": "家宽",
    "ok": true,
-   "nodes": 206,
+   "nodes": 204,
    "kind": "clash"
   },
   {
@@ -23,9 +23,26 @@
  "count": 20,
  "nodes": [
   {
-   "name": "CH-Zurich-171810-tteu",
+   "name": "CH-Zurich-171810-hhph",
    "type": "vless",
    "server": "46.19.138.214",
+   "port": 443,
+   "uuid": "90157e25-cee1-4217-921e-91f300bc1a24",
+   "flow": "xtls-rprx-vision",
+   "tls": true,
+   "servername": "perevodchiki.su",
+   "skip-cert-verify": true,
+   "client-fingerprint": "firefox",
+   "reality-opts": {
+    "public-key": "1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs",
+    "short-id": "428ef87fd47a3a32"
+   },
+   "qscore": -3
+  },
+  {
+   "name": "CH-Zurich-h-76025-haat",
+   "type": "vless",
+   "server": "179.43.166.190",
    "port": 443,
    "uuid": "90157e25-cee1-4217-921e-91f300bc1a24",
    "flow": "xtls-rprx-vision",
@@ -39,23 +56,7 @@
    "qscore": -3
   },
   {
-   "name": "CH-Zurich-h-76025-ttee",
-   "type": "vless",
-   "server": "179.43.166.190",
-   "port": 443,
-   "uuid": "90157e25-cee1-4217-921e-91f300bc1a24",
-   "flow": "xtls-rprx-vision",
-   "tls": true,
-   "servername": "perevodchiki.su",
-   "client-fingerprint": "chrome",
-   "reality-opts": {
-    "public-key": "1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs",
-    "short-id": "428ef87fd47a3a32"
-   },
-   "qscore": -3
-  },
-  {
-   "name": "CH-Zurich-h-76025-ttnt",
+   "name": "CH-Zurich-h-76025-hhla",
    "type": "vless",
    "server": "prvtch.titun.su",
    "port": 443,
@@ -63,7 +64,7 @@
    "flow": "xtls-rprx-vision",
    "tls": true,
    "servername": "perevodchiki.su",
-   "client-fingerprint": "chrome",
+   "client-fingerprint": "firefox",
    "reality-opts": {
     "public-key": "1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs",
     "short-id": "428ef87fd47a3a32"
@@ -71,34 +72,21 @@
    "qscore": -3
   },
   {
-   "name": "DE-Frankfurt am Main-h-7712-ttnu",
+   "name": "NL-Kerkrade-h-43722410-hlyt",
    "type": "vless",
-   "server": "64.188.66.181",
+   "server": "15b171g.nl7.h1clayd.click",
    "port": 443,
-   "uuid": "f8d52ece-fad4-478d-875d-df6eed3befa7",
-   "flow": "xtls-rprx-vision",
+   "uuid": "cda0862a-0f87-4be9-8ed8-1d0c9e382839",
    "tls": true,
-   "servername": "ge-s-1.pythonmakemigreat.wiki",
+   "servername": "15b171g.nl7.h1clayd.click",
    "client-fingerprint": "chrome",
-   "reality-opts": {
-    "public-key": "5fkwwCKZzMsE6Eb_b3iqluu-1AWIfnYl-p0N3EL9Al8",
-    "short-id": "2c9a2790ad5900b2"
+   "network": "grpc",
+   "grpc-opts": {
+    "grpc-service-name": "5b79e8a94241"
    },
-   "qscore": -3
-  },
-  {
-   "name": "RU-Moscow-243667-twvv",
-   "type": "vless",
-   "server": "92.243.66.79",
-   "port": 443,
-   "uuid": "c5f59ef3-9540-49fa-bd1e-c6c2f79df49a",
-   "flow": "xtls-rprx-vision",
-   "tls": true,
-   "servername": "ru-mow.probe.geomyip.com",
-   "client-fingerprint": "chrome",
    "reality-opts": {
-    "public-key": "siD4oj2gdtLLEphV6fUXb8ueIc2WHVn7msOUhNGPf2o",
-    "short-id": "8d03c10b6a874a9c"
+    "public-key": "zbz--PMjcIC4Ggr3j-ibDf0fzXRTj0lM_HzjPJyMkVE",
+    "short-id": "50a749f0eccb628c"
    },
    "qscore": -3
   },
@@ -121,42 +109,45 @@
    "qscore": -3
   },
   {
-   "name": "CH-Geneva-h-905615-ttoj",
+   "name": "DE-Düsseldorf-96114516-hhly",
    "type": "vless",
-   "server": "62.109.1.5",
-   "port": 2058,
-   "uuid": "4ad9f982-b56a-444a-9684-35ce51307a36",
-   "flow": "xtls-rprx-vision",
+   "server": "cdn.kavosiprotocol.shop",
+   "port": 443,
+   "uuid": "5bb1fda3-0b8a-41d5-a803-b48e180ad718",
    "tls": true,
-   "servername": "www.cloudflare.com",
+   "servername": "cdn.kavosiprotocol.shop",
    "skip-cert-verify": true,
    "client-fingerprint": "chrome",
-   "reality-opts": {
-    "public-key": "lJBsn9ndieTIUBzXkJUhf6O0OE8pm29_z1fUtARwL0s",
-    "short-id": "937255313d6ce673"
+   "network": "ws",
+   "ws-opts": {
+    "path": "/@KVPROTOCOlVPN--@KVPROTOCOlVPN--@KVPROTOCOlVPN--@KVPROTOCOlVPN--ws/s_48738e13cc",
+    "headers": {
+     "Host": "cdn.kavosiprotocol.shop"
+    }
    },
    "qscore": -2
   },
   {
-   "name": "DK-Rødding-323325318-ttlj",
+   "name": "JP-Minato-ku-h-61713914-hhpt",
    "type": "vless",
-   "server": "193.233.253.180",
-   "port": 8444,
-   "uuid": "a346c521-7a7f-452b-9356-a4893feb5982",
+   "server": "saas.sin.fan",
+   "port": 443,
+   "uuid": "5d7b401c-78fa-4254-872e-6d42bf7e75ec",
    "tls": true,
-   "servername": "github.com",
-   "client-fingerprint": "firefox",
-   "network": "grpc",
-   "grpc-opts": {
-    "grpc-service-name": "GunService"
-   },
-   "reality-opts": {
-    "public-key": "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0"
+   "servername": "v2n4.11676767.xyz",
+   "skip-cert-verify": true,
+   "client-fingerprint": "chrome",
+   "network": "ws",
+   "ws-opts": {
+    "path": "/documents/zh-tw/video/TkZDG0RVE1kPREsSEQ8YEEBHSEpZUwhIFF4WRBIIFUkVRQQQRhNYEFASC0FbR1ZETQ9cXUZAQ1laV0cXFBJEXFZeBVAHBFNUA0pYElFeVhQDWV0SQwEWQlpGWRoNA1cVBBk=",
+    "headers": {
+     "Host": "v2n4.11676767.xyz"
+    }
    },
    "qscore": -2
   },
   {
-   "name": "SG-Singapore-825312510-ttvd",
+   "name": "SG-Singapore-825312510-haxt",
    "type": "vless",
    "server": "2407:cdc0:d010:27bd::",
    "port": 30454,
@@ -293,21 +284,13 @@
    "qscore": -2
   },
   {
-   "name": "FR-Paris-h-23610918-ttjo",
+   "name": "FR-Paris-h-23610918-hapj",
    "type": "vless",
    "server": "w.geogame.ir",
    "port": 2053,
    "uuid": "fbda2834-b1e7-4148-afb9-deda31036a30",
    "tls": true,
    "servername": "w.geogame.ir",
-   "qscore": -1
-  },
-  {
-   "name": "US-Pasadena-h-4517624-tten",
-   "type": "vless",
-   "server": "jp.sofast.live",
-   "port": 52683,
-   "uuid": "399b6b23-cc40-4831-a494-61948e2df133",
    "qscore": -1
   },
   {
@@ -347,11 +330,49 @@
    },
    "client-fingerprint": "chrome",
    "qscore": -1
+  },
+  {
+   "name": "自建·加拿大-03 ×0.1",
+   "type": "vless",
+   "server": "139.180.206.80",
+   "port": 8443,
+   "uuid": "0bc7c8a1-fd2b-4346-8544-cb683278b8e5",
+   "udp": false,
+   "tls": true,
+   "servername": "us1.1am.cc.cd",
+   "network": "ws",
+   "ws-opts": {
+    "path": "/492fbb0e1ab5996d",
+    "headers": {
+     "Host": "us1.1am.cc.cd"
+    }
+   },
+   "client-fingerprint": "chrome",
+   "qscore": -1
+  },
+  {
+   "name": "自建·加拿大-04 ×0.1",
+   "type": "vless",
+   "server": "103.85.27.100",
+   "port": 8443,
+   "uuid": "0bc7c8a1-fd2b-4346-8544-cb683278b8e5",
+   "udp": false,
+   "tls": true,
+   "servername": "us1.1am.cc.cd",
+   "network": "ws",
+   "ws-opts": {
+    "path": "/492fbb0e1ab5996d",
+    "headers": {
+     "Host": "us1.1am.cc.cd"
+    }
+   },
+   "client-fingerprint": "chrome",
+   "qscore": -1
   }
  ],
- "rankedAt": 1794150369,
+ "rankedAt": 1794151865,
  "stats": {
-  "raw": 285,
+  "raw": 280,
   "kept": 20
  }
 }

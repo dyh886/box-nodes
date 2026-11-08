@@ -49,6 +49,7 @@
       "tls": {
         "enabled": true,
         "server_name": "perevodchiki.su",
+        "insecure": true,
         "reality": {
           "enabled": true,
           "public_key": "1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs",
@@ -77,7 +78,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       }
     },
@@ -98,54 +99,36 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       }
     },
     {
       "tag": "n03",
       "type": "vless",
-      "server": "64.188.66.181",
+      "server": "15b171g.nl7.h1clayd.click",
       "server_port": 443,
-      "uuid": "f8d52ece-fad4-478d-875d-df6eed3befa7",
-      "flow": "xtls-rprx-vision",
+      "uuid": "cda0862a-0f87-4be9-8ed8-1d0c9e382839",
       "tls": {
         "enabled": true,
-        "server_name": "ge-s-1.pythonmakemigreat.wiki",
+        "server_name": "15b171g.nl7.h1clayd.click",
         "reality": {
           "enabled": true,
-          "public_key": "5fkwwCKZzMsE6Eb_b3iqluu-1AWIfnYl-p0N3EL9Al8",
-          "short_id": "2c9a2790ad5900b2"
+          "public_key": "zbz--PMjcIC4Ggr3j-ibDf0fzXRTj0lM_HzjPJyMkVE",
+          "short_id": "50a749f0eccb628c"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "5b79e8a94241"
       }
     },
     {
       "tag": "n04",
-      "type": "vless",
-      "server": "92.243.66.79",
-      "server_port": 443,
-      "uuid": "c5f59ef3-9540-49fa-bd1e-c6c2f79df49a",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru-mow.probe.geomyip.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "siD4oj2gdtLLEphV6fUXb8ueIc2WHVn7msOUhNGPf2o",
-          "short_id": "8d03c10b6a874a9c"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "n05",
       "type": "vless",
       "server": "179.43.166.190",
       "server_port": 443,
@@ -166,53 +149,53 @@
       }
     },
     {
-      "tag": "n06",
+      "tag": "n05",
       "type": "vless",
-      "server": "62.109.1.5",
-      "server_port": 2058,
-      "uuid": "4ad9f982-b56a-444a-9684-35ce51307a36",
-      "flow": "xtls-rprx-vision",
+      "server": "cdn.kavosiprotocol.shop",
+      "server_port": 443,
+      "uuid": "5bb1fda3-0b8a-41d5-a803-b48e180ad718",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
+        "server_name": "cdn.kavosiprotocol.shop",
         "insecure": true,
-        "reality": {
-          "enabled": true,
-          "public_key": "lJBsn9ndieTIUBzXkJUhf6O0OE8pm29_z1fUtARwL0s",
-          "short_id": "937255313d6ce673"
-        },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/@KVPROTOCOlVPN--@KVPROTOCOlVPN--@KVPROTOCOlVPN--@KVPROTOCOlVPN--ws/s_48738e13cc",
+        "headers": {
+          "Host": "cdn.kavosiprotocol.shop"
+        }
+      }
+    },
+    {
+      "tag": "n06",
+      "type": "vless",
+      "server": "saas.sin.fan",
+      "server_port": 443,
+      "uuid": "5d7b401c-78fa-4254-872e-6d42bf7e75ec",
+      "tls": {
+        "enabled": true,
+        "server_name": "v2n4.11676767.xyz",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/documents/zh-tw/video/TkZDG0RVE1kPREsSEQ8YEEBHSEpZUwhIFF4WRBIIFUkVRQQQRhNYEFASC0FbR1ZETQ9cXUZAQ1laV0cXFBJEXFZeBVAHBFNUA0pYElFeVhQDWV0SQwEWQlpGWRoNA1cVBBk=",
+        "headers": {
+          "Host": "v2n4.11676767.xyz"
         }
       }
     },
     {
       "tag": "n07",
-      "type": "vless",
-      "server": "193.233.253.180",
-      "server_port": 8444,
-      "uuid": "a346c521-7a7f-452b-9356-a4893feb5982",
-      "tls": {
-        "enabled": true,
-        "server_name": "github.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "GunService"
-      }
-    },
-    {
-      "tag": "n08",
       "type": "vless",
       "server": "2407:cdc0:d010:27bd::",
       "server_port": 30454,
@@ -233,7 +216,7 @@
       }
     },
     {
-      "tag": "n09",
+      "tag": "n08",
       "type": "vless",
       "server": "198.16.113.219",
       "server_port": 8443,
@@ -254,7 +237,7 @@
       }
     },
     {
-      "tag": "n10",
+      "tag": "n09",
       "type": "vless",
       "server": "51.158.206.80",
       "server_port": 23576,
@@ -275,7 +258,7 @@
       }
     },
     {
-      "tag": "n11",
+      "tag": "n10",
       "type": "vless",
       "server": "45.76.155.179",
       "server_port": 443,
@@ -290,7 +273,7 @@
       }
     },
     {
-      "tag": "n12",
+      "tag": "n11",
       "type": "vless",
       "server": "ww13.levikogjgfdd.ir",
       "server_port": 23576,
@@ -311,7 +294,7 @@
       }
     },
     {
-      "tag": "n13",
+      "tag": "n12",
       "type": "vless",
       "server": "15.204.97.197",
       "server_port": 23576,
@@ -332,7 +315,7 @@
       }
     },
     {
-      "tag": "n14",
+      "tag": "n13",
       "type": "vless",
       "server": "161.114.15.215",
       "server_port": 8443,
@@ -353,7 +336,7 @@
       }
     },
     {
-      "tag": "n15",
+      "tag": "n14",
       "type": "vless",
       "server": "161.114.15.215",
       "server_port": 30449,
@@ -374,7 +357,7 @@
       }
     },
     {
-      "tag": "n16",
+      "tag": "n15",
       "type": "vless",
       "server": "w.geogame.ir",
       "server_port": 2053,
@@ -385,14 +368,7 @@
       }
     },
     {
-      "tag": "n17",
-      "type": "vless",
-      "server": "jp.sofast.live",
-      "server_port": 52683,
-      "uuid": "399b6b23-cc40-4831-a494-61948e2df133"
-    },
-    {
-      "tag": "n18",
+      "tag": "n16",
       "type": "vless",
       "server": "209.33.172.78",
       "server_port": 8443,
@@ -414,10 +390,54 @@
       }
     },
     {
-      "tag": "n19",
+      "tag": "n17",
       "type": "vless",
       "server": "14.49.249.113",
       "server_port": 30083,
+      "uuid": "0bc7c8a1-fd2b-4346-8544-cb683278b8e5",
+      "tls": {
+        "enabled": true,
+        "server_name": "us1.1am.cc.cd",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/492fbb0e1ab5996d",
+        "headers": {
+          "Host": "us1.1am.cc.cd"
+        }
+      }
+    },
+    {
+      "tag": "n18",
+      "type": "vless",
+      "server": "139.180.206.80",
+      "server_port": 8443,
+      "uuid": "0bc7c8a1-fd2b-4346-8544-cb683278b8e5",
+      "tls": {
+        "enabled": true,
+        "server_name": "us1.1am.cc.cd",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/492fbb0e1ab5996d",
+        "headers": {
+          "Host": "us1.1am.cc.cd"
+        }
+      }
+    },
+    {
+      "tag": "n19",
+      "type": "vless",
+      "server": "103.85.27.100",
+      "server_port": 8443,
       "uuid": "0bc7c8a1-fd2b-4346-8544-cb683278b8e5",
       "tls": {
         "enabled": true,
