@@ -12,19 +12,16 @@
   ],
   "outbounds": [
     {
-      "type": "trojan",
-      "tag": "01 SEED-TROJAN 3ms",
-      "server": "example.com",
+      "type": "shadowsocks",
+      "tag": "01 SEED-SS 172ms",
+      "server": "8.8.8.8",
       "server_port": 443,
-      "password": "placeholder-password",
-      "tls": {
-        "enabled": true,
-        "server_name": "example.com"
-      }
+      "method": "aes-256-gcm",
+      "password": "placeholder-password"
     },
     {
       "type": "vless",
-      "tag": "02 SEED-VLESS 3ms",
+      "tag": "02 SEED-VLESS 191ms",
       "server": "1.1.1.1",
       "server_port": 443,
       "uuid": "11111111-2222-3333-4444-555555555555",
@@ -38,16 +35,8 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "03 SEED-SS 3ms",
-      "server": "8.8.8.8",
-      "server_port": 443,
-      "method": "aes-256-gcm",
-      "password": "placeholder-password"
-    },
-    {
       "type": "vmess",
-      "tag": "04 SEED-VMESS 3ms",
+      "tag": "03 SEED-VMESS 197ms",
       "server": "www.cloudflare.com",
       "server_port": 443,
       "uuid": "11111111-2222-3333-4444-555555555555",
@@ -63,6 +52,17 @@
         "headers": {
           "Host": "example.com"
         }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "04 SEED-TROJAN 210ms",
+      "server": "example.com",
+      "server_port": 443,
+      "password": "placeholder-password",
+      "tls": {
+        "enabled": true,
+        "server_name": "example.com"
       }
     },
     {

@@ -1,0 +1,45 @@
+[10:36:03] step 1/3 collect
+[10:36:06] step 2/3 probe
+[10:36:08] step 3/3 export
+Traceback (most recent call last):
+  File "/home/user/box-nodes/sync.py", line 126, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/user/box-nodes/sync.py", line 93, in main
+    run([py, "pool.py", "export"])
+  File "/home/user/box-nodes/sync.py", line 37, in run
+    raise RuntimeError(f"{' '.join(cmd)} -> {p.returncode}\n{p.stdout}\n{p.stderr}")
+RuntimeError: /usr/bin/python3 pool.py export -> 1
+[10:36:09] export: no nodes, nothing written
+
+
+[10:38:31] step 1/3 collect
+[10:38:34] step 2/3 probe
+[10:38:38] step 3/3 export
+[10:38:39] nodes=4 avg=721.1ms protos={'trojan': 1, 'vless': 1, 'ss': 1, 'vmess': 1}
+[10:38:43] pushed
+[10:38:44] purge dist/meta.json -> 200
+[10:38:45] purge dist/clash.yaml -> 200
+[10:38:45] purge dist/links.txt -> 200
+[10:38:46] purge dist/sub.base64.txt -> 200
+[10:38:46] purge dist/singbox.json -> 200
+[10:38:49] cdn dist/meta.json -> 200 347B
+[10:38:49] cdn dist/clash.yaml -> 200 1525B
+[10:38:49] cdn verified 2/2
+[10:45:35] step 1/3 collect
+[10:45:38] step 2/3 probe
+[10:45:41] step 3/3 export
+[10:45:42] nodes=4 avg=432.8ms protos={'trojan': 1, 'vless': 1, 'ss': 1, 'vmess': 1}
+[10:45:46] pushed
+[10:45:47] purge dist/meta.json -> 200
+[10:45:48] purge dist/clash.yaml -> 200
+[10:45:49] purge dist/links.txt -> 200
+[10:45:49] purge dist/sub.base64.txt -> 200
+[10:45:50] purge dist/singbox.json -> 200
+[10:46:07] cdn dist/meta.json -> FAIL HTTP Error 404: Not Found
+[10:46:08] cdn dist/clash.yaml -> 200 1525B
+[10:46:08] cdn verified 1/2
+[10:51:03] step 1/3 collect
+[10:51:05] step 2/3 probe
+[10:51:06] step 3/3 export
+[10:51:07] nodes=4 avg=193.2ms protos={'ss': 1, 'vless': 1, 'vmess': 1, 'trojan': 1}
