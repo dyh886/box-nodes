@@ -531,8 +531,76 @@ def cmd_collect(_args):
 # probe
 # --------------------------------------------------------------------------
 
-def tcp_probe(server, port, timeout=PROBE_TIMEOUT):
-    """TCP connect 测活，返回 (ok, latency_ms)。"""
+def _proxy_url():
+    for v in ("https_proxy", "HTTPS_PROXY", "http_proxy", "HTTP_PROXY", "all_proxy", "ALL_PROXY"):
+        val = os.environ.get(v)
+        if val:
+            return val
+    return None
+
+
+def _parse_proxy(purl):
+    if "://" not in purl:
+        purl = "http://" + purl
+    u = urllib.parse.urlparse(purl)
+    return u.hostname, u.port or 8080, u.username, u.password
+
+
+def _probe_via_proxy(server, port, timeout=PROBE_TIMEOUT):
+    """
+    走出口代理的 CONNECT 隧道，打到节点的【真实 host:port】判活。
+
+    沙箱化的云机（如 box）没有直连出口，DNS 也在代理侧解析。CONNECT 由代理
+    完成 DNS + TCP，所以这既能验证域名可解析，也能验证目标端口真的开着，
+    且不发送任何协议数据。
+    """
+    purl = _proxy_url()
+    if not purl:
+        return _probe_direct(server, port, timeout)
+
+    phost, pport, puser, ppass = _parse_proxy(purl)
+    t0 = time.perf_counter()
+    sock = None
+    try:
+        sock = socket.create_connection((phost, pport), timeout=timeout)
+        sock.settimeout(timeout)
+        target = f"[{server}]:{port}" if ":" in server else f"{server}:{port}"
+        req = f"CONNECT {target} HTTP/1.1\r\nHost: {target}\r\n"
+        if puser:
+            tok = base64.b64encode(f"{puser}:{ppass or ''}".encode()).decode()
+            req += f"Proxy-Authorization: Basic {tok}\r\n"
+        req += "Proxy-Connection: keep-alive\r\n\r\n"
+        sock.sendall(req.encode())
+
+        buf = b""
+        deadline = time.time() + timeout
+        while b"\r\n\r\n" not in buf and time.time() < deadline:
+            chunk = sock.recv(512)
+            if not chunk:
+                break
+            buf += chunk
+            if len(buf) > 8192:
+                break
+        m = re.match(rb"HTTP/\d\.\d\s+(\d{3})", buf)
+        if not m:
+            return False, None
+        code = int(m.group(1))
+        # 200 = 隧道建立成功；403/407 是代理策略，非节点问题
+        if code == 200:
+            return True, round((time.perf_counter() - t0) * 1000, 1)
+        return False, None
+    except Exception:  # noqa: BLE001
+        return False, None
+    finally:
+        if sock:
+            try:
+                sock.close()
+            except Exception:  # noqa: BLE001
+                pass
+
+
+def _probe_direct(server, port, timeout=PROBE_TIMEOUT):
+    """真正的 TCP connect 测活（仅在有直连出口的机器上有意义）。"""
     t0 = time.perf_counter()
     try:
         infos = socket.getaddrinfo(server, port, proto=socket.IPPROTO_TCP)
@@ -550,17 +618,41 @@ def tcp_probe(server, port, timeout=PROBE_TIMEOUT):
         return False, None
 
 
+_PROXY_VARS = ("https_proxy", "HTTPS_PROXY", "http_proxy", "HTTP_PROXY", "all_proxy", "ALL_PROXY")
+
+
+def has_egress_proxy():
+    return any(os.environ.get(v) for v in _PROXY_VARS)
+
+
+def tcp_probe(server, port, timeout=PROBE_TIMEOUT, mode="auto"):
+    """
+    mode: auto | direct | proxy
+      auto   有出口代理就用代理隧道，否则直连
+      direct 强制直连（本机有真实出口时用）
+      proxy  强制走代理隧道
+    """
+    if mode == "proxy" or (mode == "auto" and has_egress_proxy()):
+        return _probe_via_proxy(server, port, timeout)
+    return _probe_direct(server, port, timeout)
+
+
 def cmd_probe(args):
     with open(STATE_FILE, encoding="utf-8") as f:
         state = json.load(f)
     nodes = state["nodes"]
-    log(f"probe: {len(nodes)} nodes, workers={args.workers}, timeout={args.timeout}s")
+    mode = args.mode
+    if mode == "auto":
+        mode = "proxy" if has_egress_proxy() else "direct"
+    log(f"probe: {len(nodes)} nodes, workers={args.workers}, "
+        f"timeout={args.timeout}s, mode={mode}")
 
     def work(n):
-        ok, ms = tcp_probe(n["server"], n["port"], args.timeout)
+        ok, ms = tcp_probe(n["server"], n["port"], args.timeout, mode)
         n["alive"] = ok
         n["latencyMs"] = ms
         n["probedAt"] = int(time.time())
+        n["probeMode"] = mode
         return n
 
     alive = []
@@ -918,6 +1010,8 @@ def main():
     p.add_argument("--workers", type=int, default=64)
     p.add_argument("--timeout", type=float, default=PROBE_TIMEOUT)
     p.add_argument("--keep", type=int, default=60)
+    p.add_argument("--mode", choices=("auto", "direct", "proxy"), default="auto",
+                   help="auto: 有出口代理就用代理隧道（沙箱云机必需）")
     p.set_defaults(fn=cmd_probe)
 
     sub.add_parser("export").set_defaults(fn=cmd_export)
