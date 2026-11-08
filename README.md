@@ -4,19 +4,41 @@
 
 ## 订阅地址（固定不变，内容自动更新）
 
+**主入口 — GitHub Pages（推荐，秒级生效）**
+
 | 格式 | URL |
 |---|---|
-| Clash / Clash Verge / Mihomo | `https://cdn.jsdelivr.net/gh/dyh886/box-nodes@latest/dist/clash.yaml` |
-| v2rayN / Shadowrocket / NekoBox（base64 订阅） | `https://cdn.jsdelivr.net/gh/dyh886/box-nodes@latest/dist/sub.base64.txt` |
-| 明文链接列表 | `https://cdn.jsdelivr.net/gh/dyh886/box-nodes@latest/dist/links.txt` |
-| sing-box | `https://cdn.jsdelivr.net/gh/dyh886/box-nodes@latest/dist/singbox.json` |
-| 状态元信息 | `https://cdn.jsdelivr.net/gh/dyh886/box-nodes@latest/dist/meta.json` |
+| Clash / Clash Verge / Mihomo | `https://dyh886.github.io/box-nodes/clash.yaml` |
+| v2rayN / Shadowrocket / NekoBox（base64 订阅） | `https://dyh886.github.io/box-nodes/sub.base64.txt` |
+| 明文链接列表 | `https://dyh886.github.io/box-nodes/links.txt` |
+| sing-box | `https://dyh886.github.io/box-nodes/singbox.json` |
+| 状态元信息 | `https://dyh886.github.io/box-nodes/meta.json` |
 
-> **必须用 `@latest`，不要用 `@main`。** jsDelivr 对 `@main` 分支引用有长 TTL 缓存（实测数十分钟不更新，`?v=` 之类的 query 也无效）；`@latest` 会解析到最新 release/commit，实测提交后立即生效。详见下方「CDN 缓存」。
->
+**备用 — jsDelivr 镜像**（国内 CDN 加速；**必须用 `@latest`**，`@main` 有长缓存）
+
+```
+https://cdn.jsdelivr.net/gh/dyh886/box-nodes@latest/dist/clash.yaml
+```
+
+**兜底 — raw.githubusercontent**（无缓存、永远最新，但国内不稳）
+
+```
+https://raw.githubusercontent.com/dyh886/box-nodes/main/docs/clash.yaml
+```
+
 > 客户端只需配置一次；上游每两小时刷新，客户端按自己的间隔拉取即可。
 
-**备用入口（CDN 出问题时）**：`https://raw.githubusercontent.com/dyh886/box-nodes/main/dist/...` — 无缓存，永远最新，但国内可能不稳。
+### CDN 缓存实测结论（重要）
+
+| 入口 | 更新延迟 | 结论 |
+|---|---|---|
+| `dyh886.github.io/box-nodes/` | 提交后 ~60s | ✅ **主入口** |
+| `jsdelivr ...@latest/` | 数十分钟 | ⚠️ 备用，有缓存 |
+| `jsdelivr ...@main/` | 数十分钟，`purge` 与 `?v=` 均无效 | ❌ 不用 |
+| `jsdelivr ...@<commit-sha>/` | 立即 | ✅ 需要对精确版本时用 |
+| `raw.githubusercontent.com` | 立即 | ✅ 兜底 |
+
+所以架构定为：**main 分支存源码 + dist/（jsDelivr 镜像）；docs/ 强推到 gh-pages，由 Pages 直出。** 两条通道各有缓存特性，Pages 承担"随时同步"，jsDelivr 承担"国内加速"。
 
 ## 架构
 
@@ -24,12 +46,13 @@
 上游订阅源 ──┐
 本地种子文件 ─┼─> pool.py collect ──> state/nodes.json
              │        (解析+去重)
-             ├─> pool.py probe  ──> 并发 TCP 探活 + 延迟排序 + 截断
-             └─> pool.py export ──> dist/{clash.yaml, links.txt, sub.base64.txt, singbox.json, meta.json}
+             ├─> pool.py probe  ──> 并发探活 + 延迟排序 + 截断
+             └─> pool.py export ──> dist/  (jsDelivr 镜像)
+                                └─> docs/  (Pages 直出)
                                           │
-                                    sync.py git push
-                                          │
-                                   jsDelivr 回源分发
+                                    sync.py 双通道推送
+                                    ├─ main  ──> jsDelivr
+                                    └─ gh-pages ──> GitHub Pages（秒级生效）
 ```
 
 三个职责分离，任一环节都能单独跑、单独调试。
