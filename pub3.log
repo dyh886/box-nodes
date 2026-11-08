@@ -22,3 +22,8 @@
 [15:06:11] step 4/5 build sing-box json
 [15:06:12] singbox.json built
 [15:06:12] step 5/5 publish
+[15:06:19] main pushed
+[15:06:24] pages pushed
+[15:06:41] pages chain.yaml -> 200 9828B
+[15:06:41] pages singbox.json -> 200 1681B
+[15:06:41] pages verified 2/1

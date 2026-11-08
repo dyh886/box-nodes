@@ -206,16 +206,18 @@ def main():
     stamp = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
     doc = {
         "log": {"level": "warn", "timestamp": True},
+        # sing-box 1.12+ 要求新式 DNS server 格式：
+        #   旧：{"address": "https://1.1.1.1/dns-query"}
+        #   新：{"type": "https", "server": "1.1.1.1"}
+        # 旧格式 1.12 弃用、1.14 移除，用旧写法会直接 decode 失败。
         "dns": {
             "servers": [
-                {"tag": "dns_proxy", "address": "https://1.1.1.1/dns-query",
-                 "detour": G_PROXY},
-                {"tag": "dns_direct", "address": "https://223.5.5.5/dns-query",
-                 "detour": "direct"},
+                {"type": "https", "tag": "dns-proxy",
+                 "server": "1.1.1.1", "detour": G_PROXY},
+                {"type": "https", "tag": "dns-direct",
+                 "server": "223.5.5.5", "detour": "direct"},
             ],
-            "rules": [{"outbound": "any", "server": "dns_direct"}],
-            "final": "dns_proxy",
-            "strategy": "prefer_ipv4",
+            "final": "dns-proxy",
         },
         "inbounds": [
             {"type": "tun", "tag": "tun-in",
@@ -226,15 +228,17 @@ def main():
         ],
         "outbounds": outbounds,
         "route": {
-            "rules": [{"ip_is_private": True, "outbound": "direct"}],
+            "rules": [
+                {"action": "route", "ip_is_private": True, "outbound": "direct"},
+            ],
             "final": G_PROXY,
             "auto_detect_interface": True,
+            # 1.12 起 outbound 解析域名要显式指定 resolver，否则域名节点无法解析
+            "default_domain_resolver": "dns-direct",
         },
         "experimental": {
             "cache_file": {"enabled": True},
-            "clash_api": {"external_controller": "127.0.0.1:9090"},
         },
-        # 备注信息（sing-box 会忽略未知键，但部分客户端会报错，故放 _meta 并在发布时剔除）
     }
 
     text = json.dumps(doc, ensure_ascii=False, indent=2)
@@ -250,12 +254,22 @@ def main():
     back = json.loads(text)
     tags_all = [o["tag"] for o in back["outbounds"]]
     lnode = next((o for o in back["outbounds"] if o["tag"] == ltag), None)
+
+    dns_servers = back.get("dns", {}).get("servers", [])
+    dns_new_format = all(
+        isinstance(s, dict) and "type" in s and "address" not in s
+        for s in dns_servers
+    )
+
     checks = [
         ("JSON 可解析", True),
+        ("DNS 用 1.12+ 新格式", dns_new_format),
         ("四组齐备", all(g in tags_all for g in (G_FRONT, G_AUTO, G_MASTER, G_PROXY))),
         ("落地挂 detour", bool(lnode) and lnode.get("detour") == G_MASTER),
         ("落地端口正确", bool(lnode) and lnode["server_port"] == int(cfg["landing_node"]["port"])),
         ("route.final 指向代理", back["route"]["final"] == G_PROXY),
+        ("有 default_domain_resolver", "default_domain_resolver" in back["route"]),
+        ("无 legacy clash_api", "clash_api" not in back.get("experimental", {})),
     ]
     ok = True
     for label, c in checks:
