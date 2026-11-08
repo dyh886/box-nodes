@@ -1,146 +1,121 @@
 # box-nodes
 
-每两小时自动刷新一次的代理节点池，产物通过 **jsDelivr CDN** 分发，任何设备只要订阅一个固定 URL 即可随时拿到最新节点。
+链式代理订阅 + 通用节点池。云电脑每 2 小时刷新并发布，任何设备订阅一个固定 URL 即可随时同步。
 
-## 订阅地址（固定不变，内容自动更新）
+## 主产物：链式代理订阅
 
-**主入口 — GitHub Pages（推荐，秒级生效）**
+**订阅地址（固定，内容自动更新）**
+
+```
+https://dyh886.github.io/box-nodes/chain.yaml
+```
+
+备用（jsDelivr 镜像，`@main` 有缓存，需 purge）：
+
+```
+https://cdn.jsdelivr.net/gh/dyh886/box-nodes@main/dist/chain.yaml
+```
+
+### 链路拓扑
+
+```
+本机 / 手机
+    ↓
+前置节点（157 个可选，手动或自动测速）
+    ↓
+落地 DediRock-LA  107.172.186.223:443  ← 唯一出口
+    ↓
+外网
+```
+
+落地节点带 `dialer-proxy: 前置总控`，所以流量必然先过前置、再由前置连到落地。
+**落地是唯一出口**，前置只负责中转，不暴露真实来源。
+
+### 四个界面（proxy-groups）
+
+| 组名 | 类型 | 作用 |
+|---|---|---|
+| `前置` | select | 手动挑一个前置节点（157 个） |
+| `前置自动` | url-test | 自动测速选最快前置（60 个候选，180s 间隔） |
+| `前置总控` | select | **链式锚点**，落地节点的 `dialer-proxy` 指向它 |
+| `代理` | select | 最终出口，选 `DediRock-LA` 走完整链路 |
+
+规则：`MATCH,代理`，全部流量走代理组。
+
+### 落地节点参数
+
+```
+name:    DediRock-LA
+type:    vless
+server:  107.172.186.223
+port:    443
+flow:    xtls-rprx-vision
+tls:     true
+sni:     www.apple.com
+reality: public-key / short-id 见配置
+dialer-proxy: 前置总控
+```
+
+## 副产物：通用节点池（可选）
+
+`state/seed.txt` 或 `config.json` 的 `sources` 里配了真实订阅时才产出：
 
 | 格式 | URL |
 |---|---|
-| Clash / Clash Verge / Mihomo | `https://dyh886.github.io/box-nodes/clash.yaml` |
-| v2rayN / Shadowrocket / NekoBox（base64 订阅） | `https://dyh886.github.io/box-nodes/sub.base64.txt` |
-| 明文链接列表 | `https://dyh886.github.io/box-nodes/links.txt` |
+| Clash | `https://dyh886.github.io/box-nodes/clash.yaml` |
+| base64 订阅 | `https://dyh886.github.io/box-nodes/sub.base64.txt` |
 | sing-box | `https://dyh886.github.io/box-nodes/singbox.json` |
-| 状态元信息 | `https://dyh886.github.io/box-nodes/meta.json` |
 
-**备用 — jsDelivr 镜像**（国内 CDN 加速；**必须用 `@latest`**，`@main` 有长缓存）
-
-```
-https://cdn.jsdelivr.net/gh/dyh886/box-nodes@latest/dist/clash.yaml
-```
-
-**兜底 — raw.githubusercontent**（无缓存、永远最新，但国内不稳）
-
-```
-https://raw.githubusercontent.com/dyh886/box-nodes/main/docs/clash.yaml
-```
-
-> 客户端只需配置一次；上游每两小时刷新，客户端按自己的间隔拉取即可。
-
-### CDN 缓存实测结论（重要）
-
-| 入口 | 更新延迟 | 结论 |
-|---|---|---|
-| `dyh886.github.io/box-nodes/` | 提交后 ~60s | ✅ **主入口** |
-| `jsdelivr ...@latest/` | 数十分钟 | ⚠️ 备用，有缓存 |
-| `jsdelivr ...@main/` | 数十分钟，`purge` 与 `?v=` 均无效 | ❌ 不用 |
-| `jsdelivr ...@<commit-sha>/` | 立即 | ✅ 需要对精确版本时用 |
-| `raw.githubusercontent.com` | 立即 | ✅ 兜底 |
-
-所以架构定为：**main 分支存源码 + dist/（jsDelivr 镜像）；docs/ 强推到 gh-pages，由 Pages 直出。** 两条通道各有缓存特性，Pages 承担"随时同步"，jsDelivr 承担"国内加速"。
-
-## 架构
-
-```
-上游订阅源 ──┐
-本地种子文件 ─┼─> pool.py collect ──> state/nodes.json
-             │        (解析+去重)
-             ├─> pool.py probe  ──> 并发探活 + 延迟排序 + 截断
-             └─> pool.py export ──> dist/  (jsDelivr 镜像)
-                                └─> docs/  (Pages 直出)
-                                          │
-                                    sync.py 双通道推送
-                                    ├─ main  ──> jsDelivr
-                                    └─ gh-pages ──> GitHub Pages（秒级生效）
-```
-
-三个职责分离，任一环节都能单独跑、单独调试。
+没配源时自动跳过，不影响主产物。
 
 ## 组件
 
-### `pool.py` — 采集 / 探活 / 导出
+| 文件 | 作用 |
+|---|---|
+| `extract_source.py` | 从本地机场 profile 用 PyYAML 提取前置/静态住宅/落地节点 |
+| `build_chain.py` | 生成四层链式代理配置，内置 8 项结构自检 |
+| `pool.py` | 通用节点池：collect / probe / export |
+| `sync.py` | 编排全流程 + 双通道发布（main / gh-pages） |
 
-纯 Python 标准库，无第三方依赖（云机没有 pip3）。
+### 提取器的两个坑（已修）
 
-**支持的节点格式**
+手写 YAML 解析曾踩过：
 
-| 协议 | 链接 | Clash YAML |
+1. `alpn:\n  - http/1.1` 的列表项被误判成新节点 → 产生空名假节点
+2. 原始块缩进不统一（有的顶格、有的两格）→ 拼接后 YAML 非法
+
+现在用 `yaml.safe_load` 解析、`yaml.dump` 序列化，不再复用原始文本。
+
+### 发布双通道
+
+| 通道 | 延迟 | 用途 |
 |---|---|---|
-| vmess | ✅ base64 JSON | ✅ |
-| vless | ✅ 含 Reality (`pbk`/`sid`/`fp`) | ✅ |
-| trojan | ✅ | ✅ |
-| shadowsocks | ✅ 两种 userinfo 写法 | ✅ |
-| shadowsocksR | ✅ | — |
-| hysteria2 | ✅ | ✅ |
-| tuic | ✅ | ✅ |
-
-**来源类型自动嗅探**：base64 整段订阅、明文链接列表、Clash YAML（内置极简 YAML 子集解析器，不引 PyYAML）。
-
-**去重指纹** = `sha1(protocol, server, port, uuid|password, network, path, sni, security, publicKey)` 取前 12 位。同一条线路从多个源进来只留一份，且排序稳定，避免每次 commit 产生无意义 diff。
-
-**探活**：`ThreadPoolExecutor` 并发 TCP connect，默认 64 并发 / 5s 超时。只测 TCP 可达性与延迟，不做协议握手——快，且不会向上游暴露探测行为。
-
-```bash
-python pool.py collect                    # 拉取+去重 -> state/nodes.json
-python pool.py probe --workers 64 --keep 60
-python pool.py export                     # -> dist/
-```
-
-### `sync.py` — 编排 + 发布
-
-```bash
-python sync.py              # 全流程 + commit/push + jsDelivr purge/verify
-python sync.py --dry-run    # 只跑管线，不发布
-python sync.py --no-probe   # 跳过探活
-```
-
-推送后主动调用 `purge.jsdelivr.net` 让 CDN 立即回源，再 GET 一次产物确认可读。
-
-### `config.json` — 源配置
-
-```json
-{
-  "sources": [
-    { "name": "my-sub", "url": "https://.../sub?token=xxx", "kind": "auto", "enabled": true },
-    { "name": "local",  "file": "state/seed.txt",           "kind": "auto", "enabled": true }
-  ]
-}
-```
-
-`kind` 可选 `auto` / `clash` / `base64`。`enabled: false` 可临时停用某个源。
+| GitHub Pages (`dyh886.github.io`) | 提交后 ~60s | **主入口** |
+| jsDelivr `@main` | 有缓存，purge 可刷新 | 国内加速 |
+| `raw.githubusercontent.com` | 立即 | 兜底/调试 |
 
 ## 定时
 
-节点池每两小时刷新，由云电脑（box）上的 **systemd timer** 触发：
+云电脑上 systemd timer 每 2 小时跑一次：
 
 ```
-box-nodes-sync.timer   →  OnCalendar=*-*-* 00/2:05:00  (UTC), Persistent=true
+box-nodes-sync.timer   →  OnCalendar=*-*-* 00/2:05:00 (UTC), Persistent=true
 box-nodes-sync.service →  User=user, WorkingDirectory=~/box-nodes
 ```
 
-`Persistent=true` 保证机器休眠/重启后补跑错过的那次；`RandomizedDelaySec=120` 避免整点堆积。
-
 ```bash
-systemctl list-timers box-nodes-sync.timer      # 看下次运行
-sudo systemctl start box-nodes-sync.service     # 立即手动跑一次
-tail -f ~/box-nodes/sync.log                    # 看日志
+systemctl list-timers box-nodes-sync.timer      # 下次运行
+sudo systemctl start box-nodes-sync.service     # 立即跑一次
+tail -f ~/box-nodes/sync.log                    # 日志
 ```
 
-> 云机时区是 UTC，`00/2:05` 即北京时间 08:05 / 10:05 / 12:05 …（每两小时）。
+## 环境适配（沙箱云机）
 
-## 环境适配要点（沙箱云机特有）
-
-这套东西能跑起来，踩了三个坑，全部已在代码里处理：
-
-1. **没有直连出口**。云机所有流量强制经 `127.0.0.1:3128` 出口代理，本地 DNS 不可用（`nameserver 8.8.8.8` 但解析必失败）。所以直接 `socket.connect` 探活会 100% 失败 —— `probe` 改为走代理的 **CONNECT 隧道**打到节点真实 `host:port`，由代理侧完成 DNS + TCP，既不发送协议数据也能验证「域名可解析 + 端口可达」。
-
-2. **systemd 不继承 shell 环境**。代理变量只在交互式 shell 里存在，`Environment=` 必须显式写进 unit 文件，否则定时任务里探活全灭、`export` 直接以 `no nodes` 退出。
-
-3. **jsDelivr 的 `@main` 缓存不可控**。实测 `@main` 数十分钟不回源，`purge` 接口返回 200 但无效，加 query 参数也无效。`@latest` 立即生效，所以全部入口改用 `@latest`。
+1. **没有直连出口**：所有流量强制走 `127.0.0.1:3128`，本地 DNS 不可用。`pool.py probe` 因此改为走代理 CONNECT 隧道，打节点真实 `host:port`。
+2. **systemd 不继承 shell 环境**：代理变量必须用 `Environment=` 显式写进 unit，否则定时任务里探活全灭。
+3. **编码**：Windows 下 `subprocess` 默认 GBK，遇到中文/emoji stderr 会崩。`sync.py` 统一用 `encoding="utf-8", errors="replace"`。
 
 ## 注意
 
-- 产物是公开仓库里的明文节点配置。若上游订阅是私有的，建议把仓库改为 private 并改用带 token 的拉取方式，或把 `dist/` 加密后再发布。
-- `state/seed.txt` 里默认是**占位节点**，仅用于验证管线；换成真实订阅后才会有可用节点。
-- TCP 探活只证明端口开着，不代表协议可用。要更严格的判定，可把 `probe` 换成真实的协议握手（需额外依赖）。
+- 仓库是公开的，产物含明文节点凭据。若要私有化，改仓库可见性并换带 token 的拉取方式。
+- 前置节点由机场维护，会随订阅变化。要更新前置池，重跑 `extract_source.py` 即可。
