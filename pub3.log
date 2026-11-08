@@ -1,0 +1,24 @@
+[15:06:04] step 1/4 fetch
+[15:06:08]   [15:06:05] fetch: 3 subscriptions
+[15:06:08]   [15:06:07]   OK  测试: 29 (clash)
+[15:06:08]   [15:06:08]   OK  家宽: 206 (clash)
+[15:06:08]   [15:06:08]   OK  7x24可用100: 120 (clash/mirror)
+[15:06:08]   [15:06:08] aggregate: 355 -> 285 unique
+[15:06:08] step 2/4 rank top 20
+[15:06:09]   [15:06:09] rank: 285 candidates
+[15:06:09]   [15:06:09] rank: kept 20 (excluded plaintext/poor protocols)
+[15:06:09]   [15:06:09]   q=-3  CH-Zurich-171810-tteu
+[15:06:09]   [15:06:09]   q=-3  CH-Zurich-h-76025-ttee
+[15:06:09]   [15:06:09]   q=-3  CH-Zurich-h-76025-ttnt
+[15:06:09]   [15:06:09]   q=-3  DE-Frankfurt am Main-h-7712-ttnu
+[15:06:09]   [15:06:09]   q=-3  RU-Moscow-243667-twvv
+[15:06:09]   [15:06:09]   q=-3  🇨🇭 CH 03 | 参考4.0M | vless
+[15:06:09]   [15:06:09]   q=-2  CH-Geneva-h-905615-ttoj
+[15:06:09]   [15:06:09]   q=-2  DK-Rødding-323325318-ttlj
+[15:06:09]   [15:06:09]   q=-2  SG-Singapore-825312510-ttvd
+[15:06:09]   [15:06:09]   q=-2  🇮🇷 IR 01 | 参考2.8M | vless
+[15:06:09] step 3/5 build clash yaml
+[15:06:11] chain.yaml built
+[15:06:11] step 4/5 build sing-box json
+[15:06:12] singbox.json built
+[15:06:12] step 5/5 publish

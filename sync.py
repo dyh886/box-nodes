@@ -82,18 +82,25 @@ def main():
     for line in p.stderr.strip().splitlines():
         log("  " + line)
 
-    log("step 3/4 build")
+    log("step 3/5 build clash yaml")
     p = run([py, "build_live.py", "build"], check=False)
     if p.returncode != 0:
         log(f"build FAILED: {p.stderr[-400:]}")
         return 1
     log("chain.yaml built")
 
+    log("step 4/5 build sing-box json")
+    p = run([py, "build_singbox.py"], check=False)
+    if p.returncode != 0:
+        log(f"singbox FAILED: {p.stderr[-400:]}")
+    else:
+        log("singbox.json built")
+
     if args.dry_run:
         log("dry-run: skip publish")
         return 0
 
-    log("step 4/4 publish")
+    log("step 5/5 publish")
     stamp = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
 
     git("add", "-A")
@@ -160,7 +167,7 @@ def publish_pages():
 
     time.sleep(6)
     ok = 0
-    for f in ("chain.yaml",):
+    for f in ("chain.yaml", "singbox.json"):
         url = f"{PAGES_BASE}/{f}"
         try:
             req = urllib.request.Request(
