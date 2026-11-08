@@ -112,3 +112,8 @@ RuntimeError: /usr/bin/python3 pool.py export -> 1
 [16:06:53] step 4/5 build sing-box json
 [16:06:53] singbox.json built
 [16:06:53] step 5/5 publish
+[16:06:57] main pushed
+[16:06:59] pages pushed
+[16:07:05] pages chain.yaml -> 200 10233B
+[16:07:05] pages singbox.json -> 200 13523B
+[16:07:05] pages verified 2/1

@@ -207,15 +207,18 @@ def main():
     doc = {
         "log": {"level": "warn", "timestamp": True},
         # sing-box 1.12+ 要求新式 DNS server 格式：
-        #   旧：{"address": "https://1.1.1.1/dns-query"}
+        #   旧：{"address": "https://1.1.1.1/dns-query"}  → 1.12 弃用、1.14 移除
         #   新：{"type": "https", "server": "1.1.1.1"}
-        # 旧格式 1.12 弃用、1.14 移除，用旧写法会直接 decode 失败。
+        #
+        # 注意：不要给 DNS server 写 detour: "direct"。
+        # sing-box 会报 "detour to an empty direct outbound makes no sense"
+        # ——空的 direct 出站没有参数，当 detour 目标无意义。省略即走直连。
         "dns": {
             "servers": [
                 {"type": "https", "tag": "dns-proxy",
                  "server": "1.1.1.1", "detour": G_PROXY},
                 {"type": "https", "tag": "dns-direct",
-                 "server": "223.5.5.5", "detour": "direct"},
+                 "server": "223.5.5.5"},
             ],
             "final": "dns-proxy",
         },
@@ -260,10 +263,16 @@ def main():
         isinstance(s, dict) and "type" in s and "address" not in s
         for s in dns_servers
     )
+    # 不能有 detour 指向空 direct
+    dns_bad_detour = any(
+        isinstance(s, dict) and s.get("detour") == "direct"
+        for s in dns_servers
+    )
 
     checks = [
         ("JSON 可解析", True),
         ("DNS 用 1.12+ 新格式", dns_new_format),
+        ("DNS 无 detour:direct", not dns_bad_detour),
         ("四组齐备", all(g in tags_all for g in (G_FRONT, G_AUTO, G_MASTER, G_PROXY))),
         ("落地挂 detour", bool(lnode) and lnode.get("detour") == G_MASTER),
         ("落地端口正确", bool(lnode) and lnode["server_port"] == int(cfg["landing_node"]["port"])),
