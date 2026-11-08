@@ -1,13 +1,13 @@
 {
-  "updatedAt": 1794135067,
-  "updatedAtISO": "2026-11-08T10:51:07Z",
+  "updatedAt": 1794135261,
+  "updatedAtISO": "2026-11-08T10:54:21Z",
   "count": 4,
-  "avgLatencyMs": 193.2,
+  "avgLatencyMs": 257.2,
   "byProtocol": {
-    "ss": 1,
+    "trojan": 1,
     "vless": 1,
     "vmess": 1,
-    "trojan": 1
+    "ss": 1
   },
   "endpoints": {
     "pages": "https://dyh886.github.io/box-nodes/",
