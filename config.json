@@ -1,0 +1,20 @@
+{
+  "sources": [
+    {
+      "name": "local-seed",
+      "file": "state/seed.txt",
+      "kind": "auto",
+      "enabled": true
+    }
+  ],
+  "probe": {
+    "workers": 64,
+    "timeoutSeconds": 5,
+    "keep": 60
+  },
+  "publish": {
+    "repo": "dyh886/box-nodes",
+    "branch": "main",
+    "cdnBase": "https://cdn.jsdelivr.net/gh/dyh886/box-nodes@main"
+  }
+}

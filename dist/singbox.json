@@ -1,0 +1,62 @@
+{
+  "log": {
+    "level": "info"
+  },
+  "inbounds": [
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 7890
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "vmess",
+      "tag": "01 SEED-VMESS 206ms",
+      "server": "www.cloudflare.com",
+      "server_port": 443,
+      "uuid": "11111111-2222-3333-4444-555555555555",
+      "security": "auto",
+      "alter_id": 0,
+      "tls": {
+        "enabled": true,
+        "server_name": "example.com"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws",
+        "headers": {
+          "Host": "example.com"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "02 SEED-TROJAN 226ms",
+      "server": "example.com",
+      "server_port": 443,
+      "password": "placeholder-password",
+      "tls": {
+        "enabled": true,
+        "server_name": "example.com"
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "outbound": "mixed-in",
+        "type": "default"
+      }
+    ]
+  }
+}

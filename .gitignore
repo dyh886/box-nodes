@@ -1,0 +1,5 @@
+# deps 只用于本地 git 推送的凭据注入；运行时不依赖任何第三方包
+__pycache__/
+*.pyc
+state/nodes.json.bak
+.venv/

@@ -1,0 +1,46 @@
+{
+ "updatedAt": 1794133191,
+ "count": 2,
+ "nodes": [
+  {
+   "protocol": "vmess",
+   "name": "SEED-VMESS",
+   "server": "www.cloudflare.com",
+   "port": 443,
+   "uuid": "11111111-2222-3333-4444-555555555555",
+   "alterId": 0,
+   "cipher": "auto",
+   "network": "ws",
+   "tls": true,
+   "sni": "example.com",
+   "host": "example.com",
+   "path": "/ws",
+   "source_link": "vmess://eyJ2IjoiMiIsInBzIjoiU0VFRC1WTUVTUyIsImFkZCI6Ind3dy5jbG91ZGZsYXJlLmNvbSIsInBvcnQiOiI0NDMiLCJpZCI6IjExMTExMTExLTIyMjItMzMzMy00NDQ0LTU1NTU1NTU1NTU1NSIsImFpZCI6IjAiLCJzY3kiOiJhdXRvIiwibmV0Ijoid3MiLCJ0eXBlIjoibm9uZSIsImhvc3QiOiJleGFtcGxlLmNvbSIsInBhdGgiOiIvd3MiLCJ0bHMiOiJ0bHMiLCJzbmkiOiJleGFtcGxlLmNvbSJ9",
+   "id": "5b29e852c3c1",
+   "collectedAt": 1794133191,
+   "alive": true,
+   "latencyMs": 206.8,
+   "probedAt": 1794133191
+  },
+  {
+   "protocol": "trojan",
+   "name": "SEED-TROJAN",
+   "server": "example.com",
+   "port": 443,
+   "password": "placeholder-password",
+   "network": "tcp",
+   "tls": true,
+   "sni": "example.com",
+   "host": "",
+   "path": "",
+   "allowInsecure": false,
+   "source_link": "trojan://placeholder-password@example.com:443?sni=example.com&type=tcp#SEED-TROJAN",
+   "id": "dc3ccb728e95",
+   "collectedAt": 1794133191,
+   "alive": true,
+   "latencyMs": 226.1,
+   "probedAt": 1794133191
+  }
+ ],
+ "probedAt": 1794133195
+}
