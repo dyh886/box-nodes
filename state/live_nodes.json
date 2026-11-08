@@ -1,5 +1,5 @@
 {
- "fetchedAt": 1794146742,
+ "fetchedAt": 1794147232,
  "sources": [
   {
    "label": "测试",
@@ -23,242 +23,72 @@
  "count": 20,
  "nodes": [
   {
-   "name": "CA-Toronto-7224512-twet",
-   "type": "http",
-   "server": "4.172.245.121",
+   "name": "🇺🇸 US 01 | 5.0M | trojan",
+   "server": "216.152.155.23",
    "port": 443,
-   "username": "null",
-   "password": "null",
+   "type": "trojan",
+   "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+   "udp": true,
    "tls": true,
+   "sni": "courses.nextjobopportunityandclaimyouridealrole.com",
+   "alive": true,
+   "latencyMs": 12.3
+  },
+  {
+   "alpn": [
+    ""
+   ],
+   "alterId": 0,
+   "cipher": "auto",
+   "name": "🇺🇸 US 56 | 参考5.5M | vmess",
+   "network": "ws",
+   "port": 443,
+   "server": "162.159.128.17",
+   "servername": "ny-v2ray.ryin.vip",
    "skip-cert-verify": true,
-   "alive": true,
-   "latencyMs": 51.0,
-   "nodeLatencyMs": 32.6
-  },
-  {
-   "name": "DE-Berlin-10622315-ttln",
-   "type": "http",
-   "server": "87.106.223.158",
-   "port": 443,
    "tls": true,
-   "sni": "87.106.223.158",
-   "skip-cert-verify": true,
-   "alive": true,
-   "latencyMs": 51.0,
-   "nodeLatencyMs": 119.0
-  },
-  {
-   "name": "JP-Tokyo-1372379-tvdj",
-   "type": "http",
-   "server": "fan.571589.xyz",
-   "port": 443,
-   "username": "bnVsbDpudWxs",
-   "tls": true,
-   "alive": true,
-   "latencyMs": 51.1,
-   "nodeLatencyMs": 195.3
-  },
-  {
-   "name": "US-Fremont-82602-tvon",
-   "type": "http",
-   "server": "voteshirleysew.club",
-   "port": 443,
-   "username": "bnVsbDpudWxs",
-   "tls": true,
-   "alive": true,
-   "latencyMs": 51.1,
-   "nodeLatencyMs": 169.7
-  },
-  {
-   "name": "US-West Wendover-49686-ttot",
-   "type": "http",
-   "server": "fullmanfirm.icu",
-   "port": 443,
-   "username": "null",
-   "password": "None",
-   "tls": true,
-   "sni": "fullmanfirm.icu",
-   "alive": true,
-   "latencyMs": 51.1,
-   "nodeLatencyMs": 201.4
-  },
-  {
-   "name": "CH-Zurich-7625-twdw",
-   "type": "http",
-   "server": "31.7.62.50",
-   "port": 443,
-   "tls": true,
-   "skip-cert-verify": true,
-   "alive": true,
-   "latencyMs": 51.2,
-   "nodeLatencyMs": 137.4
-  },
-  {
-   "name": "DE-Falkenstein-62021729-tvlt",
-   "type": "http",
-   "server": "116.202.172.99",
-   "port": 443,
-   "username": "null",
-   "password": "null",
-   "tls": true,
-   "skip-cert-verify": true,
-   "alive": true,
-   "latencyMs": 51.2,
-   "nodeLatencyMs": 127.6
-  },
-  {
-   "name": "SG-Singapore-4261392-tvwt",
-   "type": "http",
-   "server": "154.26.139.24",
-   "port": 443,
-   "tls": true,
-   "skip-cert-verify": true,
-   "alive": true,
-   "latencyMs": 51.3,
-   "nodeLatencyMs": 216.6
-  },
-  {
-   "name": "RU-Moscow-2428518-tvvj",
-   "type": "http",
-   "server": "87.242.85.187",
-   "port": 8443,
-   "username": "null",
-   "password": "null",
-   "tls": true,
-   "sni": "87.242.85.187",
-   "skip-cert-verify": true,
-   "alive": true,
-   "latencyMs": 51.4,
-   "nodeLatencyMs": 155.1
-  },
-  {
-   "name": "CH-Zurich-h-76025-tvoj",
-   "type": "vless",
-   "server": "prvtch.titun.su",
-   "port": 443,
-   "uuid": "90157e25-cee1-4217-921e-91f300bc1a24",
-   "flow": "xtls-rprx-vision",
-   "tls": true,
-   "servername": "perevodchiki.su",
-   "client-fingerprint": "firefox",
-   "reality-opts": {
-    "public-key": "1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs",
-    "short-id": "428ef87fd47a3a32"
+   "type": "vmess",
+   "udp": true,
+   "uuid": "c8b455ad-fff1-43e9-9af9-d97585c4534a",
+   "ws-opts": {
+    "headers": {
+     "Host": "ny-v2ray.ryin.vip"
+    },
+    "path": "/ryinsocksv2board"
    },
    "alive": true,
-   "latencyMs": 51.5,
-   "nodeLatencyMs": 294.3
+   "latencyMs": 13.0
   },
   {
-   "name": "US-Boardman-19017622-twon",
-   "type": "http",
-   "server": "54.190.176.228",
-   "port": 8443,
-   "tls": true,
-   "skip-cert-verify": true,
+   "name": "🇺🇸 US 17 | 8.5M | ss",
+   "type": "ss",
+   "server": "138.199.42.68",
+   "port": 8080,
+   "cipher": "rc4-md5",
+   "password": "14fFPrbezE3HDZzsMOr6",
    "alive": true,
-   "latencyMs": 51.6,
-   "nodeLatencyMs": 39.4
+   "latencyMs": 14.9
   },
   {
-   "name": "US-San Jose-622191-teol",
+   "name": "US-Chicago-h-1127348-tewv",
    "type": "http",
-   "server": "purposebydesig.club",
-   "port": 443,
-   "username": "null",
-   "password": "None",
-   "tls": true,
-   "sni": "purposebydesig.club",
-   "alive": true,
-   "latencyMs": 51.6,
-   "nodeLatencyMs": 70.0
-  },
-  {
-   "name": "DE-Frankfurt am Main-h-7712-ttnu",
-   "type": "vless",
-   "server": "64.188.66.181",
-   "port": 443,
-   "uuid": "f8d52ece-fad4-478d-875d-df6eed3befa7",
-   "flow": "xtls-rprx-vision",
-   "tls": true,
-   "servername": "ge-s-1.pythonmakemigreat.wiki",
-   "client-fingerprint": "chrome",
-   "reality-opts": {
-    "public-key": "5fkwwCKZzMsE6Eb_b3iqluu-1AWIfnYl-p0N3EL9Al8",
-    "short-id": "2c9a2790ad5900b2"
-   },
-   "alive": true,
-   "latencyMs": 51.8,
-   "nodeLatencyMs": 114.3
-  },
-  {
-   "name": "US-Fremont-52874-tvlu",
-   "type": "http",
-   "server": "carolinafreigh.fun",
-   "port": 443,
-   "username": "null",
-   "password": "null",
-   "tls": true,
-   "alive": true,
-   "latencyMs": 51.8,
-   "nodeLatencyMs": 209.1
-  },
-  {
-   "name": "US-Salina-h-2251021-teno",
-   "type": "http",
-   "server": "24.225.10.211",
+   "server": "121.127.34.82",
    "port": 443,
    "tls": true,
    "skip-cert-verify": true,
    "alive": true,
-   "latencyMs": 51.9,
-   "nodeLatencyMs": 33.0
+   "latencyMs": 15.8
   },
   {
-   "name": "FR-Paris-91316521-ttje",
+   "name": "US-Dallas-1331761-twvj",
    "type": "http",
-   "server": "fan.132031.xyz",
-   "port": 443,
-   "username": "null",
-   "password": "null",
-   "tls": true,
-   "alive": true,
-   "latencyMs": 52.0,
-   "nodeLatencyMs": 154.1
-  },
-  {
-   "name": "ID-Lenteng-38611611-tvdu",
-   "type": "http",
-   "server": "103.86.117.202",
+   "server": "23.133.176.14",
    "port": 443,
    "tls": true,
+   "sni": "23.133.176.14",
    "skip-cert-verify": true,
    "alive": true,
-   "latencyMs": 52.0,
-   "nodeLatencyMs": 222.6
-  },
-  {
-   "name": "IN-Mumbai-017318822-ttjl",
-   "type": "http",
-   "server": "110.173.188.221",
-   "port": 443,
-   "tls": true,
-   "sni": "110.173.188.221",
-   "skip-cert-verify": true,
-   "alive": true,
-   "latencyMs": 52.0,
-   "nodeLatencyMs": 237.1
-  },
-  {
-   "name": "NL-Haarlem-1582439-ttvo",
-   "type": "http",
-   "server": "51.158.243.91",
-   "port": 443,
-   "tls": true,
-   "skip-cert-verify": true,
-   "alive": true,
-   "latencyMs": 52.0,
-   "nodeLatencyMs": 102.2
+   "latencyMs": 18.7
   },
   {
    "name": "CA-Beauharnois-h-24421012-ttnd",
@@ -269,14 +99,172 @@
    "sni": "142.44.210.129",
    "skip-cert-verify": true,
    "alive": true,
-   "latencyMs": 52.1,
-   "nodeLatencyMs": 32.6
+   "latencyMs": 31.9
+  },
+  {
+   "name": "US-Salina-h-2251021-teno",
+   "type": "http",
+   "server": "24.225.10.211",
+   "port": 443,
+   "tls": true,
+   "skip-cert-verify": true,
+   "alive": true,
+   "latencyMs": 34.1
+  },
+  {
+   "name": "🇺🇸 US 07 | 参考3.0M | http",
+   "type": "http",
+   "server": "162.217.114.50",
+   "port": 443,
+   "username": "",
+   "password": "",
+   "tls": true,
+   "skip-cert-verify": true,
+   "alive": true,
+   "latencyMs": 35.2
+  },
+  {
+   "name": "CA-Toronto-7224512-twet",
+   "type": "http",
+   "server": "4.172.245.121",
+   "port": 443,
+   "username": "null",
+   "password": "null",
+   "tls": true,
+   "skip-cert-verify": true,
+   "alive": true,
+   "latencyMs": 38.7
+  },
+  {
+   "name": "US-Boardman-19017622-twon",
+   "type": "http",
+   "server": "54.190.176.228",
+   "port": 8443,
+   "tls": true,
+   "skip-cert-verify": true,
+   "alive": true,
+   "latencyMs": 38.7
+  },
+  {
+   "name": "🇺🇸 US 23 | 参考5.7M | http",
+   "port": 8443,
+   "server": "44.248.167.117",
+   "skip-cert-verify": true,
+   "tls": true,
+   "type": "http",
+   "udp": true,
+   "alive": true,
+   "latencyMs": 39.0
+  },
+  {
+   "name": "自建·加拿大-06 ×0.1",
+   "type": "vless",
+   "server": "2.56.123.163",
+   "port": 8443,
+   "uuid": "0bc7c8a1-fd2b-4346-8544-cb683278b8e5",
+   "udp": false,
+   "tls": true,
+   "servername": "us1.1am.cc.cd",
+   "network": "ws",
+   "ws-opts": {
+    "path": "/492fbb0e1ab5996d",
+    "headers": {
+     "Host": "us1.1am.cc.cd"
+    }
+   },
+   "client-fingerprint": "chrome",
+   "alive": true,
+   "latencyMs": 40.2
+  },
+  {
+   "name": "US-San Jose-82214-teel",
+   "type": "http",
+   "server": "137.175.22.84",
+   "port": 443,
+   "tls": true,
+   "skip-cert-verify": true,
+   "alive": true,
+   "latencyMs": 40.6
+  },
+  {
+   "name": "US-San Jose-82005715-tvoo",
+   "type": "http",
+   "server": "38.28.185.152",
+   "port": 443,
+   "tls": true,
+   "skip-cert-verify": true,
+   "alive": true,
+   "latencyMs": 41.5
+  },
+  {
+   "name": "US-San Jose-82214-twod",
+   "type": "http",
+   "server": "137.175.22.96",
+   "port": 443,
+   "tls": true,
+   "skip-cert-verify": true,
+   "alive": true,
+   "latencyMs": 41.9
+  },
+  {
+   "name": "US-Phoenix-91539318-twdt",
+   "type": "http",
+   "server": "129.153.93.183",
+   "port": 443,
+   "tls": true,
+   "skip-cert-verify": true,
+   "alive": true,
+   "latencyMs": 45.3
+  },
+  {
+   "name": "🇺🇸 US 50 | 参考4.0M | http",
+   "type": "http",
+   "server": "96.5.129.85",
+   "port": 443,
+   "username": "",
+   "password": "",
+   "tls": true,
+   "sni": "96.5.129.85",
+   "skip-cert-verify": true,
+   "alive": true,
+   "latencyMs": 46.5
+  },
+  {
+   "name": "CA-Sambro Creek-h-1692245-twlw",
+   "type": "http",
+   "server": "23.169.224.34",
+   "port": 443,
+   "tls": true,
+   "skip-cert-verify": true,
+   "alive": true,
+   "latencyMs": 47.3
+  },
+  {
+   "name": "US-San Jose-82214-ttwe",
+   "type": "http",
+   "server": "137.175.22.40",
+   "port": 443,
+   "tls": true,
+   "skip-cert-verify": true,
+   "alive": true,
+   "latencyMs": 47.6
+  },
+  {
+   "cipher": "rc4-md5",
+   "name": "🇺🇸 US 58 | 参考4.0M | ss",
+   "password": "14fFPrbezE3HDZzsMOr6",
+   "port": 8080,
+   "server": "107.151.182.253",
+   "type": "ss",
+   "udp": true,
+   "alive": true,
+   "latencyMs": 48.1
   }
  ],
- "probedAt": 1794146755,
+ "probedAt": 1794147239,
  "stats": {
   "raw": 277,
-  "reachable": 64,
+  "reachable": 112,
   "kept": 20
  }
 }

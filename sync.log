@@ -84,3 +84,7 @@ RuntimeError: /usr/bin/python3 pool.py export -> 1
 [14:05:55] chain.yaml built
 [14:05:55] stats: raw=277 reachable=64 kept=20
 [14:05:55] step 4/4 publish
+[14:05:56] main pushed
+[14:05:57] pages pushed
+[14:06:04] pages chain.yaml -> 200 6658B
+[14:06:04] pages verified 1/1

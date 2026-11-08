@@ -39,23 +39,17 @@ CONFIG = os.path.join(ROOT, "config.json")
 STATE = os.path.join(ROOT, "state")
 LIVE_JSON = os.path.join(STATE, "live_nodes.json")
 
-# 落地节点（唯一出口）
+# 落地节点（唯一出口）—— 参数取自 vps/export/singbox-latest.json
+# 这是 shadowsocks，不是 vless。端口 9443，chacha20-ietf-poly1305。
+# 关键：落地必须经前置中转（detour / dialer-proxy），直连 443/9443 都不通是正常的。
 LANDING = {
     "name": "DediRock-LA",
-    "type": "vless",
+    "type": "ss",
     "server": "107.172.186.223",
-    "port": 443,
-    "uuid": "5dc61111-0287-4105-87b4-861e5f738505",
-    "network": "tcp",
+    "port": 9443,
+    "cipher": "chacha20-ietf-poly1305",
+    "password": "DediRock2026xK9mPq",
     "udp": True,
-    "tls": True,
-    "flow": "xtls-rprx-vision",
-    "servername": "www.apple.com",
-    "reality-opts": {
-        "public-key": "IOtwseqVpH6GUAOGEdclaVBlVbRzE96G7WCRWLMhEws",
-        "short-id": "c9c3225f8a9980ef",
-    },
-    "client-fingerprint": "chrome",
 }
 
 UA = "clash-verge/v2.0.0"
@@ -269,24 +263,12 @@ def connect_via_proxy(phost, pport, puser, ppass, target, timeout):
 
 def probe_landing(node, timeout=8.0):
     """
-    测这个节点「能不能连到落地 IP:443」，返回 (ok, latency_ms)。
+    注意：落地节点必须经前置中转（dialer-proxy），云机直连落地一定失败。
+    所以这里【不能】用「能否连到落地 IP」来判定节点好坏——那会把所有节点都判死。
 
-    注意：这里测的是云机经出口代理到落地 IP 的可达性，作为「链路质量」代理指标。
-    真正的前置→落地延迟只能在客户端侧测，云机端用这个值排序已经足够筛掉不可达的。
+    改为测前置节点自身的可达性（probe_node_reachable），这才是链路的瓶颈。
     """
-    purl = proxy_url()
-    target = f"{LANDING['server']}:{LANDING['port']}"
-    if purl:
-        ph, pp, pu, pw = parse_proxy(purl)
-        return connect_via_proxy(ph, pp, pu, pw, target, timeout)
-    # 无代理：直接连
-    t0 = time.perf_counter()
-    try:
-        s = socket.create_connection((LANDING["server"], LANDING["port"]), timeout=timeout)
-        s.close()
-        return True, round((time.perf_counter() - t0) * 1000, 1)
-    except Exception:  # noqa: BLE001
-        return False, None
+    return probe_node_reachable(node, timeout)
 
 
 def probe_node_reachable(node, timeout=8.0):
@@ -389,14 +371,8 @@ def cmd_probe(args):
 
     def work(n):
         ok1, ms1 = probe_node_reachable(n, args.timeout)
-        if not ok1:
-            n["alive"] = False
-            n["latencyMs"] = None
-            return n
-        ok2, ms2 = probe_landing(n, args.timeout)
-        n["alive"] = bool(ok2)
-        n["latencyMs"] = ms2
-        n["nodeLatencyMs"] = ms1
+        n["alive"] = bool(ok1)
+        n["latencyMs"] = ms1
         return n
 
     done = []

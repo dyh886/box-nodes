@@ -1,0 +1,14 @@
+[14:13:51] step 1/4 fetch subscriptions
+[14:13:52] step 2/4 probe + pick top 20
+[14:13:59]   [14:13:59]   14.9ms  🇺🇸 US 17 | 8.5M | ss
+[14:13:59]   [14:13:59]   15.8ms  US-Chicago-h-1127348-tewv
+[14:13:59]   [14:13:59]   18.7ms  US-Dallas-1331761-twvj
+[14:13:59]   [14:13:59]   31.9ms  CA-Beauharnois-h-24421012-ttnd
+[14:13:59]   [14:13:59]   34.1ms  US-Salina-h-2251021-teno
+[14:13:59]   [14:13:59]   35.2ms  🇺🇸 US 07 | 参考3.0M | http
+[14:13:59]   [14:13:59]   38.7ms  CA-Toronto-7224512-twet
+[14:13:59]   [14:13:59]   38.7ms  US-Boardman-19017622-twon
+[14:13:59] step 3/4 build chain
+[14:13:59] chain.yaml built
+[14:13:59] stats: raw=277 reachable=112 kept=20
+[14:13:59] step 4/4 publish
