@@ -1,0 +1,23 @@
+[14:47:40] real probe: 20 candidates
+[14:47:40] landing: 107.172.186.223:9443 (ss)
+[14:47:50]   FAIL  2461.4ms  US-Chicago-h-1127348-tewv  HTTP502
+[14:47:50]   FAIL  2659.6ms  US-Salina-h-2251021-teno  HTTP502
+[14:47:50]   FAIL  3068.3ms  🇺🇸 US 56 | 参考5.5M | vmess  HTTP502
+[14:47:50]   FAIL  2933.7ms  🇺🇸 US 07 | 参考3.0M | http  HTTP502
+[14:47:51]   FAIL  3803.9ms  CA-Beauharnois-h-24421012-ttnd  HTTP502
+[14:48:06]   FAIL    12.7ms  CA-Toronto-7224512-twet  HTTP502
+[14:48:06]   FAIL  3433.6ms  🇺🇸 US 17 | 8.5M | ss  HTTP502
+[14:48:06]   FAIL  3419.2ms  US-Dallas-1331761-twvj  HTTP502
+[14:48:06]   FAIL  4145.5ms  🇺🇸 US 01 | 5.0M | trojan  HTTP502
+[14:48:14]   FAIL    48.3ms  US-Phoenix-91539318-twdt  HTTP502
+[14:48:14]   FAIL  3106.6ms  自建·加拿大-06 ×0.1  HTTP502
+[14:48:15]   FAIL  4128.7ms  US-Boardman-19017622-twon  HTTP502
+[14:48:15]   FAIL  4329.3ms  US-San Jose-82214-teel  HTTP502
+[14:48:17]   FAIL  3077.3ms  US-San Jose-82005715-tvoo  HTTP502
+[14:48:18]   FAIL  3419.8ms  🇺🇸 US 23 | 参考5.7M | http  HTTP502
+[14:48:18]   FAIL  2457.4ms  🇺🇸 US 50 | 参考4.0M | http  HTTP502
+[14:48:19]   FAIL  3696.7ms  US-San Jose-82214-twod  HTTP502
+[14:48:22]   FAIL  3278.9ms  US-San Jose-82214-ttwe  HTTP502
+[14:48:22]   FAIL  2675.1ms  🇺🇸 US 58 | 参考4.0M | ss  HTTP502
+[14:48:22]   FAIL  3330.6ms  CA-Sambro Creek-h-1692245-twlw  HTTP502
+[14:48:23] result: 0/20 pass real test

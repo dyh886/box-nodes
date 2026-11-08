@@ -12,3 +12,11 @@
 [14:13:59] chain.yaml built
 [14:13:59] stats: raw=277 reachable=112 kept=20
 [14:13:59] step 4/4 publish
+[14:14:00] main push FAILED: itory pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+[14:14:02] pages pushed
+[14:14:08] pages chain.yaml -> 200 7203B
+[14:14:08] pages verified 1/1

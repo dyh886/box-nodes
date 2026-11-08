@@ -23,14 +23,21 @@
       "timeout": 45
     }
   ],
-  "landing": {
+  "landing_node": {
+    "name": "DediRock-LA",
+    "type": "ss",
     "server": "107.172.186.223",
-    "port": 443
+    "port": 9443,
+    "cipher": "chacha20-ietf-poly1305",
+    "password": "DediRock2026xK9mPq",
+    "udp": true
   },
   "pick": {
     "top": 20,
     "workers": 40,
-    "timeoutSeconds": 6
+    "timeoutSeconds": 6,
+    "realTest": true,
+    "realTestLimit": 60
   },
   "publish": {
     "repo": "dyh886/box-nodes",

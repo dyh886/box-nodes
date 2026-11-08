@@ -1,16 +1,16 @@
 {
- "fetchedAt": 1794147232,
+ "fetchedAt": 1794149588,
  "sources": [
   {
    "label": "测试",
    "ok": true,
-   "nodes": 26,
+   "nodes": 29,
    "kind": "clash"
   },
   {
    "label": "家宽",
    "ok": true,
-   "nodes": 202,
+   "nodes": 206,
    "kind": "clash"
   },
   {
@@ -23,143 +23,297 @@
  "count": 20,
  "nodes": [
   {
-   "name": "🇺🇸 US 01 | 5.0M | trojan",
-   "server": "216.152.155.23",
-   "port": 443,
-   "type": "trojan",
-   "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-   "udp": true,
-   "tls": true,
-   "sni": "courses.nextjobopportunityandclaimyouridealrole.com",
-   "alive": true,
-   "latencyMs": 12.3
-  },
-  {
-   "alpn": [
-    ""
-   ],
-   "alterId": 0,
-   "cipher": "auto",
-   "name": "🇺🇸 US 56 | 参考5.5M | vmess",
-   "network": "ws",
-   "port": 443,
-   "server": "162.159.128.17",
-   "servername": "ny-v2ray.ryin.vip",
-   "skip-cert-verify": true,
-   "tls": true,
-   "type": "vmess",
-   "udp": true,
-   "uuid": "c8b455ad-fff1-43e9-9af9-d97585c4534a",
-   "ws-opts": {
-    "headers": {
-     "Host": "ny-v2ray.ryin.vip"
-    },
-    "path": "/ryinsocksv2board"
-   },
-   "alive": true,
-   "latencyMs": 13.0
-  },
-  {
-   "name": "🇺🇸 US 17 | 8.5M | ss",
-   "type": "ss",
-   "server": "138.199.42.68",
-   "port": 8080,
-   "cipher": "rc4-md5",
-   "password": "14fFPrbezE3HDZzsMOr6",
-   "alive": true,
-   "latencyMs": 14.9
-  },
-  {
-   "name": "US-Chicago-h-1127348-tewv",
-   "type": "http",
-   "server": "121.127.34.82",
-   "port": 443,
-   "tls": true,
-   "skip-cert-verify": true,
-   "alive": true,
-   "latencyMs": 15.8
-  },
-  {
-   "name": "US-Dallas-1331761-twvj",
-   "type": "http",
-   "server": "23.133.176.14",
-   "port": 443,
-   "tls": true,
-   "sni": "23.133.176.14",
-   "skip-cert-verify": true,
-   "alive": true,
-   "latencyMs": 18.7
-  },
-  {
-   "name": "CA-Beauharnois-h-24421012-ttnd",
-   "type": "http",
-   "server": "142.44.210.129",
-   "port": 443,
-   "tls": true,
-   "sni": "142.44.210.129",
-   "skip-cert-verify": true,
-   "alive": true,
-   "latencyMs": 31.9
-  },
-  {
-   "name": "US-Salina-h-2251021-teno",
-   "type": "http",
-   "server": "24.225.10.211",
-   "port": 443,
-   "tls": true,
-   "skip-cert-verify": true,
-   "alive": true,
-   "latencyMs": 34.1
-  },
-  {
-   "name": "🇺🇸 US 07 | 参考3.0M | http",
-   "type": "http",
-   "server": "162.217.114.50",
-   "port": 443,
-   "username": "",
-   "password": "",
-   "tls": true,
-   "skip-cert-verify": true,
-   "alive": true,
-   "latencyMs": 35.2
-  },
-  {
-   "name": "CA-Toronto-7224512-twet",
-   "type": "http",
-   "server": "4.172.245.121",
-   "port": 443,
-   "username": "null",
-   "password": "null",
-   "tls": true,
-   "skip-cert-verify": true,
-   "alive": true,
-   "latencyMs": 38.7
-  },
-  {
-   "name": "US-Boardman-19017622-twon",
-   "type": "http",
-   "server": "54.190.176.228",
-   "port": 8443,
-   "tls": true,
-   "skip-cert-verify": true,
-   "alive": true,
-   "latencyMs": 38.7
-  },
-  {
-   "name": "🇺🇸 US 23 | 参考5.7M | http",
-   "port": 8443,
-   "server": "44.248.167.117",
-   "skip-cert-verify": true,
-   "tls": true,
-   "type": "http",
-   "udp": true,
-   "alive": true,
-   "latencyMs": 39.0
-  },
-  {
-   "name": "自建·加拿大-06 ×0.1",
+   "name": "CH-Zurich-171810-tteu",
    "type": "vless",
-   "server": "2.56.123.163",
+   "server": "46.19.138.214",
+   "port": 443,
+   "uuid": "90157e25-cee1-4217-921e-91f300bc1a24",
+   "flow": "xtls-rprx-vision",
+   "tls": true,
+   "servername": "perevodchiki.su",
+   "client-fingerprint": "firefox",
+   "reality-opts": {
+    "public-key": "1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs",
+    "short-id": "428ef87fd47a3a32"
+   },
+   "qscore": -3
+  },
+  {
+   "name": "CH-Zurich-h-76025-ttee",
+   "type": "vless",
+   "server": "179.43.166.190",
+   "port": 443,
+   "uuid": "90157e25-cee1-4217-921e-91f300bc1a24",
+   "flow": "xtls-rprx-vision",
+   "tls": true,
+   "servername": "perevodchiki.su",
+   "client-fingerprint": "chrome",
+   "reality-opts": {
+    "public-key": "1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs",
+    "short-id": "428ef87fd47a3a32"
+   },
+   "qscore": -3
+  },
+  {
+   "name": "CH-Zurich-h-76025-ttnt",
+   "type": "vless",
+   "server": "prvtch.titun.su",
+   "port": 443,
+   "uuid": "90157e25-cee1-4217-921e-91f300bc1a24",
+   "flow": "xtls-rprx-vision",
+   "tls": true,
+   "servername": "perevodchiki.su",
+   "client-fingerprint": "chrome",
+   "reality-opts": {
+    "public-key": "1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs",
+    "short-id": "428ef87fd47a3a32"
+   },
+   "qscore": -3
+  },
+  {
+   "name": "DE-Frankfurt am Main-h-7712-ttnu",
+   "type": "vless",
+   "server": "64.188.66.181",
+   "port": 443,
+   "uuid": "f8d52ece-fad4-478d-875d-df6eed3befa7",
+   "flow": "xtls-rprx-vision",
+   "tls": true,
+   "servername": "ge-s-1.pythonmakemigreat.wiki",
+   "client-fingerprint": "chrome",
+   "reality-opts": {
+    "public-key": "5fkwwCKZzMsE6Eb_b3iqluu-1AWIfnYl-p0N3EL9Al8",
+    "short-id": "2c9a2790ad5900b2"
+   },
+   "qscore": -3
+  },
+  {
+   "name": "RU-Moscow-243667-twvv",
+   "type": "vless",
+   "server": "92.243.66.79",
+   "port": 443,
+   "uuid": "c5f59ef3-9540-49fa-bd1e-c6c2f79df49a",
+   "flow": "xtls-rprx-vision",
+   "tls": true,
+   "servername": "ru-mow.probe.geomyip.com",
+   "client-fingerprint": "chrome",
+   "reality-opts": {
+    "public-key": "siD4oj2gdtLLEphV6fUXb8ueIc2WHVn7msOUhNGPf2o",
+    "short-id": "8d03c10b6a874a9c"
+   },
+   "qscore": -3
+  },
+  {
+   "name": "🇨🇭 CH 03 | 参考4.0M | vless",
+   "server": "179.43.166.190",
+   "port": 443,
+   "type": "vless",
+   "uuid": "90157e25-cee1-4217-921e-91f300bc1a24",
+   "tls": true,
+   "flow": "xtls-rprx-vision",
+   "reality-opts": {
+    "public-key": "1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs",
+    "short-id": "428ef87fd47a3a32"
+   },
+   "servername": "perevodchiki.su",
+   "client-fingerprint": "chrome",
+   "network": "tcp",
+   "udp": true,
+   "qscore": -3
+  },
+  {
+   "name": "CH-Geneva-h-905615-ttoj",
+   "type": "vless",
+   "server": "62.109.1.5",
+   "port": 2058,
+   "uuid": "4ad9f982-b56a-444a-9684-35ce51307a36",
+   "flow": "xtls-rprx-vision",
+   "tls": true,
+   "servername": "www.cloudflare.com",
+   "skip-cert-verify": true,
+   "client-fingerprint": "chrome",
+   "reality-opts": {
+    "public-key": "lJBsn9ndieTIUBzXkJUhf6O0OE8pm29_z1fUtARwL0s",
+    "short-id": "937255313d6ce673"
+   },
+   "qscore": -2
+  },
+  {
+   "name": "DK-Rødding-323325318-ttlj",
+   "type": "vless",
+   "server": "193.233.253.180",
+   "port": 8444,
+   "uuid": "a346c521-7a7f-452b-9356-a4893feb5982",
+   "tls": true,
+   "servername": "github.com",
+   "client-fingerprint": "firefox",
+   "network": "grpc",
+   "grpc-opts": {
+    "grpc-service-name": "GunService"
+   },
+   "reality-opts": {
+    "public-key": "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0"
+   },
+   "qscore": -2
+  },
+  {
+   "name": "SG-Singapore-825312510-ttvd",
+   "type": "vless",
+   "server": "2407:cdc0:d010:27bd::",
+   "port": 30454,
+   "uuid": "14cfea1a-e7b2-4f27-b46e-34c9efabf198",
+   "flow": "xtls-rprx-vision",
+   "tls": true,
+   "servername": "www.samsung.com",
+   "client-fingerprint": "chrome",
+   "reality-opts": {
+    "public-key": "I4WlCiks92rMzYTBZ3T_iDHU-kQX1bUW7jVIsjiklUE",
+    "short-id": "4e4d7529"
+   },
+   "qscore": -2
+  },
+  {
+   "client-fingerprint": "chrome",
+   "flow": "xtls-rprx-vision",
+   "name": "🇮🇷 IR 01 | 参考2.8M | vless",
+   "network": "tcp",
+   "port": 8443,
+   "reality-opts": {
+    "public-key": "8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE",
+    "short-id": "69984b9e02545831"
+   },
+   "server": "198.16.113.219",
+   "servername": "www.apple.com",
+   "tls": true,
+   "type": "vless",
+   "udp": true,
+   "uuid": "e3e0e1c3-599e-4ae1-8ad4-d9e90effacc4",
+   "xudp": true,
+   "path": "direct",
+   "is_landing": false,
+   "qscore": -2
+  },
+  {
+   "name": "🇳🇱 NL 10 | 参考2.6M | vless",
+   "type": "vless",
+   "server": "51.158.206.80",
+   "port": 23576,
+   "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+   "tls": true,
+   "network": "tcp",
+   "servername": "fuck.rkn",
+   "flow": "xtls-rprx-vision",
+   "client-fingerprint": "chrome",
+   "reality-opts": {
+    "public-key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+    "short-id": "01"
+   },
+   "qscore": -2
+  },
+  {
+   "client-fingerprint": "firefox",
+   "name": "🇸🇬 SG 04 | 参考31.9M | vless",
+   "port": 443,
+   "server": "45.76.155.179",
+   "servername": "sg003.zestapp778.com",
+   "tls": true,
+   "type": "vless",
+   "uuid": "e9a8144e-5237-488a-afb1-9ca3d8d54c80",
+   "qscore": -2
+  },
+  {
+   "name": "🇺🇸 US 09 | 参考4.5M | vless",
+   "type": "vless",
+   "server": "ww13.levikogjgfdd.ir",
+   "port": 23576,
+   "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+   "tls": true,
+   "network": "tcp",
+   "servername": "fuck.rkn",
+   "flow": "xtls-rprx-vision",
+   "client-fingerprint": "chrome",
+   "reality-opts": {
+    "public-key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+    "short-id": "01"
+   },
+   "qscore": -2
+  },
+  {
+   "name": "🇺🇸 US 26 | 参考3.7M | vless",
+   "type": "vless",
+   "server": "15.204.97.197",
+   "port": 23576,
+   "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+   "tls": true,
+   "network": "tcp",
+   "servername": "fuck.rkn",
+   "flow": "xtls-rprx-vision",
+   "client-fingerprint": "chrome",
+   "reality-opts": {
+    "public-key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+    "short-id": "01"
+   },
+   "qscore": -2
+  },
+  {
+   "name": "🇺🇸 US 28 | vless",
+   "type": "vless",
+   "server": "161.114.15.215",
+   "port": 8443,
+   "uuid": "e109a3df-a17d-4838-91ae-50e16584c866",
+   "network": "tcp",
+   "tls": true,
+   "udp": true,
+   "flow": "xtls-rprx-vision",
+   "packet-encoding": "xudp",
+   "servername": "www.bing.com",
+   "client-fingerprint": "chrome",
+   "reality-opts": {
+    "public-key": "WiIMUs3m0eRax6TYK7zlhv2muhK5REougscih7_YLAc",
+    "short-id": "f69f548731e1eb71"
+   },
+   "path": "direct",
+   "is_landing": false,
+   "qscore": -2
+  },
+  {
+   "name": "🇺🇸 US 36 | 参考3.8M | vless",
+   "type": "vless",
+   "server": "161.114.15.215",
+   "port": 30449,
+   "uuid": "2b2fae41-9e15-46f2-9045-4fda3273750f",
+   "tls": true,
+   "network": "tcp",
+   "servername": "www.cloudflare.com",
+   "flow": "xtls-rprx-vision",
+   "client-fingerprint": "chrome",
+   "reality-opts": {
+    "public-key": "AuuIwPN-uCAIkqy77aF5NRU8AxJUFbraiGKsHTjr9Xw",
+    "short-id": "bd7838071eb9d90c"
+   },
+   "qscore": -2
+  },
+  {
+   "name": "FR-Paris-h-23610918-ttjo",
+   "type": "vless",
+   "server": "w.geogame.ir",
+   "port": 2053,
+   "uuid": "fbda2834-b1e7-4148-afb9-deda31036a30",
+   "tls": true,
+   "servername": "w.geogame.ir",
+   "qscore": -1
+  },
+  {
+   "name": "US-Pasadena-h-4517624-tten",
+   "type": "vless",
+   "server": "jp.sofast.live",
+   "port": 52683,
+   "uuid": "399b6b23-cc40-4831-a494-61948e2df133",
+   "qscore": -1
+  },
+  {
+   "name": "自建·加拿大-01 ×0.1",
+   "type": "vless",
+   "server": "209.33.172.78",
    "port": 8443,
    "uuid": "0bc7c8a1-fd2b-4346-8544-cb683278b8e5",
    "udp": false,
@@ -173,98 +327,31 @@
     }
    },
    "client-fingerprint": "chrome",
-   "alive": true,
-   "latencyMs": 40.2
+   "qscore": -1
   },
   {
-   "name": "US-San Jose-82214-teel",
-   "type": "http",
-   "server": "137.175.22.84",
-   "port": 443,
+   "name": "自建·加拿大-02 ×0.1",
+   "type": "vless",
+   "server": "14.49.249.113",
+   "port": 30083,
+   "uuid": "0bc7c8a1-fd2b-4346-8544-cb683278b8e5",
+   "udp": false,
    "tls": true,
-   "skip-cert-verify": true,
-   "alive": true,
-   "latencyMs": 40.6
-  },
-  {
-   "name": "US-San Jose-82005715-tvoo",
-   "type": "http",
-   "server": "38.28.185.152",
-   "port": 443,
-   "tls": true,
-   "skip-cert-verify": true,
-   "alive": true,
-   "latencyMs": 41.5
-  },
-  {
-   "name": "US-San Jose-82214-twod",
-   "type": "http",
-   "server": "137.175.22.96",
-   "port": 443,
-   "tls": true,
-   "skip-cert-verify": true,
-   "alive": true,
-   "latencyMs": 41.9
-  },
-  {
-   "name": "US-Phoenix-91539318-twdt",
-   "type": "http",
-   "server": "129.153.93.183",
-   "port": 443,
-   "tls": true,
-   "skip-cert-verify": true,
-   "alive": true,
-   "latencyMs": 45.3
-  },
-  {
-   "name": "🇺🇸 US 50 | 参考4.0M | http",
-   "type": "http",
-   "server": "96.5.129.85",
-   "port": 443,
-   "username": "",
-   "password": "",
-   "tls": true,
-   "sni": "96.5.129.85",
-   "skip-cert-verify": true,
-   "alive": true,
-   "latencyMs": 46.5
-  },
-  {
-   "name": "CA-Sambro Creek-h-1692245-twlw",
-   "type": "http",
-   "server": "23.169.224.34",
-   "port": 443,
-   "tls": true,
-   "skip-cert-verify": true,
-   "alive": true,
-   "latencyMs": 47.3
-  },
-  {
-   "name": "US-San Jose-82214-ttwe",
-   "type": "http",
-   "server": "137.175.22.40",
-   "port": 443,
-   "tls": true,
-   "skip-cert-verify": true,
-   "alive": true,
-   "latencyMs": 47.6
-  },
-  {
-   "cipher": "rc4-md5",
-   "name": "🇺🇸 US 58 | 参考4.0M | ss",
-   "password": "14fFPrbezE3HDZzsMOr6",
-   "port": 8080,
-   "server": "107.151.182.253",
-   "type": "ss",
-   "udp": true,
-   "alive": true,
-   "latencyMs": 48.1
+   "servername": "us1.1am.cc.cd",
+   "network": "ws",
+   "ws-opts": {
+    "path": "/492fbb0e1ab5996d",
+    "headers": {
+     "Host": "us1.1am.cc.cd"
+    }
+   },
+   "client-fingerprint": "chrome",
+   "qscore": -1
   }
  ],
- "probedAt": 1794147239,
+ "rankedAt": 1794149591,
  "stats": {
-  "raw": 277,
-  "reachable": 112,
+  "raw": 285,
   "kept": 20
  }
 }
