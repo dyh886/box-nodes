@@ -367,22 +367,36 @@ def cmd_build(args):
     G_FRONT, G_AUTO, G_MASTER, G_PROXY = "前置", "前置自动", "前置总控", "代理"
     names = [n["name"] for n in picked]
 
+    # L2 已验证的节点排在前面，让「前置自动」优先从可信集合里选
+    l2_ok = [n for n in picked if n.get("l2Ms")]
+    l2_names = [n["name"] for n in l2_ok] or names
+    if l2_ok:
+        l2_ok.sort(key=lambda x: x.get("l2Ms") or 9e9)
+        l2_names = [n["name"] for n in l2_ok]
+
     proxies = []
     for n in picked:
         q = {k: v for k, v in n.items()
              if k not in ("alive", "latencyMs", "realLatencyMs",
-                          "nodeLatencyMs", "qscore", "dialer-proxy")}
+                          "nodeLatencyMs", "qscore", "dialer-proxy",
+                          "l2Ms", "l2Note")}
         proxies.append(q)
 
     land = dict(landing)
     land["dialer-proxy"] = G_MASTER
     proxies.append(land)
 
+    # A 方案要点：
+    #  1. url-test 用严格目标（google 204）：能过测速的必须真能访问国际站点。
+    #     gstatic/204 国内直连就能通，会选出「绿色但打不开」的假可用节点。
+    #  2. 「前置总控」默认指向「前置自动」，不依赖某个固定节点名——
+    #     订阅每小时更新、节点名每次都变，固定选择必然失效。
+    #  3. 「前置自动」优先用 L2 实测通过的节点。
     groups = [
         {"name": G_FRONT, "type": "select", "proxies": names},
-        {"name": G_AUTO, "type": "url-test", "proxies": names,
-         "url": "http://www.gstatic.com/generate_204",
-         "interval": 300, "tolerance": 80},
+        {"name": G_AUTO, "type": "url-test", "proxies": l2_names,
+         "url": "https://www.google.com/generate_204",
+         "interval": 180, "tolerance": 80},
         {"name": G_MASTER, "type": "select", "proxies": [G_AUTO, G_FRONT] + names},
         {"name": G_PROXY, "type": "select",
          "proxies": [land["name"], G_MASTER, "DIRECT"]},
@@ -392,20 +406,11 @@ def cmd_build(args):
         "mixed-port": 7890, "allow-lan": False, "mode": "rule",
         "log-level": "info", "ipv6": False,
         "external-controller": "127.0.0.1:9090",
-        "dns": {
-            "enable": True, "ipv6": False, "listen": "0.0.0.0:1053",
-            "enhanced-mode": "fake-ip", "fake-ip-range": "198.18.0.1/16",
-            "fake-ip-filter": ["*.lan", "*.local", "localhost.ptlogin2.qq.com",
-                               "+.msftconnecttest.com", "+.msftncsi.com",
-                               "time.*.com", "ntp.*.com"],
-            "default-nameserver": ["223.5.5.5", "119.29.29.29"],
-            "nameserver": ["https://223.5.5.5/dns-query",
-                           "https://119.29.29.29/dns-query"],
-            "proxy-server-nameserver": ["https://223.5.5.5/dns-query"],
-            "fallback": ["https://1.1.1.1/dns-query", "https://8.8.8.8/dns-query"],
-            "fallback-filter": {"geoip": True, "geoip-code": "CN",
-                                "ipcidr": ["240.0.0.0/4", "0.0.0.0/32"]},
-        },
+        # 不写 dns: 段。
+        # 原因：原方案（vps/chain/update_chain.py）从不写 dns，客户端用自身设置。
+        # 我此前硬编码了 119.29.29.29 / 1.1.1.1 / 8.8.8.8 的 DoH，实测在部分网络上
+        # 这些解析器超时，导致代理侧域名解析卡约 5 秒、TLS 握手失败
+        # （表现为「能测速但打不开 GitHub」）。订阅不应干预客户端 DNS。
         "proxies": proxies,
         "proxy-groups": groups,
         "rules": ["GEOIP,PRIVATE,DIRECT,no-resolve", f"MATCH,{G_PROXY}"],
@@ -413,21 +418,26 @@ def cmd_build(args):
 
     stamp = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
     st = data.get("stats", {})
+    l2_tested = st.get("l2Tested", 0)
+    l2_passed = st.get("l2Passed", len(l2_ok))
     head = f"""# ============================================================
 # box-nodes 链式代理订阅
 # 生成: {stamp}
-# 候选: {st.get('raw','?')} 个 → 精选 {len(names)} 个（按协议质量初筛）
+# 候选: {st.get('raw','?')} 个 → 初筛 {st.get('kept','?')} → 精选 {len(names)} 个
+# 端到端验证: {l2_tested} 个实测 → {l2_passed} 个通过（Google 204 + GitHub 200）
 # 唯一出口: {landing['server']}:{landing['port']}  ({landing['type']})
 #
 #   本机 -> 前置(前置总控) -> 落地 -> 外网
 #
-# 说明: 云机出口只放行 443/22，无法验证非 443 的落地链路。
-#       节点的真实速度由客户端 url-test 本地测速决定（「前置自动」组）。
+# 说明: L2 端到端验证在本机完成（云机出口只放行 443/22，落地 9443 不可达）。
+#       「前置自动」用 https://www.google.com/generate_204 严格测速，
+#       能过测速的节点即真正具备国际出口能力。
+#       本订阅不含 dns 段：DNS 交由客户端管理，避免订阅覆盖后解析异常。
 #
 # 界面:
 #   {G_FRONT}      手动选前置
-#   {G_AUTO} 自动测速（推荐，客户端本地判定）
-#   {G_MASTER} 链式锚点
+#   {G_AUTO} 自动测速（推荐；节点名每次更新都会变，固定选择会失效）
+#   {G_MASTER} 链式锚点，默认指向「{G_AUTO}」
 #   {G_PROXY}      最终出口，选「{land['name']}」走完整链路
 # ============================================================
 """
@@ -453,6 +463,8 @@ def cmd_build(args):
         ("落地协议正确", bool(ln) and ln.get("type") == landing["type"]
          and int(ln.get("port")) == int(landing["port"])),
         ("节点数正确", len(back["proxies"]) == len(names) + 1),
+        # 订阅不得干预客户端 DNS：曾有 dns 段导致解析超时、能测速但打不开网页
+        ("不含 dns 段", "dns" not in back),
     ]
     ok = True
     for label, c in checks:
