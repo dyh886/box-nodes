@@ -1,18 +1,21 @@
 # ============================================================
 # box-nodes 链式代理订阅
-# 生成: 2026-11-08T16:07:38Z
-# 候选: 285 个 → 精选 20 个（按协议质量初筛）
+# 生成: 2026-11-09T09:49:45Z
+# 候选: 287 个 → 初筛 60 → 精选 12 个
+# 端到端验证: 60 个实测 → 12 个通过（Google 204 + GitHub 200）
 # 唯一出口: 107.172.186.223:9443  (ss)
 #
 #   本机 -> 前置(前置总控) -> 落地 -> 外网
 #
-# 说明: 云机出口只放行 443/22，无法验证非 443 的落地链路。
-#       节点的真实速度由客户端 url-test 本地测速决定（「前置自动」组）。
+# 说明: L2 端到端验证在本机完成（云机出口只放行 443/22，落地 9443 不可达）。
+#       「前置自动」用 https://www.google.com/generate_204 严格测速，
+#       能过测速的节点即真正具备国际出口能力。
+#       本订阅不含 dns 段：DNS 交由客户端管理，避免订阅覆盖后解析异常。
 #
 # 界面:
 #   前置      手动选前置
-#   前置自动 自动测速（推荐，客户端本地判定）
-#   前置总控 链式锚点
+#   前置自动 自动测速（推荐；节点名每次更新都会变，固定选择会失效）
+#   前置总控 链式锚点，默认指向「前置自动」
 #   代理      最终出口，选「DediRock-LA」走完整链路
 # ============================================================
 mixed-port: 7890
@@ -22,249 +25,26 @@ log-level: info
 ipv6: false
 external-controller: 127.0.0.1:9090
 proxies:
-- name: AL-Tirana-h-1827022-hltp
+- name: IT-Milan-1741189-ggxx
+  type: ss
+  server: 202.50.253.90
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: TW-Taichung-h-2482195-gmfj
   type: vless
-  server: 5d0319t.nl7.h1clayd.click
+  server: 59.125.69.22
   port: 443
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
   tls: true
-  servername: 5d0319t.nl7.h1clayd.click
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs
-    short-id: 361d0dd59c70516f
-- name: CH-Zurich-171810-hhxw
-  type: vless
-  server: prvtch.titun.su
-  port: 443
-  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
-  flow: xtls-rprx-vision
-  tls: true
-  servername: perevodchiki.su
-  skip-cert-verify: true
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
-    short-id: 428ef87fd47a3a32
-- name: CH-Zurich-h-76025-hhxm
-  type: vless
-  server: 179.43.166.190
-  port: 443
-  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
-  flow: xtls-rprx-vision
-  tls: true
-  servername: perevodchiki.su
-  skip-cert-verify: true
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
-    short-id: 428ef87fd47a3a32
-- name: NL-Kerkrade-h-43722410-hlyt
-  type: vless
-  server: 15b171g.nl7.h1clayd.click
-  port: 443
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  tls: true
-  servername: 15b171g.nl7.h1clayd.click
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 5b79e8a94241
-  reality-opts:
-    public-key: zbz--PMjcIC4Ggr3j-ibDf0fzXRTj0lM_HzjPJyMkVE
-    short-id: 50a749f0eccb628c
-- name: 🇨🇭 CH 03 | 参考4.0M | vless
-  server: 179.43.166.190
-  port: 443
-  type: vless
-  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
-  tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
-    short-id: 428ef87fd47a3a32
-  servername: perevodchiki.su
-  client-fingerprint: chrome
-  network: tcp
-  udp: true
-- name: JP-Minato-ku-h-61713914-hhpt
-  type: vless
-  server: saas.sin.fan
-  port: 443
-  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
-  tls: true
-  servername: v2n4.11676767.xyz
+  servername: tse1.mm.bing.net
   skip-cert-verify: true
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /documents/zh-tw/video/TkZDG0RVE1kPREsSEQ8YEEBHSEpZUwhIFF4WRBIIFUkVRQQQRhNYEFASC0FbR1ZETQ9cXUZAQ1laV0cXFBJEXFZeBVAHBFNUA0pYElFeVhQDWV0SQwEWQlpGWRoNA1cVBBk=
+    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
     headers:
-      Host: v2n4.11676767.xyz
-- name: SG-Singapore-825312510-haxt
-  type: vless
-  server: '2407:cdc0:d010:27bd::'
-  port: 30454
-  uuid: 14cfea1a-e7b2-4f27-b46e-34c9efabf198
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.samsung.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: I4WlCiks92rMzYTBZ3T_iDHU-kQX1bUW7jVIsjiklUE
-    short-id: 4e4d7529
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇮🇷 IR 01 | 参考2.8M | vless
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: 8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE
-    short-id: 69984b9e02545831
-  server: 198.16.113.219
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: e3e0e1c3-599e-4ae1-8ad4-d9e90effacc4
-  xudp: true
-  path: direct
-  is_landing: false
-- name: 🇳🇱 NL 10 | 参考2.6M | vless
-  type: vless
-  server: 51.158.206.80
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  tls: true
-  network: tcp
-  servername: fuck.rkn
-  flow: xtls-rprx-vision
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-- client-fingerprint: firefox
-  name: 🇸🇬 SG 04 | 参考31.9M | vless
-  port: 443
-  server: 45.76.155.179
-  servername: sg003.zestapp778.com
-  tls: true
-  type: vless
-  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-- name: 🇺🇸 US 09 | 参考4.5M | vless
-  type: vless
-  server: ww13.levikogjgfdd.ir
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  tls: true
-  network: tcp
-  servername: fuck.rkn
-  flow: xtls-rprx-vision
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-- name: 🇺🇸 US 26 | 参考3.7M | vless
-  type: vless
-  server: 15.204.97.197
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  tls: true
-  network: tcp
-  servername: fuck.rkn
-  flow: xtls-rprx-vision
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-- name: 🇺🇸 US 28 | vless
-  type: vless
-  server: 161.114.15.215
-  port: 8443
-  uuid: e109a3df-a17d-4838-91ae-50e16584c866
-  network: tcp
-  tls: true
-  udp: true
-  flow: xtls-rprx-vision
-  packet-encoding: xudp
-  servername: www.bing.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: WiIMUs3m0eRax6TYK7zlhv2muhK5REougscih7_YLAc
-    short-id: f69f548731e1eb71
-  path: direct
-  is_landing: false
-- name: 🇺🇸 US 36 | 参考3.8M | vless
-  type: vless
-  server: 161.114.15.215
-  port: 30449
-  uuid: 2b2fae41-9e15-46f2-9045-4fda3273750f
-  tls: true
-  network: tcp
-  servername: www.cloudflare.com
-  flow: xtls-rprx-vision
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: AuuIwPN-uCAIkqy77aF5NRU8AxJUFbraiGKsHTjr9Xw
-    short-id: bd7838071eb9d90c
-- name: DE-Frankfurt am Main-h-41052317-hawy
-  type: trojan
-  server: jp1.8b1c7c70-ecf1-6891-9fa7-68a86662f902.cheathub.net
-  port: 443
-  password: 6cddea99-9b18-4d42-8638-131bd9f5374f
-  tls: true
-  sni: 8b1c7c70-ecf1-6891-9fa7-68a86662f902.cheathub.net
-  skip-cert-verify: true
-- name: FR-Paris-h-23610918-hlmj
-  type: vless
-  server: w.geogame.ir
-  port: 2053
-  uuid: fbda2834-b1e7-4148-afb9-deda31036a30
-  tls: true
-  servername: w.geogame.ir
-  client-fingerprint: chrome
-- name: 自建·加拿大-01 ×0.1
-  type: vless
-  server: 209.33.172.78
-  port: 8443
-  uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
-  udp: false
-  tls: true
-  servername: us1.1am.cc.cd
-  network: ws
-  ws-opts:
-    path: /492fbb0e1ab5996d
-    headers:
-      Host: us1.1am.cc.cd
-  client-fingerprint: chrome
-- name: 自建·加拿大-02 ×0.1
-  type: vless
-  server: 14.49.249.113
-  port: 30083
-  uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
-  udp: false
-  tls: true
-  servername: us1.1am.cc.cd
-  network: ws
-  ws-opts:
-    path: /492fbb0e1ab5996d
-    headers:
-      Host: us1.1am.cc.cd
-  client-fingerprint: chrome
-- name: 自建·加拿大-03 ×0.1
-  type: vless
-  server: 139.180.206.80
-  port: 8443
-  uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
-  udp: false
-  tls: true
-  servername: us1.1am.cc.cd
-  network: ws
-  ws-opts:
-    path: /492fbb0e1ab5996d
-    headers:
-      Host: us1.1am.cc.cd
-  client-fingerprint: chrome
+      Host: tse1.mm.bing.net
 - name: 自建·加拿大-04 ×0.1
   type: vless
   server: 103.85.27.100
@@ -279,6 +59,106 @@ proxies:
     headers:
       Host: us1.1am.cc.cd
   client-fingerprint: chrome
+- name: IT-Milan-1741183-ggee
+  type: ss
+  server: 202.50.253.36
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 自建·加拿大-05 ×0.1
+  type: vless
+  server: 23.106.143.50
+  port: 8443
+  uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
+  udp: false
+  tls: true
+  servername: us1.1am.cc.cd
+  network: ws
+  ws-opts:
+    path: /492fbb0e1ab5996d
+    headers:
+      Host: us1.1am.cc.cd
+  client-fingerprint: chrome
+- name: IT-Milan-1741184-ggpj
+  type: ss
+  server: 202.50.253.45
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: IT-Milan-1741189-ggme
+  type: ss
+  server: 202.50.253.99
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: JP-Shibuya City-h-323221311-ggfm
+  type: vless
+  server: jpgajma.xyy123.date
+  port: 443
+  uuid: a4fa57a2-d4df-482b-afec-aa38a824a23a
+  flow: xtls-rprx-vision
+  tls: true
+  servername: home.amazon.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: dtNeCNIcRgs8_EKIJg_oTJEsiA8KBU-QaE1yVpkoX0I
+    short-id: 2c92d6
+- name: 自建·加拿大-02 ×0.1
+  type: vless
+  server: 14.49.249.113
+  port: 30083
+  uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
+  udp: false
+  tls: true
+  servername: us1.1am.cc.cd
+  network: ws
+  ws-opts:
+    path: /492fbb0e1ab5996d
+    headers:
+      Host: us1.1am.cc.cd
+  client-fingerprint: chrome
+- name: 自建·美国-08 ×0.2
+  type: vless
+  server: 46.8.227.65
+  port: 2083
+  uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
+  udp: false
+  tls: true
+  servername: oh1.1am.cc.cd
+  network: ws
+  ws-opts:
+    path: /fda194c443e8b4d184bf0572
+    headers:
+      Host: oh1.1am.cc.cd
+  client-fingerprint: chrome
+- name: 自建·加拿大-06 ×0.1
+  type: vless
+  server: 2.56.123.163
+  port: 8443
+  uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
+  udp: false
+  tls: true
+  servername: us1.1am.cc.cd
+  network: ws
+  ws-opts:
+    path: /492fbb0e1ab5996d
+    headers:
+      Host: us1.1am.cc.cd
+  client-fingerprint: chrome
+- name: 自建·美国-05 ×0.2
+  type: vless
+  server: 13.140.95.76
+  port: 2087
+  uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
+  udp: false
+  tls: true
+  servername: oh1.1am.cc.cd
+  network: ws
+  ws-opts:
+    path: /fda194c443e8b4d184bf0572
+    headers:
+      Host: oh1.1am.cc.cd
+  client-fingerprint: chrome
 - name: DediRock-LA
   type: ss
   server: 107.172.186.223
@@ -290,58 +170,54 @@ proxies:
 proxy-groups:
 - name: 前置
   type: select
-  proxies: &id001
-  - AL-Tirana-h-1827022-hltp
-  - CH-Zurich-171810-hhxw
-  - CH-Zurich-h-76025-hhxm
-  - NL-Kerkrade-h-43722410-hlyt
-  - 🇨🇭 CH 03 | 参考4.0M | vless
-  - JP-Minato-ku-h-61713914-hhpt
-  - SG-Singapore-825312510-haxt
-  - 🇮🇷 IR 01 | 参考2.8M | vless
-  - 🇳🇱 NL 10 | 参考2.6M | vless
-  - 🇸🇬 SG 04 | 参考31.9M | vless
-  - 🇺🇸 US 09 | 参考4.5M | vless
-  - 🇺🇸 US 26 | 参考3.7M | vless
-  - 🇺🇸 US 28 | vless
-  - 🇺🇸 US 36 | 参考3.8M | vless
-  - DE-Frankfurt am Main-h-41052317-hawy
-  - FR-Paris-h-23610918-hlmj
-  - 自建·加拿大-01 ×0.1
-  - 自建·加拿大-02 ×0.1
-  - 自建·加拿大-03 ×0.1
+  proxies:
+  - IT-Milan-1741189-ggxx
+  - TW-Taichung-h-2482195-gmfj
   - 自建·加拿大-04 ×0.1
+  - IT-Milan-1741183-ggee
+  - 自建·加拿大-05 ×0.1
+  - IT-Milan-1741184-ggpj
+  - IT-Milan-1741189-ggme
+  - JP-Shibuya City-h-323221311-ggfm
+  - 自建·加拿大-02 ×0.1
+  - 自建·美国-08 ×0.2
+  - 自建·加拿大-06 ×0.1
+  - 自建·美国-05 ×0.2
 - name: 前置自动
   type: url-test
-  proxies: *id001
-  url: http://www.gstatic.com/generate_204
-  interval: 300
+  proxies:
+  - IT-Milan-1741189-ggxx
+  - TW-Taichung-h-2482195-gmfj
+  - 自建·加拿大-04 ×0.1
+  - IT-Milan-1741183-ggee
+  - 自建·加拿大-05 ×0.1
+  - IT-Milan-1741184-ggpj
+  - IT-Milan-1741189-ggme
+  - JP-Shibuya City-h-323221311-ggfm
+  - 自建·加拿大-02 ×0.1
+  - 自建·美国-08 ×0.2
+  - 自建·加拿大-06 ×0.1
+  - 自建·美国-05 ×0.2
+  url: https://www.google.com/generate_204
+  interval: 180
   tolerance: 80
 - name: 前置总控
   type: select
   proxies:
   - 前置自动
   - 前置
-  - AL-Tirana-h-1827022-hltp
-  - CH-Zurich-171810-hhxw
-  - CH-Zurich-h-76025-hhxm
-  - NL-Kerkrade-h-43722410-hlyt
-  - 🇨🇭 CH 03 | 参考4.0M | vless
-  - JP-Minato-ku-h-61713914-hhpt
-  - SG-Singapore-825312510-haxt
-  - 🇮🇷 IR 01 | 参考2.8M | vless
-  - 🇳🇱 NL 10 | 参考2.6M | vless
-  - 🇸🇬 SG 04 | 参考31.9M | vless
-  - 🇺🇸 US 09 | 参考4.5M | vless
-  - 🇺🇸 US 26 | 参考3.7M | vless
-  - 🇺🇸 US 28 | vless
-  - 🇺🇸 US 36 | 参考3.8M | vless
-  - DE-Frankfurt am Main-h-41052317-hawy
-  - FR-Paris-h-23610918-hlmj
-  - 自建·加拿大-01 ×0.1
-  - 自建·加拿大-02 ×0.1
-  - 自建·加拿大-03 ×0.1
+  - IT-Milan-1741189-ggxx
+  - TW-Taichung-h-2482195-gmfj
   - 自建·加拿大-04 ×0.1
+  - IT-Milan-1741183-ggee
+  - 自建·加拿大-05 ×0.1
+  - IT-Milan-1741184-ggpj
+  - IT-Milan-1741189-ggme
+  - JP-Shibuya City-h-323221311-ggfm
+  - 自建·加拿大-02 ×0.1
+  - 自建·美国-08 ×0.2
+  - 自建·加拿大-06 ×0.1
+  - 自建·美国-05 ×0.2
 - name: 代理
   type: select
   proxies:
