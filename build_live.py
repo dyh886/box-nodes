@@ -212,22 +212,21 @@ PROTO_RANK = {
 
 def quality_score(n):
     """
-    启发式打分，越小越好。这不是延迟实测（云机做不到），
-    而是剔除明显劣质的节点：明文 http 代理、无 TLS 的裸传输等。
+    仅用于排序，不用于淘汰。
+
+    历史教训：曾给 http/socks5 额外 +5 分并直接剔除，结果误杀 206 个节点，
+    其中实测 62.5% 能正常打开 GitHub。协议类型不决定可用性。
+
+    现在的规则：分数只影响实测队列的先后顺序（优先验证 TLS 类），
+    所有节点都会进入端到端验证，由实测结果决定去留。
     """
     t = str(n.get("type", "")).lower()
-    s = PROTO_RANK.get(t, 8)
+    s = PROTO_RANK.get(t, 5)
 
-    # 有 TLS 加分
     if n.get("tls") or t in ("trojan", "hysteria2", "tuic", "vless"):
         s -= 1
-    # reality 最好
     if n.get("reality-opts"):
         s -= 1
-    # 明文 http/socks 代理直接排后
-    if t in ("http", "socks5"):
-        s += 5
-    # 443 端口更可能穿透严格网络
     if int(n.get("port") or 0) == 443:
         s -= 1
     return s
@@ -300,7 +299,14 @@ def cmd_fetch():
 
 
 def cmd_rank(args):
-    """按启发式质量 + 名称去重排序，挑出前 N。不假装是延迟实测。"""
+    """
+    只做去重和排序，不再按协议类型排除节点。
+
+    历史教训：此前把 http/socks5 当作「明文劣质代理」一律剔除，
+    实测这批节点 62.5% 能正常打开 GitHub（25/40），是我误杀了可用节点。
+    协议类型不代表可用性——是否可用只能靠端到端实连判断。
+    所以这里保留全部协议，只按名称去重并按质量分排序。
+    """
     with io.open(LIVE_JSON, encoding="utf-8") as f:
         data = json.load(f)
 
@@ -317,22 +323,23 @@ def cmd_rank(args):
         nm = str(n.get("name") or "").strip()
         if nm in seen_names:
             continue
-        # 把明显劣质的（明文代理）排除在主列表之外
-        if n["qscore"] >= 8:
-            continue
         seen_names.add(nm)
         chosen.append(n)
         if len(chosen) >= args.top:
             break
 
-    log(f"rank: kept {len(chosen)} (excluded plaintext/poor protocols)")
-    for n in chosen[:10]:
-        log(f"  q={n['qscore']}  {str(n.get('name'))[:44]}")
+    types = {}
+    for n in chosen:
+        t = str(n.get("type"))
+        types[t] = types.get(t, 0) + 1
+    log(f"rank: kept {len(chosen)} (all protocols) {types}")
+    for n in chosen[:6]:
+        log(f"  q={n['qscore']}  {str(n.get('type')):8s} {str(n.get('name'))[:38]}")
 
     data["nodes"] = chosen
     data["count"] = len(chosen)
     data["rankedAt"] = int(time.time())
-    data["stats"] = {"raw": len(nodes), "kept": len(chosen)}
+    data["stats"] = {"raw": len(nodes), "kept": len(chosen), "byType": types}
     with io.open(LIVE_JSON, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=1)
     return 0
