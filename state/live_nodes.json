@@ -1,16 +1,16 @@
 {
- "fetchedAt": 1794154057,
+ "fetchedAt": 1794190590,
  "sources": [
   {
    "label": "测试",
    "ok": true,
-   "nodes": 30,
+   "nodes": 34,
    "kind": "clash"
   },
   {
    "label": "家宽",
    "ok": true,
-   "nodes": 209,
+   "nodes": 206,
    "kind": "clash"
   },
   {
@@ -23,30 +23,14 @@
  "count": 20,
  "nodes": [
   {
-   "name": "AL-Tirana-h-1827022-hltp",
+   "name": "CH-Zurich-171810-ppgu",
    "type": "vless",
-   "server": "5d0319t.nl7.h1clayd.click",
-   "port": 443,
-   "uuid": "cda0862a-0f87-4be9-8ed8-1d0c9e382839",
-   "tls": true,
-   "servername": "5d0319t.nl7.h1clayd.click",
-   "client-fingerprint": "firefox",
-   "reality-opts": {
-    "public-key": "l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs",
-    "short-id": "361d0dd59c70516f"
-   },
-   "qscore": -3
-  },
-  {
-   "name": "CH-Zurich-171810-hhxw",
-   "type": "vless",
-   "server": "prvtch.titun.su",
+   "server": "46.19.138.214",
    "port": 443,
    "uuid": "90157e25-cee1-4217-921e-91f300bc1a24",
    "flow": "xtls-rprx-vision",
    "tls": true,
    "servername": "perevodchiki.su",
-   "skip-cert-verify": true,
    "client-fingerprint": "firefox",
    "reality-opts": {
     "public-key": "1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs",
@@ -55,7 +39,24 @@
    "qscore": -3
   },
   {
-   "name": "CH-Zurich-h-76025-hhxm",
+   "name": "CH-Zurich-171810-ppgv",
+   "type": "vless",
+   "server": "prvtch.titun.su",
+   "port": 443,
+   "uuid": "90157e25-cee1-4217-921e-91f300bc1a24",
+   "flow": "xtls-rprx-vision",
+   "tls": true,
+   "servername": "perevodchiki.su",
+   "skip-cert-verify": true,
+   "client-fingerprint": "chrome",
+   "reality-opts": {
+    "public-key": "1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs",
+    "short-id": "428ef87fd47a3a32"
+   },
+   "qscore": -3
+  },
+  {
+   "name": "CH-Zurich-h-76025-ppuf",
    "type": "vless",
    "server": "179.43.166.190",
    "port": 443,
@@ -72,21 +73,17 @@
    "qscore": -3
   },
   {
-   "name": "NL-Kerkrade-h-43722410-hlyt",
+   "name": "NL-Kerkrade-h-43722422-pude",
    "type": "vless",
-   "server": "15b171g.nl7.h1clayd.click",
+   "server": "79.182.39.108",
    "port": 443,
-   "uuid": "cda0862a-0f87-4be9-8ed8-1d0c9e382839",
+   "uuid": "b7b8ee80-db83-4276-8c68-87dc88b0b0b5",
    "tls": true,
-   "servername": "15b171g.nl7.h1clayd.click",
-   "client-fingerprint": "chrome",
-   "network": "grpc",
-   "grpc-opts": {
-    "grpc-service-name": "5b79e8a94241"
-   },
+   "servername": "15d7fft.nl11.h1clayd.click",
+   "client-fingerprint": "firefox",
    "reality-opts": {
-    "public-key": "zbz--PMjcIC4Ggr3j-ibDf0fzXRTj0lM_HzjPJyMkVE",
-    "short-id": "50a749f0eccb628c"
+    "public-key": "xv6OUZcyzEHXFMTfumuJH-1Rd4NQ0cdmWikek4mm0m4",
+    "short-id": "c71118d9399fb8c2"
    },
    "qscore": -3
   },
@@ -109,37 +106,40 @@
    "qscore": -3
   },
   {
-   "name": "JP-Minato-ku-h-61713914-hhpt",
+   "name": "DE-Düsseldorf-96114516-ppge",
    "type": "vless",
-   "server": "saas.sin.fan",
+   "server": "cdn.kavosiprotocol.shop",
    "port": 443,
-   "uuid": "5d7b401c-78fa-4254-872e-6d42bf7e75ec",
+   "uuid": "5bb1fda3-0b8a-41d5-a803-b48e180ad718",
    "tls": true,
-   "servername": "v2n4.11676767.xyz",
+   "servername": "cdn.kavosiprotocol.shop",
    "skip-cert-verify": true,
    "client-fingerprint": "chrome",
    "network": "ws",
    "ws-opts": {
-    "path": "/documents/zh-tw/video/TkZDG0RVE1kPREsSEQ8YEEBHSEpZUwhIFF4WRBIIFUkVRQQQRhNYEFASC0FbR1ZETQ9cXUZAQ1laV0cXFBJEXFZeBVAHBFNUA0pYElFeVhQDWV0SQwEWQlpGWRoNA1cVBBk=",
+    "path": "/@KVPROTOCOlVPN--@KVPROTOCOlVPN--@KVPROTOCOlVPN--@KVPROTOCOlVPN--ws/s_48738e13cc",
     "headers": {
-     "Host": "v2n4.11676767.xyz"
+     "Host": "cdn.kavosiprotocol.shop"
     }
    },
    "qscore": -2
   },
   {
-   "name": "SG-Singapore-825312510-haxt",
+   "name": "JP-Hamamatsu-53620421-ppdf",
    "type": "vless",
-   "server": "2407:cdc0:d010:27bd::",
-   "port": 30454,
-   "uuid": "14cfea1a-e7b2-4f27-b46e-34c9efabf198",
-   "flow": "xtls-rprx-vision",
+   "server": "saas.sin.fan",
+   "port": 443,
+   "uuid": "5d7b401c-78fa-4254-872e-6d42bf7e75ec",
    "tls": true,
-   "servername": "www.samsung.com",
+   "servername": "v1n4.11676767.xyz",
+   "skip-cert-verify": true,
    "client-fingerprint": "chrome",
-   "reality-opts": {
-    "public-key": "I4WlCiks92rMzYTBZ3T_iDHU-kQX1bUW7jVIsjiklUE",
-    "short-id": "4e4d7529"
+   "network": "ws",
+   "ws-opts": {
+    "path": "/register/program/study/video/TkZDG0RVE1kPREsSEQ8YEEBHSEpZUwhIFF4WRBIIFUkVRQQQRhNYEFASC0FbR1ZETQ9cXUZAQ1laV0cXFBJEXFdeBFIBAVVQB0pYElFeVhQDWV0SQwEWQlpGWRoNA1EbAhk=",
+    "headers": {
+     "Host": "v1n4.11676767.xyz"
+    }
    },
    "qscore": -2
   },
@@ -265,25 +265,37 @@
    "qscore": -2
   },
   {
-   "name": "DE-Frankfurt am Main-h-41052317-hawy",
-   "type": "trojan",
-   "server": "jp1.8b1c7c70-ecf1-6891-9fa7-68a86662f902.cheathub.net",
-   "port": 443,
-   "password": "6cddea99-9b18-4d42-8638-131bd9f5374f",
-   "tls": true,
-   "sni": "8b1c7c70-ecf1-6891-9fa7-68a86662f902.cheathub.net",
-   "skip-cert-verify": true,
-   "qscore": -1
-  },
-  {
-   "name": "FR-Paris-h-23610918-hlmj",
+   "name": "FR-Paris-h-23610918-pgku",
    "type": "vless",
    "server": "w.geogame.ir",
    "port": 2053,
    "uuid": "fbda2834-b1e7-4148-afb9-deda31036a30",
    "tls": true,
    "servername": "w.geogame.ir",
-   "client-fingerprint": "chrome",
+   "qscore": -1
+  },
+  {
+   "name": "US-Pasadena-h-24610818-pguz",
+   "type": "vless",
+   "server": "us22.sofast.live",
+   "port": 58011,
+   "uuid": "0afc6426-606c-48e7-bd70-3c424a416842",
+   "qscore": -1
+  },
+  {
+   "name": "US-Pasadena-h-4517622-pugf",
+   "type": "vless",
+   "server": "jp.sofast.live",
+   "port": 52683,
+   "uuid": "5aaa5259-f924-4682-a4a3-149d472a9dcc",
+   "qscore": -1
+  },
+  {
+   "name": "US-Pasadena-h-4517624-pfgz",
+   "type": "vless",
+   "server": "jp.sofast.live",
+   "port": 52683,
+   "uuid": "399b6b23-cc40-4831-a494-61948e2df133",
    "qscore": -1
   },
   {
@@ -323,49 +335,11 @@
    },
    "client-fingerprint": "chrome",
    "qscore": -1
-  },
-  {
-   "name": "自建·加拿大-03 ×0.1",
-   "type": "vless",
-   "server": "139.180.206.80",
-   "port": 8443,
-   "uuid": "0bc7c8a1-fd2b-4346-8544-cb683278b8e5",
-   "udp": false,
-   "tls": true,
-   "servername": "us1.1am.cc.cd",
-   "network": "ws",
-   "ws-opts": {
-    "path": "/492fbb0e1ab5996d",
-    "headers": {
-     "Host": "us1.1am.cc.cd"
-    }
-   },
-   "client-fingerprint": "chrome",
-   "qscore": -1
-  },
-  {
-   "name": "自建·加拿大-04 ×0.1",
-   "type": "vless",
-   "server": "103.85.27.100",
-   "port": 8443,
-   "uuid": "0bc7c8a1-fd2b-4346-8544-cb683278b8e5",
-   "udp": false,
-   "tls": true,
-   "servername": "us1.1am.cc.cd",
-   "network": "ws",
-   "ws-opts": {
-    "path": "/492fbb0e1ab5996d",
-    "headers": {
-     "Host": "us1.1am.cc.cd"
-    }
-   },
-   "client-fingerprint": "chrome",
-   "qscore": -1
   }
  ],
- "rankedAt": 1794154057,
+ "rankedAt": 1794190590,
  "stats": {
-  "raw": 285,
+  "raw": 282,
   "kept": 20
  }
 }

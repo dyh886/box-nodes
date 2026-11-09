@@ -1,7 +1,7 @@
 # ============================================================
 # box-nodes 链式代理订阅
-# 生成: 2026-11-08T16:07:38Z
-# 候选: 285 个 → 精选 20 个（按协议质量初筛）
+# 生成: 2026-11-09T02:16:30Z
+# 候选: 282 个 → 精选 20 个（按协议质量初筛）
 # 唯一出口: 107.172.186.223:9443  (ss)
 #
 #   本机 -> 前置(前置总控) -> 落地 -> 外网
@@ -53,18 +53,19 @@ dns:
     - 240.0.0.0/4
     - 0.0.0.0/32
 proxies:
-- name: AL-Tirana-h-1827022-hltp
+- name: CH-Zurich-171810-ppgu
   type: vless
-  server: 5d0319t.nl7.h1clayd.click
+  server: 46.19.138.214
   port: 443
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
+  flow: xtls-rprx-vision
   tls: true
-  servername: 5d0319t.nl7.h1clayd.click
+  servername: perevodchiki.su
   client-fingerprint: firefox
   reality-opts:
-    public-key: l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs
-    short-id: 361d0dd59c70516f
-- name: CH-Zurich-171810-hhxw
+    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
+    short-id: 428ef87fd47a3a32
+- name: CH-Zurich-171810-ppgv
   type: vless
   server: prvtch.titun.su
   port: 443
@@ -73,11 +74,11 @@ proxies:
   tls: true
   servername: perevodchiki.su
   skip-cert-verify: true
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   reality-opts:
     public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
     short-id: 428ef87fd47a3a32
-- name: CH-Zurich-h-76025-hhxm
+- name: CH-Zurich-h-76025-ppuf
   type: vless
   server: 179.43.166.190
   port: 443
@@ -90,20 +91,17 @@ proxies:
   reality-opts:
     public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
     short-id: 428ef87fd47a3a32
-- name: NL-Kerkrade-h-43722410-hlyt
+- name: NL-Kerkrade-h-43722422-pude
   type: vless
-  server: 15b171g.nl7.h1clayd.click
+  server: 79.182.39.108
   port: 443
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  uuid: b7b8ee80-db83-4276-8c68-87dc88b0b0b5
   tls: true
-  servername: 15b171g.nl7.h1clayd.click
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 5b79e8a94241
+  servername: 15d7fft.nl11.h1clayd.click
+  client-fingerprint: firefox
   reality-opts:
-    public-key: zbz--PMjcIC4Ggr3j-ibDf0fzXRTj0lM_HzjPJyMkVE
-    short-id: 50a749f0eccb628c
+    public-key: xv6OUZcyzEHXFMTfumuJH-1Rd4NQ0cdmWikek4mm0m4
+    short-id: c71118d9399fb8c2
 - name: 🇨🇭 CH 03 | 参考4.0M | vless
   server: 179.43.166.190
   port: 443
@@ -118,32 +116,34 @@ proxies:
   client-fingerprint: chrome
   network: tcp
   udp: true
-- name: JP-Minato-ku-h-61713914-hhpt
+- name: DE-Düsseldorf-96114516-ppge
+  type: vless
+  server: cdn.kavosiprotocol.shop
+  port: 443
+  uuid: 5bb1fda3-0b8a-41d5-a803-b48e180ad718
+  tls: true
+  servername: cdn.kavosiprotocol.shop
+  skip-cert-verify: true
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@KVPROTOCOlVPN--@KVPROTOCOlVPN--@KVPROTOCOlVPN--@KVPROTOCOlVPN--ws/s_48738e13cc
+    headers:
+      Host: cdn.kavosiprotocol.shop
+- name: JP-Hamamatsu-53620421-ppdf
   type: vless
   server: saas.sin.fan
   port: 443
   uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
   tls: true
-  servername: v2n4.11676767.xyz
+  servername: v1n4.11676767.xyz
   skip-cert-verify: true
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /documents/zh-tw/video/TkZDG0RVE1kPREsSEQ8YEEBHSEpZUwhIFF4WRBIIFUkVRQQQRhNYEFASC0FbR1ZETQ9cXUZAQ1laV0cXFBJEXFZeBVAHBFNUA0pYElFeVhQDWV0SQwEWQlpGWRoNA1cVBBk=
+    path: /register/program/study/video/TkZDG0RVE1kPREsSEQ8YEEBHSEpZUwhIFF4WRBIIFUkVRQQQRhNYEFASC0FbR1ZETQ9cXUZAQ1laV0cXFBJEXFdeBFIBAVVQB0pYElFeVhQDWV0SQwEWQlpGWRoNA1EbAhk=
     headers:
-      Host: v2n4.11676767.xyz
-- name: SG-Singapore-825312510-haxt
-  type: vless
-  server: '2407:cdc0:d010:27bd::'
-  port: 30454
-  uuid: 14cfea1a-e7b2-4f27-b46e-34c9efabf198
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.samsung.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: I4WlCiks92rMzYTBZ3T_iDHU-kQX1bUW7jVIsjiklUE
-    short-id: 4e4d7529
+      Host: v1n4.11676767.xyz
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇮🇷 IR 01 | 参考2.8M | vless
@@ -238,22 +238,28 @@ proxies:
   reality-opts:
     public-key: AuuIwPN-uCAIkqy77aF5NRU8AxJUFbraiGKsHTjr9Xw
     short-id: bd7838071eb9d90c
-- name: DE-Frankfurt am Main-h-41052317-hawy
-  type: trojan
-  server: jp1.8b1c7c70-ecf1-6891-9fa7-68a86662f902.cheathub.net
-  port: 443
-  password: 6cddea99-9b18-4d42-8638-131bd9f5374f
-  tls: true
-  sni: 8b1c7c70-ecf1-6891-9fa7-68a86662f902.cheathub.net
-  skip-cert-verify: true
-- name: FR-Paris-h-23610918-hlmj
+- name: FR-Paris-h-23610918-pgku
   type: vless
   server: w.geogame.ir
   port: 2053
   uuid: fbda2834-b1e7-4148-afb9-deda31036a30
   tls: true
   servername: w.geogame.ir
-  client-fingerprint: chrome
+- name: US-Pasadena-h-24610818-pguz
+  type: vless
+  server: us22.sofast.live
+  port: 58011
+  uuid: 0afc6426-606c-48e7-bd70-3c424a416842
+- name: US-Pasadena-h-4517622-pugf
+  type: vless
+  server: jp.sofast.live
+  port: 52683
+  uuid: 5aaa5259-f924-4682-a4a3-149d472a9dcc
+- name: US-Pasadena-h-4517624-pfgz
+  type: vless
+  server: jp.sofast.live
+  port: 52683
+  uuid: 399b6b23-cc40-4831-a494-61948e2df133
 - name: 自建·加拿大-01 ×0.1
   type: vless
   server: 209.33.172.78
@@ -282,34 +288,6 @@ proxies:
     headers:
       Host: us1.1am.cc.cd
   client-fingerprint: chrome
-- name: 自建·加拿大-03 ×0.1
-  type: vless
-  server: 139.180.206.80
-  port: 8443
-  uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
-  udp: false
-  tls: true
-  servername: us1.1am.cc.cd
-  network: ws
-  ws-opts:
-    path: /492fbb0e1ab5996d
-    headers:
-      Host: us1.1am.cc.cd
-  client-fingerprint: chrome
-- name: 自建·加拿大-04 ×0.1
-  type: vless
-  server: 103.85.27.100
-  port: 8443
-  uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
-  udp: false
-  tls: true
-  servername: us1.1am.cc.cd
-  network: ws
-  ws-opts:
-    path: /492fbb0e1ab5996d
-    headers:
-      Host: us1.1am.cc.cd
-  client-fingerprint: chrome
 - name: DediRock-LA
   type: ss
   server: 107.172.186.223
@@ -322,13 +300,13 @@ proxy-groups:
 - name: 前置
   type: select
   proxies: &id001
-  - AL-Tirana-h-1827022-hltp
-  - CH-Zurich-171810-hhxw
-  - CH-Zurich-h-76025-hhxm
-  - NL-Kerkrade-h-43722410-hlyt
+  - CH-Zurich-171810-ppgu
+  - CH-Zurich-171810-ppgv
+  - CH-Zurich-h-76025-ppuf
+  - NL-Kerkrade-h-43722422-pude
   - 🇨🇭 CH 03 | 参考4.0M | vless
-  - JP-Minato-ku-h-61713914-hhpt
-  - SG-Singapore-825312510-haxt
+  - DE-Düsseldorf-96114516-ppge
+  - JP-Hamamatsu-53620421-ppdf
   - 🇮🇷 IR 01 | 参考2.8M | vless
   - 🇳🇱 NL 10 | 参考2.6M | vless
   - 🇸🇬 SG 04 | 参考31.9M | vless
@@ -336,12 +314,12 @@ proxy-groups:
   - 🇺🇸 US 26 | 参考3.7M | vless
   - 🇺🇸 US 28 | vless
   - 🇺🇸 US 36 | 参考3.8M | vless
-  - DE-Frankfurt am Main-h-41052317-hawy
-  - FR-Paris-h-23610918-hlmj
+  - FR-Paris-h-23610918-pgku
+  - US-Pasadena-h-24610818-pguz
+  - US-Pasadena-h-4517622-pugf
+  - US-Pasadena-h-4517624-pfgz
   - 自建·加拿大-01 ×0.1
   - 自建·加拿大-02 ×0.1
-  - 自建·加拿大-03 ×0.1
-  - 自建·加拿大-04 ×0.1
 - name: 前置自动
   type: url-test
   proxies: *id001
@@ -353,13 +331,13 @@ proxy-groups:
   proxies:
   - 前置自动
   - 前置
-  - AL-Tirana-h-1827022-hltp
-  - CH-Zurich-171810-hhxw
-  - CH-Zurich-h-76025-hhxm
-  - NL-Kerkrade-h-43722410-hlyt
+  - CH-Zurich-171810-ppgu
+  - CH-Zurich-171810-ppgv
+  - CH-Zurich-h-76025-ppuf
+  - NL-Kerkrade-h-43722422-pude
   - 🇨🇭 CH 03 | 参考4.0M | vless
-  - JP-Minato-ku-h-61713914-hhpt
-  - SG-Singapore-825312510-haxt
+  - DE-Düsseldorf-96114516-ppge
+  - JP-Hamamatsu-53620421-ppdf
   - 🇮🇷 IR 01 | 参考2.8M | vless
   - 🇳🇱 NL 10 | 参考2.6M | vless
   - 🇸🇬 SG 04 | 参考31.9M | vless
@@ -367,12 +345,12 @@ proxy-groups:
   - 🇺🇸 US 26 | 参考3.7M | vless
   - 🇺🇸 US 28 | vless
   - 🇺🇸 US 36 | 参考3.8M | vless
-  - DE-Frankfurt am Main-h-41052317-hawy
-  - FR-Paris-h-23610918-hlmj
+  - FR-Paris-h-23610918-pgku
+  - US-Pasadena-h-24610818-pguz
+  - US-Pasadena-h-4517622-pugf
+  - US-Pasadena-h-4517624-pfgz
   - 自建·加拿大-01 ×0.1
   - 自建·加拿大-02 ×0.1
-  - 自建·加拿大-03 ×0.1
-  - 自建·加拿大-04 ×0.1
 - name: 代理
   type: select
   proxies:

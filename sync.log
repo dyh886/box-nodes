@@ -117,3 +117,27 @@ RuntimeError: /usr/bin/python3 pool.py export -> 1
 [16:07:05] pages chain.yaml -> 200 10233B
 [16:07:05] pages singbox.json -> 200 13523B
 [16:07:05] pages verified 2/1
+[02:16:28] step 1/4 fetch
+[02:16:30]   [02:16:28] fetch: 3 subscriptions
+[02:16:30]   [02:16:29]   OK  测试: 34 (clash)
+[02:16:30]   [02:16:30]   OK  家宽: 206 (clash)
+[02:16:30]   [02:16:30]   OK  7x24可用100: 120 (clash/mirror)
+[02:16:30]   [02:16:30] aggregate: 360 -> 282 unique
+[02:16:30] step 2/4 rank top 20
+[02:16:30]   [02:16:30] rank: 282 candidates
+[02:16:30]   [02:16:30] rank: kept 20 (excluded plaintext/poor protocols)
+[02:16:30]   [02:16:30]   q=-3  CH-Zurich-171810-ppgu
+[02:16:30]   [02:16:30]   q=-3  CH-Zurich-171810-ppgv
+[02:16:30]   [02:16:30]   q=-3  CH-Zurich-h-76025-ppuf
+[02:16:30]   [02:16:30]   q=-3  NL-Kerkrade-h-43722422-pude
+[02:16:30]   [02:16:30]   q=-3  🇨🇭 CH 03 | 参考4.0M | vless
+[02:16:30]   [02:16:30]   q=-2  DE-Düsseldorf-96114516-ppge
+[02:16:30]   [02:16:30]   q=-2  JP-Hamamatsu-53620421-ppdf
+[02:16:30]   [02:16:30]   q=-2  🇮🇷 IR 01 | 参考2.8M | vless
+[02:16:30]   [02:16:30]   q=-2  🇳🇱 NL 10 | 参考2.6M | vless
+[02:16:30]   [02:16:30]   q=-2  🇸🇬 SG 04 | 参考31.9M | vless
+[02:16:30] step 3/5 build clash yaml
+[02:16:30] chain.yaml built
+[02:16:30] step 4/5 build sing-box json
+[02:16:30] singbox.json built
+[02:16:30] step 5/5 publish

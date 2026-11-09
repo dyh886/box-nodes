@@ -41,16 +41,17 @@
     {
       "tag": "n00",
       "type": "vless",
-      "server": "5d0319t.nl7.h1clayd.click",
+      "server": "46.19.138.214",
       "server_port": 443,
-      "uuid": "cda0862a-0f87-4be9-8ed8-1d0c9e382839",
+      "uuid": "90157e25-cee1-4217-921e-91f300bc1a24",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "5d0319t.nl7.h1clayd.click",
+        "server_name": "perevodchiki.su",
         "reality": {
           "enabled": true,
-          "public_key": "l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs",
-          "short_id": "361d0dd59c70516f"
+          "public_key": "1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs",
+          "short_id": "428ef87fd47a3a32"
         },
         "utls": {
           "enabled": true,
@@ -76,7 +77,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       }
     },
@@ -105,25 +106,21 @@
     {
       "tag": "n03",
       "type": "vless",
-      "server": "15b171g.nl7.h1clayd.click",
+      "server": "79.182.39.108",
       "server_port": 443,
-      "uuid": "cda0862a-0f87-4be9-8ed8-1d0c9e382839",
+      "uuid": "b7b8ee80-db83-4276-8c68-87dc88b0b0b5",
       "tls": {
         "enabled": true,
-        "server_name": "15b171g.nl7.h1clayd.click",
+        "server_name": "15d7fft.nl11.h1clayd.click",
         "reality": {
           "enabled": true,
-          "public_key": "zbz--PMjcIC4Ggr3j-ibDf0fzXRTj0lM_HzjPJyMkVE",
-          "short_id": "50a749f0eccb628c"
+          "public_key": "xv6OUZcyzEHXFMTfumuJH-1Rd4NQ0cdmWikek4mm0m4",
+          "short_id": "c71118d9399fb8c2"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "5b79e8a94241"
       }
     },
     {
@@ -150,12 +147,12 @@
     {
       "tag": "n05",
       "type": "vless",
-      "server": "saas.sin.fan",
+      "server": "cdn.kavosiprotocol.shop",
       "server_port": 443,
-      "uuid": "5d7b401c-78fa-4254-872e-6d42bf7e75ec",
+      "uuid": "5bb1fda3-0b8a-41d5-a803-b48e180ad718",
       "tls": {
         "enabled": true,
-        "server_name": "v2n4.11676767.xyz",
+        "server_name": "cdn.kavosiprotocol.shop",
         "insecure": true,
         "utls": {
           "enabled": true,
@@ -164,30 +161,32 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/documents/zh-tw/video/TkZDG0RVE1kPREsSEQ8YEEBHSEpZUwhIFF4WRBIIFUkVRQQQRhNYEFASC0FbR1ZETQ9cXUZAQ1laV0cXFBJEXFZeBVAHBFNUA0pYElFeVhQDWV0SQwEWQlpGWRoNA1cVBBk=",
+        "path": "/@KVPROTOCOlVPN--@KVPROTOCOlVPN--@KVPROTOCOlVPN--@KVPROTOCOlVPN--ws/s_48738e13cc",
         "headers": {
-          "Host": "v2n4.11676767.xyz"
+          "Host": "cdn.kavosiprotocol.shop"
         }
       }
     },
     {
       "tag": "n06",
       "type": "vless",
-      "server": "2407:cdc0:d010:27bd::",
-      "server_port": 30454,
-      "uuid": "14cfea1a-e7b2-4f27-b46e-34c9efabf198",
-      "flow": "xtls-rprx-vision",
+      "server": "saas.sin.fan",
+      "server_port": 443,
+      "uuid": "5d7b401c-78fa-4254-872e-6d42bf7e75ec",
       "tls": {
         "enabled": true,
-        "server_name": "www.samsung.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "I4WlCiks92rMzYTBZ3T_iDHU-kQX1bUW7jVIsjiklUE",
-          "short_id": "4e4d7529"
-        },
+        "server_name": "v1n4.11676767.xyz",
+        "insecure": true,
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/register/program/study/video/TkZDG0RVE1kPREsSEQ8YEEBHSEpZUwhIFF4WRBIIFUkVRQQQRhNYEFASC0FbR1ZETQ9cXUZAQ1laV0cXFBJEXFdeBFIBAVVQB0pYElFeVhQDWV0SQwEWQlpGWRoNA1EbAhk=",
+        "headers": {
+          "Host": "v1n4.11676767.xyz"
         }
       }
     },
@@ -334,33 +333,38 @@
     },
     {
       "tag": "n14",
-      "type": "trojan",
-      "server": "jp1.8b1c7c70-ecf1-6891-9fa7-68a86662f902.cheathub.net",
-      "server_port": 443,
-      "password": "6cddea99-9b18-4d42-8638-131bd9f5374f",
-      "tls": {
-        "enabled": true,
-        "server_name": "8b1c7c70-ecf1-6891-9fa7-68a86662f902.cheathub.net",
-        "insecure": true
-      }
-    },
-    {
-      "tag": "n15",
       "type": "vless",
       "server": "w.geogame.ir",
       "server_port": 2053,
       "uuid": "fbda2834-b1e7-4148-afb9-deda31036a30",
       "tls": {
         "enabled": true,
-        "server_name": "w.geogame.ir",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "server_name": "w.geogame.ir"
       }
     },
     {
+      "tag": "n15",
+      "type": "vless",
+      "server": "us22.sofast.live",
+      "server_port": 58011,
+      "uuid": "0afc6426-606c-48e7-bd70-3c424a416842"
+    },
+    {
       "tag": "n16",
+      "type": "vless",
+      "server": "jp.sofast.live",
+      "server_port": 52683,
+      "uuid": "5aaa5259-f924-4682-a4a3-149d472a9dcc"
+    },
+    {
+      "tag": "n17",
+      "type": "vless",
+      "server": "jp.sofast.live",
+      "server_port": 52683,
+      "uuid": "399b6b23-cc40-4831-a494-61948e2df133"
+    },
+    {
+      "tag": "n18",
       "type": "vless",
       "server": "209.33.172.78",
       "server_port": 8443,
@@ -382,54 +386,10 @@
       }
     },
     {
-      "tag": "n17",
+      "tag": "n19",
       "type": "vless",
       "server": "14.49.249.113",
       "server_port": 30083,
-      "uuid": "0bc7c8a1-fd2b-4346-8544-cb683278b8e5",
-      "tls": {
-        "enabled": true,
-        "server_name": "us1.1am.cc.cd",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/492fbb0e1ab5996d",
-        "headers": {
-          "Host": "us1.1am.cc.cd"
-        }
-      }
-    },
-    {
-      "tag": "n18",
-      "type": "vless",
-      "server": "139.180.206.80",
-      "server_port": 8443,
-      "uuid": "0bc7c8a1-fd2b-4346-8544-cb683278b8e5",
-      "tls": {
-        "enabled": true,
-        "server_name": "us1.1am.cc.cd",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/492fbb0e1ab5996d",
-        "headers": {
-          "Host": "us1.1am.cc.cd"
-        }
-      }
-    },
-    {
-      "tag": "n19",
-      "type": "vless",
-      "server": "103.85.27.100",
-      "server_port": 8443,
       "uuid": "0bc7c8a1-fd2b-4346-8544-cb683278b8e5",
       "tls": {
         "enabled": true,
