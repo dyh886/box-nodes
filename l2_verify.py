@@ -49,10 +49,13 @@ BASE_PORT = 28100
 BATCH = 8
 STARTUP_WAIT = 4.0
 
-TARGETS = [
-    ("https://www.google.com/generate_204", "204"),
-    ("https://github.com/", "200"),
-]
+# 判据说明：
+#   必须通过 https://github.com/ → 200（这才是用户真正要访问的站点）
+#   https://www.google.com/generate_204 → 204 作为「真实国际出口」的加分验证
+# 之前要求两者都过，导致通过率过低（77 → 7）；而 google 在国内部分网络本就
+# 不可直连，属于锦上添花而非必要条件。以 GitHub 为准更贴合实际需求。
+REQUIRED = [("https://github.com/", "200")]
+BONUS = [("https://www.google.com/generate_204", "204")]
 
 
 def log(m):
@@ -208,19 +211,26 @@ def verify_batch(batch, landing, sb, widx):
     results = {}
     try:
         if not wait_port(BASE_PORT, timeout=STARTUP_WAIT + 8):
-            return {i: (False, None, "no-port") for i in range(len(batch))}
+            return {i: (False, None, "no-port", False) for i in range(len(batch))}
         time.sleep(0.6)
 
         def one(i):
             port = BASE_PORT + i
-            best = None
-            for url, expect in TARGETS:
+            # 必过项：GitHub 200
+            total = 0
+            for url, expect in REQUIRED:
                 ok, ms, note = curl_via(port, url, expect)
                 if not ok:
-                    return i, (False, ms, f"{url.split('/')[2]}:{note}")
-                if best is None or ms < best:
-                    best = ms
-            return i, (True, best, "google+github")
+                    return i, (False, ms, f"github:{note}", False)
+                total += ms
+            # 加分项：Google 204
+            bonus = False
+            for url, expect in BONUS:
+                ok2, ms2, _ = curl_via(port, url, expect)
+                if ok2:
+                    bonus = True
+                    total += ms2
+            return i, (True, round(total, 1), "github" + ("+google" if bonus else ""), bonus)
 
         with cf.ThreadPoolExecutor(max_workers=len(batch)) as ex:
             for i, r in ex.map(one, range(len(batch))):
@@ -267,13 +277,14 @@ def main():
         widx = start // args.batch
         res = verify_batch(chunk, landing, sb, widx)
         for i, n in enumerate(chunk):
-            ok, ms, note = res.get(i, (False, None, "missing"))
+            ok, ms, note, bonus = res.get(i, (False, None, "missing", False))
             tag = "OK  " if ok else "FAIL"
             log(f"  {tag} {str(ms) if ms else '-':>7}ms  {str(n.get('name'))[:40]:42s} {note}")
             if ok:
                 q = dict(n)
                 q["l2Ms"] = ms
                 q["l2Note"] = note
+                q["l2Bonus"] = bonus
                 passed.append(q)
 
     passed.sort(key=lambda x: x.get("l2Ms") or 9e9)
