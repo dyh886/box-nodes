@@ -1,7 +1,0 @@
-# box-nodes seed — 真实订阅源填这里，或写进 config.json 的 sources
-# 逐行支持: vmess:// vless:// trojan:// ss:// ssr:// hysteria2:// tuic://
-# 也支持整段 base64 订阅体
-#
-# 这里只用于「通用节点池」产物（dist/clash.yaml 等）。
-# 主产物 docs/chain.yaml 的链式代理节点来自 extract_source.py，
-# 从本地机场配置提取，不依赖本文件。
