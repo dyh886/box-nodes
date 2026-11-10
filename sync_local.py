@@ -99,14 +99,26 @@ def gh_put(branch, path, data, msg, token):
 
 
 def publish(token):
-    data = (ROOT / "docs" / "chain.yaml").read_bytes()
     stamp = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
     msg = f"chore: verified node refresh @ {stamp}"
     ok = True
+
+    chain = (ROOT / "docs" / "chain.yaml").read_bytes()
     for br, p in (("main", "docs/chain.yaml"),
                   ("main", "dist/chain.yaml"),
                   ("gh-pages", "chain.yaml")):
-        ok &= gh_put(br, p, data, msg, token)
+        ok &= gh_put(br, p, chain, msg, token)
+
+    # sing-box 配置（iOS 端）。缺失时不影响 Clash 端发布。
+    sb_path = ROOT / "docs" / "singbox.json"
+    if sb_path.exists():
+        sb = sb_path.read_bytes()
+        for br, p in (("main", "docs/singbox.json"),
+                      ("main", "dist/singbox.json"),
+                      ("gh-pages", "singbox.json")):
+            ok &= gh_put(br, p, sb, msg, token)
+    else:
+        log("  WARN: docs/singbox.json 缺失，跳过 sing-box 发布")
     return ok
 
 
@@ -122,7 +134,10 @@ def main():
     args = ap.parse_args()
 
     if args.publish_only:
-        log("publish-only: 直接发布现有 docs/chain.yaml")
+        log("publish-only: 同步生成 sing-box 后发布")
+        p = run(["singbox_from_chain.py"], timeout=300)
+        for ln in (p.stderr or "").strip().splitlines()[-3:]:
+            log("  " + ln)
         return do_publish(args)
 
     if not args.no_l2:
@@ -137,13 +152,17 @@ def main():
             log("  " + ln)
 
         log("step 3/6 L2 end-to-end verify (github required)")
-        p = run(["l2_verify.py", "--batch", "8"], timeout=2400)
+        p = run(["l2_verify.py", "--batch", "10"], timeout=3600)
         lines = (p.stderr or "").strip().splitlines()
-        for ln in lines[-2:]:
+        summary = [l for l in lines if "L2 result" in l]
+        for ln in summary or lines[-2:]:
             log("  " + ln)
         try:
             live = json.loads((ROOT / "state" / "live_nodes.json").read_text(encoding="utf-8"))
-            if live.get("count", 0) == 0:
+            passed = live.get("count", 0)
+            st = live.get("stats", {})
+            log(f"  L2: {st.get('l2Tested','?')} 测试 → {passed} 通过")
+            if passed == 0:
                 log("  no node passed L2 — abort, keep previous subscription")
                 return 1
         except Exception as e:  # noqa: BLE001
@@ -164,6 +183,16 @@ def main():
         if p.returncode != 0:
             log("  build failed")
             return 1
+
+        # 同步产出 sing-box 配置（iOS 端用）。
+        # 必须从 chain.yaml 转换，而不是 live_nodes —— 后者每轮被 fetch 覆盖、
+        # 节点名每轮都变（实测 65 个里只能匹配到 4 个）。
+        log("  build sing-box json from chain.yaml (for iOS)")
+        p = run(["singbox_from_chain.py"], timeout=300)
+        for ln in (p.stderr or "").strip().splitlines()[-3:]:
+            log("  " + ln)
+        if p.returncode != 0:
+            log("  singbox build failed (chain.yaml 仍会发布)")
     else:
         # 关键：--no-l2 只重建，绝不重新拉取/筛选，避免覆盖已验证节点集
         log("no-l2: 用现有 state 重建（不拉取、不覆盖验证结果）")
@@ -173,6 +202,11 @@ def main():
         if p.returncode != 0:
             log("  build failed")
             return 1
+
+        log("  build sing-box json from chain.yaml")
+        p = run(["singbox_from_chain.py"], timeout=300)
+        for ln in (p.stderr or "").strip().splitlines()[-3:]:
+            log("  " + ln)
 
     return do_publish(args)
 
