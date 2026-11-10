@@ -1,8 +1,8 @@
 # ============================================================
 # box-nodes 链式代理订阅
-# 生成: 2026-11-10T08:19:42Z
-# 候选: 289 个 → 初筛 289 → 精选 40 个
-# 端到端验证: 289 个实测 → 111 个通过（Google 204 + GitHub 200）
+# 生成: 2026-11-10T12:20:05Z
+# 候选: 299 个 → 初筛 299 → 精选 55 个
+# 端到端验证: 299 个实测 → 121 个通过（Google 204 + GitHub 200）
 # 唯一出口: 107.172.186.223:9443  (ss)
 #
 #   本机 -> 前置(前置总控) -> 落地 -> 外网
@@ -25,159 +25,14 @@ log-level: info
 ipv6: false
 external-controller: 127.0.0.1:9090
 proxies:
-- name: US-Atlanta-h-610923-pwzr
+- name: HK-Hong Kong-9282423-xlvk
   type: http
-  server: 118.184.140.90
-  port: 58764
-  tls: true
-  skip-cert-verify: true
-  l2Bonus: true
-- name: CH-Zurich-h-76025-pzwm
-  type: vless
-  server: 179.43.166.190
-  port: 443
-  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
-  flow: xtls-rprx-vision
-  tls: true
-  servername: perevodchiki.su
-  skip-cert-verify: true
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
-    short-id: 428ef87fd47a3a32
-  l2Bonus: true
-- name: DE-Frankfurt am Main-5791265-pdkw
-  type: http
-  server: fan.973511.xyz
-  port: 443
-  username: bnVsbDpudWxs
-  tls: true
-  skip-cert-verify: true
-  l2Bonus: true
-- name: IT-Milan-1741187-ppro
-  type: ss
-  server: 202.50.253.81
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  l2Bonus: true
-- name: 🇭🇰 HK 430 | http
-  port: 3128
   server: 119.28.24.235
-  skip-cert-verify: true
-  sub_tag: P002-260618
-  tls: true
-  type: http
-  udp: true
-  l2Bonus: true
-- name: CH-Zurich-171810-ppor
-  type: vless
-  server: prvtch.titun.su
-  port: 443
-  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
-  flow: xtls-rprx-vision
-  tls: true
-  servername: perevodchiki.su
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
-    short-id: 428ef87fd47a3a32
-  l2Bonus: true
-- name: US-San Jose-82005715-pwwd
-  type: http
-  server: 38.28.185.224
-  port: 443
+  port: 3128
   tls: true
   skip-cert-verify: true
   l2Bonus: true
-- name: JP-Osaka-176518-pkkw
-  type: http
-  server: 64.176.51.83
-  port: 8443
-  tls: true
-  skip-cert-verify: true
-  l2Bonus: true
-- name: US-San Jose-82005715-pwdz
-  type: http
-  server: 38.28.185.163
-  port: 443
-  tls: true
-  skip-cert-verify: true
-  l2Bonus: true
-- name: US-Irvine-24714113-pxzr
-  type: http
-  server: 38.247.141.135
-  port: 443
-  username: 'null'
-  password: 'null'
-  tls: true
-  sni: 38.247.141.135
-  skip-cert-verify: true
-  l2Bonus: false
-- name: US-Seattle-1457212-pxdx
-  type: http
-  server: 45.145.72.122
-  port: 8443
-  tls: true
-  skip-cert-verify: true
-  l2Bonus: false
-- name: US-McLean-4188139-pxwr
-  type: http
-  server: 184.188.139.2
-  port: 8090
-  tls: true
-  sni: 184.188.139.2
-  skip-cert-verify: true
-  l2Bonus: false
-- name: US-Boardman-24816711-ppmx
-  type: http
-  server: 44.248.167.117
-  port: 8443
-  username: 'null'
-  password: 'null'
-  tls: true
-  skip-cert-verify: true
-  l2Bonus: false
-- name: US-Boardman-19017622-pxkm
-  type: http
-  server: 54.190.176.228
-  port: 8443
-  username: 'null'
-  password: 'null'
-  tls: true
-  sni: 54.190.176.228
-  skip-cert-verify: true
-  l2Bonus: false
-- name: LT-Vilnius-12411-ppmz
-  type: http
-  server: 89.124.11.9
-  port: 443
-  tls: true
-  skip-cert-verify: true
-  l2Bonus: false
-- name: US-San Jose-82214-pxdw
-  type: http
-  server: 137.175.22.40
-  port: 443
-  tls: true
-  sni: 137.175.22.40
-  skip-cert-verify: true
-  l2Bonus: true
-- name: CH-Zurich-171810-ppum
-  type: vless
-  server: 46.19.138.214
-  port: 443
-  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
-  flow: xtls-rprx-vision
-  tls: true
-  servername: perevodchiki.su
-  skip-cert-verify: true
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
-    short-id: 428ef87fd47a3a32
-  l2Bonus: true
-- name: 🇺🇸 US 788 | http
+- name: 🇺🇸 US 801 | http
   password: gs4BXwT6SW
   port: 10988
   server: 154.26.192.123
@@ -187,40 +42,199 @@ proxies:
   udp: true
   username: fQ67Dpe5dU
   l2Bonus: true
-- name: HK-Tai Po-285532-pprd
+- name: US-San Jose-82214-xpvl
   type: http
-  server: fan.240104.xyz
+  server: 137.175.22.84
+  port: 443
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: 自建·加拿大-05 ×0.1
+  type: vless
+  server: 103.85.27.100
+  port: 8443
+  uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
+  udp: false
+  tls: true
+  servername: us1.1am.cc.cd
+  network: ws
+  ws-opts:
+    path: /492fbb0e1ab5996d
+    headers:
+      Host: us1.1am.cc.cd
+  client-fingerprint: chrome
+  l2Bonus: true
+- name: 自建·加拿大-01 ×0.1
+  type: vless
+  server: 2.56.123.163
+  port: 8443
+  uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
+  udp: false
+  tls: true
+  servername: us1.1am.cc.cd
+  network: ws
+  ws-opts:
+    path: /492fbb0e1ab5996d
+    headers:
+      Host: us1.1am.cc.cd
+  client-fingerprint: chrome
+  l2Bonus: true
+- name: 自建·加拿大-06 ×0.1
+  type: vless
+  server: 45.45.217.192
+  port: 444
+  uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
+  udp: false
+  tls: true
+  servername: us1.1am.cc.cd
+  network: ws
+  ws-opts:
+    path: /492fbb0e1ab5996d
+    headers:
+      Host: us1.1am.cc.cd
+  client-fingerprint: chrome
+  l2Bonus: true
+- name: 🇺🇸 US 744 | http
+  type: http
+  server: 137.175.22.120
+  port: 443
+  username: ''
+  password: ''
+  tls: true
+  sni: 137.175.22.120
+  skip-cert-verify: true
+  l2Bonus: true
+- name: IT-Milan-1741186-xxvk
+  type: ss
+  server: 202.50.253.72
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  l2Bonus: true
+- name: JP-Osaka-176518-xolo
+  type: http
+  server: 64.176.51.83
+  port: 8443
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: 🇧🇦 BA 02 | http
+  server: 185.164.35.16
+  port: 9443
+  type: http
+  tls: true
+  sni: 185.164.35.16
+  skip-cert-verify: true
+  l2Bonus: true
+- name: NL-Dronten-551188-xovn
+  type: http
+  server: 5.255.118.82
   port: 443
   username: 'null'
   password: 'null'
   tls: true
-  l2Bonus: true
-- name: US-San Jose-82214-pwuk
-  type: http
-  server: 137.175.22.16
-  port: 443
-  tls: true
-  sni: 137.175.22.16
+  sni: 5.255.118.82
   skip-cert-verify: true
   l2Bonus: true
-- name: SG-Singapore-23616824-pzop
-  type: socks5
-  server: 47.236.168.243
-  port: 1080
-  username: '8888'
-  password: '8888'
-  l2Bonus: true
-- name: 🇩🇪 DE 296 | http
+- name: KR-Chuncheon-26923022-xool
   type: http
-  server: 116.202.172.99
+  server: 152.69.230.221
+  port: 443
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: US-San Jose-82214-xppm
+  type: http
+  server: 137.175.22.29
+  port: 443
+  tls: true
+  sni: 137.175.22.29
+  skip-cert-verify: true
+  l2Bonus: true
+- name: RU-Moscow-2916613-xmjl
+  type: http
+  server: 46.29.166.134
+  port: 1446
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: IT-Milan-1741185-xxjp
+  type: ss
+  server: 202.50.253.63
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  l2Bonus: true
+- name: US-San Jose-82214-xpko
+  type: http
+  server: 137.175.22.52
+  port: 443
+  tls: true
+  sni: 137.175.22.52
+  skip-cert-verify: true
+  l2Bonus: true
+- name: US-San Jose-82214-xanj
+  type: http
+  server: fan.365747.xyz
   port: 443
   username: 'null'
   password: 'null'
-  skip-cert-verify: true
   tls: true
-  sni: 116.202.172.99
+  skip-cert-verify: true
   l2Bonus: true
-- name: US-San Jose-82214-pxpd
+- name: US-Boardman-24816711-xpvp
+  type: http
+  server: 44.248.167.117
+  port: 8443
+  tls: true
+  sni: 44.248.167.117
+  skip-cert-verify: true
+  l2Bonus: true
+- name: US-San Jose-82214-xaln
+  type: http
+  server: 137.175.22.88
+  port: 443
+  tls: true
+  sni: 137.175.22.88
+  skip-cert-verify: true
+  l2Bonus: true
+- name: IT-Milan-1741187-xxjo
+  type: ss
+  server: 202.50.253.81
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  l2Bonus: true
+- name: US-San Jose-82214-xpxm
+  type: http
+  server: 137.175.22.96
+  port: 443
+  tls: true
+  sni: 137.175.22.96
+  skip-cert-verify: true
+  l2Bonus: true
+- name: IT-Milan-h-17411814-xxjm
+  type: ss
+  server: 202.50.253.18
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  l2Bonus: true
+- name: IT-Milan-h-17411815-xxjv
+  type: ss
+  server: 202.50.253.36
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  l2Bonus: true
+- name: US-San Jose-82214-xpvm
+  type: http
+  server: 137.175.22.45
+  port: 443
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: US-San Jose-82214-xpjk
   type: http
   server: 137.175.22.98
   port: 443
@@ -228,16 +242,7 @@ proxies:
   sni: 137.175.22.98
   skip-cert-verify: true
   l2Bonus: true
-- name: US-San Francisco-224314624-ppwu
-  type: http
-  server: 162.243.146.243
-  port: 443
-  username: testuser1
-  password: e4b72b531a2d10900519
-  tls: true
-  sni: a2f392f3.acsnet.co
-  l2Bonus: true
-- name: NL-Haarlem-1582439-pkwr
+- name: NL-Haarlem-1582439-xoma
   type: http
   server: 51.158.243.91
   port: 443
@@ -246,32 +251,69 @@ proxies:
   tls: true
   sni: 51.158.243.91
   skip-cert-verify: true
-  l2Bonus: true
-- name: US-Salina-h-2251021-pxmp
+  l2Bonus: false
+- name: NL-Amsterdam-514020923-xoaa
   type: http
+  server: 185.140.209.235
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: false
+- name: LV-Riga-52191591-xomx
+  type: http
+  server: 185.219.159.15
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  sni: 185.219.159.15
+  skip-cert-verify: true
+  l2Bonus: false
+- name: JP-Tokyo-1372379-xonv
+  type: http
+  server: fan.571589.xyz
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  sni: fan.571589.xyz
+  skip-cert-verify: true
+  l2Bonus: true
+- name: 🇺🇸 US 582 | 1.7M | http
+  port: 443
   server: 24.225.10.211
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+  l2Bonus: true
+- name: IE-Dublin-20320422-xlka
+  type: http
+  server: 18.200.158.139
   port: 443
   tls: true
-  sni: 24.225.10.211
+  sni: 18.200.158.139
   skip-cert-verify: true
   l2Bonus: true
-- name: NL-Haarlem-1582439-pkxo
+- name: US-Irvine-24714113-xaxm
   type: http
-  server: 51.158.243.91
+  server: 38.247.141.135
   port: 443
   username: 'null'
   password: 'null'
   tls: true
+  sni: 38.247.141.135
   skip-cert-verify: true
   l2Bonus: true
-- name: US-San Jose-82005715-pzrp
+- name: US-Seattle-1457324-xpkl
   type: http
-  server: fan.596189.xyz
-  port: 443
-  username: 'null'
-  password: 'null'
+  server: 45.145.73.240
+  port: 8443
   tls: true
-  sni: fan.596189.xyz
+  skip-cert-verify: true
   l2Bonus: true
 - name: 🇳🇱 NL 146 | 11.1M | http
   type: http
@@ -281,90 +323,178 @@ proxies:
   tls: true
   sni: 482c8436a1f7c908b48a1757abb5dd79-ce85c45206570905.apache-iv.com
   l2Bonus: true
-- name: 🇵🇱 PL 64 | http
+- type: http
+  name: 🇫🇷 FR 194 | http
+  server: 31.32.19.111
+  port: 8081
+  password: None
+  tls: true
+  servername: 31.32.19.111
+  skip-cert-verify: true
+  l2Bonus: true
+- name: FR-Paris-91316521-xxao
   type: http
-  server: 151.115.54.133
+  server: 62.210.27.111
+  port: 443
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: SE-Huskvarna-721012924-xmja
+  type: http
+  server: 217.210.129.243
+  port: 443
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: FR-Gravelines-9817415-xlmo
+  type: http
+  server: 87.98.174.157
+  port: 6103
+  username: 'null'
+  password: 'null'
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: IE-Dublin-7611712-xlko
+  type: http
+  server: 34.249.214.108
+  port: 443
+  tls: true
+  sni: 34.249.214.108
+  skip-cert-verify: true
+  l2Bonus: true
+- name: 🇩🇪 DE 73 | 13.9M | http
+  port: 443
+  server: 159.69.94.125
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+  l2Bonus: true
+- name: 🇱🇻 LV 22 | http
+  type: http
+  server: 185.219.159.16
   port: 443
   username: ''
   password: ''
   tls: true
+  sni: 185.219.159.16
   skip-cert-verify: true
   l2Bonus: true
-- name: US-San Jose-82005715-pzwo
+- name: HK-Tai Po-285532-xxva
   type: http
-  server: fan.596189.xyz
-  port: 443
-  tls: true
-  sni: fan.596189.xyz
-  l2Bonus: true
-- name: NL-Haarlem-15922519-pkoo
-  type: http
-  server: 51.159.225.196
-  port: 23856
-  tls: true
-  sni: 51.159.225.196
-  skip-cert-verify: true
-  l2Bonus: true
-- name: KR-Chuncheon-26923022-pkmd
-  type: http
-  server: 152.69.230.221
-  port: 443
-  tls: true
-  skip-cert-verify: true
-  l2Bonus: true
-- name: DE-Frankfurt am Main-h-776722-pddr
-  type: http
-  server: 188.120.225.125
-  port: 8443
-  tls: true
-  skip-cert-verify: true
-  l2Bonus: true
-- name: JP-Tokyo-1372379-pzxo
-  type: http
-  server: fan.571589.xyz
+  server: fan.240104.xyz
   port: 443
   username: 'null'
   password: 'null'
   tls: true
-  sni: fan.571589.xyz
   l2Bonus: true
-- name: JP-Tokyo-1372379-pkku
+- name: 🇮🇪 IE 13 | http
   type: http
-  server: fan.571589.xyz
+  server: 34.249.214.108
   port: 443
+  username: 'null'
+  password: 'null'
   tls: true
-  sni: fan.571589.xyz
+  sni: 34.249.214.108
   skip-cert-verify: true
   l2Bonus: true
-- name: US-San Jose-82214-pwrz
+- name: 🇺🇸 US 754 | http
+  server: 184.188.139.2
+  port: 8090
   type: http
-  server: fan.365747.xyz
-  port: 443
   tls: true
-  sni: fan.365747.xyz
+  sni: 184.188.139.2
   skip-cert-verify: true
   l2Bonus: true
-- name: NL-Alkmaar-7311-pkww
-  type: http
-  server: 5.2.73.112
-  port: 443
-  tls: true
-  sni: 5.2.73.112
-  skip-cert-verify: true
-  l2Bonus: true
-- name: LV-Riga-52191591-pzmu
+- name: 🇱🇻 LV 21 | http
   type: http
   server: 185.219.159.15
   port: 443
+  username: ''
+  password: ''
+  tls: true
+  sni: 185.219.159.15
+  skip-cert-verify: true
+  l2Bonus: true
+- name: FR-Paris-718120125-xlmk
+  type: http
+  server: 217.181.201.254
+  port: 8090
   tls: true
   skip-cert-verify: true
   l2Bonus: true
-- name: RU-Moscow-2428518-pmoo
+- name: BR-Vinhedo-465177-xnvk
   type: http
-  server: 87.242.85.187
+  server: 134.65.17.77
+  port: 443
+  tls: true
+  sni: 134.65.17.77
+  skip-cert-verify: true
+  l2Bonus: true
+- name: 🇺🇸 US 815 | http
+  type: http
+  server: 129.153.93.183
+  port: 443
+  skip-cert-verify: true
+  tls: true
+  l2Bonus: true
+- name: 🇺🇸 US 736 | http
+  type: http
+  server: 162.243.146.243
+  port: 443
+  username: testuser1
+  password: e4b72b531a2d10900519
+  tls: true
+  sni: a2f392f3.acsnet.co
+  l2Bonus: true
+- name: VN-Hanoi-2257112-xvla
+  type: http
+  server: 14.225.71.128
+  port: 443
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: US-Sanford-h-432623-xpap
+  type: http
+  server: 71.43.26.234
+  port: 443
+  tls: true
+  sni: 71.43.26.234
+  skip-cert-verify: true
+  l2Bonus: true
+- name: 🇳🇱 NL 267 | http
+  type: http
+  server: 185.246.153.42
+  port: 443
+  username: ''
+  password: ''
+  tls: true
+  sni: 482c8436a1f7c908b48a1757abb5dd79-3791fb4df2db250b.apache-iv.com
+  skip-cert-verify: true
+  l2Bonus: true
+- name: FR-Maisons-Alfort-321911-xnoa
+  type: http
+  server: 31.32.19.111
+  port: 8081
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: US-Ashburn-h-2084922-xpmp
+  type: http
+  server: 44.217.145.28
   port: 8443
   tls: true
-  sni: 87.242.85.187
+  skip-cert-verify: true
+  l2Bonus: true
+- name: NL-Haarlem-15922519-xjkn
+  type: http
+  server: 51.159.225.197
+  port: 19362
+  username: 'null'
+  password: 'null'
+  tls: true
   skip-cert-verify: true
   l2Bonus: true
 - name: DediRock-LA
@@ -379,89 +509,119 @@ proxy-groups:
 - name: 前置
   type: select
   proxies:
-  - US-Atlanta-h-610923-pwzr
-  - CH-Zurich-h-76025-pzwm
-  - DE-Frankfurt am Main-5791265-pdkw
-  - IT-Milan-1741187-ppro
-  - 🇭🇰 HK 430 | http
-  - CH-Zurich-171810-ppor
-  - US-San Jose-82005715-pwwd
-  - JP-Osaka-176518-pkkw
-  - US-San Jose-82005715-pwdz
-  - US-Irvine-24714113-pxzr
-  - US-Seattle-1457212-pxdx
-  - US-McLean-4188139-pxwr
-  - US-Boardman-24816711-ppmx
-  - US-Boardman-19017622-pxkm
-  - LT-Vilnius-12411-ppmz
-  - US-San Jose-82214-pxdw
-  - CH-Zurich-171810-ppum
-  - 🇺🇸 US 788 | http
-  - HK-Tai Po-285532-pprd
-  - US-San Jose-82214-pwuk
-  - SG-Singapore-23616824-pzop
-  - 🇩🇪 DE 296 | http
-  - US-San Jose-82214-pxpd
-  - US-San Francisco-224314624-ppwu
-  - NL-Haarlem-1582439-pkwr
-  - US-Salina-h-2251021-pxmp
-  - NL-Haarlem-1582439-pkxo
-  - US-San Jose-82005715-pzrp
+  - HK-Hong Kong-9282423-xlvk
+  - 🇺🇸 US 801 | http
+  - US-San Jose-82214-xpvl
+  - 自建·加拿大-05 ×0.1
+  - 自建·加拿大-01 ×0.1
+  - 自建·加拿大-06 ×0.1
+  - 🇺🇸 US 744 | http
+  - IT-Milan-1741186-xxvk
+  - JP-Osaka-176518-xolo
+  - 🇧🇦 BA 02 | http
+  - NL-Dronten-551188-xovn
+  - KR-Chuncheon-26923022-xool
+  - US-San Jose-82214-xppm
+  - RU-Moscow-2916613-xmjl
+  - IT-Milan-1741185-xxjp
+  - US-San Jose-82214-xpko
+  - US-San Jose-82214-xanj
+  - US-Boardman-24816711-xpvp
+  - US-San Jose-82214-xaln
+  - IT-Milan-1741187-xxjo
+  - US-San Jose-82214-xpxm
+  - IT-Milan-h-17411814-xxjm
+  - IT-Milan-h-17411815-xxjv
+  - US-San Jose-82214-xpvm
+  - US-San Jose-82214-xpjk
+  - NL-Haarlem-1582439-xoma
+  - NL-Amsterdam-514020923-xoaa
+  - LV-Riga-52191591-xomx
+  - JP-Tokyo-1372379-xonv
+  - 🇺🇸 US 582 | 1.7M | http
+  - IE-Dublin-20320422-xlka
+  - US-Irvine-24714113-xaxm
+  - US-Seattle-1457324-xpkl
   - 🇳🇱 NL 146 | 11.1M | http
-  - 🇵🇱 PL 64 | http
-  - US-San Jose-82005715-pzwo
-  - NL-Haarlem-15922519-pkoo
-  - KR-Chuncheon-26923022-pkmd
-  - DE-Frankfurt am Main-h-776722-pddr
-  - JP-Tokyo-1372379-pzxo
-  - JP-Tokyo-1372379-pkku
-  - US-San Jose-82214-pwrz
-  - NL-Alkmaar-7311-pkww
-  - LV-Riga-52191591-pzmu
-  - RU-Moscow-2428518-pmoo
+  - 🇫🇷 FR 194 | http
+  - FR-Paris-91316521-xxao
+  - SE-Huskvarna-721012924-xmja
+  - FR-Gravelines-9817415-xlmo
+  - IE-Dublin-7611712-xlko
+  - 🇩🇪 DE 73 | 13.9M | http
+  - 🇱🇻 LV 22 | http
+  - HK-Tai Po-285532-xxva
+  - 🇮🇪 IE 13 | http
+  - 🇺🇸 US 754 | http
+  - 🇱🇻 LV 21 | http
+  - FR-Paris-718120125-xlmk
+  - BR-Vinhedo-465177-xnvk
+  - 🇺🇸 US 815 | http
+  - 🇺🇸 US 736 | http
+  - VN-Hanoi-2257112-xvla
+  - US-Sanford-h-432623-xpap
+  - 🇳🇱 NL 267 | http
+  - FR-Maisons-Alfort-321911-xnoa
+  - US-Ashburn-h-2084922-xpmp
+  - NL-Haarlem-15922519-xjkn
 - name: 前置自动
   type: url-test
   proxies:
-  - US-Atlanta-h-610923-pwzr
-  - CH-Zurich-h-76025-pzwm
-  - DE-Frankfurt am Main-5791265-pdkw
-  - IT-Milan-1741187-ppro
-  - 🇭🇰 HK 430 | http
-  - CH-Zurich-171810-ppor
-  - US-San Jose-82005715-pwwd
-  - JP-Osaka-176518-pkkw
-  - US-San Jose-82005715-pwdz
-  - US-Irvine-24714113-pxzr
-  - US-Seattle-1457212-pxdx
-  - US-McLean-4188139-pxwr
-  - US-Boardman-24816711-ppmx
-  - US-Boardman-19017622-pxkm
-  - LT-Vilnius-12411-ppmz
-  - US-San Jose-82214-pxdw
-  - CH-Zurich-171810-ppum
-  - 🇺🇸 US 788 | http
-  - HK-Tai Po-285532-pprd
-  - US-San Jose-82214-pwuk
-  - SG-Singapore-23616824-pzop
-  - 🇩🇪 DE 296 | http
-  - US-San Jose-82214-pxpd
-  - US-San Francisco-224314624-ppwu
-  - NL-Haarlem-1582439-pkwr
-  - US-Salina-h-2251021-pxmp
-  - NL-Haarlem-1582439-pkxo
-  - US-San Jose-82005715-pzrp
+  - HK-Hong Kong-9282423-xlvk
+  - 🇺🇸 US 801 | http
+  - US-San Jose-82214-xpvl
+  - 自建·加拿大-05 ×0.1
+  - 自建·加拿大-01 ×0.1
+  - 自建·加拿大-06 ×0.1
+  - 🇺🇸 US 744 | http
+  - IT-Milan-1741186-xxvk
+  - JP-Osaka-176518-xolo
+  - 🇧🇦 BA 02 | http
+  - NL-Dronten-551188-xovn
+  - KR-Chuncheon-26923022-xool
+  - US-San Jose-82214-xppm
+  - RU-Moscow-2916613-xmjl
+  - IT-Milan-1741185-xxjp
+  - US-San Jose-82214-xpko
+  - US-San Jose-82214-xanj
+  - US-Boardman-24816711-xpvp
+  - US-San Jose-82214-xaln
+  - IT-Milan-1741187-xxjo
+  - US-San Jose-82214-xpxm
+  - IT-Milan-h-17411814-xxjm
+  - IT-Milan-h-17411815-xxjv
+  - US-San Jose-82214-xpvm
+  - US-San Jose-82214-xpjk
+  - NL-Haarlem-1582439-xoma
+  - NL-Amsterdam-514020923-xoaa
+  - LV-Riga-52191591-xomx
+  - JP-Tokyo-1372379-xonv
+  - 🇺🇸 US 582 | 1.7M | http
+  - IE-Dublin-20320422-xlka
+  - US-Irvine-24714113-xaxm
+  - US-Seattle-1457324-xpkl
   - 🇳🇱 NL 146 | 11.1M | http
-  - 🇵🇱 PL 64 | http
-  - US-San Jose-82005715-pzwo
-  - NL-Haarlem-15922519-pkoo
-  - KR-Chuncheon-26923022-pkmd
-  - DE-Frankfurt am Main-h-776722-pddr
-  - JP-Tokyo-1372379-pzxo
-  - JP-Tokyo-1372379-pkku
-  - US-San Jose-82214-pwrz
-  - NL-Alkmaar-7311-pkww
-  - LV-Riga-52191591-pzmu
-  - RU-Moscow-2428518-pmoo
+  - 🇫🇷 FR 194 | http
+  - FR-Paris-91316521-xxao
+  - SE-Huskvarna-721012924-xmja
+  - FR-Gravelines-9817415-xlmo
+  - IE-Dublin-7611712-xlko
+  - 🇩🇪 DE 73 | 13.9M | http
+  - 🇱🇻 LV 22 | http
+  - HK-Tai Po-285532-xxva
+  - 🇮🇪 IE 13 | http
+  - 🇺🇸 US 754 | http
+  - 🇱🇻 LV 21 | http
+  - FR-Paris-718120125-xlmk
+  - BR-Vinhedo-465177-xnvk
+  - 🇺🇸 US 815 | http
+  - 🇺🇸 US 736 | http
+  - VN-Hanoi-2257112-xvla
+  - US-Sanford-h-432623-xpap
+  - 🇳🇱 NL 267 | http
+  - FR-Maisons-Alfort-321911-xnoa
+  - US-Ashburn-h-2084922-xpmp
+  - NL-Haarlem-15922519-xjkn
   url: https://www.google.com/generate_204
   interval: 180
   tolerance: 80
@@ -470,46 +630,61 @@ proxy-groups:
   proxies:
   - 前置自动
   - 前置
-  - US-Atlanta-h-610923-pwzr
-  - CH-Zurich-h-76025-pzwm
-  - DE-Frankfurt am Main-5791265-pdkw
-  - IT-Milan-1741187-ppro
-  - 🇭🇰 HK 430 | http
-  - CH-Zurich-171810-ppor
-  - US-San Jose-82005715-pwwd
-  - JP-Osaka-176518-pkkw
-  - US-San Jose-82005715-pwdz
-  - US-Irvine-24714113-pxzr
-  - US-Seattle-1457212-pxdx
-  - US-McLean-4188139-pxwr
-  - US-Boardman-24816711-ppmx
-  - US-Boardman-19017622-pxkm
-  - LT-Vilnius-12411-ppmz
-  - US-San Jose-82214-pxdw
-  - CH-Zurich-171810-ppum
-  - 🇺🇸 US 788 | http
-  - HK-Tai Po-285532-pprd
-  - US-San Jose-82214-pwuk
-  - SG-Singapore-23616824-pzop
-  - 🇩🇪 DE 296 | http
-  - US-San Jose-82214-pxpd
-  - US-San Francisco-224314624-ppwu
-  - NL-Haarlem-1582439-pkwr
-  - US-Salina-h-2251021-pxmp
-  - NL-Haarlem-1582439-pkxo
-  - US-San Jose-82005715-pzrp
+  - HK-Hong Kong-9282423-xlvk
+  - 🇺🇸 US 801 | http
+  - US-San Jose-82214-xpvl
+  - 自建·加拿大-05 ×0.1
+  - 自建·加拿大-01 ×0.1
+  - 自建·加拿大-06 ×0.1
+  - 🇺🇸 US 744 | http
+  - IT-Milan-1741186-xxvk
+  - JP-Osaka-176518-xolo
+  - 🇧🇦 BA 02 | http
+  - NL-Dronten-551188-xovn
+  - KR-Chuncheon-26923022-xool
+  - US-San Jose-82214-xppm
+  - RU-Moscow-2916613-xmjl
+  - IT-Milan-1741185-xxjp
+  - US-San Jose-82214-xpko
+  - US-San Jose-82214-xanj
+  - US-Boardman-24816711-xpvp
+  - US-San Jose-82214-xaln
+  - IT-Milan-1741187-xxjo
+  - US-San Jose-82214-xpxm
+  - IT-Milan-h-17411814-xxjm
+  - IT-Milan-h-17411815-xxjv
+  - US-San Jose-82214-xpvm
+  - US-San Jose-82214-xpjk
+  - NL-Haarlem-1582439-xoma
+  - NL-Amsterdam-514020923-xoaa
+  - LV-Riga-52191591-xomx
+  - JP-Tokyo-1372379-xonv
+  - 🇺🇸 US 582 | 1.7M | http
+  - IE-Dublin-20320422-xlka
+  - US-Irvine-24714113-xaxm
+  - US-Seattle-1457324-xpkl
   - 🇳🇱 NL 146 | 11.1M | http
-  - 🇵🇱 PL 64 | http
-  - US-San Jose-82005715-pzwo
-  - NL-Haarlem-15922519-pkoo
-  - KR-Chuncheon-26923022-pkmd
-  - DE-Frankfurt am Main-h-776722-pddr
-  - JP-Tokyo-1372379-pzxo
-  - JP-Tokyo-1372379-pkku
-  - US-San Jose-82214-pwrz
-  - NL-Alkmaar-7311-pkww
-  - LV-Riga-52191591-pzmu
-  - RU-Moscow-2428518-pmoo
+  - 🇫🇷 FR 194 | http
+  - FR-Paris-91316521-xxao
+  - SE-Huskvarna-721012924-xmja
+  - FR-Gravelines-9817415-xlmo
+  - IE-Dublin-7611712-xlko
+  - 🇩🇪 DE 73 | 13.9M | http
+  - 🇱🇻 LV 22 | http
+  - HK-Tai Po-285532-xxva
+  - 🇮🇪 IE 13 | http
+  - 🇺🇸 US 754 | http
+  - 🇱🇻 LV 21 | http
+  - FR-Paris-718120125-xlmk
+  - BR-Vinhedo-465177-xnvk
+  - 🇺🇸 US 815 | http
+  - 🇺🇸 US 736 | http
+  - VN-Hanoi-2257112-xvla
+  - US-Sanford-h-432623-xpap
+  - 🇳🇱 NL 267 | http
+  - FR-Maisons-Alfort-321911-xnoa
+  - US-Ashburn-h-2084922-xpmp
+  - NL-Haarlem-15922519-xjkn
 - name: 代理
   type: select
   proxies:
