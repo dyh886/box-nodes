@@ -22,161 +22,7 @@ dns:
     - https://1.1.1.1/dns-query
     - https://8.8.8.8/dns-query
 proxies:
-- name: "自建·香港-01 ×1.2"
-  type: vless
-  server: "39.109.57.230"
-  port: 8443
-  uuid: "0bc7c8a1-fd2b-4346-8544-cb683278b8e5"
-  udp: false
-  tls: true
-  servername: "hk1.1am.cc.cd"
-  network: ws
-  ws-opts:
-    path: "/69258b95124b5273"
-    headers:
-      Host: "hk1.1am.cc.cd"
-  client-fingerprint: chrome
-- name: "自建·香港-02 ×1.2"
-  type: vless
-  server: "38.55.193.106"
-  port: 8443
-  uuid: "0bc7c8a1-fd2b-4346-8544-cb683278b8e5"
-  udp: false
-  tls: true
-  servername: "hk1.1am.cc.cd"
-  network: ws
-  ws-opts:
-    path: "/69258b95124b5273"
-    headers:
-      Host: "hk1.1am.cc.cd"
-  client-fingerprint: chrome
-- name: "自建·香港-03 ×1.2"
-  type: vless
-  server: "154.19.186.229"
-  port: 8443
-  uuid: "0bc7c8a1-fd2b-4346-8544-cb683278b8e5"
-  udp: false
-  tls: true
-  servername: "hk1.1am.cc.cd"
-  network: ws
-  ws-opts:
-    path: "/69258b95124b5273"
-    headers:
-      Host: "hk1.1am.cc.cd"
-  client-fingerprint: chrome
-- name: "自建·香港-04 ×1.2"
-  type: vless
-  server: "43.160.227.223"
-  port: 9443
-  uuid: "0bc7c8a1-fd2b-4346-8544-cb683278b8e5"
-  udp: false
-  tls: true
-  servername: "hk1.1am.cc.cd"
-  network: ws
-  ws-opts:
-    path: "/69258b95124b5273"
-    headers:
-      Host: "hk1.1am.cc.cd"
-  client-fingerprint: chrome
-- name: "自建·香港-05 ×1.2"
-  type: vless
-  server: "1.250.142.241"
-  port: 18057
-  uuid: "0bc7c8a1-fd2b-4346-8544-cb683278b8e5"
-  udp: false
-  tls: true
-  servername: "hk1.1am.cc.cd"
-  network: ws
-  ws-opts:
-    path: "/69258b95124b5273"
-    headers:
-      Host: "hk1.1am.cc.cd"
-  client-fingerprint: chrome
-- name: "自建·香港-06 ×1.2"
-  type: vless
-  server: "95.182.86.190"
-  port: 2083
-  uuid: "0bc7c8a1-fd2b-4346-8544-cb683278b8e5"
-  udp: false
-  tls: true
-  servername: "hk1.1am.cc.cd"
-  network: ws
-  ws-opts:
-    path: "/69258b95124b5273"
-    headers:
-      Host: "hk1.1am.cc.cd"
-  client-fingerprint: chrome
 - name: "自建·加拿大-01 ×0.1"
-  type: vless
-  server: "209.33.172.78"
-  port: 8443
-  uuid: "0bc7c8a1-fd2b-4346-8544-cb683278b8e5"
-  udp: false
-  tls: true
-  servername: "us1.1am.cc.cd"
-  network: ws
-  ws-opts:
-    path: "/492fbb0e1ab5996d"
-    headers:
-      Host: "us1.1am.cc.cd"
-  client-fingerprint: chrome
-- name: "自建·加拿大-02 ×0.1"
-  type: vless
-  server: "14.49.249.113"
-  port: 30083
-  uuid: "0bc7c8a1-fd2b-4346-8544-cb683278b8e5"
-  udp: false
-  tls: true
-  servername: "us1.1am.cc.cd"
-  network: ws
-  ws-opts:
-    path: "/492fbb0e1ab5996d"
-    headers:
-      Host: "us1.1am.cc.cd"
-  client-fingerprint: chrome
-- name: "自建·加拿大-03 ×0.1"
-  type: vless
-  server: "139.180.206.80"
-  port: 8443
-  uuid: "0bc7c8a1-fd2b-4346-8544-cb683278b8e5"
-  udp: false
-  tls: true
-  servername: "us1.1am.cc.cd"
-  network: ws
-  ws-opts:
-    path: "/492fbb0e1ab5996d"
-    headers:
-      Host: "us1.1am.cc.cd"
-  client-fingerprint: chrome
-- name: "自建·加拿大-04 ×0.1"
-  type: vless
-  server: "103.85.27.100"
-  port: 8443
-  uuid: "0bc7c8a1-fd2b-4346-8544-cb683278b8e5"
-  udp: false
-  tls: true
-  servername: "us1.1am.cc.cd"
-  network: ws
-  ws-opts:
-    path: "/492fbb0e1ab5996d"
-    headers:
-      Host: "us1.1am.cc.cd"
-  client-fingerprint: chrome
-- name: "自建·加拿大-05 ×0.1"
-  type: vless
-  server: "23.106.143.50"
-  port: 8443
-  uuid: "0bc7c8a1-fd2b-4346-8544-cb683278b8e5"
-  udp: false
-  tls: true
-  servername: "us1.1am.cc.cd"
-  network: ws
-  ws-opts:
-    path: "/492fbb0e1ab5996d"
-    headers:
-      Host: "us1.1am.cc.cd"
-  client-fingerprint: chrome
-- name: "自建·加拿大-06 ×0.1"
   type: vless
   server: "2.56.123.163"
   port: 8443
@@ -190,119 +36,151 @@ proxies:
     headers:
       Host: "us1.1am.cc.cd"
   client-fingerprint: chrome
-- name: "自建·美国-01 ×0.2"
+- name: "自建·加拿大-02 ×0.1"
+  type: vless
+  server: "23.106.143.50"
+  port: 8443
+  uuid: "0bc7c8a1-fd2b-4346-8544-cb683278b8e5"
+  udp: false
+  tls: true
+  servername: "us1.1am.cc.cd"
+  network: ws
+  ws-opts:
+    path: "/492fbb0e1ab5996d"
+    headers:
+      Host: "us1.1am.cc.cd"
+  client-fingerprint: chrome
+- name: "自建·加拿大-03 ×0.1"
+  type: vless
+  server: "103.238.227.212"
+  port: 8443
+  uuid: "0bc7c8a1-fd2b-4346-8544-cb683278b8e5"
+  udp: false
+  tls: true
+  servername: "us1.1am.cc.cd"
+  network: ws
+  ws-opts:
+    path: "/492fbb0e1ab5996d"
+    headers:
+      Host: "us1.1am.cc.cd"
+  client-fingerprint: chrome
+- name: "自建·加拿大-04 ×0.1"
   type: vless
   server: "154.19.186.229"
   port: 8443
   uuid: "0bc7c8a1-fd2b-4346-8544-cb683278b8e5"
   udp: false
   tls: true
-  servername: "oh1.1am.cc.cd"
+  servername: "us1.1am.cc.cd"
   network: ws
   ws-opts:
-    path: "/fda194c443e8b4d184bf0572"
+    path: "/492fbb0e1ab5996d"
     headers:
-      Host: "oh1.1am.cc.cd"
+      Host: "us1.1am.cc.cd"
   client-fingerprint: chrome
-- name: "自建·美国-02 ×0.2"
+- name: "自建·加拿大-05 ×0.1"
+  type: vless
+  server: "103.85.27.100"
+  port: 8443
+  uuid: "0bc7c8a1-fd2b-4346-8544-cb683278b8e5"
+  udp: false
+  tls: true
+  servername: "us1.1am.cc.cd"
+  network: ws
+  ws-opts:
+    path: "/492fbb0e1ab5996d"
+    headers:
+      Host: "us1.1am.cc.cd"
+  client-fingerprint: chrome
+- name: "自建·加拿大-06 ×0.1"
+  type: vless
+  server: "45.45.217.192"
+  port: 444
+  uuid: "0bc7c8a1-fd2b-4346-8544-cb683278b8e5"
+  udp: false
+  tls: true
+  servername: "us1.1am.cc.cd"
+  network: ws
+  ws-opts:
+    path: "/492fbb0e1ab5996d"
+    headers:
+      Host: "us1.1am.cc.cd"
+  client-fingerprint: chrome
+- name: "自建·加拿大-07 ×0.1"
   type: vless
   server: "38.55.193.106"
   port: 8443
   uuid: "0bc7c8a1-fd2b-4346-8544-cb683278b8e5"
   udp: false
   tls: true
-  servername: "oh1.1am.cc.cd"
+  servername: "us1.1am.cc.cd"
   network: ws
   ws-opts:
-    path: "/fda194c443e8b4d184bf0572"
+    path: "/492fbb0e1ab5996d"
     headers:
-      Host: "oh1.1am.cc.cd"
+      Host: "us1.1am.cc.cd"
   client-fingerprint: chrome
-- name: "自建·美国-03 ×0.2"
+- name: "自建·加拿大-08 ×0.1"
   type: vless
-  server: "45.192.207.18"
-  port: 17000
-  uuid: "0bc7c8a1-fd2b-4346-8544-cb683278b8e5"
-  udp: false
-  tls: true
-  servername: "oh1.1am.cc.cd"
-  network: ws
-  ws-opts:
-    path: "/fda194c443e8b4d184bf0572"
-    headers:
-      Host: "oh1.1am.cc.cd"
-  client-fingerprint: chrome
-- name: "自建·美国-04 ×0.2"
-  type: vless
-  server: "188.253.5.77"
+  server: "39.109.57.230"
   port: 8443
   uuid: "0bc7c8a1-fd2b-4346-8544-cb683278b8e5"
   udp: false
   tls: true
-  servername: "oh1.1am.cc.cd"
+  servername: "us1.1am.cc.cd"
   network: ws
   ws-opts:
-    path: "/fda194c443e8b4d184bf0572"
+    path: "/492fbb0e1ab5996d"
     headers:
-      Host: "oh1.1am.cc.cd"
+      Host: "us1.1am.cc.cd"
   client-fingerprint: chrome
-- name: "自建·美国-05 ×0.2"
+- name: "自建·加拿大-09 ×0.1"
   type: vless
-  server: "13.140.95.76"
-  port: 2087
+  server: "14.49.249.113"
+  port: 30083
   uuid: "0bc7c8a1-fd2b-4346-8544-cb683278b8e5"
   udp: false
   tls: true
-  servername: "oh1.1am.cc.cd"
+  servername: "us1.1am.cc.cd"
   network: ws
   ws-opts:
-    path: "/fda194c443e8b4d184bf0572"
+    path: "/492fbb0e1ab5996d"
     headers:
-      Host: "oh1.1am.cc.cd"
+      Host: "us1.1am.cc.cd"
   client-fingerprint: chrome
-- name: "自建·美国-06 ×0.2"
-  type: vless
-  server: "14.44.19.57"
-  port: 12101
-  uuid: "0bc7c8a1-fd2b-4346-8544-cb683278b8e5"
-  udp: false
+- name: 🇳🇱 NL 113 | 11.2M | http
+  password: 'null'
+  port: 9002
+  server: 84.17.47.146
+  skip-cert-verify: true
   tls: true
-  servername: "oh1.1am.cc.cd"
-  network: ws
-  ws-opts:
-    path: "/fda194c443e8b4d184bf0572"
-    headers:
-      Host: "oh1.1am.cc.cd"
-  client-fingerprint: chrome
-- name: "自建·美国-07 ×0.2"
-  type: vless
-  server: "46.250.248.202"
-  port: 8443
-  uuid: "0bc7c8a1-fd2b-4346-8544-cb683278b8e5"
-  udp: false
+  type: http
+  username: 'null'
+- name: 🇳🇱 NL 105 | 11.5M | http
+  port: 19362
+  server: 51.159.225.197
+  skip-cert-verify: true
+  sub_tag: R002-260618
   tls: true
-  servername: "oh1.1am.cc.cd"
-  network: ws
-  ws-opts:
-    path: "/fda194c443e8b4d184bf0572"
-    headers:
-      Host: "oh1.1am.cc.cd"
-  client-fingerprint: chrome
-- name: "自建·美国-08 ×0.2"
-  type: vless
-  server: "46.8.227.65"
-  port: 2083
-  uuid: "0bc7c8a1-fd2b-4346-8544-cb683278b8e5"
-  udp: false
+  type: http
+  udp: true
+- name: 🇷🇴 RO 09 | 8.9M | http
+  port: 9002
+  server: 193.176.84.18
+  skip-cert-verify: true
+  sub_tag: R002-260618
   tls: true
-  servername: "oh1.1am.cc.cd"
-  network: ws
-  ws-opts:
-    path: "/fda194c443e8b4d184bf0572"
-    headers:
-      Host: "oh1.1am.cc.cd"
-  client-fingerprint: chrome
-- name: 🇱🇻 LV 01 | 参考4.0M | http
+  type: http
+  udp: true
+- name: 🇺🇸 US 715 | http
+  type: http
+  server: 162.243.146.243
+  port: 443
+  username: testuser1
+  password: e4b72b531a2d10900519
+  tls: true
+  sni: a2f392f3.acsnet.co
+- name: 🇱🇻 LV 22 | http
   type: http
   server: 185.219.159.15
   port: 443
@@ -311,7 +189,7 @@ proxies:
   tls: true
   sni: 185.219.159.15
   skip-cert-verify: true
-- name: 🇩🇪 DE 07 | 参考4.3M | http
+- name: 🇩🇪 DE 297 | http
   type: http
   server: 158.173.154.5
   port: 9002
@@ -320,7 +198,7 @@ proxies:
   tls: true
   sni: 158.173.154.5
   skip-cert-verify: true
-- name: 🇷🇴 RO 06 | 参考2.8M | http
+- name: 🇷🇴 RO 62 | http
   type: http
   server: 193.176.84.31
   port: 9002
@@ -329,7 +207,7 @@ proxies:
   tls: true
   sni: www.bing.com
   skip-cert-verify: true
-- name: 🇺🇸 US 30 | 参考5.4M | http
+- name: 🇺🇸 US 716 | http
   type: http
   server: 138.199.35.220
   port: 9002
@@ -338,7 +216,7 @@ proxies:
   tls: true
   sni: 138.199.35.220
   skip-cert-verify: true
-- name: 🇺🇸 US 28 | 参考2.7M | http
+- name: 🇺🇸 US 717 | http
   type: http
   server: 96.5.129.85
   port: 443
@@ -347,7 +225,7 @@ proxies:
   tls: true
   sni: 96.5.129.85
   skip-cert-verify: true
-- name: 🇺🇸 US 18 | 参考5.8M | http
+- name: 🇺🇸 US 718 | http
   type: http
   server: 138.199.35.205
   port: 9002
@@ -355,7 +233,7 @@ proxies:
   password: ''
   tls: true
   skip-cert-verify: true
-- name: 🇺🇸 US 06 | 参考6.4M | http
+- name: 🇺🇸 US 719 | http
   type: http
   server: 138.199.35.217
   port: 9002
@@ -363,7 +241,7 @@ proxies:
   password: ''
   tls: true
   skip-cert-verify: true
-- name: 🇺🇸 US 03 | 2.9M | http
+- name: 🇺🇸 US 720 | http
   type: http
   server: 137.175.22.120
   port: 443
@@ -374,7 +252,7 @@ proxies:
   skip-cert-verify: true
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇮🇷 IR 01 | 参考3.3M | vless
+  name: 🇮🇷 IR 22 | vless
   network: tcp
   port: 8443
   reality-opts:
@@ -389,7 +267,7 @@ proxies:
   xudp: true
   path: direct
   is_landing: false
-- name: 🇷🇴 RO 03 | 参考2.9M | http
+- name: 🇷🇴 RO 64 | http
   type: http
   server: 193.176.84.30
   port: 9002
@@ -397,7 +275,7 @@ proxies:
   password: ''
   tls: true
   skip-cert-verify: true
-- name: 🇷🇴 RO 02 | 参考3.0M | http
+- name: 🇷🇴 RO 63 | http
   type: http
   server: 193.176.84.40
   port: 9002
@@ -405,14 +283,14 @@ proxies:
   password: ''
   tls: true
   skip-cert-verify: true
-- name: 🇷🇴 RO 01 | 参考2.9M | http
+- name: 🇷🇴 RO 65 | http
   server: 193.176.84.38
   port: 9002
   type: http
   tls: true
   sni: 193.176.84.38
   skip-cert-verify: true
-- name: 🇩🇪 DE 04 | 参考4.4M | http
+- name: 🇩🇪 DE 298 | http
   type: http
   server: 158.173.154.1
   port: 9002
@@ -420,7 +298,7 @@ proxies:
   password: ''
   tls: true
   skip-cert-verify: true
-- name: 🇮🇪 IE 01 | 参考4.0M | http
+- name: 🇮🇪 IE 16 | http
   type: http
   server: 34.249.214.108
   port: 443
@@ -429,7 +307,7 @@ proxies:
   tls: true
   sni: 34.249.214.108
   skip-cert-verify: true
-- name: 🇳🇱 NL 01 | 参考5.4M | http
+- name: 🇳🇱 NL 277 | http
   type: http
   server: 51.158.243.91
   port: 443
@@ -438,7 +316,7 @@ proxies:
   tls: true
   sni: 51.158.243.91
   skip-cert-verify: true
-- name: 🇮🇪 IE 03 | 参考4.1M | http
+- name: 🇮🇪 IE 17 | http
   type: http
   server: 18.200.158.139
   port: 443
@@ -446,14 +324,46 @@ proxies:
   password: ''
   tls: true
   skip-cert-verify: true
-- name: 🇮🇱 IL 01 | 参考4.1M | http
+- name: 🇺🇸 US 723 | 参考6.0M | http
+  type: http
+  server: 138.199.35.206
+  port: 9002
+  username: ''
+  password: ''
+  tls: true
+  skip-cert-verify: true
+- type: http
+  name: 🇫🇷 FR 191 | http
+  server: 31.32.19.111
+  port: 8081
+  password: None
+  tls: true
+  servername: 31.32.19.111
+  skip-cert-verify: true
+- name: 🇳🇱 NL 281 | http
+  type: http
+  server: 185.246.153.42
+  port: 443
+  username: ''
+  password: ''
+  tls: true
+  sni: 482c8436a1f7c908b48a1757abb5dd79-3791fb4df2db250b.apache-iv.com
+  skip-cert-verify: true
+- name: 🇮🇱 IL 04 | http
+  type: http
   server: 62.90.77.30
   port: 443
-  type: http
   tls: true
   sni: 62.90.77.30
   skip-cert-verify: true
-- name: 🇷🇴 RO 153 | http
+- type: http
+  name: 🇺🇸 US 727 | http
+  server: 23.133.176.14
+  port: 443
+  tls: true
+  servername: 23.133.176.14
+  skip-cert-verify: true
+- name: 🇷🇴 RO 66 | http
   password: null
   port: 9002
   server: 193.176.84.17
@@ -461,26 +371,26 @@ proxies:
   tls: true
   type: http
   username: null
-- name: 🇺🇸 US 07 | 参考3.5M | http
-  type: http
+- name: 🇺🇸 US 728 | http
   server: tzoa.fun
   port: 443
-  skip-cert-verify: true
+  type: http
   tls: true
   sni: tzoa.fun
-- name: 🇸🇬 SG 01 | 参考32.8M | ss
+  skip-cert-verify: true
+- name: 🇸🇬 SG 195 | ss
   type: ss
   server: 149.88.106.74
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇩🇪 DE 01 | 参考3.9M | trojan
-  type: trojan
-  server: 193.108.119.193
-  port: 443
+- name: 🇩🇪 DE 299 | trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 193.108.119.193
   sni: resources.iloverussia2026.com
-- name: 🇦🇱 AL 01 | 参考3.2M | http
+  type: trojan
+- name: 🇦🇱 AL 07 | http
   type: http
   server: 31.171.154.66
   port: 443
@@ -488,14 +398,14 @@ proxies:
   password: None
   tls: true
   skip-cert-verify: true
-- name: 🇺🇸 US 22 | 参考3.5M | http
+- name: 🇺🇸 US 732 | http
   server: 184.188.139.2
   port: 8090
   type: http
   tls: true
   sni: 184.188.139.2
   skip-cert-verify: true
-- name: 🇬🇧 GB 01 | 参考2.9M | vless
+- name: 🇬🇧 GB 88 | vless
   type: vless
   server: 213.176.92.168
   port: 14430
@@ -506,20 +416,20 @@ proxies:
     path: /vless
     headers:
       Host: 213.176.92.168
-- name: 🇺🇸 US 04 | 参考4.5M | ss
+- name: 🇺🇸 US 733 | ss
   server: 65.49.197.121
   port: 51888
   type: ss
   cipher: 2022-blake3-aes-128-gcm
   password: dL9x9OXRTXbpHpd726Gtdg==
   udp: true
-- name: 🇩🇪 DE 02 | 参考4.0M | http
+- name: 🇩🇪 DE 300 | http
   type: http
   server: 103.237.102.191
   port: 11111
   username: ''
   password: ''
-- name: 🇩🇪 DE 06 | 参考3.7M | http
+- name: 🇩🇪 DE 301 | http
   type: http
   server: 116.202.172.99
   port: 443
@@ -528,7 +438,7 @@ proxies:
   skip-cert-verify: true
   tls: true
   sni: 116.202.172.99
-- name: 🇸🇪 SE 01 | 参考4.6M | vless
+- name: 🇸🇪 SE 23 | vless
   server: 138.124.86.230
   port: 48115
   type: vless
@@ -540,7 +450,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: 138-124-86-230-sslip-io
-- name: 🇩🇪 DE 05 | 参考2.6M | http
+- name: 🇩🇪 DE 302 | http
   type: http
   server: 87.249.132.97
   port: 443
@@ -548,7 +458,16 @@ proxies:
   password: None
   tls: true
   skip-cert-verify: true
-- name: 🇨🇿 CZ 01 | 参考1.9M | http
+- name: 🇫🇷 FR 192 | 3.9M | http
+  type: http
+  server: 138.199.47.247
+  port: 9443
+  username: ''
+  password: ''
+  tls: true
+  sni: 138.199.47.247
+  skip-cert-verify: true
+- name: 🇨🇿 CZ 22 | http
   type: http
   server: 193.35.104.196
   port: 443
@@ -556,14 +475,14 @@ proxies:
   password: ''
   tls: true
   skip-cert-verify: true
-- name: 🇳🇱 NL 02 | 参考5.4M | http
+- name: 🇳🇱 NL 284 | http
+  type: http
   server: 84.17.47.124
   port: 9002
-  type: http
   tls: true
   sni: 84.17.47.124
   skip-cert-verify: true
-- name: 🇫🇷 FR 03 | 参考5.4M | http
+- name: 🇫🇷 FR 193 | http
   type: http
   server: 82.65.162.76
   port: 443
@@ -572,7 +491,7 @@ proxies:
   tls: true
   sni: 82.65.162.76
   skip-cert-verify: true
-- name: 🇷🇴 RO 07 | 参考2.4M | http
+- name: 🇷🇴 RO 68 | http
   type: http
   server: 193.176.84.37
   port: 9002
@@ -580,7 +499,7 @@ proxies:
   password: 'null'
   tls: true
   skip-cert-verify: true
-- name: 🇫🇷 FR 04 | 参考3.3M | http
+- name: 🇫🇷 FR 194 | http
   type: http
   server: 141.94.16.4
   port: 443
@@ -589,7 +508,7 @@ proxies:
   tls: true
   sni: 141.94.16.4
   skip-cert-verify: true
-- name: 🇵🇱 PL 01 | http
+- name: 🇵🇱 PL 69 | http
   type: http
   server: 151.115.54.133
   port: 443
@@ -597,14 +516,30 @@ proxies:
   password: ''
   tls: true
   skip-cert-verify: true
-- name: 🇷🇴 RO 05 | 参考3.5M | http
+- name: 🇯🇵 JP 226 | http
+  port: 443
+  server: fan.571589.xyz
+  sni: fan.571589.xyz
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- name: 🇷🇴 RO 69 | http
   server: 193.176.84.19
   port: 9002
   type: http
   tls: true
   sni: 193.176.84.19
   skip-cert-verify: true
-- name: 🇱🇻 LV 14 | 参考4.0M | http
+- name: 🇺🇸 US 582 | 1.7M | http
+  port: 443
+  server: 24.225.10.211
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- name: 🇱🇻 LV 23 | 参考4.0M | http
   type: http
   server: 185.219.159.16
   port: 443
@@ -613,7 +548,7 @@ proxies:
   tls: true
   sni: 185.219.159.16
   skip-cert-verify: true
-- name: 🇺🇸 US 1207 | 参考6.1M | http
+- name: 🇺🇸 US 741 | http
   server: kimberlymilano.icu
   port: 443
   type: http
@@ -621,7 +556,7 @@ proxies:
   tls: true
   sni: kimberlymilano.icu
   skip-cert-verify: true
-- name: 🇳🇱 NL 03 | http
+- name: 🇳🇱 NL 288 | http
   password: None
   port: 9002
   server: 84.17.47.123
@@ -629,90 +564,105 @@ proxies:
   tls: true
   type: http
   udp: true
-- name: 🇳🇱 NL 105 | 11.5M | http
-  port: 19362
-  server: 51.159.225.197
-  skip-cert-verify: true
-  sub_tag: R002-260618
-  tls: true
-  type: http
-  udp: true
-- name: 🇩🇪 DE 08 | http
+- name: 🇩🇪 DE 304 | http
   type: http
   server: 87.106.223.158
   port: 443
   tls: true
   sni: 87.106.223.158
   skip-cert-verify: true
-- name: 🇺🇸 US 17 | 3.0M | http
+- name: 🇺🇸 US 746 | http
   server: 138.199.35.197
   port: 9002
   type: http
   tls: true
   sni: 138.199.35.197
   skip-cert-verify: true
-- name: 🇦🇺 AU 01 | http
+- name: 🇦🇺 AU 13 | http
   server: 103.62.50.130
   port: 443
   type: http
   tls: true
   sni: 103.62.50.130
   skip-cert-verify: true
-- name: 🇨🇦 CA 01 | http
-  type: http
+- name: 🇨🇦 CA 105 | http
   server: 198.44.157.19
   port: 9443
+  type: http
   tls: true
   sni: 198.44.157.19
   skip-cert-verify: true
-- name: 🇮🇹 IT 01 | 参考4.4M | ss
+- name: 🇺🇸 US 747 | http
+  server: 138.199.35.216
+  port: 9002
+  type: http
+  password: None
+  tls: true
+  skip-cert-verify: true
+- name: 🇺🇸 US 292 | 11.1M | http
+  port: 8443
+  server: 44.248.167.117
+  skip-cert-verify: true
+  tls: true
+  type: http
+- name: 🇮🇹 IT 24 | 参考4.4M | ss
   type: ss
   server: 149.50.215.234
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸 US 37 | 参考3.9M | http
+- name: 🇺🇸 US 750 | 参考3.9M | http
   type: http
   server: jewelscollecti.icu
   port: 443
   username: 'null'
   password: None
-  skip-cert-verify: true
   tls: true
   sni: jewelscollecti.icu
-- name: 🇺🇸 US 11 | 参考4.5M | ss
+  skip-cert-verify: true
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  name: 🇸🇪 SE 24 | vless
+  network: tcp
+  port: 443
+  server: 194.104.94.141
+  servername: se3.shtil.io
+  tls: true
+  type: vless
+  uuid: 6ba4ed2e-b42b-4880-8b3b-c7e2df2d02f6
+- name: 🇺🇸 US 752 | ss
   type: ss
   server: 167.88.62.203
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇫🇷 FR 02 | 参考4.4M | ss
+- name: 🇫🇷 FR 196 | ss
   type: ss
   server: 172.99.189.142
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸 US 16 | 参考3.9M | ss
+- name: 🇺🇸 US 754 | ss
   type: ss
   server: 38.121.43.18
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸 US 01 | 参考2.6M | ss
+- name: 🇺🇸 US 755 | ss
   type: ss
   server: 38.121.43.231
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇨🇦 CA 30 | 参考4.3M | http
-  type: http
-  server: 23.169.224.34
-  port: 9443
-  username: ''
-  password: None
-  tls: true
-  skip-cert-verify: true
-- name: 🇷🇴 RO 08 | http
+- name: 🇺🇸 US 756 | ss
+  type: ss
+  server: 167.88.63.99
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇷🇴 RO 72 | http
   type: http
   server: 193.176.84.22
   port: 9002
@@ -721,7 +671,7 @@ proxies:
   tls: true
   sni: 193.176.84.22
   skip-cert-verify: true
-- name: 🇺🇸 US 47 | http
+- name: 🇺🇸 US 759 | http
   type: http
   server: 138.199.35.200
   port: 9002
@@ -729,7 +679,7 @@ proxies:
   password: ''
   tls: true
   skip-cert-verify: true
-- name: 🇪🇸 ES 01 | http
+- name: 🇪🇸 ES 23 | http
   type: http
   server: 130.195.250.34
   port: 443
@@ -737,21 +687,29 @@ proxies:
   password: ''
   tls: true
   skip-cert-verify: true
-- name: 🇨🇦 CA 03 | http
-  type: http
+- name: 🇨🇦 CA 106 | http
   server: 206.223.183.13
   port: 443
-  skip-cert-verify: true
+  type: http
   tls: true
   sni: 206.223.183.13
-- name: 🇮🇹 IT 07 | socks5
+  skip-cert-verify: true
+- name: 🇮🇹 IT 25 | socks5
   password: null
   port: 1088
   server: 212.77.75.25
   type: socks5
   udp: true
   username: null
-- name: 🇺🇸 US 1218 | 参考3.5M | vless
+- name: 🇬🇧 GB 89 | http
+  type: http
+  server: 84.17.50.214
+  port: 9443
+  username: ''
+  password: ''
+  tls: true
+  skip-cert-verify: true
+- name: 🇺🇸 US 762 | 参考3.5M | vless
   type: vless
   server: 161.114.15.215
   port: 30449
@@ -764,20 +722,41 @@ proxies:
   reality-opts:
     public-key: AuuIwPN-uCAIkqy77aF5NRU8AxJUFbraiGKsHTjr9Xw
     short-id: 'bd7838071eb9d90c'
-- name: 🇩🇪 DE 03 | 参考4.1M | ss
+- name: 🇩🇪 DE 307 | ss
   type: ss
   server: 193.108.119.2
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇳🇱 NL 06 | 参考3.9M | http
+- name: 🇧🇦 BA 02 | http
+  type: http
+  server: 185.164.35.16
+  port: 9443
+  tls: true
+  sni: 185.164.35.16
+  skip-cert-verify: true
+- name: 🇺🇸 US 763 | http
+  type: http
+  server: 138.199.35.219
+  port: 9002
+  tls: true
+  sni: 138.199.35.219
+  skip-cert-verify: true
+- type: http
+  name: 🇷🇴 RO 73 | http
+  server: 193.176.84.36
+  port: 9002
+  tls: true
+  servername: 193.176.84.36
+  skip-cert-verify: true
+- name: 🇳🇱 NL 297 | http
+  type: http
   server: 84.17.47.147
   port: 9002
-  type: http
   tls: true
   sni: 84.17.47.147
   skip-cert-verify: true
-- name: 🇺🇸 US 44 | 参考4.9M | http
+- name: 🇺🇸 US 764 | http
   type: http
   server: 138.199.35.209
   port: 9002
@@ -785,53 +764,72 @@ proxies:
   password: 'null'
   tls: true
   skip-cert-verify: true
-- type: http
-  name: 🇺🇸 US 23 | 参考5.9M | http
-  server: 138.199.35.219
+- name: 🇺🇸 US 68 | 14.9M | http
+  password: ''
   port: 9002
-  password: None
-  tls: true
-  servername: 138.199.35.219
+  server: 138.199.35.210
   skip-cert-verify: true
-- name: 🇺🇸 US 05 | 参考1.6M | http
-  password: gs4BXwT6SW
-  port: 10988
-  server: 154.26.192.123
+  tls: true
+  type: http
+  username: ''
+- type: http
+  name: 🇺🇸 US 772 | http
+  server: 138.199.35.214
+  port: 9002
+  tls: true
+  servername: 138.199.35.214
+  skip-cert-verify: true
+- name: 🇩🇪 DE 73 | 13.9M | http
+  port: 443
+  server: 159.69.94.125
+  skip-cert-verify: true
   sub_tag: R002-260618
-  tls: false
+  tls: true
   type: http
   udp: true
-  username: fQ67Dpe5dU
-- name: 🇳🇱 NL 113 | 11.2M | http
-  password: 'null'
+- name: 🇮🇪 IE 20 | http (2)
+  type: http
+  server: 149.88.96.1
+  port: 443
+  username: ''
+  password: ''
+  tls: true
+  skip-cert-verify: true
+- name: 🇺🇸 US 783 | http
+  server: 138.199.35.215
   port: 9002
-  server: 84.17.47.146
+  type: http
+  password: None
+  tls: true
+  skip-cert-verify: true
+- name: 🇳🇱 NL 302 | http
+  type: http
+  server: 84.17.47.150
+  port: 9002
   skip-cert-verify: true
   tls: true
+- name: 🇭🇰 HK 437 | http
+  port: 3128
+  server: 119.28.24.235
+  skip-cert-verify: true
+  sub_tag: P002-260618
+  tls: true
   type: http
-  username: 'null'
-- name: 🇺🇸 US 32 | http
+  udp: true
+- name: 🇺🇸 US 789 | http
   server: 138.199.35.201
   port: 9002
   type: http
   password: None
   tls: true
   skip-cert-verify: true
-- name: 🇺🇸 US 08 | 参考5.3M | ss
+- name: 🇺🇸 US 794 | ss
   type: ss
   server: 149.40.57.134
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- client-fingerprint: firefox
-  name: 🇸🇬 SG 08 | 参考26.5M | vless
-  port: 443
-  server: 45.76.155.179
-  servername: sg003.zestapp778.com
-  tls: true
-  type: vless
-  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-- name: 🇳🇱 NL 04 | 6.3M | vless
+- name: 🇳🇱 NL 304 | 6.3M | vless
   server: 51.158.206.97
   port: 23576
   type: vless
@@ -844,20 +842,20 @@ proxies:
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
-- name: 🇸🇬 SG 02 | 参考11.1M | ss
+- name: 🇸🇬 SG 202 | ss
   server: 51.79.228.131
   port: 19999
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: 🇬🇧 GB 02 | 参考4.7M | ss
+- name: 🇬🇧 GB 92 | ss
   type: ss
   server: 141.98.101.181
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
-- name: 🇬🇧 GB 110 | 参考3.5M | http
+- name: 🇬🇧 GB 93 | http
   password: null
   port: 443
   server: 185.164.138.156
@@ -865,22 +863,20 @@ proxies:
   tls: true
   type: http
   username: null
-- name: 🇺🇸 US 68 | 14.9M | http
-  password: ''
-  port: 9002
-  server: 138.199.35.210
-  skip-cert-verify: true
-  tls: true
+- name: 🇺🇸 US 796 | http (2)
   type: http
-  username: ''
-- type: http
-  name: 🇺🇸 US 36 | 参考6.1M | http
-  server: 138.199.35.214
-  port: 9002
-  tls: true
-  servername: 138.199.35.214
+  server: 129.153.93.183
+  port: 443
   skip-cert-verify: true
-- name: 🇺🇸 US 67 | 参考5.0M | http
+  tls: true
+- name: 🇱🇹 LT 17 | http
+  server: 89.124.11.9
+  port: 443
+  type: http
+  tls: true
+  sni: 89.124.11.9
+  skip-cert-verify: true
+- name: 🇺🇸 US 803 | http
   password: null
   port: 9002
   server: 138.199.35.204
@@ -888,219 +884,53 @@ proxies:
   tls: true
   type: http
   username: null
-- name: 🇺🇸 US 35 | 参考5.1M | http
-  port: 8443
-  server: 44.248.167.117
+- name: 🇺🇸 US 806 | ss
+  type: ss
+  server: 38.91.107.188
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇳🇱 NL 146 | 11.1M | http
+  type: http
+  server: 185.140.209.235
+  port: 443
   skip-cert-verify: true
   tls: true
-  type: http
-  udp: true
+  sni: 482c8436a1f7c908b48a1757abb5dd79-ce85c45206570905.apache-iv.com
+- type: ss
+  name: 🇮🇹 IT 28 | ss
+  server: 202.50.253.81
+  port: 19999
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  cipher: aes-256-gcm
+  tls: false
+  skip-cert-verify: false
 - name: 🇺🇸 US 658 | 0.1M | http
   type: http
   server: 38.28.185.247
   port: 443
   skip-cert-verify: true
   tls: true
-- name: 🇳🇱 NL 16 | 参考4.0M | ss
+- name: 🇳🇱 NL 309 | 参考4.0M | ss
   type: ss
   server: 82.38.31.210
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- type: http
-  name: 🇷🇴 RO 10 | 参考3.0M | http
-  server: 193.176.84.36
-  port: 9002
-  tls: true
-  servername: 193.176.84.36
-  skip-cert-verify: true
-- cipher: aes-256-gcm
-  name: 🇮🇹 IT 04 | 参考4.0M | ss
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.99
-  skip-cert-verify: true
-  type: ss
-  udp: true
-- name: 🇨🇦 CA 05 | 参考3.5M | http
-  port: 443
-  server: 142.44.210.129
-  skip-cert-verify: true
-  sub_tag: R002-260618
-  tls: true
-  type: http
-  udp: true
-- type: http
-  name: 🇺🇸 US 43 | 参考6.0M | http
-  server: 138.199.35.206
-  port: 9002
-  password: 'null'
-  username: 'null'
-  tls: true
-  servername: 138.199.35.206
-  skip-cert-verify: true
-- type: http
-  name: 🇳🇱 NL 15 | http
-  server: 103.97.88.154
-  port: 443
-  password: 'null'
-  username: 'null'
-  tls: true
-  servername: 103.97.88.154
-  skip-cert-verify: true
-- name: 🇺🇸 US 52 | 参考2.9M | http
-  type: http
-  server: 38.247.141.135
-  port: 443
-  username: ''
-  password: ''
-  tls: true
-  sni: 38.247.141.135
-  skip-cert-verify: true
-- name: 🇳🇱 NL 14 | 参考5.1M | http
-  type: http
-  server: 84.17.47.149
-  port: 9002
-  username: ''
-  password: None
-  tls: true
-  skip-cert-verify: true
-- name: 🇯🇵 JP 01 | 参考10.2M | ss
-  type: ss
-  server: 149.22.87.204
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  tfo: false
-  udp: true
-- client-fingerprint: chrome
-  encryption: none
-  flow: xtls-rprx-vision
-  name: 🇩🇰 DK 11 | vless
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: fSVfR9NB-6J6smrZlavi0GWd8JfDh0aXuEkKbtuFzUI
-    short-id: '3cbc3d737fb9c4af'
-  server: 5.42.99.64
-  servername: du-rov.secureservice.top
-  tls: true
-  type: vless
-  udp: true
-  uuid: c53ea5e9-ed8b-4990-805d-7f1d6451426c
-  xudp: true
-- name: 🇺🇸 US 108 | 参考4.9M | http
-  type: http
-  server: 138.199.35.216
-  port: 9002
-  username: ''
-  password: ''
-  tls: true
-  skip-cert-verify: true
-- type: vless
-  name: 🇷🇴 RO 159 | vless
-  server: 5.42.99.64
-  port: 8443
-  uuid: c53ea5e9-ed8b-4990-805d-7f1d6451426c
-  flow: xtls-rprx-vision
-  tls: true
-  servername: du-rov.secureservice.top
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: fSVfR9NB-6J6smrZlavi0GWd8JfDh0aXuEkKbtuFzUI
-    short-id: '3cbc3d737fb9c4af'
-- name: 🇺🇸 US 104 | 参考4.0M | http
-  server: goedkoopgeluid.icu
-  port: 443
+- name: 🇺🇸 US 809 | http
+  server: 118.184.140.90
+  port: 58764
   type: http
   tls: true
-  sni: goedkoopgeluid.icu
-- name: 🇺🇸 US 582 | 1.7M | http
-  port: 443
-  server: 24.225.10.211
+  sni: 118.184.140.90
   skip-cert-verify: true
-  sub_tag: R002-260618
-  tls: true
-  type: http
-  udp: true
-- name: 🇭🇰 HK 03 | 174.5M | http
-  type: http
-  server: 119.28.24.235
-  port: 3128
-  skip-cert-verify: true
-  tls: true
-- name: 🇫🇷 FR 07 | 参考2.1M | http
-  type: http
-  server: 149.102.245.65
-  port: 443
-  username: ''
-  password: ''
-  tls: true
-  sni: 149.102.245.65
-  skip-cert-verify: true
-- name: 🇭🇷 HR 01 | 参考4.9M | http
-  type: http
-  server: 154.47.29.174
-  port: 443
-  username: ''
-  password: ''
-  tls: true
-  skip-cert-verify: true
-- name: 🇩🇪 DE 15 | 参考3.3M | http
+- name: 🇩🇪 DE 313 | http
+  password: null
   port: 443
   server: 213.109.163.119
   skip-cert-verify: true
   tls: true
   type: http
-  udp: true
-- name: 🇺🇸 US 62 | http
-  type: http
-  server: 162.243.146.243
-  port: 443
-  username: testuser1
-  password: e4b72b531a2d10900519
-  tls: true
-  sni: a2f392f3.acsnet.co
-- type: http
-  name: 🇺🇸 US 66 | 参考4.7M | http
-  server: 138.199.35.208
-  port: 9002
-  tls: true
-  servername: 138.199.35.208
-  skip-cert-verify: true
-- name: 🇺🇸 US 57 | 参考5.2M | http
-  type: http
-  server: 54.190.176.228
-  port: 8443
-  username: 'null'
-  password: 'null'
-  tls: true
-  skip-cert-verify: true
-- name: 🇬🇧 GB 04 | 参考3.1M | ss
-  type: ss
-  server: 146.70.61.37
-  port: 8080
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇺🇸 US 14 | 5.0M | trojan
-  server: 216.152.155.23
-  port: 443
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  udp: true
-  tls: true
-  sni: courses.nextjobopportunityandclaimyouridealrole.com
-- name: 🇳🇱 NL 27 | 参考4.0M | ss
-  type: ss
-  server: 82.38.31.48
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇸🇬 SG 07 | 参考10.8M | http
-  type: http
-  server: 149.88.99.210
-  port: 443
-  skip-cert-verify: true
-  tls: true
-proxy-groups: [{"name":"📢 11.5 增加了美国节点","type":"select","proxies":["DIRECT"]},{"name":"🌐 7x24.alwaysdata.net","type":"select","proxies":["DIRECT"]},{"name":"🕒 节点更新于 11-10 00:03","type":"select","proxies":["DIRECT"]},{"name":"🚀 节点选择","type":"select","proxies":["♻️ 自动选择","🔯 故障转移","🔮 负载均衡","🎯 全球直连","自建·香港-01 ×1.2","自建·香港-02 ×1.2","自建·香港-03 ×1.2","自建·香港-04 ×1.2","自建·香港-05 ×1.2","自建·香港-06 ×1.2","自建·加拿大-01 ×0.1","自建·加拿大-02 ×0.1","自建·加拿大-03 ×0.1","自建·加拿大-04 ×0.1","自建·加拿大-05 ×0.1","自建·加拿大-06 ×0.1","自建·美国-01 ×0.2","自建·美国-02 ×0.2","自建·美国-03 ×0.2","自建·美国-04 ×0.2","自建·美国-05 ×0.2","自建·美国-06 ×0.2","自建·美国-07 ×0.2","自建·美国-08 ×0.2","🇱🇻 LV 01 | 参考4.0M | http","🇩🇪 DE 07 | 参考4.3M | http","🇷🇴 RO 06 | 参考2.8M | http","🇺🇸 US 30 | 参考5.4M | http","🇺🇸 US 28 | 参考2.7M | http","🇺🇸 US 18 | 参考5.8M | http","🇺🇸 US 06 | 参考6.4M | http","🇺🇸 US 03 | 2.9M | http","🇮🇷 IR 01 | 参考3.3M | vless","🇷🇴 RO 03 | 参考2.9M | http","🇷🇴 RO 02 | 参考3.0M | http","🇷🇴 RO 01 | 参考2.9M | http","🇩🇪 DE 04 | 参考4.4M | http","🇮🇪 IE 01 | 参考4.0M | http","🇳🇱 NL 01 | 参考5.4M | http","🇮🇪 IE 03 | 参考4.1M | http","🇮🇱 IL 01 | 参考4.1M | http","🇷🇴 RO 153 | http","🇺🇸 US 07 | 参考3.5M | http","🇸🇬 SG 01 | 参考32.8M | ss","🇩🇪 DE 01 | 参考3.9M | trojan","🇦🇱 AL 01 | 参考3.2M | http","🇺🇸 US 22 | 参考3.5M | http","🇬🇧 GB 01 | 参考2.9M | vless","🇺🇸 US 04 | 参考4.5M | ss","🇩🇪 DE 02 | 参考4.0M | http","🇩🇪 DE 06 | 参考3.7M | http","🇸🇪 SE 01 | 参考4.6M | vless","🇩🇪 DE 05 | 参考2.6M | http","🇨🇿 CZ 01 | 参考1.9M | http","🇳🇱 NL 02 | 参考5.4M | http","🇫🇷 FR 03 | 参考5.4M | http","🇷🇴 RO 07 | 参考2.4M | http","🇫🇷 FR 04 | 参考3.3M | http","🇵🇱 PL 01 | http","🇷🇴 RO 05 | 参考3.5M | http","🇱🇻 LV 14 | 参考4.0M | http","🇺🇸 US 1207 | 参考6.1M | http","🇳🇱 NL 03 | http","🇳🇱 NL 105 | 11.5M | http","🇩🇪 DE 08 | http","🇺🇸 US 17 | 3.0M | http","🇦🇺 AU 01 | http","🇨🇦 CA 01 | http","🇮🇹 IT 01 | 参考4.4M | ss","🇺🇸 US 37 | 参考3.9M | http","🇺🇸 US 11 | 参考4.5M | ss","🇫🇷 FR 02 | 参考4.4M | ss","🇺🇸 US 16 | 参考3.9M | ss","🇺🇸 US 01 | 参考2.6M | ss","🇨🇦 CA 30 | 参考4.3M | http","🇷🇴 RO 08 | http","🇺🇸 US 47 | http","🇪🇸 ES 01 | http","🇨🇦 CA 03 | http","🇮🇹 IT 07 | socks5","🇺🇸 US 1218 | 参考3.5M | vless","🇩🇪 DE 03 | 参考4.1M | ss","🇳🇱 NL 06 | 参考3.9M | http","🇺🇸 US 44 | 参考4.9M | http","🇺🇸 US 23 | 参考5.9M | http","🇺🇸 US 05 | 参考1.6M | http","🇳🇱 NL 113 | 11.2M | http","🇺🇸 US 32 | http","🇺🇸 US 08 | 参考5.3M | ss","🇸🇬 SG 08 | 参考26.5M | vless","🇳🇱 NL 04 | 6.3M | vless","🇸🇬 SG 02 | 参考11.1M | ss","🇬🇧 GB 02 | 参考4.7M | ss","🇬🇧 GB 110 | 参考3.5M | http","🇺🇸 US 68 | 14.9M | http","🇺🇸 US 36 | 参考6.1M | http","🇺🇸 US 67 | 参考5.0M | http","🇺🇸 US 35 | 参考5.1M | http","🇺🇸 US 658 | 0.1M | http","🇳🇱 NL 16 | 参考4.0M | ss","🇷🇴 RO 10 | 参考3.0M | http","🇮🇹 IT 04 | 参考4.0M | ss","🇨🇦 CA 05 | 参考3.5M | http","🇺🇸 US 43 | 参考6.0M | http","🇳🇱 NL 15 | http","🇺🇸 US 52 | 参考2.9M | http","🇳🇱 NL 14 | 参考5.1M | http","🇯🇵 JP 01 | 参考10.2M | ss","🇩🇰 DK 11 | vless","🇺🇸 US 108 | 参考4.9M | http","🇷🇴 RO 159 | vless","🇺🇸 US 104 | 参考4.0M | http","🇺🇸 US 582 | 1.7M | http","🇭🇰 HK 03 | 174.5M | http","🇫🇷 FR 07 | 参考2.1M | http","🇭🇷 HR 01 | 参考4.9M | http","🇩🇪 DE 15 | 参考3.3M | http","🇺🇸 US 62 | http","🇺🇸 US 66 | 参考4.7M | http","🇺🇸 US 57 | 参考5.2M | http","🇬🇧 GB 04 | 参考3.1M | ss","🇺🇸 US 14 | 5.0M | trojan","🇳🇱 NL 27 | 参考4.0M | ss","🇸🇬 SG 07 | 参考10.8M | http"]},{"name":"♻️ 自动选择","type":"url-test","proxies":["自建·香港-01 ×1.2","自建·香港-02 ×1.2","自建·香港-03 ×1.2","自建·香港-04 ×1.2","自建·香港-05 ×1.2","自建·香港-06 ×1.2","自建·加拿大-01 ×0.1","自建·加拿大-02 ×0.1","自建·加拿大-03 ×0.1","自建·加拿大-04 ×0.1","自建·加拿大-05 ×0.1","自建·加拿大-06 ×0.1","自建·美国-01 ×0.2","自建·美国-02 ×0.2","自建·美国-03 ×0.2","自建·美国-04 ×0.2","自建·美国-05 ×0.2","自建·美国-06 ×0.2","自建·美国-07 ×0.2","自建·美国-08 ×0.2","🇱🇻 LV 01 | 参考4.0M | http","🇩🇪 DE 07 | 参考4.3M | http","🇷🇴 RO 06 | 参考2.8M | http","🇺🇸 US 30 | 参考5.4M | http","🇺🇸 US 28 | 参考2.7M | http","🇺🇸 US 18 | 参考5.8M | http","🇺🇸 US 06 | 参考6.4M | http","🇺🇸 US 03 | 2.9M | http","🇮🇷 IR 01 | 参考3.3M | vless","🇷🇴 RO 03 | 参考2.9M | http","🇷🇴 RO 02 | 参考3.0M | http","🇷🇴 RO 01 | 参考2.9M | http","🇩🇪 DE 04 | 参考4.4M | http","🇮🇪 IE 01 | 参考4.0M | http","🇳🇱 NL 01 | 参考5.4M | http","🇮🇪 IE 03 | 参考4.1M | http","🇮🇱 IL 01 | 参考4.1M | http","🇷🇴 RO 153 | http","🇺🇸 US 07 | 参考3.5M | http","🇸🇬 SG 01 | 参考32.8M | ss","🇩🇪 DE 01 | 参考3.9M | trojan","🇦🇱 AL 01 | 参考3.2M | http","🇺🇸 US 22 | 参考3.5M | http","🇬🇧 GB 01 | 参考2.9M | vless","🇺🇸 US 04 | 参考4.5M | ss","🇩🇪 DE 02 | 参考4.0M | http","🇩🇪 DE 06 | 参考3.7M | http","🇸🇪 SE 01 | 参考4.6M | vless","🇩🇪 DE 05 | 参考2.6M | http","🇨🇿 CZ 01 | 参考1.9M | http","🇳🇱 NL 02 | 参考5.4M | http","🇫🇷 FR 03 | 参考5.4M | http","🇷🇴 RO 07 | 参考2.4M | http","🇫🇷 FR 04 | 参考3.3M | http","🇵🇱 PL 01 | http","🇷🇴 RO 05 | 参考3.5M | http","🇱🇻 LV 14 | 参考4.0M | http","🇺🇸 US 1207 | 参考6.1M | http","🇳🇱 NL 03 | http","🇳🇱 NL 105 | 11.5M | http","🇩🇪 DE 08 | http","🇺🇸 US 17 | 3.0M | http","🇦🇺 AU 01 | http","🇨🇦 CA 01 | http","🇮🇹 IT 01 | 参考4.4M | ss","🇺🇸 US 37 | 参考3.9M | http","🇺🇸 US 11 | 参考4.5M | ss","🇫🇷 FR 02 | 参考4.4M | ss","🇺🇸 US 16 | 参考3.9M | ss","🇺🇸 US 01 | 参考2.6M | ss","🇨🇦 CA 30 | 参考4.3M | http","🇷🇴 RO 08 | http","🇺🇸 US 47 | http","🇪🇸 ES 01 | http","🇨🇦 CA 03 | http","🇮🇹 IT 07 | socks5","🇺🇸 US 1218 | 参考3.5M | vless","🇩🇪 DE 03 | 参考4.1M | ss","🇳🇱 NL 06 | 参考3.9M | http","🇺🇸 US 44 | 参考4.9M | http","🇺🇸 US 23 | 参考5.9M | http","🇺🇸 US 05 | 参考1.6M | http","🇳🇱 NL 113 | 11.2M | http","🇺🇸 US 32 | http","🇺🇸 US 08 | 参考5.3M | ss","🇸🇬 SG 08 | 参考26.5M | vless","🇳🇱 NL 04 | 6.3M | vless","🇸🇬 SG 02 | 参考11.1M | ss","🇬🇧 GB 02 | 参考4.7M | ss","🇬🇧 GB 110 | 参考3.5M | http","🇺🇸 US 68 | 14.9M | http","🇺🇸 US 36 | 参考6.1M | http","🇺🇸 US 67 | 参考5.0M | http","🇺🇸 US 35 | 参考5.1M | http","🇺🇸 US 658 | 0.1M | http","🇳🇱 NL 16 | 参考4.0M | ss","🇷🇴 RO 10 | 参考3.0M | http","🇮🇹 IT 04 | 参考4.0M | ss","🇨🇦 CA 05 | 参考3.5M | http","🇺🇸 US 43 | 参考6.0M | http","🇳🇱 NL 15 | http","🇺🇸 US 52 | 参考2.9M | http","🇳🇱 NL 14 | 参考5.1M | http","🇯🇵 JP 01 | 参考10.2M | ss","🇩🇰 DK 11 | vless","🇺🇸 US 108 | 参考4.9M | http","🇷🇴 RO 159 | vless","🇺🇸 US 104 | 参考4.0M | http","🇺🇸 US 582 | 1.7M | http","🇭🇰 HK 03 | 174.5M | http","🇫🇷 FR 07 | 参考2.1M | http","🇭🇷 HR 01 | 参考4.9M | http","🇩🇪 DE 15 | 参考3.3M | http","🇺🇸 US 62 | http","🇺🇸 US 66 | 参考4.7M | http","🇺🇸 US 57 | 参考5.2M | http","🇬🇧 GB 04 | 参考3.1M | ss","🇺🇸 US 14 | 5.0M | trojan","🇳🇱 NL 27 | 参考4.0M | ss","🇸🇬 SG 07 | 参考10.8M | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"🔯 故障转移","type":"fallback","proxies":["自建·香港-01 ×1.2","自建·香港-02 ×1.2","自建·香港-03 ×1.2","自建·香港-04 ×1.2","自建·香港-05 ×1.2","自建·香港-06 ×1.2","自建·加拿大-01 ×0.1","自建·加拿大-02 ×0.1","自建·加拿大-03 ×0.1","自建·加拿大-04 ×0.1","自建·加拿大-05 ×0.1","自建·加拿大-06 ×0.1","自建·美国-01 ×0.2","自建·美国-02 ×0.2","自建·美国-03 ×0.2","自建·美国-04 ×0.2","自建·美国-05 ×0.2","自建·美国-06 ×0.2","自建·美国-07 ×0.2","自建·美国-08 ×0.2","🇱🇻 LV 01 | 参考4.0M | http","🇩🇪 DE 07 | 参考4.3M | http","🇷🇴 RO 06 | 参考2.8M | http","🇺🇸 US 30 | 参考5.4M | http","🇺🇸 US 28 | 参考2.7M | http","🇺🇸 US 18 | 参考5.8M | http","🇺🇸 US 06 | 参考6.4M | http","🇺🇸 US 03 | 2.9M | http","🇮🇷 IR 01 | 参考3.3M | vless","🇷🇴 RO 03 | 参考2.9M | http","🇷🇴 RO 02 | 参考3.0M | http","🇷🇴 RO 01 | 参考2.9M | http","🇩🇪 DE 04 | 参考4.4M | http","🇮🇪 IE 01 | 参考4.0M | http","🇳🇱 NL 01 | 参考5.4M | http","🇮🇪 IE 03 | 参考4.1M | http","🇮🇱 IL 01 | 参考4.1M | http","🇷🇴 RO 153 | http","🇺🇸 US 07 | 参考3.5M | http","🇸🇬 SG 01 | 参考32.8M | ss","🇩🇪 DE 01 | 参考3.9M | trojan","🇦🇱 AL 01 | 参考3.2M | http","🇺🇸 US 22 | 参考3.5M | http","🇬🇧 GB 01 | 参考2.9M | vless","🇺🇸 US 04 | 参考4.5M | ss","🇩🇪 DE 02 | 参考4.0M | http","🇩🇪 DE 06 | 参考3.7M | http","🇸🇪 SE 01 | 参考4.6M | vless","🇩🇪 DE 05 | 参考2.6M | http","🇨🇿 CZ 01 | 参考1.9M | http","🇳🇱 NL 02 | 参考5.4M | http","🇫🇷 FR 03 | 参考5.4M | http","🇷🇴 RO 07 | 参考2.4M | http","🇫🇷 FR 04 | 参考3.3M | http","🇵🇱 PL 01 | http","🇷🇴 RO 05 | 参考3.5M | http","🇱🇻 LV 14 | 参考4.0M | http","🇺🇸 US 1207 | 参考6.1M | http","🇳🇱 NL 03 | http","🇳🇱 NL 105 | 11.5M | http","🇩🇪 DE 08 | http","🇺🇸 US 17 | 3.0M | http","🇦🇺 AU 01 | http","🇨🇦 CA 01 | http","🇮🇹 IT 01 | 参考4.4M | ss","🇺🇸 US 37 | 参考3.9M | http","🇺🇸 US 11 | 参考4.5M | ss","🇫🇷 FR 02 | 参考4.4M | ss","🇺🇸 US 16 | 参考3.9M | ss","🇺🇸 US 01 | 参考2.6M | ss","🇨🇦 CA 30 | 参考4.3M | http","🇷🇴 RO 08 | http","🇺🇸 US 47 | http","🇪🇸 ES 01 | http","🇨🇦 CA 03 | http","🇮🇹 IT 07 | socks5","🇺🇸 US 1218 | 参考3.5M | vless","🇩🇪 DE 03 | 参考4.1M | ss","🇳🇱 NL 06 | 参考3.9M | http","🇺🇸 US 44 | 参考4.9M | http","🇺🇸 US 23 | 参考5.9M | http","🇺🇸 US 05 | 参考1.6M | http","🇳🇱 NL 113 | 11.2M | http","🇺🇸 US 32 | http","🇺🇸 US 08 | 参考5.3M | ss","🇸🇬 SG 08 | 参考26.5M | vless","🇳🇱 NL 04 | 6.3M | vless","🇸🇬 SG 02 | 参考11.1M | ss","🇬🇧 GB 02 | 参考4.7M | ss","🇬🇧 GB 110 | 参考3.5M | http","🇺🇸 US 68 | 14.9M | http","🇺🇸 US 36 | 参考6.1M | http","🇺🇸 US 67 | 参考5.0M | http","🇺🇸 US 35 | 参考5.1M | http","🇺🇸 US 658 | 0.1M | http","🇳🇱 NL 16 | 参考4.0M | ss","🇷🇴 RO 10 | 参考3.0M | http","🇮🇹 IT 04 | 参考4.0M | ss","🇨🇦 CA 05 | 参考3.5M | http","🇺🇸 US 43 | 参考6.0M | http","🇳🇱 NL 15 | http","🇺🇸 US 52 | 参考2.9M | http","🇳🇱 NL 14 | 参考5.1M | http","🇯🇵 JP 01 | 参考10.2M | ss","🇩🇰 DK 11 | vless","🇺🇸 US 108 | 参考4.9M | http","🇷🇴 RO 159 | vless","🇺🇸 US 104 | 参考4.0M | http","🇺🇸 US 582 | 1.7M | http","🇭🇰 HK 03 | 174.5M | http","🇫🇷 FR 07 | 参考2.1M | http","🇭🇷 HR 01 | 参考4.9M | http","🇩🇪 DE 15 | 参考3.3M | http","🇺🇸 US 62 | http","🇺🇸 US 66 | 参考4.7M | http","🇺🇸 US 57 | 参考5.2M | http","🇬🇧 GB 04 | 参考3.1M | ss","🇺🇸 US 14 | 5.0M | trojan","🇳🇱 NL 27 | 参考4.0M | ss","🇸🇬 SG 07 | 参考10.8M | http"],"url":"https://www.gstatic.com/generate_204","interval":300},{"name":"🔮 负载均衡","type":"load-balance","proxies":["自建·香港-01 ×1.2","自建·香港-02 ×1.2","自建·香港-03 ×1.2","自建·香港-04 ×1.2","自建·香港-05 ×1.2","自建·香港-06 ×1.2","自建·加拿大-01 ×0.1","自建·加拿大-02 ×0.1","自建·加拿大-03 ×0.1","自建·加拿大-04 ×0.1","自建·加拿大-05 ×0.1","自建·加拿大-06 ×0.1","自建·美国-01 ×0.2","自建·美国-02 ×0.2","自建·美国-03 ×0.2","自建·美国-04 ×0.2","自建·美国-05 ×0.2","自建·美国-06 ×0.2","自建·美国-07 ×0.2","自建·美国-08 ×0.2","🇱🇻 LV 01 | 参考4.0M | http","🇩🇪 DE 07 | 参考4.3M | http","🇷🇴 RO 06 | 参考2.8M | http","🇺🇸 US 30 | 参考5.4M | http","🇺🇸 US 28 | 参考2.7M | http","🇺🇸 US 18 | 参考5.8M | http","🇺🇸 US 06 | 参考6.4M | http","🇺🇸 US 03 | 2.9M | http","🇮🇷 IR 01 | 参考3.3M | vless","🇷🇴 RO 03 | 参考2.9M | http","🇷🇴 RO 02 | 参考3.0M | http","🇷🇴 RO 01 | 参考2.9M | http","🇩🇪 DE 04 | 参考4.4M | http","🇮🇪 IE 01 | 参考4.0M | http","🇳🇱 NL 01 | 参考5.4M | http","🇮🇪 IE 03 | 参考4.1M | http","🇮🇱 IL 01 | 参考4.1M | http","🇷🇴 RO 153 | http","🇺🇸 US 07 | 参考3.5M | http","🇸🇬 SG 01 | 参考32.8M | ss","🇩🇪 DE 01 | 参考3.9M | trojan","🇦🇱 AL 01 | 参考3.2M | http","🇺🇸 US 22 | 参考3.5M | http","🇬🇧 GB 01 | 参考2.9M | vless","🇺🇸 US 04 | 参考4.5M | ss","🇩🇪 DE 02 | 参考4.0M | http","🇩🇪 DE 06 | 参考3.7M | http","🇸🇪 SE 01 | 参考4.6M | vless","🇩🇪 DE 05 | 参考2.6M | http","🇨🇿 CZ 01 | 参考1.9M | http","🇳🇱 NL 02 | 参考5.4M | http","🇫🇷 FR 03 | 参考5.4M | http","🇷🇴 RO 07 | 参考2.4M | http","🇫🇷 FR 04 | 参考3.3M | http","🇵🇱 PL 01 | http","🇷🇴 RO 05 | 参考3.5M | http","🇱🇻 LV 14 | 参考4.0M | http","🇺🇸 US 1207 | 参考6.1M | http","🇳🇱 NL 03 | http","🇳🇱 NL 105 | 11.5M | http","🇩🇪 DE 08 | http","🇺🇸 US 17 | 3.0M | http","🇦🇺 AU 01 | http","🇨🇦 CA 01 | http","🇮🇹 IT 01 | 参考4.4M | ss","🇺🇸 US 37 | 参考3.9M | http","🇺🇸 US 11 | 参考4.5M | ss","🇫🇷 FR 02 | 参考4.4M | ss","🇺🇸 US 16 | 参考3.9M | ss","🇺🇸 US 01 | 参考2.6M | ss","🇨🇦 CA 30 | 参考4.3M | http","🇷🇴 RO 08 | http","🇺🇸 US 47 | http","🇪🇸 ES 01 | http","🇨🇦 CA 03 | http","🇮🇹 IT 07 | socks5","🇺🇸 US 1218 | 参考3.5M | vless","🇩🇪 DE 03 | 参考4.1M | ss","🇳🇱 NL 06 | 参考3.9M | http","🇺🇸 US 44 | 参考4.9M | http","🇺🇸 US 23 | 参考5.9M | http","🇺🇸 US 05 | 参考1.6M | http","🇳🇱 NL 113 | 11.2M | http","🇺🇸 US 32 | http","🇺🇸 US 08 | 参考5.3M | ss","🇸🇬 SG 08 | 参考26.5M | vless","🇳🇱 NL 04 | 6.3M | vless","🇸🇬 SG 02 | 参考11.1M | ss","🇬🇧 GB 02 | 参考4.7M | ss","🇬🇧 GB 110 | 参考3.5M | http","🇺🇸 US 68 | 14.9M | http","🇺🇸 US 36 | 参考6.1M | http","🇺🇸 US 67 | 参考5.0M | http","🇺🇸 US 35 | 参考5.1M | http","🇺🇸 US 658 | 0.1M | http","🇳🇱 NL 16 | 参考4.0M | ss","🇷🇴 RO 10 | 参考3.0M | http","🇮🇹 IT 04 | 参考4.0M | ss","🇨🇦 CA 05 | 参考3.5M | http","🇺🇸 US 43 | 参考6.0M | http","🇳🇱 NL 15 | http","🇺🇸 US 52 | 参考2.9M | http","🇳🇱 NL 14 | 参考5.1M | http","🇯🇵 JP 01 | 参考10.2M | ss","🇩🇰 DK 11 | vless","🇺🇸 US 108 | 参考4.9M | http","🇷🇴 RO 159 | vless","🇺🇸 US 104 | 参考4.0M | http","🇺🇸 US 582 | 1.7M | http","🇭🇰 HK 03 | 174.5M | http","🇫🇷 FR 07 | 参考2.1M | http","🇭🇷 HR 01 | 参考4.9M | http","🇩🇪 DE 15 | 参考3.3M | http","🇺🇸 US 62 | http","🇺🇸 US 66 | 参考4.7M | http","🇺🇸 US 57 | 参考5.2M | http","🇬🇧 GB 04 | 参考3.1M | ss","🇺🇸 US 14 | 5.0M | trojan","🇳🇱 NL 27 | 参考4.0M | ss","🇸🇬 SG 07 | 参考10.8M | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"strategy":"consistent-hashing"},{"name":"♻️ CA自动","type":"url-test","proxies":["自建·加拿大-01 ×0.1","自建·加拿大-02 ×0.1","自建·加拿大-03 ×0.1","自建·加拿大-04 ×0.1","自建·加拿大-05 ×0.1","自建·加拿大-06 ×0.1","🇨🇦 CA 01 | http","🇨🇦 CA 30 | 参考4.3M | http","🇨🇦 CA 03 | http","🇨🇦 CA 05 | 参考3.5M | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ DE自动","type":"url-test","proxies":["🇩🇪 DE 07 | 参考4.3M | http","🇩🇪 DE 04 | 参考4.4M | http","🇩🇪 DE 01 | 参考3.9M | trojan","🇩🇪 DE 02 | 参考4.0M | http","🇩🇪 DE 06 | 参考3.7M | http","🇩🇪 DE 05 | 参考2.6M | http","🇩🇪 DE 08 | http","🇩🇪 DE 03 | 参考4.1M | ss","🇩🇪 DE 15 | 参考3.3M | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ FR自动","type":"url-test","proxies":["🇫🇷 FR 03 | 参考5.4M | http","🇫🇷 FR 04 | 参考3.3M | http","🇫🇷 FR 02 | 参考4.4M | ss","🇫🇷 FR 07 | 参考2.1M | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ GB自动","type":"url-test","proxies":["🇬🇧 GB 01 | 参考2.9M | vless","🇬🇧 GB 02 | 参考4.7M | ss","🇬🇧 GB 110 | 参考3.5M | http","🇬🇧 GB 04 | 参考3.1M | ss"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ HK自动","type":"url-test","proxies":["自建·香港-01 ×1.2","自建·香港-02 ×1.2","自建·香港-03 ×1.2","自建·香港-04 ×1.2","自建·香港-05 ×1.2","自建·香港-06 ×1.2","🇭🇰 HK 03 | 174.5M | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ IE自动","type":"url-test","proxies":["🇮🇪 IE 01 | 参考4.0M | http","🇮🇪 IE 03 | 参考4.1M | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ IT自动","type":"url-test","proxies":["🇮🇹 IT 01 | 参考4.4M | ss","🇮🇹 IT 07 | socks5","🇮🇹 IT 04 | 参考4.0M | ss"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ LV自动","type":"url-test","proxies":["🇱🇻 LV 01 | 参考4.0M | http","🇱🇻 LV 14 | 参考4.0M | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ NL自动","type":"url-test","proxies":["🇳🇱 NL 01 | 参考5.4M | http","🇳🇱 NL 02 | 参考5.4M | http","🇳🇱 NL 03 | http","🇳🇱 NL 105 | 11.5M | http","🇳🇱 NL 06 | 参考3.9M | http","🇳🇱 NL 113 | 11.2M | http","🇳🇱 NL 04 | 6.3M | vless","🇳🇱 NL 16 | 参考4.0M | ss","🇳🇱 NL 15 | http","🇳🇱 NL 14 | 参考5.1M | http","🇳🇱 NL 27 | 参考4.0M | ss"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ RO自动","type":"url-test","proxies":["🇷🇴 RO 06 | 参考2.8M | http","🇷🇴 RO 03 | 参考2.9M | http","🇷🇴 RO 02 | 参考3.0M | http","🇷🇴 RO 01 | 参考2.9M | http","🇷🇴 RO 153 | http","🇷🇴 RO 07 | 参考2.4M | http","🇷🇴 RO 05 | 参考3.5M | http","🇷🇴 RO 08 | http","🇷🇴 RO 10 | 参考3.0M | http","🇷🇴 RO 159 | vless"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ SG自动","type":"url-test","proxies":["🇸🇬 SG 01 | 参考32.8M | ss","🇸🇬 SG 08 | 参考26.5M | vless","🇸🇬 SG 02 | 参考11.1M | ss","🇸🇬 SG 07 | 参考10.8M | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ US自动","type":"url-test","proxies":["自建·美国-01 ×0.2","自建·美国-02 ×0.2","自建·美国-03 ×0.2","自建·美国-04 ×0.2","自建·美国-05 ×0.2","自建·美国-06 ×0.2","自建·美国-07 ×0.2","自建·美国-08 ×0.2","🇺🇸 US 30 | 参考5.4M | http","🇺🇸 US 28 | 参考2.7M | http","🇺🇸 US 18 | 参考5.8M | http","🇺🇸 US 06 | 参考6.4M | http","🇺🇸 US 03 | 2.9M | http","🇺🇸 US 07 | 参考3.5M | http","🇺🇸 US 22 | 参考3.5M | http","🇺🇸 US 04 | 参考4.5M | ss","🇺🇸 US 1207 | 参考6.1M | http","🇺🇸 US 17 | 3.0M | http","🇺🇸 US 37 | 参考3.9M | http","🇺🇸 US 11 | 参考4.5M | ss","🇺🇸 US 16 | 参考3.9M | ss","🇺🇸 US 01 | 参考2.6M | ss","🇺🇸 US 47 | http","🇺🇸 US 1218 | 参考3.5M | vless","🇺🇸 US 44 | 参考4.9M | http","🇺🇸 US 23 | 参考5.9M | http","🇺🇸 US 05 | 参考1.6M | http","🇺🇸 US 32 | http","🇺🇸 US 08 | 参考5.3M | ss","🇺🇸 US 68 | 14.9M | http","🇺🇸 US 36 | 参考6.1M | http","🇺🇸 US 67 | 参考5.0M | http","🇺🇸 US 35 | 参考5.1M | http","🇺🇸 US 658 | 0.1M | http","🇺🇸 US 43 | 参考6.0M | http","🇺🇸 US 52 | 参考2.9M | http","🇺🇸 US 108 | 参考4.9M | http","🇺🇸 US 104 | 参考4.0M | http","🇺🇸 US 582 | 1.7M | http","🇺🇸 US 62 | http","🇺🇸 US 66 | 参考4.7M | http","🇺🇸 US 57 | 参考5.2M | http","🇺🇸 US 14 | 5.0M | trojan"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"🤖 AI平台","type":"select","proxies":["🚀 节点选择","自建·加拿大-01 ×0.1","自建·加拿大-02 ×0.1","自建·加拿大-03 ×0.1","自建·加拿大-04 ×0.1","自建·加拿大-05 ×0.1","自建·加拿大-06 ×0.1","🇷🇴 RO 07 | 参考2.4M | http","🇵🇱 PL 01 | http","🇳🇱 NL 105 | 11.5M | http","🇳🇱 NL 06 | 参考3.9M | http","🇺🇸 US 44 | 参考4.9M | http","🇺🇸 US 23 | 参考5.9M | http","🇺🇸 US 05 | 参考1.6M | http","🇳🇱 NL 113 | 11.2M | http","🇺🇸 US 68 | 14.9M | http","🇺🇸 US 36 | 参考6.1M | http","🇨🇦 CA 05 | 参考3.5M | http","🇺🇸 US 43 | 参考6.0M | http","🇺🇸 US 582 | 1.7M | http","🇺🇸 US 62 | http","🇺🇸 US 66 | 参考4.7M | http"]},{"name":"📹 油管视频","type":"select","proxies":["🚀 节点选择","🇺🇸 US 44 | 参考4.9M | http","🇺🇸 US 23 | 参考5.9M | http","🇺🇸 US 05 | 参考1.6M | http","🇺🇸 US 68 | 14.9M | http","🇺🇸 US 36 | 参考6.1M | http","🇨🇦 CA 05 | 参考3.5M | http","🇺🇸 US 43 | 参考6.0M | http","🇭🇰 HK 03 | 174.5M | http","🇺🇸 US 62 | http","🇺🇸 US 66 | 参考4.7M | http"]},{"name":"🎥 奈飞视频","type":"select","proxies":["🚀 节点选择","🇷🇴 RO 07 | 参考2.4M | http","🇵🇱 PL 01 | http","🇳🇱 NL 105 | 11.5M | http","🇳🇱 NL 06 | 参考3.9M | http","🇺🇸 US 44 | 参考4.9M | http","🇺🇸 US 23 | 参考5.9M | http","🇺🇸 US 05 | 参考1.6M | http","🇳🇱 NL 113 | 11.2M | http","🇺🇸 US 68 | 14.9M | http","🇺🇸 US 36 | 参考6.1M | http","🇨🇦 CA 05 | 参考3.5M | http","🇺🇸 US 43 | 参考6.0M | http","🇺🇸 US 582 | 1.7M | http","🇭🇰 HK 03 | 174.5M | http","🇺🇸 US 62 | http","🇺🇸 US 66 | 参考4.7M | http"]},{"name":"📲 电报消息","type":"select","proxies":["🚀 节点选择"]},{"name":"🎯 全球直连","type":"select","proxies":["DIRECT"]},{"name":"🛑 广告拦截","type":"select","proxies":["REJECT","DIRECT"]},{"name":"🐟 漏网之鱼","type":"select","proxies":["🚀 节点选择","🎯 全球直连"]}]
+  username: null
+proxy-groups: [{"name":"📢 11.5 增加了美国节点","type":"select","proxies":["DIRECT"]},{"name":"🌐 7x24.alwaysdata.net","type":"select","proxies":["DIRECT"]},{"name":"🕒 节点更新于 11-10 11:07","type":"select","proxies":["DIRECT"]},{"name":"🚀 节点选择","type":"select","proxies":["♻️ 自动选择","🔯 故障转移","🔮 负载均衡","🎯 全球直连","自建·加拿大-01 ×0.1","自建·加拿大-02 ×0.1","自建·加拿大-03 ×0.1","自建·加拿大-04 ×0.1","自建·加拿大-05 ×0.1","自建·加拿大-06 ×0.1","自建·加拿大-07 ×0.1","自建·加拿大-08 ×0.1","自建·加拿大-09 ×0.1","🇳🇱 NL 113 | 11.2M | http","🇳🇱 NL 105 | 11.5M | http","🇷🇴 RO 09 | 8.9M | http","🇺🇸 US 715 | http","🇱🇻 LV 22 | http","🇩🇪 DE 297 | http","🇷🇴 RO 62 | http","🇺🇸 US 716 | http","🇺🇸 US 717 | http","🇺🇸 US 718 | http","🇺🇸 US 719 | http","🇺🇸 US 720 | http","🇮🇷 IR 22 | vless","🇷🇴 RO 64 | http","🇷🇴 RO 63 | http","🇷🇴 RO 65 | http","🇩🇪 DE 298 | http","🇮🇪 IE 16 | http","🇳🇱 NL 277 | http","🇮🇪 IE 17 | http","🇺🇸 US 723 | 参考6.0M | http","🇫🇷 FR 191 | http","🇳🇱 NL 281 | http","🇮🇱 IL 04 | http","🇺🇸 US 727 | http","🇷🇴 RO 66 | http","🇺🇸 US 728 | http","🇸🇬 SG 195 | ss","🇩🇪 DE 299 | trojan","🇦🇱 AL 07 | http","🇺🇸 US 732 | http","🇬🇧 GB 88 | vless","🇺🇸 US 733 | ss","🇩🇪 DE 300 | http","🇩🇪 DE 301 | http","🇸🇪 SE 23 | vless","🇩🇪 DE 302 | http","🇫🇷 FR 192 | 3.9M | http","🇨🇿 CZ 22 | http","🇳🇱 NL 284 | http","🇫🇷 FR 193 | http","🇷🇴 RO 68 | http","🇫🇷 FR 194 | http","🇵🇱 PL 69 | http","🇯🇵 JP 226 | http","🇷🇴 RO 69 | http","🇺🇸 US 582 | 1.7M | http","🇱🇻 LV 23 | 参考4.0M | http","🇺🇸 US 741 | http","🇳🇱 NL 288 | http","🇩🇪 DE 304 | http","🇺🇸 US 746 | http","🇦🇺 AU 13 | http","🇨🇦 CA 105 | http","🇺🇸 US 747 | http","🇺🇸 US 292 | 11.1M | http","🇮🇹 IT 24 | 参考4.4M | ss","🇺🇸 US 750 | 参考3.9M | http","🇸🇪 SE 24 | vless","🇺🇸 US 752 | ss","🇫🇷 FR 196 | ss","🇺🇸 US 754 | ss","🇺🇸 US 755 | ss","🇺🇸 US 756 | ss","🇷🇴 RO 72 | http","🇺🇸 US 759 | http","🇪🇸 ES 23 | http","🇨🇦 CA 106 | http","🇮🇹 IT 25 | socks5","🇬🇧 GB 89 | http","🇺🇸 US 762 | 参考3.5M | vless","🇩🇪 DE 307 | ss","🇧🇦 BA 02 | http","🇺🇸 US 763 | http","🇷🇴 RO 73 | http","🇳🇱 NL 297 | http","🇺🇸 US 764 | http","🇺🇸 US 68 | 14.9M | http","🇺🇸 US 772 | http","🇩🇪 DE 73 | 13.9M | http","🇮🇪 IE 20 | http (2)","🇺🇸 US 783 | http","🇳🇱 NL 302 | http","🇭🇰 HK 437 | http","🇺🇸 US 789 | http","🇺🇸 US 794 | ss","🇳🇱 NL 304 | 6.3M | vless","🇸🇬 SG 202 | ss","🇬🇧 GB 92 | ss","🇬🇧 GB 93 | http","🇺🇸 US 796 | http (2)","🇱🇹 LT 17 | http","🇺🇸 US 803 | http","🇺🇸 US 806 | ss","🇳🇱 NL 146 | 11.1M | http","🇮🇹 IT 28 | ss","🇺🇸 US 658 | 0.1M | http","🇳🇱 NL 309 | 参考4.0M | ss","🇺🇸 US 809 | http","🇩🇪 DE 313 | http"]},{"name":"♻️ 自动选择","type":"url-test","proxies":["自建·加拿大-01 ×0.1","自建·加拿大-02 ×0.1","自建·加拿大-03 ×0.1","自建·加拿大-04 ×0.1","自建·加拿大-05 ×0.1","自建·加拿大-06 ×0.1","自建·加拿大-07 ×0.1","自建·加拿大-08 ×0.1","自建·加拿大-09 ×0.1","🇳🇱 NL 113 | 11.2M | http","🇳🇱 NL 105 | 11.5M | http","🇷🇴 RO 09 | 8.9M | http","🇺🇸 US 715 | http","🇱🇻 LV 22 | http","🇩🇪 DE 297 | http","🇷🇴 RO 62 | http","🇺🇸 US 716 | http","🇺🇸 US 717 | http","🇺🇸 US 718 | http","🇺🇸 US 719 | http","🇺🇸 US 720 | http","🇮🇷 IR 22 | vless","🇷🇴 RO 64 | http","🇷🇴 RO 63 | http","🇷🇴 RO 65 | http","🇩🇪 DE 298 | http","🇮🇪 IE 16 | http","🇳🇱 NL 277 | http","🇮🇪 IE 17 | http","🇺🇸 US 723 | 参考6.0M | http","🇫🇷 FR 191 | http","🇳🇱 NL 281 | http","🇮🇱 IL 04 | http","🇺🇸 US 727 | http","🇷🇴 RO 66 | http","🇺🇸 US 728 | http","🇸🇬 SG 195 | ss","🇩🇪 DE 299 | trojan","🇦🇱 AL 07 | http","🇺🇸 US 732 | http","🇬🇧 GB 88 | vless","🇺🇸 US 733 | ss","🇩🇪 DE 300 | http","🇩🇪 DE 301 | http","🇸🇪 SE 23 | vless","🇩🇪 DE 302 | http","🇫🇷 FR 192 | 3.9M | http","🇨🇿 CZ 22 | http","🇳🇱 NL 284 | http","🇫🇷 FR 193 | http","🇷🇴 RO 68 | http","🇫🇷 FR 194 | http","🇵🇱 PL 69 | http","🇯🇵 JP 226 | http","🇷🇴 RO 69 | http","🇺🇸 US 582 | 1.7M | http","🇱🇻 LV 23 | 参考4.0M | http","🇺🇸 US 741 | http","🇳🇱 NL 288 | http","🇩🇪 DE 304 | http","🇺🇸 US 746 | http","🇦🇺 AU 13 | http","🇨🇦 CA 105 | http","🇺🇸 US 747 | http","🇺🇸 US 292 | 11.1M | http","🇮🇹 IT 24 | 参考4.4M | ss","🇺🇸 US 750 | 参考3.9M | http","🇸🇪 SE 24 | vless","🇺🇸 US 752 | ss","🇫🇷 FR 196 | ss","🇺🇸 US 754 | ss","🇺🇸 US 755 | ss","🇺🇸 US 756 | ss","🇷🇴 RO 72 | http","🇺🇸 US 759 | http","🇪🇸 ES 23 | http","🇨🇦 CA 106 | http","🇮🇹 IT 25 | socks5","🇬🇧 GB 89 | http","🇺🇸 US 762 | 参考3.5M | vless","🇩🇪 DE 307 | ss","🇧🇦 BA 02 | http","🇺🇸 US 763 | http","🇷🇴 RO 73 | http","🇳🇱 NL 297 | http","🇺🇸 US 764 | http","🇺🇸 US 68 | 14.9M | http","🇺🇸 US 772 | http","🇩🇪 DE 73 | 13.9M | http","🇮🇪 IE 20 | http (2)","🇺🇸 US 783 | http","🇳🇱 NL 302 | http","🇭🇰 HK 437 | http","🇺🇸 US 789 | http","🇺🇸 US 794 | ss","🇳🇱 NL 304 | 6.3M | vless","🇸🇬 SG 202 | ss","🇬🇧 GB 92 | ss","🇬🇧 GB 93 | http","🇺🇸 US 796 | http (2)","🇱🇹 LT 17 | http","🇺🇸 US 803 | http","🇺🇸 US 806 | ss","🇳🇱 NL 146 | 11.1M | http","🇮🇹 IT 28 | ss","🇺🇸 US 658 | 0.1M | http","🇳🇱 NL 309 | 参考4.0M | ss","🇺🇸 US 809 | http","🇩🇪 DE 313 | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"🔯 故障转移","type":"fallback","proxies":["自建·加拿大-01 ×0.1","自建·加拿大-02 ×0.1","自建·加拿大-03 ×0.1","自建·加拿大-04 ×0.1","自建·加拿大-05 ×0.1","自建·加拿大-06 ×0.1","自建·加拿大-07 ×0.1","自建·加拿大-08 ×0.1","自建·加拿大-09 ×0.1","🇳🇱 NL 113 | 11.2M | http","🇳🇱 NL 105 | 11.5M | http","🇷🇴 RO 09 | 8.9M | http","🇺🇸 US 715 | http","🇱🇻 LV 22 | http","🇩🇪 DE 297 | http","🇷🇴 RO 62 | http","🇺🇸 US 716 | http","🇺🇸 US 717 | http","🇺🇸 US 718 | http","🇺🇸 US 719 | http","🇺🇸 US 720 | http","🇮🇷 IR 22 | vless","🇷🇴 RO 64 | http","🇷🇴 RO 63 | http","🇷🇴 RO 65 | http","🇩🇪 DE 298 | http","🇮🇪 IE 16 | http","🇳🇱 NL 277 | http","🇮🇪 IE 17 | http","🇺🇸 US 723 | 参考6.0M | http","🇫🇷 FR 191 | http","🇳🇱 NL 281 | http","🇮🇱 IL 04 | http","🇺🇸 US 727 | http","🇷🇴 RO 66 | http","🇺🇸 US 728 | http","🇸🇬 SG 195 | ss","🇩🇪 DE 299 | trojan","🇦🇱 AL 07 | http","🇺🇸 US 732 | http","🇬🇧 GB 88 | vless","🇺🇸 US 733 | ss","🇩🇪 DE 300 | http","🇩🇪 DE 301 | http","🇸🇪 SE 23 | vless","🇩🇪 DE 302 | http","🇫🇷 FR 192 | 3.9M | http","🇨🇿 CZ 22 | http","🇳🇱 NL 284 | http","🇫🇷 FR 193 | http","🇷🇴 RO 68 | http","🇫🇷 FR 194 | http","🇵🇱 PL 69 | http","🇯🇵 JP 226 | http","🇷🇴 RO 69 | http","🇺🇸 US 582 | 1.7M | http","🇱🇻 LV 23 | 参考4.0M | http","🇺🇸 US 741 | http","🇳🇱 NL 288 | http","🇩🇪 DE 304 | http","🇺🇸 US 746 | http","🇦🇺 AU 13 | http","🇨🇦 CA 105 | http","🇺🇸 US 747 | http","🇺🇸 US 292 | 11.1M | http","🇮🇹 IT 24 | 参考4.4M | ss","🇺🇸 US 750 | 参考3.9M | http","🇸🇪 SE 24 | vless","🇺🇸 US 752 | ss","🇫🇷 FR 196 | ss","🇺🇸 US 754 | ss","🇺🇸 US 755 | ss","🇺🇸 US 756 | ss","🇷🇴 RO 72 | http","🇺🇸 US 759 | http","🇪🇸 ES 23 | http","🇨🇦 CA 106 | http","🇮🇹 IT 25 | socks5","🇬🇧 GB 89 | http","🇺🇸 US 762 | 参考3.5M | vless","🇩🇪 DE 307 | ss","🇧🇦 BA 02 | http","🇺🇸 US 763 | http","🇷🇴 RO 73 | http","🇳🇱 NL 297 | http","🇺🇸 US 764 | http","🇺🇸 US 68 | 14.9M | http","🇺🇸 US 772 | http","🇩🇪 DE 73 | 13.9M | http","🇮🇪 IE 20 | http (2)","🇺🇸 US 783 | http","🇳🇱 NL 302 | http","🇭🇰 HK 437 | http","🇺🇸 US 789 | http","🇺🇸 US 794 | ss","🇳🇱 NL 304 | 6.3M | vless","🇸🇬 SG 202 | ss","🇬🇧 GB 92 | ss","🇬🇧 GB 93 | http","🇺🇸 US 796 | http (2)","🇱🇹 LT 17 | http","🇺🇸 US 803 | http","🇺🇸 US 806 | ss","🇳🇱 NL 146 | 11.1M | http","🇮🇹 IT 28 | ss","🇺🇸 US 658 | 0.1M | http","🇳🇱 NL 309 | 参考4.0M | ss","🇺🇸 US 809 | http","🇩🇪 DE 313 | http"],"url":"https://www.gstatic.com/generate_204","interval":300},{"name":"🔮 负载均衡","type":"load-balance","proxies":["自建·加拿大-01 ×0.1","自建·加拿大-02 ×0.1","自建·加拿大-03 ×0.1","自建·加拿大-04 ×0.1","自建·加拿大-05 ×0.1","自建·加拿大-06 ×0.1","自建·加拿大-07 ×0.1","自建·加拿大-08 ×0.1","自建·加拿大-09 ×0.1","🇳🇱 NL 113 | 11.2M | http","🇳🇱 NL 105 | 11.5M | http","🇷🇴 RO 09 | 8.9M | http","🇺🇸 US 715 | http","🇱🇻 LV 22 | http","🇩🇪 DE 297 | http","🇷🇴 RO 62 | http","🇺🇸 US 716 | http","🇺🇸 US 717 | http","🇺🇸 US 718 | http","🇺🇸 US 719 | http","🇺🇸 US 720 | http","🇮🇷 IR 22 | vless","🇷🇴 RO 64 | http","🇷🇴 RO 63 | http","🇷🇴 RO 65 | http","🇩🇪 DE 298 | http","🇮🇪 IE 16 | http","🇳🇱 NL 277 | http","🇮🇪 IE 17 | http","🇺🇸 US 723 | 参考6.0M | http","🇫🇷 FR 191 | http","🇳🇱 NL 281 | http","🇮🇱 IL 04 | http","🇺🇸 US 727 | http","🇷🇴 RO 66 | http","🇺🇸 US 728 | http","🇸🇬 SG 195 | ss","🇩🇪 DE 299 | trojan","🇦🇱 AL 07 | http","🇺🇸 US 732 | http","🇬🇧 GB 88 | vless","🇺🇸 US 733 | ss","🇩🇪 DE 300 | http","🇩🇪 DE 301 | http","🇸🇪 SE 23 | vless","🇩🇪 DE 302 | http","🇫🇷 FR 192 | 3.9M | http","🇨🇿 CZ 22 | http","🇳🇱 NL 284 | http","🇫🇷 FR 193 | http","🇷🇴 RO 68 | http","🇫🇷 FR 194 | http","🇵🇱 PL 69 | http","🇯🇵 JP 226 | http","🇷🇴 RO 69 | http","🇺🇸 US 582 | 1.7M | http","🇱🇻 LV 23 | 参考4.0M | http","🇺🇸 US 741 | http","🇳🇱 NL 288 | http","🇩🇪 DE 304 | http","🇺🇸 US 746 | http","🇦🇺 AU 13 | http","🇨🇦 CA 105 | http","🇺🇸 US 747 | http","🇺🇸 US 292 | 11.1M | http","🇮🇹 IT 24 | 参考4.4M | ss","🇺🇸 US 750 | 参考3.9M | http","🇸🇪 SE 24 | vless","🇺🇸 US 752 | ss","🇫🇷 FR 196 | ss","🇺🇸 US 754 | ss","🇺🇸 US 755 | ss","🇺🇸 US 756 | ss","🇷🇴 RO 72 | http","🇺🇸 US 759 | http","🇪🇸 ES 23 | http","🇨🇦 CA 106 | http","🇮🇹 IT 25 | socks5","🇬🇧 GB 89 | http","🇺🇸 US 762 | 参考3.5M | vless","🇩🇪 DE 307 | ss","🇧🇦 BA 02 | http","🇺🇸 US 763 | http","🇷🇴 RO 73 | http","🇳🇱 NL 297 | http","🇺🇸 US 764 | http","🇺🇸 US 68 | 14.9M | http","🇺🇸 US 772 | http","🇩🇪 DE 73 | 13.9M | http","🇮🇪 IE 20 | http (2)","🇺🇸 US 783 | http","🇳🇱 NL 302 | http","🇭🇰 HK 437 | http","🇺🇸 US 789 | http","🇺🇸 US 794 | ss","🇳🇱 NL 304 | 6.3M | vless","🇸🇬 SG 202 | ss","🇬🇧 GB 92 | ss","🇬🇧 GB 93 | http","🇺🇸 US 796 | http (2)","🇱🇹 LT 17 | http","🇺🇸 US 803 | http","🇺🇸 US 806 | ss","🇳🇱 NL 146 | 11.1M | http","🇮🇹 IT 28 | ss","🇺🇸 US 658 | 0.1M | http","🇳🇱 NL 309 | 参考4.0M | ss","🇺🇸 US 809 | http","🇩🇪 DE 313 | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"strategy":"consistent-hashing"},{"name":"♻️ CA自动","type":"url-test","proxies":["自建·加拿大-01 ×0.1","自建·加拿大-02 ×0.1","自建·加拿大-03 ×0.1","自建·加拿大-04 ×0.1","自建·加拿大-05 ×0.1","自建·加拿大-06 ×0.1","自建·加拿大-07 ×0.1","自建·加拿大-08 ×0.1","自建·加拿大-09 ×0.1","🇨🇦 CA 105 | http","🇨🇦 CA 106 | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ DE自动","type":"url-test","proxies":["🇩🇪 DE 297 | http","🇩🇪 DE 298 | http","🇩🇪 DE 299 | trojan","🇩🇪 DE 300 | http","🇩🇪 DE 301 | http","🇩🇪 DE 302 | http","🇩🇪 DE 304 | http","🇩🇪 DE 307 | ss","🇩🇪 DE 73 | 13.9M | http","🇩🇪 DE 313 | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ FR自动","type":"url-test","proxies":["🇫🇷 FR 191 | http","🇫🇷 FR 192 | 3.9M | http","🇫🇷 FR 193 | http","🇫🇷 FR 194 | http","🇫🇷 FR 196 | ss"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ GB自动","type":"url-test","proxies":["🇬🇧 GB 88 | vless","🇬🇧 GB 89 | http","🇬🇧 GB 92 | ss","🇬🇧 GB 93 | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ IE自动","type":"url-test","proxies":["🇮🇪 IE 16 | http","🇮🇪 IE 17 | http","🇮🇪 IE 20 | http (2)"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ IT自动","type":"url-test","proxies":["🇮🇹 IT 24 | 参考4.4M | ss","🇮🇹 IT 25 | socks5","🇮🇹 IT 28 | ss"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ LV自动","type":"url-test","proxies":["🇱🇻 LV 22 | http","🇱🇻 LV 23 | 参考4.0M | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ NL自动","type":"url-test","proxies":["🇳🇱 NL 113 | 11.2M | http","🇳🇱 NL 105 | 11.5M | http","🇳🇱 NL 277 | http","🇳🇱 NL 281 | http","🇳🇱 NL 284 | http","🇳🇱 NL 288 | http","🇳🇱 NL 297 | http","🇳🇱 NL 302 | http","🇳🇱 NL 304 | 6.3M | vless","🇳🇱 NL 146 | 11.1M | http","🇳🇱 NL 309 | 参考4.0M | ss"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ RO自动","type":"url-test","proxies":["🇷🇴 RO 09 | 8.9M | http","🇷🇴 RO 62 | http","🇷🇴 RO 64 | http","🇷🇴 RO 63 | http","🇷🇴 RO 65 | http","🇷🇴 RO 66 | http","🇷🇴 RO 68 | http","🇷🇴 RO 69 | http","🇷🇴 RO 72 | http","🇷🇴 RO 73 | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ SE自动","type":"url-test","proxies":["🇸🇪 SE 23 | vless","🇸🇪 SE 24 | vless"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ SG自动","type":"url-test","proxies":["🇸🇬 SG 195 | ss","🇸🇬 SG 202 | ss"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ US自动","type":"url-test","proxies":["🇺🇸 US 715 | http","🇺🇸 US 716 | http","🇺🇸 US 717 | http","🇺🇸 US 718 | http","🇺🇸 US 719 | http","🇺🇸 US 720 | http","🇺🇸 US 723 | 参考6.0M | http","🇺🇸 US 727 | http","🇺🇸 US 728 | http","🇺🇸 US 732 | http","🇺🇸 US 733 | ss","🇺🇸 US 582 | 1.7M | http","🇺🇸 US 741 | http","🇺🇸 US 746 | http","🇺🇸 US 747 | http","🇺🇸 US 292 | 11.1M | http","🇺🇸 US 750 | 参考3.9M | http","🇺🇸 US 752 | ss","🇺🇸 US 754 | ss","🇺🇸 US 755 | ss","🇺🇸 US 756 | ss","🇺🇸 US 759 | http","🇺🇸 US 762 | 参考3.5M | vless","🇺🇸 US 763 | http","🇺🇸 US 764 | http","🇺🇸 US 68 | 14.9M | http","🇺🇸 US 772 | http","🇺🇸 US 783 | http","🇺🇸 US 789 | http","🇺🇸 US 794 | ss","🇺🇸 US 796 | http (2)","🇺🇸 US 803 | http","🇺🇸 US 806 | ss","🇺🇸 US 658 | 0.1M | http","🇺🇸 US 809 | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"🤖 AI平台","type":"select","proxies":["🚀 节点选择","自建·加拿大-01 ×0.1","自建·加拿大-02 ×0.1","自建·加拿大-03 ×0.1","自建·加拿大-04 ×0.1","自建·加拿大-05 ×0.1","自建·加拿大-06 ×0.1","自建·加拿大-07 ×0.1","自建·加拿大-08 ×0.1","自建·加拿大-09 ×0.1","🇳🇱 NL 113 | 11.2M | http","🇳🇱 NL 105 | 11.5M | http","🇷🇴 RO 09 | 8.9M | http","🇺🇸 US 715 | http","🇺🇸 US 727 | http","🇷🇴 RO 68 | http","🇵🇱 PL 69 | http","🇺🇸 US 582 | 1.7M | http","🇺🇸 US 292 | 11.1M | http","🇳🇱 NL 297 | http","🇺🇸 US 764 | http","🇺🇸 US 68 | 14.9M | http","🇺🇸 US 772 | http","🇩🇪 DE 73 | 13.9M | http","🇳🇱 NL 302 | http","🇺🇸 US 796 | http (2)","🇳🇱 NL 146 | 11.1M | http"]},{"name":"📹 油管视频","type":"select","proxies":["🚀 节点选择","🇺🇸 US 715 | http","🇺🇸 US 727 | http","🇺🇸 US 764 | http","🇺🇸 US 68 | 14.9M | http","🇺🇸 US 772 | http","🇺🇸 US 796 | http (2)"]},{"name":"🎥 奈飞视频","type":"select","proxies":["🚀 节点选择","🇳🇱 NL 113 | 11.2M | http","🇳🇱 NL 105 | 11.5M | http","🇷🇴 RO 09 | 8.9M | http","🇺🇸 US 715 | http","🇺🇸 US 727 | http","🇷🇴 RO 68 | http","🇵🇱 PL 69 | http","🇺🇸 US 582 | 1.7M | http","🇺🇸 US 292 | 11.1M | http","🇳🇱 NL 297 | http","🇺🇸 US 764 | http","🇺🇸 US 68 | 14.9M | http","🇺🇸 US 772 | http","🇩🇪 DE 73 | 13.9M | http","🇳🇱 NL 302 | http","🇺🇸 US 796 | http (2)","🇳🇱 NL 146 | 11.1M | http"]},{"name":"📲 电报消息","type":"select","proxies":["🚀 节点选择"]},{"name":"🎯 全球直连","type":"select","proxies":["DIRECT"]},{"name":"🛑 广告拦截","type":"select","proxies":["REJECT","DIRECT"]},{"name":"🐟 漏网之鱼","type":"select","proxies":["🚀 节点选择","🎯 全球直连"]}]
 rules: ["DOMAIN-SUFFIX,localhost,DIRECT","IP-CIDR,127.0.0.0/8,DIRECT,no-resolve","IP-CIDR,10.0.0.0/8,DIRECT,no-resolve","IP-CIDR,172.16.0.0/12,DIRECT,no-resolve","IP-CIDR,192.168.0.0/16,DIRECT,no-resolve","IP-CIDR,169.254.0.0/16,DIRECT,no-resolve","IP-CIDR,100.64.0.0/10,DIRECT,no-resolve","IP-CIDR,224.0.0.0/4,DIRECT,no-resolve","IP-CIDR6,fc00::/7,DIRECT,no-resolve","IP-CIDR6,fe80::/10,DIRECT,no-resolve","DOMAIN-SUFFIX,7x24.alwaysdata.net,DIRECT","DOMAIN-SUFFIX,ad.doubleclick.net,🛑 广告拦截","DOMAIN-SUFFIX,doubleclick.net,🛑 广告拦截","DOMAIN-SUFFIX,googleadservices.com,🛑 广告拦截","DOMAIN-SUFFIX,googlesyndication.com,🛑 广告拦截","DOMAIN-SUFFIX,google-analytics.com,🛑 广告拦截","DOMAIN-SUFFIX,googletagmanager.com,🛑 广告拦截","DOMAIN-SUFFIX,umeng.com,🛑 广告拦截","DOMAIN-SUFFIX,cnzz.com,🛑 广告拦截","DOMAIN-SUFFIX,admaster.com.cn,🛑 广告拦截","DOMAIN-SUFFIX,miaozhen.com,🛑 广告拦截","DOMAIN-SUFFIX,alimama.com,🛑 广告拦截","DOMAIN-SUFFIX,tanx.com,🛑 广告拦截","DOMAIN-SUFFIX,cpro.baidu.com,🛑 广告拦截","DOMAIN-SUFFIX,pos.baidu.com,🛑 广告拦截","DOMAIN-SUFFIX,union.baidu.com,🛑 广告拦截","DOMAIN-SUFFIX,mmstat.com,🛑 广告拦截","DOMAIN-SUFFIX,ads.youtube.com,🛑 广告拦截","DOMAIN-SUFFIX,openai.com,🤖 AI平台","DOMAIN-SUFFIX,chatgpt.com,🤖 AI平台","DOMAIN-SUFFIX,oaistatic.com,🤖 AI平台","DOMAIN-SUFFIX,oaiusercontent.com,🤖 AI平台","DOMAIN-SUFFIX,anthropic.com,🤖 AI平台","DOMAIN-SUFFIX,claude.ai,🤖 AI平台","DOMAIN-SUFFIX,gemini.google.com,🤖 AI平台","DOMAIN-SUFFIX,ai.google.dev,🤖 AI平台","DOMAIN-SUFFIX,aistudio.google.com,🤖 AI平台","DOMAIN-SUFFIX,perplexity.ai,🤖 AI平台","DOMAIN-SUFFIX,poe.com,🤖 AI平台","DOMAIN-SUFFIX,midjourney.com,🤖 AI平台","DOMAIN-SUFFIX,openrouter.ai,🤖 AI平台","DOMAIN-SUFFIX,youtube.com,📹 油管视频","DOMAIN-SUFFIX,youtu.be,📹 油管视频","DOMAIN-SUFFIX,ytimg.com,📹 油管视频","DOMAIN-SUFFIX,googlevideo.com,📹 油管视频","DOMAIN-SUFFIX,ggpht.com,📹 油管视频","DOMAIN-SUFFIX,youtubekids.com,📹 油管视频","DOMAIN-SUFFIX,youtubemusic.com,📹 油管视频","DOMAIN-SUFFIX,netflix.com,🎥 奈飞视频","DOMAIN-SUFFIX,netflix.net,🎥 奈飞视频","DOMAIN-SUFFIX,nflxext.com,🎥 奈飞视频","DOMAIN-SUFFIX,nflximg.com,🎥 奈飞视频","DOMAIN-SUFFIX,nflxso.net,🎥 奈飞视频","DOMAIN-SUFFIX,nflxvideo.net,🎥 奈飞视频","DOMAIN-SUFFIX,fast.com,🎥 奈飞视频","DOMAIN-SUFFIX,telegram.org,📲 电报消息","DOMAIN-SUFFIX,telegram.me,📲 电报消息","DOMAIN-SUFFIX,t.me,📲 电报消息","DOMAIN-SUFFIX,telegra.ph,📲 电报消息","DOMAIN-SUFFIX,telesco.pe,📲 电报消息","DOMAIN-SUFFIX,telegram.dog,📲 电报消息","GEOIP,CN,🎯 全球直连","MATCH,🐟 漏网之鱼"]
