@@ -1,0 +1,382 @@
+{
+  "log": {
+    "level": "warn",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "type": "https",
+        "tag": "dns-proxy",
+        "server": "1.1.1.1",
+        "detour": "代理"
+      },
+      {
+        "type": "https",
+        "tag": "dns-direct",
+        "server": "223.5.5.5"
+      }
+    ],
+    "final": "dns-proxy"
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "address": [
+        "172.19.0.1/30"
+      ],
+      "auto_route": true,
+      "strict_route": true,
+      "stack": "mixed"
+    },
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 2080
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "n00",
+      "type": "http",
+      "server": "137.175.22.52",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "137.175.22.52",
+        "insecure": true
+      }
+    },
+    {
+      "tag": "n01",
+      "type": "http",
+      "server": "twmoon1-cdn-route.couldflare-cdn.com",
+      "server_port": 1443,
+      "username": "mrwdfNTD8M79LCukCieldrqZWqs=",
+      "password": "exaxgqkKkd0TAMrCxeonWg==",
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      }
+    },
+    {
+      "tag": "n02",
+      "type": "http",
+      "server": "154.26.192.123",
+      "server_port": 10988,
+      "username": "fQ67Dpe5dU",
+      "password": "gs4BXwT6SW"
+    },
+    {
+      "tag": "n03",
+      "type": "http",
+      "server": "44.248.167.117",
+      "server_port": 8443,
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      }
+    },
+    {
+      "tag": "n04",
+      "type": "http",
+      "server": "198.44.157.19",
+      "server_port": 9443,
+      "tls": {
+        "enabled": true,
+        "server_name": "198.44.157.19",
+        "insecure": true
+      }
+    },
+    {
+      "tag": "n05",
+      "type": "vless",
+      "server": "14.49.249.113",
+      "server_port": 30083,
+      "uuid": "0bc7c8a1-fd2b-4346-8544-cb683278b8e5",
+      "tls": {
+        "enabled": true,
+        "server_name": "us1.1am.cc.cd",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/492fbb0e1ab5996d",
+        "headers": {
+          "Host": "us1.1am.cc.cd"
+        }
+      }
+    },
+    {
+      "tag": "n06",
+      "type": "vless",
+      "server": "54.169.49.130",
+      "server_port": 443,
+      "uuid": "911d76d2-0bd4-47ee-a791-672211e4568c",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.shopify.com",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "n07",
+      "type": "http",
+      "server": "87.106.223.158",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "87.106.223.158",
+        "insecure": true
+      }
+    },
+    {
+      "tag": "n08",
+      "type": "http",
+      "server": "213.109.163.119",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      }
+    },
+    {
+      "tag": "n09",
+      "type": "http",
+      "server": "119.28.24.235",
+      "server_port": 3128,
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      }
+    },
+    {
+      "tag": "n10",
+      "type": "http",
+      "server": "fan.587475.xyz",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "fan.587475.xyz"
+      }
+    },
+    {
+      "tag": "n11",
+      "type": "http",
+      "server": "116.202.172.99",
+      "server_port": 443,
+      "username": "null",
+      "password": "null",
+      "tls": {
+        "enabled": true,
+        "server_name": "116.202.172.99",
+        "insecure": true
+      }
+    },
+    {
+      "tag": "n12",
+      "type": "http",
+      "server": "23.133.176.14",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "23.133.176.14",
+        "insecure": true
+      }
+    },
+    {
+      "tag": "n13",
+      "type": "vless",
+      "server": "23.106.143.50",
+      "server_port": 8443,
+      "uuid": "0bc7c8a1-fd2b-4346-8544-cb683278b8e5",
+      "tls": {
+        "enabled": true,
+        "server_name": "us1.1am.cc.cd",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/492fbb0e1ab5996d",
+        "headers": {
+          "Host": "us1.1am.cc.cd"
+        }
+      }
+    },
+    {
+      "tag": "n14",
+      "type": "http",
+      "server": "184.188.139.2",
+      "server_port": 8090,
+      "tls": {
+        "enabled": true,
+        "server_name": "184.188.139.2",
+        "insecure": true
+      }
+    },
+    {
+      "tag": "n15",
+      "type": "http",
+      "server": "87.242.85.187",
+      "server_port": 8443,
+      "username": "null",
+      "password": "null",
+      "tls": {
+        "enabled": true,
+        "server_name": "87.242.85.187",
+        "insecure": true
+      }
+    },
+    {
+      "tag": "n16",
+      "type": "vless",
+      "server": "39.109.57.230",
+      "server_port": 8443,
+      "uuid": "0bc7c8a1-fd2b-4346-8544-cb683278b8e5",
+      "tls": {
+        "enabled": true,
+        "server_name": "us1.1am.cc.cd",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/492fbb0e1ab5996d",
+        "headers": {
+          "Host": "us1.1am.cc.cd"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "DediRock-LA",
+      "server": "107.172.186.223",
+      "server_port": 19443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "f163442cc351131b8b63ade346274652",
+      "detour": "前置总控"
+    },
+    {
+      "type": "selector",
+      "tag": "前置",
+      "outbounds": [
+        "n00",
+        "n01",
+        "n02",
+        "n03",
+        "n04",
+        "n05",
+        "n06",
+        "n07",
+        "n08",
+        "n09",
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n15",
+        "n16"
+      ],
+      "default": "n00"
+    },
+    {
+      "type": "urltest",
+      "tag": "前置自动",
+      "outbounds": [
+        "n00",
+        "n01",
+        "n02",
+        "n03",
+        "n04",
+        "n05",
+        "n06",
+        "n07",
+        "n08",
+        "n09",
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n15",
+        "n16"
+      ],
+      "url": "https://www.google.com/generate_204",
+      "interval": "3m",
+      "tolerance": 80
+    },
+    {
+      "type": "selector",
+      "tag": "前置总控",
+      "outbounds": [
+        "前置自动",
+        "前置",
+        "n00",
+        "n01",
+        "n02",
+        "n03",
+        "n04",
+        "n05",
+        "n06",
+        "n07",
+        "n08",
+        "n09",
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n15",
+        "n16"
+      ],
+      "default": "前置自动"
+    },
+    {
+      "type": "selector",
+      "tag": "代理",
+      "outbounds": [
+        "DediRock-LA",
+        "前置总控",
+        "direct"
+      ],
+      "default": "DediRock-LA"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "action": "route",
+        "ip_is_private": true,
+        "outbound": "direct"
+      }
+    ],
+    "final": "代理",
+    "auto_detect_interface": true,
+    "default_domain_resolver": "dns-direct"
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true
+    }
+  }
+}
