@@ -40,162 +40,6 @@
   "outbounds": [
     {
       "tag": "n00",
-      "type": "http",
-      "server": "137.175.22.52",
-      "server_port": 443,
-      "tls": {
-        "enabled": true,
-        "server_name": "137.175.22.52",
-        "insecure": true
-      }
-    },
-    {
-      "tag": "n01",
-      "type": "http",
-      "server": "twmoon1-cdn-route.couldflare-cdn.com",
-      "server_port": 1443,
-      "username": "mrwdfNTD8M79LCukCieldrqZWqs=",
-      "password": "exaxgqkKkd0TAMrCxeonWg==",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      }
-    },
-    {
-      "tag": "n02",
-      "type": "http",
-      "server": "154.26.192.123",
-      "server_port": 10988,
-      "username": "fQ67Dpe5dU",
-      "password": "gs4BXwT6SW"
-    },
-    {
-      "tag": "n03",
-      "type": "http",
-      "server": "44.248.167.117",
-      "server_port": 8443,
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      }
-    },
-    {
-      "tag": "n04",
-      "type": "http",
-      "server": "198.44.157.19",
-      "server_port": 9443,
-      "tls": {
-        "enabled": true,
-        "server_name": "198.44.157.19",
-        "insecure": true
-      }
-    },
-    {
-      "tag": "n05",
-      "type": "vless",
-      "server": "14.49.249.113",
-      "server_port": 30083,
-      "uuid": "0bc7c8a1-fd2b-4346-8544-cb683278b8e5",
-      "tls": {
-        "enabled": true,
-        "server_name": "us1.1am.cc.cd",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/492fbb0e1ab5996d",
-        "headers": {
-          "Host": "us1.1am.cc.cd"
-        }
-      }
-    },
-    {
-      "tag": "n06",
-      "type": "vless",
-      "server": "54.169.49.130",
-      "server_port": 443,
-      "uuid": "911d76d2-0bd4-47ee-a791-672211e4568c",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.shopify.com",
-        "insecure": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "n07",
-      "type": "http",
-      "server": "87.106.223.158",
-      "server_port": 443,
-      "tls": {
-        "enabled": true,
-        "server_name": "87.106.223.158",
-        "insecure": true
-      }
-    },
-    {
-      "tag": "n08",
-      "type": "http",
-      "server": "213.109.163.119",
-      "server_port": 443,
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      }
-    },
-    {
-      "tag": "n09",
-      "type": "http",
-      "server": "119.28.24.235",
-      "server_port": 3128,
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      }
-    },
-    {
-      "tag": "n10",
-      "type": "http",
-      "server": "fan.587475.xyz",
-      "server_port": 443,
-      "tls": {
-        "enabled": true,
-        "server_name": "fan.587475.xyz"
-      }
-    },
-    {
-      "tag": "n11",
-      "type": "http",
-      "server": "116.202.172.99",
-      "server_port": 443,
-      "username": "null",
-      "password": "null",
-      "tls": {
-        "enabled": true,
-        "server_name": "116.202.172.99",
-        "insecure": true
-      }
-    },
-    {
-      "tag": "n12",
-      "type": "http",
-      "server": "23.133.176.14",
-      "server_port": 443,
-      "tls": {
-        "enabled": true,
-        "server_name": "23.133.176.14",
-        "insecure": true
-      }
-    },
-    {
-      "tag": "n13",
       "type": "vless",
       "server": "23.106.143.50",
       "server_port": 8443,
@@ -217,34 +61,54 @@
       }
     },
     {
-      "tag": "n14",
-      "type": "http",
-      "server": "184.188.139.2",
-      "server_port": 8090,
-      "tls": {
-        "enabled": true,
-        "server_name": "184.188.139.2",
-        "insecure": true
-      }
-    },
-    {
-      "tag": "n15",
-      "type": "http",
-      "server": "87.242.85.187",
-      "server_port": 8443,
-      "username": "null",
-      "password": "null",
-      "tls": {
-        "enabled": true,
-        "server_name": "87.242.85.187",
-        "insecure": true
-      }
-    },
-    {
-      "tag": "n16",
+      "tag": "n01",
       "type": "vless",
       "server": "39.109.57.230",
       "server_port": 8443,
+      "uuid": "0bc7c8a1-fd2b-4346-8544-cb683278b8e5",
+      "tls": {
+        "enabled": true,
+        "server_name": "us1.1am.cc.cd",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/492fbb0e1ab5996d",
+        "headers": {
+          "Host": "us1.1am.cc.cd"
+        }
+      }
+    },
+    {
+      "tag": "n02",
+      "type": "vless",
+      "server": "103.85.27.100",
+      "server_port": 8443,
+      "uuid": "0bc7c8a1-fd2b-4346-8544-cb683278b8e5",
+      "tls": {
+        "enabled": true,
+        "server_name": "us1.1am.cc.cd",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/492fbb0e1ab5996d",
+        "headers": {
+          "Host": "us1.1am.cc.cd"
+        }
+      }
+    },
+    {
+      "tag": "n03",
+      "type": "vless",
+      "server": "45.45.217.192",
+      "server_port": 444,
       "uuid": "0bc7c8a1-fd2b-4346-8544-cb683278b8e5",
       "tls": {
         "enabled": true,
@@ -278,20 +142,7 @@
         "n00",
         "n01",
         "n02",
-        "n03",
-        "n04",
-        "n05",
-        "n06",
-        "n07",
-        "n08",
-        "n09",
-        "n10",
-        "n11",
-        "n12",
-        "n13",
-        "n14",
-        "n15",
-        "n16"
+        "n03"
       ],
       "default": "n00"
     },
@@ -302,20 +153,7 @@
         "n00",
         "n01",
         "n02",
-        "n03",
-        "n04",
-        "n05",
-        "n06",
-        "n07",
-        "n08",
-        "n09",
-        "n10",
-        "n11",
-        "n12",
-        "n13",
-        "n14",
-        "n15",
-        "n16"
+        "n03"
       ],
       "url": "https://www.google.com/generate_204",
       "interval": "3m",
@@ -330,20 +168,7 @@
         "n00",
         "n01",
         "n02",
-        "n03",
-        "n04",
-        "n05",
-        "n06",
-        "n07",
-        "n08",
-        "n09",
-        "n10",
-        "n11",
-        "n12",
-        "n13",
-        "n14",
-        "n15",
-        "n16"
+        "n03"
       ],
       "default": "前置自动"
     },
