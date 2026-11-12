@@ -1,0 +1,152 @@
+proxies:
+- name: US-San Jose-82214-npcz
+  type: http
+  server: 137.175.22.52
+  port: 443
+  tls: true
+  sni: 137.175.22.52
+  skip-cert-verify: true
+- name: TW-Puyan-h-223797-nvzn
+  type: http
+  server: twmoon1-cdn-route.couldflare-cdn.com
+  port: 1443
+  username: mrwdfNTD8M79LCukCieldrqZWqs=
+  password: exaxgqkKkd0TAMrCxeonWg==
+  tls: true
+  skip-cert-verify: true
+- name: 🇺🇸 US 876 | http
+  password: gs4BXwT6SW
+  port: 10988
+  server: 154.26.192.123
+  sub_tag: R002-260618
+  tls: false
+  type: http
+  udp: true
+  username: fQ67Dpe5dU
+- name: 🇺🇸 US 899 | 参考4.3M | http
+  port: 8443
+  server: 44.248.167.117
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+- name: 🇨🇦 CA 100 | http
+  server: 198.44.157.19
+  port: 9443
+  type: http
+  tls: true
+  sni: 198.44.157.19
+  skip-cert-verify: true
+- name: 自建·加拿大-09
+  type: vless
+  server: 14.49.249.113
+  port: 30083
+  uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
+  udp: false
+  tls: true
+  servername: us1.1am.cc.cd
+  network: ws
+  ws-opts:
+    path: /492fbb0e1ab5996d
+    headers:
+      Host: us1.1am.cc.cd
+  client-fingerprint: chrome
+- name: SG-Singapore-h-1694913-nnav
+  type: vless
+  server: 54.169.49.130
+  port: 443
+  uuid: 911d76d2-0bd4-47ee-a791-672211e4568c
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.shopify.com
+  skip-cert-verify: true
+  client-fingerprint: ios
+- name: 🇩🇪 DE 266 | http
+  server: 87.106.223.158
+  port: 443
+  type: http
+  tls: true
+  sni: 87.106.223.158
+  skip-cert-verify: true
+- name: 🇩🇪 DE 273 | http
+  password: null
+  port: 443
+  server: 213.109.163.119
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: null
+- name: 🇭🇰 HK 357 | http
+  port: 3128
+  server: 119.28.24.235
+  skip-cert-verify: true
+  sub_tag: P002-260618
+  tls: true
+  type: http
+  udp: true
+- name: JP-Tokyo-1372379-nncd
+  type: http
+  server: fan.587475.xyz
+  port: 443
+  tls: true
+  sni: fan.587475.xyz
+- name: 🇩🇪 DE 262 | 参考4.0M | http
+  type: http
+  server: 116.202.172.99
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  sni: 116.202.172.99
+  skip-cert-verify: true
+- type: http
+  name: 🇺🇸 US 892 | 参考5.4M | http
+  server: 23.133.176.14
+  port: 443
+  tls: true
+  servername: 23.133.176.14
+  skip-cert-verify: true
+- name: 自建·加拿大-02
+  type: vless
+  server: 23.106.143.50
+  port: 8443
+  uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
+  udp: false
+  tls: true
+  servername: us1.1am.cc.cd
+  network: ws
+  ws-opts:
+    path: /492fbb0e1ab5996d
+    headers:
+      Host: us1.1am.cc.cd
+  client-fingerprint: chrome
+- name: 🇺🇸 US 844 | 参考3.5M | http
+  server: 184.188.139.2
+  port: 8090
+  type: http
+  tls: true
+  sni: 184.188.139.2
+  skip-cert-verify: true
+- name: RU-Moscow-2428518-nvwp
+  type: http
+  server: 87.242.85.187
+  port: 8443
+  username: 'null'
+  password: 'null'
+  tls: true
+  sni: 87.242.85.187
+  skip-cert-verify: true
+- name: 自建·加拿大-08
+  type: vless
+  server: 39.109.57.230
+  port: 8443
+  uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
+  udp: false
+  tls: true
+  servername: us1.1am.cc.cd
+  network: ws
+  ws-opts:
+    path: /492fbb0e1ab5996d
+    headers:
+      Host: us1.1am.cc.cd
+  client-fingerprint: chrome
