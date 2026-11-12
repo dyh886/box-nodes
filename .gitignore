@@ -2,3 +2,13 @@ __pycache__/
 *.pyc
 .venv/
 state/nodes.json.bak
+
+# === 敏感：落地凭据与私有配置，绝不入库 ===
+private/
+config.json
+state/live_nodes.json
+state/stability.json
+state/candidates.json
+mirror/
+*log
+*.log
