@@ -1,16 +1,15 @@
 {
-  "updatedAt": 1794135261,
-  "updatedAtISO": "2026-11-08T10:54:21Z",
-  "count": 4,
-  "avgLatencyMs": 257.2,
-  "byProtocol": {
-    "trojan": 1,
-    "vless": 1,
-    "vmess": 1,
-    "ss": 1
+  "updatedAt": 1794449845,
+  "updatedAtISO": "2026-11-12T02:17:25Z",
+  "frontCount": 17,
+  "stats": {
+    "raw": 17,
+    "kept": 17,
+    "source": "restored from published chain.yaml"
   },
+  "note": "Node pool only. Landing credentials are not published.",
   "endpoints": {
-    "pages": "https://dyh886.github.io/box-nodes/",
-    "jsdelivr": "https://cdn.jsdelivr.net/gh/dyh886/box-nodes@main/dist/"
+    "provider": "https://dyh886.github.io/box-nodes/fronts.yaml",
+    "pages": "https://dyh886.github.io/box-nodes/"
   }
 }
