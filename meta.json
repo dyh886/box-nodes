@@ -1,7 +1,15 @@
 {
-  "updatedAt": 1794450427,
-  "updatedAtISO": "2026-11-12T02:27:07Z",
-  "frontCount": 295,
-  "generator": "box (aggregate only, no L2 verify)",
-  "note": "Front-only pool. Landing credentials are never published."
+  "updatedAt": 1794451440,
+  "updatedAtISO": "2026-11-12T02:44:00Z",
+  "frontCount": 17,
+  "stats": {
+    "raw": 17,
+    "kept": 17,
+    "source": "restored from published chain.yaml"
+  },
+  "note": "Node pool only. Landing credentials are not published.",
+  "endpoints": {
+    "provider": "https://dyh886.github.io/box-nodes/fronts.yaml",
+    "pages": "https://dyh886.github.io/box-nodes/"
+  }
 }
