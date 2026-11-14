@@ -314,7 +314,7 @@ proxies:
   port: 9090
   server: 152.42.170.187
   type: http
-- name: 🇭🇰 HK 02 | 参考128.7M | ssr
+- name: 🇭🇰 HK 02 | 参考184.7M | ssr
   type: ssr
   server: api.meituan88.com
   port: 56324
@@ -326,7 +326,7 @@ proxies:
   protocol: auth_aes128_md5
   protocol-param: 163564:FkGVmc
   obfs-param: aad163564.douyin.com
-- name: 🇭🇰 HK 03 | 参考13.7M | ssr
+- name: 🇭🇰 HK 03 | 参考7.7M | ssr
   type: ssr
   server: api.meituan88.com
   port: 55962
@@ -378,25 +378,9 @@ proxies:
   port: 9002
   username: 'null'
   password: None
+  skip-cert-verify: true
   tls: true
   sni: 138.199.35.205
-  skip-cert-verify: true
-- name: 🇸🇬 SG 03 | 参考0.2M | http
-  type: http
-  server: 43.156.55.191
-  port: 5001
-- name: 🇭🇰 HK 08 | 参考14.1M | ssr
-  type: ssr
-  server: api.meituan88.com
-  port: 14429
-  cipher: chacha20-ietf
-  password: di15PV
-  udp: true
-  skip-cert-verify: true
-  obfs: plain
-  protocol: auth_aes128_md5
-  protocol-param: 163564:FkGVmc
-  obfs-param: aad163564.douyin.com
 - name: 🇺🇸 US 02 | 参考4.9M | http
   type: http
   server: 138.199.35.196
@@ -406,17 +390,11 @@ proxies:
   tls: true
   sni: 138.199.35.196
   skip-cert-verify: true
-- name: 🇺🇸 US 03 | 参考5.4M | ssr
-  type: ssr
-  server: api.meituan88.com
-  port: 43313
-  cipher: chacha20-ietf
-  password: di15PV
-  obfs: plain
-  protocol: auth_aes128_md5
-  protocol-param: 163564:FkGVmc
-  obfs-param: aad163564.douyin.com
-- name: 🇺🇸 US 05 | 参考4.6M | http
+- name: 🇸🇬 SG 03 | 参考0.2M | http
+  server: 43.156.55.191
+  port: 5001
+  type: http
+- name: 🇺🇸 US 03 | 参考4.6M | http
   password: None
   port: 9002
   server: 138.199.35.219
@@ -426,14 +404,6 @@ proxies:
   username: null
   path: direct
   is_landing: false
-- name: 🇺🇸 US 04 | 参考4.4M | http
-  type: http
-  server: 138.199.35.199
-  port: 9002
-  username: ''
-  password: None
-  tls: true
-  skip-cert-verify: true
 - name: 🇱🇻 LV 01 | 参考3.9M | http
   type: http
   server: 185.219.159.15
@@ -443,6 +413,24 @@ proxies:
   skip-cert-verify: true
   tls: true
   sni: 185.219.159.15
+- name: 🇺🇸 US 05 | 参考4.4M | http
+  type: http
+  server: 138.199.35.199
+  port: 9002
+  username: ''
+  password: None
+  tls: true
+  skip-cert-verify: true
+- name: 🇺🇸 US 04 | 参考5.4M | ssr
+  type: ssr
+  server: api.meituan88.com
+  port: 43313
+  cipher: chacha20-ietf
+  password: di15PV
+  obfs: plain
+  protocol: auth_aes128_md5
+  protocol-param: 163564:FkGVmc
+  obfs-param: aad163564.douyin.com
 - name: 🇷🇴 RO 01 | 参考1.8M | http
   server: 193.176.84.18
   port: 9002
@@ -450,7 +438,17 @@ proxies:
   tls: true
   sni: 193.176.84.18
   skip-cert-verify: true
-- name: 🇺🇸 US 06 | 参考5.0M | http
+- name: 🇭🇰 HK 10 | 参考13.9M | ssr
+  type: ssr
+  server: api.meituan88.com
+  port: 14429
+  cipher: chacha20-ietf
+  password: di15PV
+  obfs: plain
+  protocol: auth_aes128_md5
+  protocol-param: 163564:FkGVmc
+  obfs-param: aad163564.douyin.com
+- name: 🇺🇸 US 06 | 参考4.3M | http
   password: None
   port: 9002
   server: 138.199.35.216
@@ -467,20 +465,10 @@ proxies:
   tls: true
   servername: www.bing.com
   skip-cert-verify: true
-- name: 🇭🇰 HK 11 | 参考113.8M | ssr
+- name: 🇭🇰 HK 12 | 参考113.8M | ssr
   type: ssr
   server: api.meituan88.com
   port: 7007
-  cipher: chacha20-ietf
-  password: di15PV
-  obfs: plain
-  protocol: auth_aes128_md5
-  protocol-param: 163564:FkGVmc
-  obfs-param: aad163564.douyin.com
-- name: 🇹🇼 TW 01 | 参考31.1M | ssr
-  type: ssr
-  server: api.meituan88.com
-  port: 7015
   cipher: chacha20-ietf
   password: di15PV
   obfs: plain
@@ -496,7 +484,7 @@ proxies:
   tls: true
   sni: f3a61d8406d537345747f99f8a281007-3f754ed5da1bba09.apache-iv.com
   skip-cert-verify: true
-- name: 🇺🇸 US 08 | 参考3.2M | http
+- name: 🇺🇸 US 08 | 参考3.1M | http
   type: http
   server: 162.217.114.50
   port: 443
@@ -504,6 +492,16 @@ proxies:
   password: ''
   tls: true
   skip-cert-verify: true
+- name: 🇹🇼 TW 01 | 参考31.1M | ssr
+  type: ssr
+  server: api.meituan88.com
+  port: 7015
+  cipher: chacha20-ietf
+  password: di15PV
+  obfs: plain
+  protocol: auth_aes128_md5
+  protocol-param: 163564:FkGVmc
+  obfs-param: aad163564.douyin.com
 - name: 🇳🇱 NL 01 | 参考4.7M | http
   server: 84.17.47.123
   port: 9002
@@ -511,35 +509,7 @@ proxies:
   password: None
   tls: true
   skip-cert-verify: true
-- name: 🇭🇰 HK 12 | 参考180.4M | ssr
-  type: ssr
-  server: api.meituan88.com
-  port: 8479
-  cipher: chacha20-ietf
-  password: di15PV
-  obfs: plain
-  protocol: auth_aes128_md5
-  protocol-param: 163564:FkGVmc
-  obfs-param: aad163564.douyin.com
-- name: 🇯🇵 JP 01 | 参考22.6M | ssr
-  type: ssr
-  server: api.meituan88.com
-  port: 9051
-  cipher: rc4-md5
-  password: di15PV
-  obfs: plain
-  protocol: auth_aes128_md5
-  protocol-param: 163564:FkGVmc
-  obfs-param: aad163564.douyin.com
-- name: 🇮🇩 ID 01 | 参考27.8M | http
-  port: 443
-  server: 103.86.116.118
-  skip-cert-verify: true
-  sub_tag: R002-260618
-  tls: true
-  type: http
-  udp: true
-- name: 🇺🇸 US 09 | 参考4.1M | http
+- name: 🇺🇸 US 09 | 参考4.0M | http
   server: 23.133.176.14
   port: 443
   type: http
@@ -547,9 +517,9 @@ proxies:
   tls: true
   skip-cert-verify: true
 - name: 🇩🇪 DE 01 | 参考4.8M | http
+  type: http
   server: 193.233.75.115
   port: 443
-  type: http
   tls: true
   sni: 193.233.75.115
   skip-cert-verify: true
@@ -563,42 +533,38 @@ proxies:
   udp: true
   path: direct
   is_landing: false
-- name: 🇸🇬 SG 05 | 参考10.9M | ssr
+- name: 🇭🇰 HK 14 | 参考146.7M | ssr
   type: ssr
   server: api.meituan88.com
-  port: 18566
+  port: 39514
   cipher: chacha20-ietf
   password: di15PV
-  obfs: plain
-  protocol: auth_aes128_md5
-  protocol-param: 163564:FkGVmc
-  obfs-param: aad163564.douyin.com
-- name: 🇭🇰 HK 13 | 6.2M | ssr
-  type: ssr
-  server: api.meituan88.com
-  port: 30062
-  cipher: chacha20-ietf
-  password: di15PV
-  obfs: plain
-  protocol: auth_aes128_md5
-  protocol-param: 163564:FkGVmc
-  obfs-param: aad163564.douyin.com
-- name: 🇭🇰 HK 14 | 参考174.4M | ssr
-  type: ssr
-  server: api.meituan88.com
-  port: 20419
-  cipher: rc4-md5
-  password: di15PV
-  udp: true
-  skip-cert-verify: true
   obfs: tls1.2_ticket_auth
   protocol: auth_aes128_md5
   protocol-param: 163564:FkGVmc
   obfs-param: aad163564.douyin.com
-- name: 🇸🇬 SG 06 | 参考28.3M | ssr
+- name: 🇭🇰 HK 15 | 参考14.2M | ssr
   type: ssr
   server: api.meituan88.com
-  port: 3207
+  port: 3204
+  cipher: chacha20-ietf
+  password: di15PV
+  obfs: tls1.2_ticket_auth
+  protocol: auth_aes128_md5
+  protocol-param: 163564:FkGVmc
+  obfs-param: aad163564.douyin.com
+- name: 🇮🇩 ID 01 | 参考27.8M | http
+  port: 443
+  server: 103.86.116.118
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- name: 🇸🇬 SG 04 | 参考10.9M | ssr
+  type: ssr
+  server: api.meituan88.com
+  port: 18566
   cipher: chacha20-ietf
   password: di15PV
   obfs: plain
@@ -611,24 +577,45 @@ proxies:
   skip-cert-verify: true
   tls: true
   type: http
-- name: 🇸🇬 SG 07 | 参考32.9M | http
-  type: http
-  server: 103.107.198.226
-  port: 9443
-  skip-cert-verify: true
-  tls: true
-- name: 🇭🇰 HK 15 | 3.4M | ssr
+- name: 🇭🇰 HK 16 | 6.2M | ssr
   type: ssr
   server: api.meituan88.com
-  port: 63699
-  cipher: rc4-md5
+  port: 30062
+  cipher: chacha20-ietf
   password: di15PV
-  udp: true
-  skip-cert-verify: true
   obfs: plain
   protocol: auth_aes128_md5
   protocol-param: 163564:FkGVmc
   obfs-param: aad163564.douyin.com
+- name: 🇭🇰 HK 13 | 参考180.4M | ssr
+  type: ssr
+  server: api.meituan88.com
+  port: 8479
+  cipher: chacha20-ietf
+  password: di15PV
+  obfs: plain
+  protocol: auth_aes128_md5
+  protocol-param: 163564:FkGVmc
+  obfs-param: aad163564.douyin.com
+- name: 🇭🇰 HK 17 | 参考0.0M | ssr
+  type: ssr
+  server: api.meituan88.com
+  port: 20419
+  cipher: rc4-md5
+  password: di15PV
+  udp: true
+  skip-cert-verify: true
+  obfs: tls1.2_ticket_auth
+  protocol: auth_aes128_md5
+  protocol-param: 163564:FkGVmc
+  obfs-param: aad163564.douyin.com
+- name: 🇷🇺 RU 01 | 参考3.8M | http
+  type: http
+  server: 46.29.166.134
+  port: 1446
+  tls: true
+  sni: 46.29.166.134
+  skip-cert-verify: true
 - name: 🇺🇸 US 13 | 参考4.6M | http
   type: http
   server: 138.199.35.211
@@ -637,14 +624,21 @@ proxies:
   password: None
   tls: true
   skip-cert-verify: true
-- name: 🇷🇺 RU 01 | 参考3.8M | http
-  server: 46.29.166.134
-  port: 1446
+- name: 🇸🇬 SG 06 | 参考32.9M | http
   type: http
-  tls: true
-  sni: 46.29.166.134
+  server: 103.107.198.226
+  port: 9443
   skip-cert-verify: true
-- name: 🇺🇸 US 14 | 参考2.7M | http
+  tls: true
+- name: 🇨🇦 CA 01 | 参考2.0M | http
+  port: 443
+  server: 4.172.245.121
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- name: 🇺🇸 US 14 | 参考3.1M | http
   type: http
   server: 173.42.49.102
   port: 8090
@@ -653,18 +647,6 @@ proxies:
   tls: true
   sni: 173.42.49.102
   skip-cert-verify: true
-- name: 🇸🇬 SG 08 | 参考0.1M | http
-  type: http
-  server: 167.99.74.174
-  port: 9090
-- name: 🇨🇦 CA 01 | 参考3.4M | http
-  port: 443
-  server: 4.172.245.121
-  skip-cert-verify: true
-  sub_tag: R002-260618
-  tls: true
-  type: http
-  udp: true
 - name: 🇳🇱 NL 02 | 参考3.9M | http
   server: 84.17.47.126
   port: 9002
@@ -672,7 +654,7 @@ proxies:
   tls: true
   sni: 84.17.47.126
   skip-cert-verify: true
-- name: 🇺🇸 US 15 | 参考2.6M | http
+- name: 🇺🇸 US 16 | 参考2.2M | http
   type: http
   server: 137.175.22.41
   port: 443
@@ -695,6 +677,29 @@ proxies:
   port: 9002
   skip-cert-verify: true
   tls: true
+- name: 🇸🇬 SG 07 | http
+  type: http
+  server: 167.99.74.174
+  port: 9090
+- name: 🇭🇰 HK 18 | 3.4M | ssr
+  type: ssr
+  server: api.meituan88.com
+  port: 63699
+  cipher: rc4-md5
+  password: di15PV
+  udp: true
+  skip-cert-verify: true
+  obfs: plain
+  protocol: auth_aes128_md5
+  protocol-param: 163564:FkGVmc
+  obfs-param: aad163564.douyin.com
+- name: 🇫🇷 FR 02 | 参考4.0M | http
+  server: 84.235.228.156
+  port: 443
+  type: http
+  tls: true
+  sni: 84.235.228.156
+  skip-cert-verify: true
 - name: 🇬🇧 GB 01 | 参考5.0M | ssr
   type: ssr
   server: api.meituan88.com
@@ -705,35 +710,6 @@ proxies:
   protocol: auth_aes128_md5
   protocol-param: 163564:FkGVmc
   obfs-param: aad163564.douyin.com
-- name: 🇺🇸 US 17 | 参考4.6M | http
-  server: 138.199.35.212
-  port: 9002
-  type: http
-  password: None
-  tls: true
-  skip-cert-verify: true
-- name: 🇫🇷 FR 02 | 参考4.0M | http
-  server: 84.235.228.156
-  port: 443
-  type: http
-  tls: true
-  sni: 84.235.228.156
-  skip-cert-verify: true
-- name: 🇭🇰 HK 17 | 参考1.7M | http
-  type: http
-  server: 202.85.53.25
-  port: 443
-  skip-cert-verify: true
-  tls: true
-- name: 🇳🇱 NL 05 | 参考5.4M | http
-  type: http
-  server: 51.159.225.197
-  port: 19362
-  username: 'null'
-  password: 'null'
-  tls: true
-  sni: 51.159.225.197
-  skip-cert-verify: true
 - name: 🇬🇧 GB 02 | 参考2.4M | http
   type: http
   server: 77.221.136.60
@@ -743,13 +719,28 @@ proxies:
   tls: true
   sni: 77.221.136.60
   skip-cert-verify: true
-- name: 🇭🇰 HK 18 | http
+- name: 🇺🇸 US 18 | 参考4.6M | http
+  server: 138.199.35.212
+  port: 9002
   type: http
-  server: 38.76.140.254
-  port: 8443
+  password: None
+  tls: true
+  skip-cert-verify: true
+- name: 🇳🇱 NL 05 | 参考5.4M | http
+  type: http
+  server: 51.159.225.197
+  port: 19362
+  username: 'null'
+  password: 'null'
+  tls: true
+  sni: 51.159.225.197
+  skip-cert-verify: true
+- name: 🇭🇰 HK 20 | 参考1.7M | http
+  type: http
+  server: 202.85.53.25
+  port: 443
   skip-cert-verify: true
   tls: true
-  sni: 38.76.140.254
 - name: 🇺🇸 US 19 | 参考2.6M | http
   type: http
   server: 216.107.139.82
@@ -759,7 +750,32 @@ proxies:
   tls: true
   sni: 991cc80f13caf81d3426ddebb2da7f49-92ff472ddc24e5b7.apache-iv.com
   skip-cert-verify: true
-- name: 🇯🇵 JP 02 | 参考24.6M | ssr
+- name: 🇫🇷 FR 03 | 参考4.2M | hysteria
+  server: 195.154.44.227
+  port: 55668
+  type: hysteria
+  auth-str: github.com/Alvin9999-newpac/fanqiang
+  skip-cert-verify: true
+  up: 20 Mbps
+  down: 20 Mbps
+  sni: bing.com
+  alpn:
+  - h3
+- name: 🇭🇰 HK 21 | http
+  type: http
+  server: 38.76.140.254
+  port: 8443
+  skip-cert-verify: true
+  tls: true
+  sni: 38.76.140.254
+- name: 🇳🇱 NL 06 | 参考4.0M | http
+  server: 84.17.47.146
+  port: 9002
+  type: http
+  tls: true
+  sni: 84.17.47.146
+  skip-cert-verify: true
+- name: 🇯🇵 JP 01 | 参考28.7M | ssr
   type: ssr
   server: api.meituan88.com
   port: 7012
@@ -771,19 +787,12 @@ proxies:
   protocol: auth_aes128_md5
   protocol-param: 163564:FkGVmc
   obfs-param: aad163564.douyin.com
-- name: 🇳🇱 NL 06 | 参考4.0M | http
-  server: 84.17.47.146
+- name: 🇷🇴 RO 04 | 参考3.3M | http
+  server: 193.176.84.40
   port: 9002
   type: http
+  password: None
   tls: true
-  sni: 84.17.47.146
-  skip-cert-verify: true
-- name: 🇸🇬 SG 09 | 参考31.1M | http
-  server: 154.26.139.24
-  port: 443
-  type: http
-  tls: true
-  sni: 154.26.139.24
   skip-cert-verify: true
 - name: 🇳🇱 NL 07 | 参考4.2M | http
   type: http
@@ -791,11 +800,17 @@ proxies:
   port: 9002
   skip-cert-verify: true
   tls: true
-- name: 🇷🇴 RO 04 | 参考3.3M | http
-  server: 193.176.84.40
-  port: 9002
+- name: 🇸🇬 SG 08 | 参考31.1M | http
+  server: 154.26.139.24
+  port: 443
   type: http
-  password: None
+  tls: true
+  sni: 154.26.139.24
+  skip-cert-verify: true
+- name: 🇻🇳 VN 02 | 参考8.9M | http
+  type: http
+  server: 157.66.81.25
+  port: 8443
   tls: true
   skip-cert-verify: true
 - name: 🇨🇦 CA 02 | 参考3.9M | ssr
@@ -808,23 +823,6 @@ proxies:
   protocol: auth_aes128_md5
   protocol-param: 163564:FkGVmc
   obfs-param: aad163564.douyin.com
-- name: 🇫🇷 FR 03 | 参考4.2M | hysteria
-  server: 195.154.44.227
-  port: 55668
-  type: hysteria
-  auth-str: github.com/Alvin9999-newpac/fanqiang
-  skip-cert-verify: true
-  up: 20 Mbps
-  down: 20 Mbps
-  sni: bing.com
-  alpn:
-  - h3
-- name: 🇻🇳 VN 02 | 参考8.9M | http
-  type: http
-  server: 157.66.81.25
-  port: 8443
-  skip-cert-verify: true
-  tls: true
 - name: 🇳🇱 NL 08 | 参考4.3M | http
   type: http
   server: 185.246.153.28
@@ -841,16 +839,6 @@ proxies:
   tls: true
   sni: 193.176.84.19
   skip-cert-verify: true
-- name: 🇷🇴 RO 06 | 参考3.3M | http
-  port: 9002
-  server: 193.176.84.26
-  skip-cert-verify: true
-  sni: www.bing.com
-  sub_tag: R002-260618
-  tls: true
-  type: http
-  udp: true
-  x-toolall-mihomo: true
 - name: 🇮🇹 IT 01 | 参考3.9M | ss
   type: ss
   server: 202.50.253.81
@@ -859,6 +847,15 @@ proxies:
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   tfo: false
   udp: true
+- name: 🇷🇴 RO 06 | 参考3.3M | http
+  type: http
+  server: 193.176.84.26
+  port: 9002
+  username: ''
+  password: ''
+  tls: true
+  sni: 193.176.84.26
+  skip-cert-verify: true
 - name: 🇫🇷 FR 04 | 参考4.0M | http
   type: http
   server: 31.32.19.111
@@ -882,6 +879,40 @@ proxies:
   tls: true
   sni: 18.200.158.139
   skip-cert-verify: true
+- name: 🇳🇱 NL 09 | 参考3.9M | http
+  type: http
+  server: 82.196.9.7
+  port: 443
+  username: testuser1
+  password: e4b72b531a2d10900519
+  tls: true
+  sni: 82.196.9.7
+  skip-cert-verify: true
+- name: 🇫🇷 FR 05 | 参考3.9M | http
+  type: http
+  server: 82.66.235.221
+  port: 443
+  username: ''
+  password: ''
+  tls: true
+  sni: 82.66.235.221
+  skip-cert-verify: true
+- name: 🇨🇦 CA 03 | http
+  type: http
+  server: 181.215.52.6
+  port: 9443
+  skip-cert-verify: true
+  tls: true
+- name: 🇭🇰 HK 23 | 参考14.1M | ssr
+  type: ssr
+  server: api.meituan88.com
+  port: 3201
+  cipher: chacha20-ietf
+  password: di15PV
+  obfs: plain
+  protocol: auth_aes128_md5
+  protocol-param: 163564:FkGVmc
+  obfs-param: aad163564.douyin.com
 - name: 🇺🇸 US 22 | 参考5.7M | vless
   type: vless
   server: 156.229.167.109
@@ -896,49 +927,6 @@ proxies:
   client-fingerprint: chrome
   tfo: false
   udp: true
-- name: 🇫🇷 FR 05 | 参考3.9M | http
-  type: http
-  server: 82.66.235.221
-  port: 443
-  username: ''
-  password: ''
-  tls: true
-  sni: 82.66.235.221
-  skip-cert-verify: true
-- name: 🇨🇦 CA 03 | http
-  type: http
-  server: 181.215.52.6
-  port: 9443
-  tls: true
-  skip-cert-verify: true
-- name: 🇳🇱 NL 09 | 参考3.9M | http
-  type: http
-  server: 82.196.9.7
-  port: 443
-  username: testuser1
-  password: e4b72b531a2d10900519
-  tls: true
-  sni: 82.196.9.7
-  skip-cert-verify: true
-- name: 🇷🇴 RO 08 | 参考3.9M | http
-  port: 9002
-  server: 193.176.84.21
-  skip-cert-verify: true
-  sni: www.bing.com
-  tls: true
-  type: http
-  udp: true
-  x-toolall-mihomo: true
-- name: 🇭🇰 HK 20 | 参考14.1M | ssr
-  type: ssr
-  server: api.meituan88.com
-  port: 3201
-  cipher: chacha20-ietf
-  password: di15PV
-  obfs: plain
-  protocol: auth_aes128_md5
-  protocol-param: 163564:FkGVmc
-  obfs-param: aad163564.douyin.com
 - name: 🇺🇸 US 23 | 参考4.9M | ssr
   type: ssr
   server: api.meituan88.com
@@ -949,7 +937,7 @@ proxies:
   protocol: auth_aes128_md5
   protocol-param: 163564:FkGVmc
   obfs-param: aad163564.douyin.com
-- name: 🇯🇵 JP 03 | 参考5.1M | ssr
+- name: 🇯🇵 JP 02 | 参考5.1M | ssr
   type: ssr
   server: api.meituan88.com
   port: 58606
@@ -965,6 +953,32 @@ proxies:
   type: http
   password: None
   tls: true
+  skip-cert-verify: true
+- name: 🇳🇱 NL 11 | 参考3.9M | http
+  port: 9002
+  server: 84.17.47.124
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+  x-toolall-mihomo: true
+- name: 🇮🇹 IT 02 | 参考1.3M | http
+  type: http
+  server: 93.42.177.250
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  sni: 93.42.177.250
+  skip-cert-verify: true
+- name: 🇩🇪 DE 02 | 参考4.6M | http
+  type: http
+  server: 158.173.154.1
+  port: 9002
+  username: ''
+  password: ''
+  tls: true
+  sni: 158.173.154.1
   skip-cert-verify: true
 - name: 🇺🇸 US 24 | 参考5.6M | http
   type: http
@@ -984,63 +998,12 @@ proxies:
   tls: true
   sni: 138.199.35.198
   skip-cert-verify: true
-- name: 🇩🇪 DE 02 | 参考4.6M | http
-  type: http
-  server: 158.173.154.1
-  port: 9002
-  username: ''
-  password: ''
-  tls: true
-  sni: 158.173.154.1
-  skip-cert-verify: true
-- name: 🇳🇱 NL 11 | 参考3.9M | http
-  port: 9002
-  server: 84.17.47.124
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-  x-toolall-mihomo: true
-- name: 🇮🇹 IT 02 | 参考1.3M | http
-  type: http
-  server: 93.42.177.250
+- name: 🇱🇻 LV 22 | 7.5M | http
   port: 443
-  username: 'null'
-  password: 'null'
+  server: 85.203.39.130
+  skip-cert-verify: true
   tls: true
-  sni: 93.42.177.250
-  skip-cert-verify: true
-- cipher: aes-256-gcm
-  name: 🇮🇹 IT 03 | 参考2.4M | ss
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.54
-  skip-cert-verify: true
-  type: ss
-  udp: true
-- name: 🇺🇸 US 26 | 参考5.9M | http
   type: http
-  server: 138.199.35.201
-  port: 9002
-  skip-cert-verify: true
-  tls: true
-- name: 🇹🇼 TW 03 | 参考29.4M | ssr
-  type: ssr
-  server: api.meituan88.com
-  port: 7018
-  cipher: chacha20-ietf
-  password: di15PV
-  obfs: plain
-  protocol: auth_aes128_md5
-  protocol-param: 163564:FkGVmc
-  obfs-param: aad163564.douyin.com
-- name: 🇺🇸 US 27 | 参考2.6M | http
-  server: 68.235.56.59
-  port: 443
-  type: http
-  password: None
-  tls: true
-  skip-cert-verify: true
 - name: 🇷🇺 RU 02 | 参考3.8M | http
   type: http
   server: 87.242.85.187
@@ -1049,14 +1012,26 @@ proxies:
   password: 'null'
   skip-cert-verify: true
   tls: true
-- name: 🇩🇪 DE 03 | 参考2.6M | http
+- name: 🇺🇸 US 26 | 参考5.9M | http
   type: http
-  server: 167.172.172.190
-  port: 443
-  username: testuser1
-  password: e4b72b531a2d10900519
+  server: 138.199.35.201
+  port: 9002
+  skip-cert-verify: true
   tls: true
-  sni: 167.172.172.190
+- cipher: aes-256-gcm
+  name: 🇮🇹 IT 03 | 参考2.4M | ss
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.54
+  skip-cert-verify: true
+  type: ss
+  udp: true
+- name: 🇺🇸 US 27 | 参考2.6M | http
+  server: 68.235.56.59
+  port: 443
+  type: http
+  password: None
+  tls: true
   skip-cert-verify: true
 - name: 🇺🇸 US 28 | 参考5.5M | http
   password: ''
@@ -1068,6 +1043,24 @@ proxies:
   udp: true
   username: ''
   x-toolall-mihomo: true
+- name: 🇩🇪 DE 03 | 参考2.6M | http
+  type: http
+  server: 167.172.172.190
+  port: 443
+  username: testuser1
+  password: e4b72b531a2d10900519
+  tls: true
+  sni: 167.172.172.190
+  skip-cert-verify: true
+- name: 🇮🇹 IT 04 | 参考4.0M | ss
+  type: ss
+  server: 202.50.253.36
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+  path: direct
+  is_landing: false
 - name: 🇺🇸 US 29 | 参考2.7M | http
   type: http
   server: 38.28.193.188
@@ -1076,7 +1069,34 @@ proxies:
   password: ''
   tls: true
   skip-cert-verify: true
-- name: 🇹🇼 TW 04 | 参考4.5M | http
+- name: 🇭🇰 HK 24 | 参考104.7M | ssr
+  type: ssr
+  server: api.meituan88.com
+  port: 19623
+  cipher: chacha20-ietf
+  password: di15PV
+  obfs: tls1.2_ticket_auth
+  protocol: auth_aes128_md5
+  protocol-param: 163564:FkGVmc
+  obfs-param: aad163564.douyin.com
+- name: 🇱🇹 LT 01 | 参考4.1M | http
+  type: http
+  server: 89.124.11.9
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  sni: 89.124.11.9
+  skip-cert-verify: true
+- name: 🇷🇴 RO 07 | 参考2.7M | http
+  type: http
+  server: 193.176.84.30
+  port: 9002
+  username: ''
+  password: ''
+  tls: true
+  skip-cert-verify: true
+- name: 🇹🇼 TW 03 | 参考7.3M | http
   type: http
   server: 114.33.6.158
   port: 443
@@ -1097,15 +1117,12 @@ proxies:
   type: vless
   udp: true
   uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
-- name: 🇱🇹 LT 01 | 参考4.1M | http
+- name: 🇸🇬 SG 12 | 参考11.3M | http
   type: http
-  server: 89.124.11.9
+  server: 213.35.107.110
   port: 443
-  username: 'null'
-  password: 'null'
-  tls: true
-  sni: 89.124.11.9
   skip-cert-verify: true
+  tls: true
 - name: 🇺🇸 US 30 | 参考4.5M | http
   password: None
   port: 9002
@@ -1116,33 +1133,6 @@ proxies:
   udp: true
   path: direct
   is_landing: false
-- name: 🇮🇹 IT 04 | 参考4.0M | ss
-  type: ss
-  server: 202.50.253.36
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-  path: direct
-  is_landing: false
-- name: 🇭🇰 HK 21 | 参考104.7M | ssr
-  type: ssr
-  server: api.meituan88.com
-  port: 19623
-  cipher: chacha20-ietf
-  password: di15PV
-  obfs: tls1.2_ticket_auth
-  protocol: auth_aes128_md5
-  protocol-param: 163564:FkGVmc
-  obfs-param: aad163564.douyin.com
-- name: 🇷🇴 RO 09 | 参考2.7M | http
-  type: http
-  server: 193.176.84.30
-  port: 9002
-  username: ''
-  password: ''
-  tls: true
-  skip-cert-verify: true
 - name: 🇵🇱 PL 01 | 参考2.1M | http
   type: http
   server: 151.115.54.133
@@ -1152,14 +1142,11 @@ proxies:
   tls: true
   sni: 151.115.54.133
   skip-cert-verify: true
-- name: 🇮🇱 IL 02 | 参考3.8M | http
+- name: 🇺🇸 US 126 | 参考3.7M | http
   type: http
-  server: 62.90.77.30
-  port: 443
-  username: 'null'
-  password: 'null'
-  tls: true
-  sni: 62.90.77.30
+  server: 138.199.35.206
+  port: 9002
   skip-cert-verify: true
-proxy-groups: [{"name":"🌐 7x24.alwaysdata.net","type":"select","proxies":["DIRECT"]},{"name":"🕒 节点更新于 11-14 11:34","type":"select","proxies":["DIRECT"]},{"name":"🚀 节点选择","type":"select","proxies":["♻️ 自动选择","🔯 故障转移","🔮 负载均衡","🎯 全球直连","自建·香港-01","自建·香港-02","自建·香港-03","自建·香港-04","自建·香港-05","自建·加拿大-01","自建·加拿大-02","自建·加拿大-03","自建·加拿大-04","自建·加拿大-05","自建·美国-01","自建·美国-02","自建·美国-03","自建·美国-04","自建·美国-05","自建·香港2-01","自建·香港2-02","自建·香港2-03","自建·香港2-04","自建·香港2-05","🇭🇰 HK 01 | 参考97.5M | http","🇸🇬 SG 282 | 3.4M | http","🇭🇰 HK 02 | 参考128.7M | ssr","🇭🇰 HK 03 | 参考13.7M | ssr","🇸🇬 SG 02 | 参考9.4M | http","🇭🇰 HK 06 | 参考14.2M | http","🇭🇰 HK 07 | 参考7.3M | ssr","🇻🇳 VN 01 | 参考7.9M | http","🇺🇸 US 01 | 参考4.6M | http","🇸🇬 SG 03 | 参考0.2M | http","🇭🇰 HK 08 | 参考14.1M | ssr","🇺🇸 US 02 | 参考4.9M | http","🇺🇸 US 03 | 参考5.4M | ssr","🇺🇸 US 05 | 参考4.6M | http","🇺🇸 US 04 | 参考4.4M | http","🇱🇻 LV 01 | 参考3.9M | http","🇷🇴 RO 01 | 参考1.8M | http","🇺🇸 US 06 | 参考5.0M | http","🇷🇴 RO 02 | 参考2.2M | http","🇭🇰 HK 11 | 参考113.8M | ssr","🇹🇼 TW 01 | 参考31.1M | ssr","🇫🇷 FR 01 | 参考4.0M | http","🇺🇸 US 08 | 参考3.2M | http","🇳🇱 NL 01 | 参考4.7M | http","🇭🇰 HK 12 | 参考180.4M | ssr","🇯🇵 JP 01 | 参考22.6M | ssr","🇮🇩 ID 01 | 参考27.8M | http","🇺🇸 US 09 | 参考4.1M | http","🇩🇪 DE 01 | 参考4.8M | http","🇺🇸 US 11 | 参考5.7M | http","🇸🇬 SG 05 | 参考10.9M | ssr","🇭🇰 HK 13 | 6.2M | ssr","🇭🇰 HK 14 | 参考174.4M | ssr","🇸🇬 SG 06 | 参考28.3M | ssr","🇺🇸 US 573 | 1.9M | http","🇸🇬 SG 07 | 参考32.9M | http","🇭🇰 HK 15 | 3.4M | ssr","🇺🇸 US 13 | 参考4.6M | http","🇷🇺 RU 01 | 参考3.8M | http","🇺🇸 US 14 | 参考2.7M | http","🇸🇬 SG 08 | 参考0.1M | http","🇨🇦 CA 01 | 参考3.4M | http","🇳🇱 NL 02 | 参考3.9M | http","🇺🇸 US 15 | 参考2.6M | http","🇦🇺 AU 01 | 参考4.3M | ssr","🇳🇱 NL 03 | 参考5.0M | http","🇬🇧 GB 01 | 参考5.0M | ssr","🇺🇸 US 17 | 参考4.6M | http","🇫🇷 FR 02 | 参考4.0M | http","🇭🇰 HK 17 | 参考1.7M | http","🇳🇱 NL 05 | 参考5.4M | http","🇬🇧 GB 02 | 参考2.4M | http","🇭🇰 HK 18 | http","🇺🇸 US 19 | 参考2.6M | http","🇯🇵 JP 02 | 参考24.6M | ssr","🇳🇱 NL 06 | 参考4.0M | http","🇸🇬 SG 09 | 参考31.1M | http","🇳🇱 NL 07 | 参考4.2M | http","🇷🇴 RO 04 | 参考3.3M | http","🇨🇦 CA 02 | 参考3.9M | ssr","🇫🇷 FR 03 | 参考4.2M | hysteria","🇻🇳 VN 02 | 参考8.9M | http","🇳🇱 NL 08 | 参考4.3M | http","🇷🇴 RO 05 | 参考2.8M | http","🇷🇴 RO 06 | 参考3.3M | http","🇮🇹 IT 01 | 参考3.9M | ss","🇫🇷 FR 04 | 参考4.0M | http","🇬🇧 GB 03 | 参考4.1M | http","🇮🇪 IE 01 | 参考2.8M | http","🇺🇸 US 22 | 参考5.7M | vless","🇫🇷 FR 05 | 参考3.9M | http","🇨🇦 CA 03 | http","🇳🇱 NL 09 | 参考3.9M | http","🇷🇴 RO 08 | 参考3.9M | http","🇭🇰 HK 20 | 参考14.1M | ssr","🇺🇸 US 23 | 参考4.9M | ssr","🇯🇵 JP 03 | 参考5.1M | ssr","🇳🇱 NL 10 | 参考4.0M | http","🇺🇸 US 24 | 参考5.6M | http","🇺🇸 US 25 | 参考4.9M | http","🇩🇪 DE 02 | 参考4.6M | http","🇳🇱 NL 11 | 参考3.9M | http","🇮🇹 IT 02 | 参考1.3M | http","🇮🇹 IT 03 | 参考2.4M | ss","🇺🇸 US 26 | 参考5.9M | http","🇹🇼 TW 03 | 参考29.4M | ssr","🇺🇸 US 27 | 参考2.6M | http","🇷🇺 RU 02 | 参考3.8M | http","🇩🇪 DE 03 | 参考2.6M | http","🇺🇸 US 28 | 参考5.5M | http","🇺🇸 US 29 | 参考2.7M | http","🇹🇼 TW 04 | 参考4.5M | http","🇫🇷 FR 06 | 参考4.0M | vless","🇱🇹 LT 01 | 参考4.1M | http","🇺🇸 US 30 | 参考4.5M | http","🇮🇹 IT 04 | 参考4.0M | ss","🇭🇰 HK 21 | 参考104.7M | ssr","🇷🇴 RO 09 | 参考2.7M | http","🇵🇱 PL 01 | 参考2.1M | http","🇮🇱 IL 02 | 参考3.8M | http"]},{"name":"♻️ 自动选择","type":"url-test","proxies":["自建·香港-01","自建·香港-02","自建·香港-03","自建·香港-04","自建·香港-05","自建·加拿大-01","自建·加拿大-02","自建·加拿大-03","自建·加拿大-04","自建·加拿大-05","自建·美国-01","自建·美国-02","自建·美国-03","自建·美国-04","自建·美国-05","自建·香港2-01","自建·香港2-02","自建·香港2-03","自建·香港2-04","自建·香港2-05","🇭🇰 HK 01 | 参考97.5M | http","🇸🇬 SG 282 | 3.4M | http","🇭🇰 HK 02 | 参考128.7M | ssr","🇭🇰 HK 03 | 参考13.7M | ssr","🇸🇬 SG 02 | 参考9.4M | http","🇭🇰 HK 06 | 参考14.2M | http","🇭🇰 HK 07 | 参考7.3M | ssr","🇻🇳 VN 01 | 参考7.9M | http","🇺🇸 US 01 | 参考4.6M | http","🇸🇬 SG 03 | 参考0.2M | http","🇭🇰 HK 08 | 参考14.1M | ssr","🇺🇸 US 02 | 参考4.9M | http","🇺🇸 US 03 | 参考5.4M | ssr","🇺🇸 US 05 | 参考4.6M | http","🇺🇸 US 04 | 参考4.4M | http","🇱🇻 LV 01 | 参考3.9M | http","🇷🇴 RO 01 | 参考1.8M | http","🇺🇸 US 06 | 参考5.0M | http","🇷🇴 RO 02 | 参考2.2M | http","🇭🇰 HK 11 | 参考113.8M | ssr","🇹🇼 TW 01 | 参考31.1M | ssr","🇫🇷 FR 01 | 参考4.0M | http","🇺🇸 US 08 | 参考3.2M | http","🇳🇱 NL 01 | 参考4.7M | http","🇭🇰 HK 12 | 参考180.4M | ssr","🇯🇵 JP 01 | 参考22.6M | ssr","🇮🇩 ID 01 | 参考27.8M | http","🇺🇸 US 09 | 参考4.1M | http","🇩🇪 DE 01 | 参考4.8M | http","🇺🇸 US 11 | 参考5.7M | http","🇸🇬 SG 05 | 参考10.9M | ssr","🇭🇰 HK 13 | 6.2M | ssr","🇭🇰 HK 14 | 参考174.4M | ssr","🇸🇬 SG 06 | 参考28.3M | ssr","🇺🇸 US 573 | 1.9M | http","🇸🇬 SG 07 | 参考32.9M | http","🇭🇰 HK 15 | 3.4M | ssr","🇺🇸 US 13 | 参考4.6M | http","🇷🇺 RU 01 | 参考3.8M | http","🇺🇸 US 14 | 参考2.7M | http","🇸🇬 SG 08 | 参考0.1M | http","🇨🇦 CA 01 | 参考3.4M | http","🇳🇱 NL 02 | 参考3.9M | http","🇺🇸 US 15 | 参考2.6M | http","🇦🇺 AU 01 | 参考4.3M | ssr","🇳🇱 NL 03 | 参考5.0M | http","🇬🇧 GB 01 | 参考5.0M | ssr","🇺🇸 US 17 | 参考4.6M | http","🇫🇷 FR 02 | 参考4.0M | http","🇭🇰 HK 17 | 参考1.7M | http","🇳🇱 NL 05 | 参考5.4M | http","🇬🇧 GB 02 | 参考2.4M | http","🇭🇰 HK 18 | http","🇺🇸 US 19 | 参考2.6M | http","🇯🇵 JP 02 | 参考24.6M | ssr","🇳🇱 NL 06 | 参考4.0M | http","🇸🇬 SG 09 | 参考31.1M | http","🇳🇱 NL 07 | 参考4.2M | http","🇷🇴 RO 04 | 参考3.3M | http","🇨🇦 CA 02 | 参考3.9M | ssr","🇫🇷 FR 03 | 参考4.2M | hysteria","🇻🇳 VN 02 | 参考8.9M | http","🇳🇱 NL 08 | 参考4.3M | http","🇷🇴 RO 05 | 参考2.8M | http","🇷🇴 RO 06 | 参考3.3M | http","🇮🇹 IT 01 | 参考3.9M | ss","🇫🇷 FR 04 | 参考4.0M | http","🇬🇧 GB 03 | 参考4.1M | http","🇮🇪 IE 01 | 参考2.8M | http","🇺🇸 US 22 | 参考5.7M | vless","🇫🇷 FR 05 | 参考3.9M | http","🇨🇦 CA 03 | http","🇳🇱 NL 09 | 参考3.9M | http","🇷🇴 RO 08 | 参考3.9M | http","🇭🇰 HK 20 | 参考14.1M | ssr","🇺🇸 US 23 | 参考4.9M | ssr","🇯🇵 JP 03 | 参考5.1M | ssr","🇳🇱 NL 10 | 参考4.0M | http","🇺🇸 US 24 | 参考5.6M | http","🇺🇸 US 25 | 参考4.9M | http","🇩🇪 DE 02 | 参考4.6M | http","🇳🇱 NL 11 | 参考3.9M | http","🇮🇹 IT 02 | 参考1.3M | http","🇮🇹 IT 03 | 参考2.4M | ss","🇺🇸 US 26 | 参考5.9M | http","🇹🇼 TW 03 | 参考29.4M | ssr","🇺🇸 US 27 | 参考2.6M | http","🇷🇺 RU 02 | 参考3.8M | http","🇩🇪 DE 03 | 参考2.6M | http","🇺🇸 US 28 | 参考5.5M | http","🇺🇸 US 29 | 参考2.7M | http","🇹🇼 TW 04 | 参考4.5M | http","🇫🇷 FR 06 | 参考4.0M | vless","🇱🇹 LT 01 | 参考4.1M | http","🇺🇸 US 30 | 参考4.5M | http","🇮🇹 IT 04 | 参考4.0M | ss","🇭🇰 HK 21 | 参考104.7M | ssr","🇷🇴 RO 09 | 参考2.7M | http","🇵🇱 PL 01 | 参考2.1M | http","🇮🇱 IL 02 | 参考3.8M | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"🔯 故障转移","type":"fallback","proxies":["自建·香港-01","自建·香港-02","自建·香港-03","自建·香港-04","自建·香港-05","自建·加拿大-01","自建·加拿大-02","自建·加拿大-03","自建·加拿大-04","自建·加拿大-05","自建·美国-01","自建·美国-02","自建·美国-03","自建·美国-04","自建·美国-05","自建·香港2-01","自建·香港2-02","自建·香港2-03","自建·香港2-04","自建·香港2-05","🇭🇰 HK 01 | 参考97.5M | http","🇸🇬 SG 282 | 3.4M | http","🇭🇰 HK 02 | 参考128.7M | ssr","🇭🇰 HK 03 | 参考13.7M | ssr","🇸🇬 SG 02 | 参考9.4M | http","🇭🇰 HK 06 | 参考14.2M | http","🇭🇰 HK 07 | 参考7.3M | ssr","🇻🇳 VN 01 | 参考7.9M | http","🇺🇸 US 01 | 参考4.6M | http","🇸🇬 SG 03 | 参考0.2M | http","🇭🇰 HK 08 | 参考14.1M | ssr","🇺🇸 US 02 | 参考4.9M | http","🇺🇸 US 03 | 参考5.4M | ssr","🇺🇸 US 05 | 参考4.6M | http","🇺🇸 US 04 | 参考4.4M | http","🇱🇻 LV 01 | 参考3.9M | http","🇷🇴 RO 01 | 参考1.8M | http","🇺🇸 US 06 | 参考5.0M | http","🇷🇴 RO 02 | 参考2.2M | http","🇭🇰 HK 11 | 参考113.8M | ssr","🇹🇼 TW 01 | 参考31.1M | ssr","🇫🇷 FR 01 | 参考4.0M | http","🇺🇸 US 08 | 参考3.2M | http","🇳🇱 NL 01 | 参考4.7M | http","🇭🇰 HK 12 | 参考180.4M | ssr","🇯🇵 JP 01 | 参考22.6M | ssr","🇮🇩 ID 01 | 参考27.8M | http","🇺🇸 US 09 | 参考4.1M | http","🇩🇪 DE 01 | 参考4.8M | http","🇺🇸 US 11 | 参考5.7M | http","🇸🇬 SG 05 | 参考10.9M | ssr","🇭🇰 HK 13 | 6.2M | ssr","🇭🇰 HK 14 | 参考174.4M | ssr","🇸🇬 SG 06 | 参考28.3M | ssr","🇺🇸 US 573 | 1.9M | http","🇸🇬 SG 07 | 参考32.9M | http","🇭🇰 HK 15 | 3.4M | ssr","🇺🇸 US 13 | 参考4.6M | http","🇷🇺 RU 01 | 参考3.8M | http","🇺🇸 US 14 | 参考2.7M | http","🇸🇬 SG 08 | 参考0.1M | http","🇨🇦 CA 01 | 参考3.4M | http","🇳🇱 NL 02 | 参考3.9M | http","🇺🇸 US 15 | 参考2.6M | http","🇦🇺 AU 01 | 参考4.3M | ssr","🇳🇱 NL 03 | 参考5.0M | http","🇬🇧 GB 01 | 参考5.0M | ssr","🇺🇸 US 17 | 参考4.6M | http","🇫🇷 FR 02 | 参考4.0M | http","🇭🇰 HK 17 | 参考1.7M | http","🇳🇱 NL 05 | 参考5.4M | http","🇬🇧 GB 02 | 参考2.4M | http","🇭🇰 HK 18 | http","🇺🇸 US 19 | 参考2.6M | http","🇯🇵 JP 02 | 参考24.6M | ssr","🇳🇱 NL 06 | 参考4.0M | http","🇸🇬 SG 09 | 参考31.1M | http","🇳🇱 NL 07 | 参考4.2M | http","🇷🇴 RO 04 | 参考3.3M | http","🇨🇦 CA 02 | 参考3.9M | ssr","🇫🇷 FR 03 | 参考4.2M | hysteria","🇻🇳 VN 02 | 参考8.9M | http","🇳🇱 NL 08 | 参考4.3M | http","🇷🇴 RO 05 | 参考2.8M | http","🇷🇴 RO 06 | 参考3.3M | http","🇮🇹 IT 01 | 参考3.9M | ss","🇫🇷 FR 04 | 参考4.0M | http","🇬🇧 GB 03 | 参考4.1M | http","🇮🇪 IE 01 | 参考2.8M | http","🇺🇸 US 22 | 参考5.7M | vless","🇫🇷 FR 05 | 参考3.9M | http","🇨🇦 CA 03 | http","🇳🇱 NL 09 | 参考3.9M | http","🇷🇴 RO 08 | 参考3.9M | http","🇭🇰 HK 20 | 参考14.1M | ssr","🇺🇸 US 23 | 参考4.9M | ssr","🇯🇵 JP 03 | 参考5.1M | ssr","🇳🇱 NL 10 | 参考4.0M | http","🇺🇸 US 24 | 参考5.6M | http","🇺🇸 US 25 | 参考4.9M | http","🇩🇪 DE 02 | 参考4.6M | http","🇳🇱 NL 11 | 参考3.9M | http","🇮🇹 IT 02 | 参考1.3M | http","🇮🇹 IT 03 | 参考2.4M | ss","🇺🇸 US 26 | 参考5.9M | http","🇹🇼 TW 03 | 参考29.4M | ssr","🇺🇸 US 27 | 参考2.6M | http","🇷🇺 RU 02 | 参考3.8M | http","🇩🇪 DE 03 | 参考2.6M | http","🇺🇸 US 28 | 参考5.5M | http","🇺🇸 US 29 | 参考2.7M | http","🇹🇼 TW 04 | 参考4.5M | http","🇫🇷 FR 06 | 参考4.0M | vless","🇱🇹 LT 01 | 参考4.1M | http","🇺🇸 US 30 | 参考4.5M | http","🇮🇹 IT 04 | 参考4.0M | ss","🇭🇰 HK 21 | 参考104.7M | ssr","🇷🇴 RO 09 | 参考2.7M | http","🇵🇱 PL 01 | 参考2.1M | http","🇮🇱 IL 02 | 参考3.8M | http"],"url":"https://www.gstatic.com/generate_204","interval":300},{"name":"🔮 负载均衡","type":"load-balance","proxies":["自建·香港-01","自建·香港-02","自建·香港-03","自建·香港-04","自建·香港-05","自建·加拿大-01","自建·加拿大-02","自建·加拿大-03","自建·加拿大-04","自建·加拿大-05","自建·美国-01","自建·美国-02","自建·美国-03","自建·美国-04","自建·美国-05","自建·香港2-01","自建·香港2-02","自建·香港2-03","自建·香港2-04","自建·香港2-05","🇭🇰 HK 01 | 参考97.5M | http","🇸🇬 SG 282 | 3.4M | http","🇭🇰 HK 02 | 参考128.7M | ssr","🇭🇰 HK 03 | 参考13.7M | ssr","🇸🇬 SG 02 | 参考9.4M | http","🇭🇰 HK 06 | 参考14.2M | http","🇭🇰 HK 07 | 参考7.3M | ssr","🇻🇳 VN 01 | 参考7.9M | http","🇺🇸 US 01 | 参考4.6M | http","🇸🇬 SG 03 | 参考0.2M | http","🇭🇰 HK 08 | 参考14.1M | ssr","🇺🇸 US 02 | 参考4.9M | http","🇺🇸 US 03 | 参考5.4M | ssr","🇺🇸 US 05 | 参考4.6M | http","🇺🇸 US 04 | 参考4.4M | http","🇱🇻 LV 01 | 参考3.9M | http","🇷🇴 RO 01 | 参考1.8M | http","🇺🇸 US 06 | 参考5.0M | http","🇷🇴 RO 02 | 参考2.2M | http","🇭🇰 HK 11 | 参考113.8M | ssr","🇹🇼 TW 01 | 参考31.1M | ssr","🇫🇷 FR 01 | 参考4.0M | http","🇺🇸 US 08 | 参考3.2M | http","🇳🇱 NL 01 | 参考4.7M | http","🇭🇰 HK 12 | 参考180.4M | ssr","🇯🇵 JP 01 | 参考22.6M | ssr","🇮🇩 ID 01 | 参考27.8M | http","🇺🇸 US 09 | 参考4.1M | http","🇩🇪 DE 01 | 参考4.8M | http","🇺🇸 US 11 | 参考5.7M | http","🇸🇬 SG 05 | 参考10.9M | ssr","🇭🇰 HK 13 | 6.2M | ssr","🇭🇰 HK 14 | 参考174.4M | ssr","🇸🇬 SG 06 | 参考28.3M | ssr","🇺🇸 US 573 | 1.9M | http","🇸🇬 SG 07 | 参考32.9M | http","🇭🇰 HK 15 | 3.4M | ssr","🇺🇸 US 13 | 参考4.6M | http","🇷🇺 RU 01 | 参考3.8M | http","🇺🇸 US 14 | 参考2.7M | http","🇸🇬 SG 08 | 参考0.1M | http","🇨🇦 CA 01 | 参考3.4M | http","🇳🇱 NL 02 | 参考3.9M | http","🇺🇸 US 15 | 参考2.6M | http","🇦🇺 AU 01 | 参考4.3M | ssr","🇳🇱 NL 03 | 参考5.0M | http","🇬🇧 GB 01 | 参考5.0M | ssr","🇺🇸 US 17 | 参考4.6M | http","🇫🇷 FR 02 | 参考4.0M | http","🇭🇰 HK 17 | 参考1.7M | http","🇳🇱 NL 05 | 参考5.4M | http","🇬🇧 GB 02 | 参考2.4M | http","🇭🇰 HK 18 | http","🇺🇸 US 19 | 参考2.6M | http","🇯🇵 JP 02 | 参考24.6M | ssr","🇳🇱 NL 06 | 参考4.0M | http","🇸🇬 SG 09 | 参考31.1M | http","🇳🇱 NL 07 | 参考4.2M | http","🇷🇴 RO 04 | 参考3.3M | http","🇨🇦 CA 02 | 参考3.9M | ssr","🇫🇷 FR 03 | 参考4.2M | hysteria","🇻🇳 VN 02 | 参考8.9M | http","🇳🇱 NL 08 | 参考4.3M | http","🇷🇴 RO 05 | 参考2.8M | http","🇷🇴 RO 06 | 参考3.3M | http","🇮🇹 IT 01 | 参考3.9M | ss","🇫🇷 FR 04 | 参考4.0M | http","🇬🇧 GB 03 | 参考4.1M | http","🇮🇪 IE 01 | 参考2.8M | http","🇺🇸 US 22 | 参考5.7M | vless","🇫🇷 FR 05 | 参考3.9M | http","🇨🇦 CA 03 | http","🇳🇱 NL 09 | 参考3.9M | http","🇷🇴 RO 08 | 参考3.9M | http","🇭🇰 HK 20 | 参考14.1M | ssr","🇺🇸 US 23 | 参考4.9M | ssr","🇯🇵 JP 03 | 参考5.1M | ssr","🇳🇱 NL 10 | 参考4.0M | http","🇺🇸 US 24 | 参考5.6M | http","🇺🇸 US 25 | 参考4.9M | http","🇩🇪 DE 02 | 参考4.6M | http","🇳🇱 NL 11 | 参考3.9M | http","🇮🇹 IT 02 | 参考1.3M | http","🇮🇹 IT 03 | 参考2.4M | ss","🇺🇸 US 26 | 参考5.9M | http","🇹🇼 TW 03 | 参考29.4M | ssr","🇺🇸 US 27 | 参考2.6M | http","🇷🇺 RU 02 | 参考3.8M | http","🇩🇪 DE 03 | 参考2.6M | http","🇺🇸 US 28 | 参考5.5M | http","🇺🇸 US 29 | 参考2.7M | http","🇹🇼 TW 04 | 参考4.5M | http","🇫🇷 FR 06 | 参考4.0M | vless","🇱🇹 LT 01 | 参考4.1M | http","🇺🇸 US 30 | 参考4.5M | http","🇮🇹 IT 04 | 参考4.0M | ss","🇭🇰 HK 21 | 参考104.7M | ssr","🇷🇴 RO 09 | 参考2.7M | http","🇵🇱 PL 01 | 参考2.1M | http","🇮🇱 IL 02 | 参考3.8M | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"strategy":"consistent-hashing"},{"name":"♻️ CA自动","type":"url-test","proxies":["自建·加拿大-01","自建·加拿大-02","自建·加拿大-03","自建·加拿大-04","自建·加拿大-05","🇨🇦 CA 01 | 参考3.4M | http","🇨🇦 CA 02 | 参考3.9M | ssr","🇨🇦 CA 03 | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ DE自动","type":"url-test","proxies":["🇩🇪 DE 01 | 参考4.8M | http","🇩🇪 DE 02 | 参考4.6M | http","🇩🇪 DE 03 | 参考2.6M | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ FR自动","type":"url-test","proxies":["🇫🇷 FR 01 | 参考4.0M | http","🇫🇷 FR 02 | 参考4.0M | http","🇫🇷 FR 03 | 参考4.2M | hysteria","🇫🇷 FR 04 | 参考4.0M | http","🇫🇷 FR 05 | 参考3.9M | http","🇫🇷 FR 06 | 参考4.0M | vless"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ GB自动","type":"url-test","proxies":["🇬🇧 GB 01 | 参考5.0M | ssr","🇬🇧 GB 02 | 参考2.4M | http","🇬🇧 GB 03 | 参考4.1M | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ HK自动","type":"url-test","proxies":["自建·香港-01","自建·香港-02","自建·香港-03","自建·香港-04","自建·香港-05","自建·香港2-01","自建·香港2-02","自建·香港2-03","自建·香港2-04","自建·香港2-05","🇭🇰 HK 01 | 参考97.5M | http","🇭🇰 HK 02 | 参考128.7M | ssr","🇭🇰 HK 03 | 参考13.7M | ssr","🇭🇰 HK 06 | 参考14.2M | http","🇭🇰 HK 07 | 参考7.3M | ssr","🇭🇰 HK 08 | 参考14.1M | ssr","🇭🇰 HK 11 | 参考113.8M | ssr","🇭🇰 HK 12 | 参考180.4M | ssr","🇭🇰 HK 13 | 6.2M | ssr","🇭🇰 HK 14 | 参考174.4M | ssr","🇭🇰 HK 15 | 3.4M | ssr","🇭🇰 HK 17 | 参考1.7M | http","🇭🇰 HK 18 | http","🇭🇰 HK 20 | 参考14.1M | ssr","🇭🇰 HK 21 | 参考104.7M | ssr"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ IT自动","type":"url-test","proxies":["🇮🇹 IT 01 | 参考3.9M | ss","🇮🇹 IT 02 | 参考1.3M | http","🇮🇹 IT 03 | 参考2.4M | ss","🇮🇹 IT 04 | 参考4.0M | ss"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ JP自动","type":"url-test","proxies":["🇯🇵 JP 01 | 参考22.6M | ssr","🇯🇵 JP 02 | 参考24.6M | ssr","🇯🇵 JP 03 | 参考5.1M | ssr"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ NL自动","type":"url-test","proxies":["🇳🇱 NL 01 | 参考4.7M | http","🇳🇱 NL 02 | 参考3.9M | http","🇳🇱 NL 03 | 参考5.0M | http","🇳🇱 NL 05 | 参考5.4M | http","🇳🇱 NL 06 | 参考4.0M | http","🇳🇱 NL 07 | 参考4.2M | http","🇳🇱 NL 08 | 参考4.3M | http","🇳🇱 NL 09 | 参考3.9M | http","🇳🇱 NL 10 | 参考4.0M | http","🇳🇱 NL 11 | 参考3.9M | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ RO自动","type":"url-test","proxies":["🇷🇴 RO 01 | 参考1.8M | http","🇷🇴 RO 02 | 参考2.2M | http","🇷🇴 RO 04 | 参考3.3M | http","🇷🇴 RO 05 | 参考2.8M | http","🇷🇴 RO 06 | 参考3.3M | http","🇷🇴 RO 08 | 参考3.9M | http","🇷🇴 RO 09 | 参考2.7M | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ RU自动","type":"url-test","proxies":["🇷🇺 RU 01 | 参考3.8M | http","🇷🇺 RU 02 | 参考3.8M | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ SG自动","type":"url-test","proxies":["🇸🇬 SG 282 | 3.4M | http","🇸🇬 SG 02 | 参考9.4M | http","🇸🇬 SG 03 | 参考0.2M | http","🇸🇬 SG 05 | 参考10.9M | ssr","🇸🇬 SG 06 | 参考28.3M | ssr","🇸🇬 SG 07 | 参考32.9M | http","🇸🇬 SG 08 | 参考0.1M | http","🇸🇬 SG 09 | 参考31.1M | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ TW自动","type":"url-test","proxies":["🇹🇼 TW 01 | 参考31.1M | ssr","🇹🇼 TW 03 | 参考29.4M | ssr","🇹🇼 TW 04 | 参考4.5M | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ US自动","type":"url-test","proxies":["自建·美国-01","自建·美国-02","自建·美国-03","自建·美国-04","自建·美国-05","🇺🇸 US 01 | 参考4.6M | http","🇺🇸 US 02 | 参考4.9M | http","🇺🇸 US 03 | 参考5.4M | ssr","🇺🇸 US 05 | 参考4.6M | http","🇺🇸 US 04 | 参考4.4M | http","🇺🇸 US 06 | 参考5.0M | http","🇺🇸 US 08 | 参考3.2M | http","🇺🇸 US 09 | 参考4.1M | http","🇺🇸 US 11 | 参考5.7M | http","🇺🇸 US 573 | 1.9M | http","🇺🇸 US 13 | 参考4.6M | http","🇺🇸 US 14 | 参考2.7M | http","🇺🇸 US 15 | 参考2.6M | http","🇺🇸 US 17 | 参考4.6M | http","🇺🇸 US 19 | 参考2.6M | http","🇺🇸 US 22 | 参考5.7M | vless","🇺🇸 US 23 | 参考4.9M | ssr","🇺🇸 US 24 | 参考5.6M | http","🇺🇸 US 25 | 参考4.9M | http","🇺🇸 US 26 | 参考5.9M | http","🇺🇸 US 27 | 参考2.6M | http","🇺🇸 US 28 | 参考5.5M | http","🇺🇸 US 29 | 参考2.7M | http","🇺🇸 US 30 | 参考4.5M | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ VN自动","type":"url-test","proxies":["🇻🇳 VN 01 | 参考7.9M | http","🇻🇳 VN 02 | 参考8.9M | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"🤖 AI平台","type":"select","proxies":["🚀 节点选择","自建·加拿大-01","自建·加拿大-02","自建·加拿大-03","自建·加拿大-04","自建·加拿大-05","🇺🇸 US 573 | 1.9M | http","🇺🇸 US 13 | 参考4.6M | http","🇳🇱 NL 02 | 参考3.9M | http","🇳🇱 NL 03 | 参考5.0M | http","🇳🇱 NL 08 | 参考4.3M | http","🇺🇸 US 26 | 参考5.9M | http","🇺🇸 US 29 | 参考2.7M | http"]},{"name":"📹 油管视频","type":"select","proxies":["🚀 节点选择","🇺🇸 US 13 | 参考4.6M | http","🇺🇸 US 26 | 参考5.9M | http","🇺🇸 US 29 | 参考2.7M | http"]},{"name":"🎥 奈飞视频","type":"select","proxies":["🚀 节点选择","🇺🇸 US 573 | 1.9M | http","🇺🇸 US 13 | 参考4.6M | http","🇳🇱 NL 02 | 参考3.9M | http","🇳🇱 NL 03 | 参考5.0M | http","🇳🇱 NL 08 | 参考4.3M | http","🇺🇸 US 26 | 参考5.9M | http","🇺🇸 US 29 | 参考2.7M | http"]},{"name":"📲 电报消息","type":"select","proxies":["🚀 节点选择"]},{"name":"🎯 全球直连","type":"select","proxies":["DIRECT"]},{"name":"🛑 广告拦截","type":"select","proxies":["REJECT","DIRECT"]},{"name":"🐟 漏网之鱼","type":"select","proxies":["🚀 节点选择","🎯 全球直连"]}]
+  tls: true
+proxy-groups: [{"name":"🌐 7x24.alwaysdata.net","type":"select","proxies":["DIRECT"]},{"name":"🕒 节点更新于 11-14 13:55","type":"select","proxies":["DIRECT"]},{"name":"🚀 节点选择","type":"select","proxies":["♻️ 自动选择","🔯 故障转移","🔮 负载均衡","🎯 全球直连","自建·香港-01","自建·香港-02","自建·香港-03","自建·香港-04","自建·香港-05","自建·加拿大-01","自建·加拿大-02","自建·加拿大-03","自建·加拿大-04","自建·加拿大-05","自建·美国-01","自建·美国-02","自建·美国-03","自建·美国-04","自建·美国-05","自建·香港2-01","自建·香港2-02","自建·香港2-03","自建·香港2-04","自建·香港2-05","🇭🇰 HK 01 | 参考97.5M | http","🇸🇬 SG 282 | 3.4M | http","🇭🇰 HK 02 | 参考184.7M | ssr","🇭🇰 HK 03 | 参考7.7M | ssr","🇸🇬 SG 02 | 参考9.4M | http","🇭🇰 HK 06 | 参考14.2M | http","🇭🇰 HK 07 | 参考7.3M | ssr","🇻🇳 VN 01 | 参考7.9M | http","🇺🇸 US 01 | 参考4.6M | http","🇺🇸 US 02 | 参考4.9M | http","🇸🇬 SG 03 | 参考0.2M | http","🇺🇸 US 03 | 参考4.6M | http","🇱🇻 LV 01 | 参考3.9M | http","🇺🇸 US 05 | 参考4.4M | http","🇺🇸 US 04 | 参考5.4M | ssr","🇷🇴 RO 01 | 参考1.8M | http","🇭🇰 HK 10 | 参考13.9M | ssr","🇺🇸 US 06 | 参考4.3M | http","🇷🇴 RO 02 | 参考2.2M | http","🇭🇰 HK 12 | 参考113.8M | ssr","🇫🇷 FR 01 | 参考4.0M | http","🇺🇸 US 08 | 参考3.1M | http","🇹🇼 TW 01 | 参考31.1M | ssr","🇳🇱 NL 01 | 参考4.7M | http","🇺🇸 US 09 | 参考4.0M | http","🇩🇪 DE 01 | 参考4.8M | http","🇺🇸 US 11 | 参考5.7M | http","🇭🇰 HK 14 | 参考146.7M | ssr","🇭🇰 HK 15 | 参考14.2M | ssr","🇮🇩 ID 01 | 参考27.8M | http","🇸🇬 SG 04 | 参考10.9M | ssr","🇺🇸 US 573 | 1.9M | http","🇭🇰 HK 16 | 6.2M | ssr","🇭🇰 HK 13 | 参考180.4M | ssr","🇭🇰 HK 17 | 参考0.0M | ssr","🇷🇺 RU 01 | 参考3.8M | http","🇺🇸 US 13 | 参考4.6M | http","🇸🇬 SG 06 | 参考32.9M | http","🇨🇦 CA 01 | 参考2.0M | http","🇺🇸 US 14 | 参考3.1M | http","🇳🇱 NL 02 | 参考3.9M | http","🇺🇸 US 16 | 参考2.2M | http","🇦🇺 AU 01 | 参考4.3M | ssr","🇳🇱 NL 03 | 参考5.0M | http","🇸🇬 SG 07 | http","🇭🇰 HK 18 | 3.4M | ssr","🇫🇷 FR 02 | 参考4.0M | http","🇬🇧 GB 01 | 参考5.0M | ssr","🇬🇧 GB 02 | 参考2.4M | http","🇺🇸 US 18 | 参考4.6M | http","🇳🇱 NL 05 | 参考5.4M | http","🇭🇰 HK 20 | 参考1.7M | http","🇺🇸 US 19 | 参考2.6M | http","🇫🇷 FR 03 | 参考4.2M | hysteria","🇭🇰 HK 21 | http","🇳🇱 NL 06 | 参考4.0M | http","🇯🇵 JP 01 | 参考28.7M | ssr","🇷🇴 RO 04 | 参考3.3M | http","🇳🇱 NL 07 | 参考4.2M | http","🇸🇬 SG 08 | 参考31.1M | http","🇻🇳 VN 02 | 参考8.9M | http","🇨🇦 CA 02 | 参考3.9M | ssr","🇳🇱 NL 08 | 参考4.3M | http","🇷🇴 RO 05 | 参考2.8M | http","🇮🇹 IT 01 | 参考3.9M | ss","🇷🇴 RO 06 | 参考3.3M | http","🇫🇷 FR 04 | 参考4.0M | http","🇬🇧 GB 03 | 参考4.1M | http","🇮🇪 IE 01 | 参考2.8M | http","🇳🇱 NL 09 | 参考3.9M | http","🇫🇷 FR 05 | 参考3.9M | http","🇨🇦 CA 03 | http","🇭🇰 HK 23 | 参考14.1M | ssr","🇺🇸 US 22 | 参考5.7M | vless","🇺🇸 US 23 | 参考4.9M | ssr","🇯🇵 JP 02 | 参考5.1M | ssr","🇳🇱 NL 10 | 参考4.0M | http","🇳🇱 NL 11 | 参考3.9M | http","🇮🇹 IT 02 | 参考1.3M | http","🇩🇪 DE 02 | 参考4.6M | http","🇺🇸 US 24 | 参考5.6M | http","🇺🇸 US 25 | 参考4.9M | http","🇱🇻 LV 22 | 7.5M | http","🇷🇺 RU 02 | 参考3.8M | http","🇺🇸 US 26 | 参考5.9M | http","🇮🇹 IT 03 | 参考2.4M | ss","🇺🇸 US 27 | 参考2.6M | http","🇺🇸 US 28 | 参考5.5M | http","🇩🇪 DE 03 | 参考2.6M | http","🇮🇹 IT 04 | 参考4.0M | ss","🇺🇸 US 29 | 参考2.7M | http","🇭🇰 HK 24 | 参考104.7M | ssr","🇱🇹 LT 01 | 参考4.1M | http","🇷🇴 RO 07 | 参考2.7M | http","🇹🇼 TW 03 | 参考7.3M | http","🇫🇷 FR 06 | 参考4.0M | vless","🇸🇬 SG 12 | 参考11.3M | http","🇺🇸 US 30 | 参考4.5M | http","🇵🇱 PL 01 | 参考2.1M | http","🇺🇸 US 126 | 参考3.7M | http"]},{"name":"♻️ 自动选择","type":"url-test","proxies":["自建·香港-01","自建·香港-02","自建·香港-03","自建·香港-04","自建·香港-05","自建·加拿大-01","自建·加拿大-02","自建·加拿大-03","自建·加拿大-04","自建·加拿大-05","自建·美国-01","自建·美国-02","自建·美国-03","自建·美国-04","自建·美国-05","自建·香港2-01","自建·香港2-02","自建·香港2-03","自建·香港2-04","自建·香港2-05","🇭🇰 HK 01 | 参考97.5M | http","🇸🇬 SG 282 | 3.4M | http","🇭🇰 HK 02 | 参考184.7M | ssr","🇭🇰 HK 03 | 参考7.7M | ssr","🇸🇬 SG 02 | 参考9.4M | http","🇭🇰 HK 06 | 参考14.2M | http","🇭🇰 HK 07 | 参考7.3M | ssr","🇻🇳 VN 01 | 参考7.9M | http","🇺🇸 US 01 | 参考4.6M | http","🇺🇸 US 02 | 参考4.9M | http","🇸🇬 SG 03 | 参考0.2M | http","🇺🇸 US 03 | 参考4.6M | http","🇱🇻 LV 01 | 参考3.9M | http","🇺🇸 US 05 | 参考4.4M | http","🇺🇸 US 04 | 参考5.4M | ssr","🇷🇴 RO 01 | 参考1.8M | http","🇭🇰 HK 10 | 参考13.9M | ssr","🇺🇸 US 06 | 参考4.3M | http","🇷🇴 RO 02 | 参考2.2M | http","🇭🇰 HK 12 | 参考113.8M | ssr","🇫🇷 FR 01 | 参考4.0M | http","🇺🇸 US 08 | 参考3.1M | http","🇹🇼 TW 01 | 参考31.1M | ssr","🇳🇱 NL 01 | 参考4.7M | http","🇺🇸 US 09 | 参考4.0M | http","🇩🇪 DE 01 | 参考4.8M | http","🇺🇸 US 11 | 参考5.7M | http","🇭🇰 HK 14 | 参考146.7M | ssr","🇭🇰 HK 15 | 参考14.2M | ssr","🇮🇩 ID 01 | 参考27.8M | http","🇸🇬 SG 04 | 参考10.9M | ssr","🇺🇸 US 573 | 1.9M | http","🇭🇰 HK 16 | 6.2M | ssr","🇭🇰 HK 13 | 参考180.4M | ssr","🇭🇰 HK 17 | 参考0.0M | ssr","🇷🇺 RU 01 | 参考3.8M | http","🇺🇸 US 13 | 参考4.6M | http","🇸🇬 SG 06 | 参考32.9M | http","🇨🇦 CA 01 | 参考2.0M | http","🇺🇸 US 14 | 参考3.1M | http","🇳🇱 NL 02 | 参考3.9M | http","🇺🇸 US 16 | 参考2.2M | http","🇦🇺 AU 01 | 参考4.3M | ssr","🇳🇱 NL 03 | 参考5.0M | http","🇸🇬 SG 07 | http","🇭🇰 HK 18 | 3.4M | ssr","🇫🇷 FR 02 | 参考4.0M | http","🇬🇧 GB 01 | 参考5.0M | ssr","🇬🇧 GB 02 | 参考2.4M | http","🇺🇸 US 18 | 参考4.6M | http","🇳🇱 NL 05 | 参考5.4M | http","🇭🇰 HK 20 | 参考1.7M | http","🇺🇸 US 19 | 参考2.6M | http","🇫🇷 FR 03 | 参考4.2M | hysteria","🇭🇰 HK 21 | http","🇳🇱 NL 06 | 参考4.0M | http","🇯🇵 JP 01 | 参考28.7M | ssr","🇷🇴 RO 04 | 参考3.3M | http","🇳🇱 NL 07 | 参考4.2M | http","🇸🇬 SG 08 | 参考31.1M | http","🇻🇳 VN 02 | 参考8.9M | http","🇨🇦 CA 02 | 参考3.9M | ssr","🇳🇱 NL 08 | 参考4.3M | http","🇷🇴 RO 05 | 参考2.8M | http","🇮🇹 IT 01 | 参考3.9M | ss","🇷🇴 RO 06 | 参考3.3M | http","🇫🇷 FR 04 | 参考4.0M | http","🇬🇧 GB 03 | 参考4.1M | http","🇮🇪 IE 01 | 参考2.8M | http","🇳🇱 NL 09 | 参考3.9M | http","🇫🇷 FR 05 | 参考3.9M | http","🇨🇦 CA 03 | http","🇭🇰 HK 23 | 参考14.1M | ssr","🇺🇸 US 22 | 参考5.7M | vless","🇺🇸 US 23 | 参考4.9M | ssr","🇯🇵 JP 02 | 参考5.1M | ssr","🇳🇱 NL 10 | 参考4.0M | http","🇳🇱 NL 11 | 参考3.9M | http","🇮🇹 IT 02 | 参考1.3M | http","🇩🇪 DE 02 | 参考4.6M | http","🇺🇸 US 24 | 参考5.6M | http","🇺🇸 US 25 | 参考4.9M | http","🇱🇻 LV 22 | 7.5M | http","🇷🇺 RU 02 | 参考3.8M | http","🇺🇸 US 26 | 参考5.9M | http","🇮🇹 IT 03 | 参考2.4M | ss","🇺🇸 US 27 | 参考2.6M | http","🇺🇸 US 28 | 参考5.5M | http","🇩🇪 DE 03 | 参考2.6M | http","🇮🇹 IT 04 | 参考4.0M | ss","🇺🇸 US 29 | 参考2.7M | http","🇭🇰 HK 24 | 参考104.7M | ssr","🇱🇹 LT 01 | 参考4.1M | http","🇷🇴 RO 07 | 参考2.7M | http","🇹🇼 TW 03 | 参考7.3M | http","🇫🇷 FR 06 | 参考4.0M | vless","🇸🇬 SG 12 | 参考11.3M | http","🇺🇸 US 30 | 参考4.5M | http","🇵🇱 PL 01 | 参考2.1M | http","🇺🇸 US 126 | 参考3.7M | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"🔯 故障转移","type":"fallback","proxies":["自建·香港-01","自建·香港-02","自建·香港-03","自建·香港-04","自建·香港-05","自建·加拿大-01","自建·加拿大-02","自建·加拿大-03","自建·加拿大-04","自建·加拿大-05","自建·美国-01","自建·美国-02","自建·美国-03","自建·美国-04","自建·美国-05","自建·香港2-01","自建·香港2-02","自建·香港2-03","自建·香港2-04","自建·香港2-05","🇭🇰 HK 01 | 参考97.5M | http","🇸🇬 SG 282 | 3.4M | http","🇭🇰 HK 02 | 参考184.7M | ssr","🇭🇰 HK 03 | 参考7.7M | ssr","🇸🇬 SG 02 | 参考9.4M | http","🇭🇰 HK 06 | 参考14.2M | http","🇭🇰 HK 07 | 参考7.3M | ssr","🇻🇳 VN 01 | 参考7.9M | http","🇺🇸 US 01 | 参考4.6M | http","🇺🇸 US 02 | 参考4.9M | http","🇸🇬 SG 03 | 参考0.2M | http","🇺🇸 US 03 | 参考4.6M | http","🇱🇻 LV 01 | 参考3.9M | http","🇺🇸 US 05 | 参考4.4M | http","🇺🇸 US 04 | 参考5.4M | ssr","🇷🇴 RO 01 | 参考1.8M | http","🇭🇰 HK 10 | 参考13.9M | ssr","🇺🇸 US 06 | 参考4.3M | http","🇷🇴 RO 02 | 参考2.2M | http","🇭🇰 HK 12 | 参考113.8M | ssr","🇫🇷 FR 01 | 参考4.0M | http","🇺🇸 US 08 | 参考3.1M | http","🇹🇼 TW 01 | 参考31.1M | ssr","🇳🇱 NL 01 | 参考4.7M | http","🇺🇸 US 09 | 参考4.0M | http","🇩🇪 DE 01 | 参考4.8M | http","🇺🇸 US 11 | 参考5.7M | http","🇭🇰 HK 14 | 参考146.7M | ssr","🇭🇰 HK 15 | 参考14.2M | ssr","🇮🇩 ID 01 | 参考27.8M | http","🇸🇬 SG 04 | 参考10.9M | ssr","🇺🇸 US 573 | 1.9M | http","🇭🇰 HK 16 | 6.2M | ssr","🇭🇰 HK 13 | 参考180.4M | ssr","🇭🇰 HK 17 | 参考0.0M | ssr","🇷🇺 RU 01 | 参考3.8M | http","🇺🇸 US 13 | 参考4.6M | http","🇸🇬 SG 06 | 参考32.9M | http","🇨🇦 CA 01 | 参考2.0M | http","🇺🇸 US 14 | 参考3.1M | http","🇳🇱 NL 02 | 参考3.9M | http","🇺🇸 US 16 | 参考2.2M | http","🇦🇺 AU 01 | 参考4.3M | ssr","🇳🇱 NL 03 | 参考5.0M | http","🇸🇬 SG 07 | http","🇭🇰 HK 18 | 3.4M | ssr","🇫🇷 FR 02 | 参考4.0M | http","🇬🇧 GB 01 | 参考5.0M | ssr","🇬🇧 GB 02 | 参考2.4M | http","🇺🇸 US 18 | 参考4.6M | http","🇳🇱 NL 05 | 参考5.4M | http","🇭🇰 HK 20 | 参考1.7M | http","🇺🇸 US 19 | 参考2.6M | http","🇫🇷 FR 03 | 参考4.2M | hysteria","🇭🇰 HK 21 | http","🇳🇱 NL 06 | 参考4.0M | http","🇯🇵 JP 01 | 参考28.7M | ssr","🇷🇴 RO 04 | 参考3.3M | http","🇳🇱 NL 07 | 参考4.2M | http","🇸🇬 SG 08 | 参考31.1M | http","🇻🇳 VN 02 | 参考8.9M | http","🇨🇦 CA 02 | 参考3.9M | ssr","🇳🇱 NL 08 | 参考4.3M | http","🇷🇴 RO 05 | 参考2.8M | http","🇮🇹 IT 01 | 参考3.9M | ss","🇷🇴 RO 06 | 参考3.3M | http","🇫🇷 FR 04 | 参考4.0M | http","🇬🇧 GB 03 | 参考4.1M | http","🇮🇪 IE 01 | 参考2.8M | http","🇳🇱 NL 09 | 参考3.9M | http","🇫🇷 FR 05 | 参考3.9M | http","🇨🇦 CA 03 | http","🇭🇰 HK 23 | 参考14.1M | ssr","🇺🇸 US 22 | 参考5.7M | vless","🇺🇸 US 23 | 参考4.9M | ssr","🇯🇵 JP 02 | 参考5.1M | ssr","🇳🇱 NL 10 | 参考4.0M | http","🇳🇱 NL 11 | 参考3.9M | http","🇮🇹 IT 02 | 参考1.3M | http","🇩🇪 DE 02 | 参考4.6M | http","🇺🇸 US 24 | 参考5.6M | http","🇺🇸 US 25 | 参考4.9M | http","🇱🇻 LV 22 | 7.5M | http","🇷🇺 RU 02 | 参考3.8M | http","🇺🇸 US 26 | 参考5.9M | http","🇮🇹 IT 03 | 参考2.4M | ss","🇺🇸 US 27 | 参考2.6M | http","🇺🇸 US 28 | 参考5.5M | http","🇩🇪 DE 03 | 参考2.6M | http","🇮🇹 IT 04 | 参考4.0M | ss","🇺🇸 US 29 | 参考2.7M | http","🇭🇰 HK 24 | 参考104.7M | ssr","🇱🇹 LT 01 | 参考4.1M | http","🇷🇴 RO 07 | 参考2.7M | http","🇹🇼 TW 03 | 参考7.3M | http","🇫🇷 FR 06 | 参考4.0M | vless","🇸🇬 SG 12 | 参考11.3M | http","🇺🇸 US 30 | 参考4.5M | http","🇵🇱 PL 01 | 参考2.1M | http","🇺🇸 US 126 | 参考3.7M | http"],"url":"https://www.gstatic.com/generate_204","interval":300},{"name":"🔮 负载均衡","type":"load-balance","proxies":["自建·香港-01","自建·香港-02","自建·香港-03","自建·香港-04","自建·香港-05","自建·加拿大-01","自建·加拿大-02","自建·加拿大-03","自建·加拿大-04","自建·加拿大-05","自建·美国-01","自建·美国-02","自建·美国-03","自建·美国-04","自建·美国-05","自建·香港2-01","自建·香港2-02","自建·香港2-03","自建·香港2-04","自建·香港2-05","🇭🇰 HK 01 | 参考97.5M | http","🇸🇬 SG 282 | 3.4M | http","🇭🇰 HK 02 | 参考184.7M | ssr","🇭🇰 HK 03 | 参考7.7M | ssr","🇸🇬 SG 02 | 参考9.4M | http","🇭🇰 HK 06 | 参考14.2M | http","🇭🇰 HK 07 | 参考7.3M | ssr","🇻🇳 VN 01 | 参考7.9M | http","🇺🇸 US 01 | 参考4.6M | http","🇺🇸 US 02 | 参考4.9M | http","🇸🇬 SG 03 | 参考0.2M | http","🇺🇸 US 03 | 参考4.6M | http","🇱🇻 LV 01 | 参考3.9M | http","🇺🇸 US 05 | 参考4.4M | http","🇺🇸 US 04 | 参考5.4M | ssr","🇷🇴 RO 01 | 参考1.8M | http","🇭🇰 HK 10 | 参考13.9M | ssr","🇺🇸 US 06 | 参考4.3M | http","🇷🇴 RO 02 | 参考2.2M | http","🇭🇰 HK 12 | 参考113.8M | ssr","🇫🇷 FR 01 | 参考4.0M | http","🇺🇸 US 08 | 参考3.1M | http","🇹🇼 TW 01 | 参考31.1M | ssr","🇳🇱 NL 01 | 参考4.7M | http","🇺🇸 US 09 | 参考4.0M | http","🇩🇪 DE 01 | 参考4.8M | http","🇺🇸 US 11 | 参考5.7M | http","🇭🇰 HK 14 | 参考146.7M | ssr","🇭🇰 HK 15 | 参考14.2M | ssr","🇮🇩 ID 01 | 参考27.8M | http","🇸🇬 SG 04 | 参考10.9M | ssr","🇺🇸 US 573 | 1.9M | http","🇭🇰 HK 16 | 6.2M | ssr","🇭🇰 HK 13 | 参考180.4M | ssr","🇭🇰 HK 17 | 参考0.0M | ssr","🇷🇺 RU 01 | 参考3.8M | http","🇺🇸 US 13 | 参考4.6M | http","🇸🇬 SG 06 | 参考32.9M | http","🇨🇦 CA 01 | 参考2.0M | http","🇺🇸 US 14 | 参考3.1M | http","🇳🇱 NL 02 | 参考3.9M | http","🇺🇸 US 16 | 参考2.2M | http","🇦🇺 AU 01 | 参考4.3M | ssr","🇳🇱 NL 03 | 参考5.0M | http","🇸🇬 SG 07 | http","🇭🇰 HK 18 | 3.4M | ssr","🇫🇷 FR 02 | 参考4.0M | http","🇬🇧 GB 01 | 参考5.0M | ssr","🇬🇧 GB 02 | 参考2.4M | http","🇺🇸 US 18 | 参考4.6M | http","🇳🇱 NL 05 | 参考5.4M | http","🇭🇰 HK 20 | 参考1.7M | http","🇺🇸 US 19 | 参考2.6M | http","🇫🇷 FR 03 | 参考4.2M | hysteria","🇭🇰 HK 21 | http","🇳🇱 NL 06 | 参考4.0M | http","🇯🇵 JP 01 | 参考28.7M | ssr","🇷🇴 RO 04 | 参考3.3M | http","🇳🇱 NL 07 | 参考4.2M | http","🇸🇬 SG 08 | 参考31.1M | http","🇻🇳 VN 02 | 参考8.9M | http","🇨🇦 CA 02 | 参考3.9M | ssr","🇳🇱 NL 08 | 参考4.3M | http","🇷🇴 RO 05 | 参考2.8M | http","🇮🇹 IT 01 | 参考3.9M | ss","🇷🇴 RO 06 | 参考3.3M | http","🇫🇷 FR 04 | 参考4.0M | http","🇬🇧 GB 03 | 参考4.1M | http","🇮🇪 IE 01 | 参考2.8M | http","🇳🇱 NL 09 | 参考3.9M | http","🇫🇷 FR 05 | 参考3.9M | http","🇨🇦 CA 03 | http","🇭🇰 HK 23 | 参考14.1M | ssr","🇺🇸 US 22 | 参考5.7M | vless","🇺🇸 US 23 | 参考4.9M | ssr","🇯🇵 JP 02 | 参考5.1M | ssr","🇳🇱 NL 10 | 参考4.0M | http","🇳🇱 NL 11 | 参考3.9M | http","🇮🇹 IT 02 | 参考1.3M | http","🇩🇪 DE 02 | 参考4.6M | http","🇺🇸 US 24 | 参考5.6M | http","🇺🇸 US 25 | 参考4.9M | http","🇱🇻 LV 22 | 7.5M | http","🇷🇺 RU 02 | 参考3.8M | http","🇺🇸 US 26 | 参考5.9M | http","🇮🇹 IT 03 | 参考2.4M | ss","🇺🇸 US 27 | 参考2.6M | http","🇺🇸 US 28 | 参考5.5M | http","🇩🇪 DE 03 | 参考2.6M | http","🇮🇹 IT 04 | 参考4.0M | ss","🇺🇸 US 29 | 参考2.7M | http","🇭🇰 HK 24 | 参考104.7M | ssr","🇱🇹 LT 01 | 参考4.1M | http","🇷🇴 RO 07 | 参考2.7M | http","🇹🇼 TW 03 | 参考7.3M | http","🇫🇷 FR 06 | 参考4.0M | vless","🇸🇬 SG 12 | 参考11.3M | http","🇺🇸 US 30 | 参考4.5M | http","🇵🇱 PL 01 | 参考2.1M | http","🇺🇸 US 126 | 参考3.7M | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"strategy":"consistent-hashing"},{"name":"♻️ CA自动","type":"url-test","proxies":["自建·加拿大-01","自建·加拿大-02","自建·加拿大-03","自建·加拿大-04","自建·加拿大-05","🇨🇦 CA 01 | 参考2.0M | http","🇨🇦 CA 02 | 参考3.9M | ssr","🇨🇦 CA 03 | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ DE自动","type":"url-test","proxies":["🇩🇪 DE 01 | 参考4.8M | http","🇩🇪 DE 02 | 参考4.6M | http","🇩🇪 DE 03 | 参考2.6M | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ FR自动","type":"url-test","proxies":["🇫🇷 FR 01 | 参考4.0M | http","🇫🇷 FR 02 | 参考4.0M | http","🇫🇷 FR 03 | 参考4.2M | hysteria","🇫🇷 FR 04 | 参考4.0M | http","🇫🇷 FR 05 | 参考3.9M | http","🇫🇷 FR 06 | 参考4.0M | vless"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ GB自动","type":"url-test","proxies":["🇬🇧 GB 01 | 参考5.0M | ssr","🇬🇧 GB 02 | 参考2.4M | http","🇬🇧 GB 03 | 参考4.1M | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ HK自动","type":"url-test","proxies":["自建·香港-01","自建·香港-02","自建·香港-03","自建·香港-04","自建·香港-05","自建·香港2-01","自建·香港2-02","自建·香港2-03","自建·香港2-04","自建·香港2-05","🇭🇰 HK 01 | 参考97.5M | http","🇭🇰 HK 02 | 参考184.7M | ssr","🇭🇰 HK 03 | 参考7.7M | ssr","🇭🇰 HK 06 | 参考14.2M | http","🇭🇰 HK 07 | 参考7.3M | ssr","🇭🇰 HK 10 | 参考13.9M | ssr","🇭🇰 HK 12 | 参考113.8M | ssr","🇭🇰 HK 14 | 参考146.7M | ssr","🇭🇰 HK 15 | 参考14.2M | ssr","🇭🇰 HK 16 | 6.2M | ssr","🇭🇰 HK 13 | 参考180.4M | ssr","🇭🇰 HK 17 | 参考0.0M | ssr","🇭🇰 HK 18 | 3.4M | ssr","🇭🇰 HK 20 | 参考1.7M | http","🇭🇰 HK 21 | http","🇭🇰 HK 23 | 参考14.1M | ssr","🇭🇰 HK 24 | 参考104.7M | ssr"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ IT自动","type":"url-test","proxies":["🇮🇹 IT 01 | 参考3.9M | ss","🇮🇹 IT 02 | 参考1.3M | http","🇮🇹 IT 03 | 参考2.4M | ss","🇮🇹 IT 04 | 参考4.0M | ss"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ JP自动","type":"url-test","proxies":["🇯🇵 JP 01 | 参考28.7M | ssr","🇯🇵 JP 02 | 参考5.1M | ssr"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ LV自动","type":"url-test","proxies":["🇱🇻 LV 01 | 参考3.9M | http","🇱🇻 LV 22 | 7.5M | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ NL自动","type":"url-test","proxies":["🇳🇱 NL 01 | 参考4.7M | http","🇳🇱 NL 02 | 参考3.9M | http","🇳🇱 NL 03 | 参考5.0M | http","🇳🇱 NL 05 | 参考5.4M | http","🇳🇱 NL 06 | 参考4.0M | http","🇳🇱 NL 07 | 参考4.2M | http","🇳🇱 NL 08 | 参考4.3M | http","🇳🇱 NL 09 | 参考3.9M | http","🇳🇱 NL 10 | 参考4.0M | http","🇳🇱 NL 11 | 参考3.9M | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ RO自动","type":"url-test","proxies":["🇷🇴 RO 01 | 参考1.8M | http","🇷🇴 RO 02 | 参考2.2M | http","🇷🇴 RO 04 | 参考3.3M | http","🇷🇴 RO 05 | 参考2.8M | http","🇷🇴 RO 06 | 参考3.3M | http","🇷🇴 RO 07 | 参考2.7M | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ RU自动","type":"url-test","proxies":["🇷🇺 RU 01 | 参考3.8M | http","🇷🇺 RU 02 | 参考3.8M | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ SG自动","type":"url-test","proxies":["🇸🇬 SG 282 | 3.4M | http","🇸🇬 SG 02 | 参考9.4M | http","🇸🇬 SG 03 | 参考0.2M | http","🇸🇬 SG 04 | 参考10.9M | ssr","🇸🇬 SG 06 | 参考32.9M | http","🇸🇬 SG 07 | http","🇸🇬 SG 08 | 参考31.1M | http","🇸🇬 SG 12 | 参考11.3M | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ TW自动","type":"url-test","proxies":["🇹🇼 TW 01 | 参考31.1M | ssr","🇹🇼 TW 03 | 参考7.3M | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ US自动","type":"url-test","proxies":["自建·美国-01","自建·美国-02","自建·美国-03","自建·美国-04","自建·美国-05","🇺🇸 US 01 | 参考4.6M | http","🇺🇸 US 02 | 参考4.9M | http","🇺🇸 US 03 | 参考4.6M | http","🇺🇸 US 05 | 参考4.4M | http","🇺🇸 US 04 | 参考5.4M | ssr","🇺🇸 US 06 | 参考4.3M | http","🇺🇸 US 08 | 参考3.1M | http","🇺🇸 US 09 | 参考4.0M | http","🇺🇸 US 11 | 参考5.7M | http","🇺🇸 US 573 | 1.9M | http","🇺🇸 US 13 | 参考4.6M | http","🇺🇸 US 14 | 参考3.1M | http","🇺🇸 US 16 | 参考2.2M | http","🇺🇸 US 18 | 参考4.6M | http","🇺🇸 US 19 | 参考2.6M | http","🇺🇸 US 22 | 参考5.7M | vless","🇺🇸 US 23 | 参考4.9M | ssr","🇺🇸 US 24 | 参考5.6M | http","🇺🇸 US 25 | 参考4.9M | http","🇺🇸 US 26 | 参考5.9M | http","🇺🇸 US 27 | 参考2.6M | http","🇺🇸 US 28 | 参考5.5M | http","🇺🇸 US 29 | 参考2.7M | http","🇺🇸 US 30 | 参考4.5M | http","🇺🇸 US 126 | 参考3.7M | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"♻️ VN自动","type":"url-test","proxies":["🇻🇳 VN 01 | 参考7.9M | http","🇻🇳 VN 02 | 参考8.9M | http"],"url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":50},{"name":"🤖 AI平台","type":"select","proxies":["🚀 节点选择","自建·加拿大-01","自建·加拿大-02","自建·加拿大-03","自建·加拿大-04","自建·加拿大-05","🇺🇸 US 573 | 1.9M | http","🇺🇸 US 13 | 参考4.6M | http","🇳🇱 NL 02 | 参考3.9M | http","🇳🇱 NL 03 | 参考5.0M | http","🇳🇱 NL 08 | 参考4.3M | http","🇱🇻 LV 22 | 7.5M | http","🇺🇸 US 26 | 参考5.9M | http","🇺🇸 US 29 | 参考2.7M | http","🇺🇸 US 126 | 参考3.7M | http"]},{"name":"📹 油管视频","type":"select","proxies":["🚀 节点选择","🇺🇸 US 13 | 参考4.6M | http","🇱🇻 LV 22 | 7.5M | http","🇺🇸 US 26 | 参考5.9M | http","🇺🇸 US 29 | 参考2.7M | http","🇺🇸 US 126 | 参考3.7M | http"]},{"name":"🎥 奈飞视频","type":"select","proxies":["🚀 节点选择","🇺🇸 US 573 | 1.9M | http","🇺🇸 US 13 | 参考4.6M | http","🇳🇱 NL 02 | 参考3.9M | http","🇳🇱 NL 03 | 参考5.0M | http","🇳🇱 NL 08 | 参考4.3M | http","🇱🇻 LV 22 | 7.5M | http","🇺🇸 US 26 | 参考5.9M | http","🇺🇸 US 29 | 参考2.7M | http","🇺🇸 US 126 | 参考3.7M | http"]},{"name":"📲 电报消息","type":"select","proxies":["🚀 节点选择"]},{"name":"🎯 全球直连","type":"select","proxies":["DIRECT"]},{"name":"🛑 广告拦截","type":"select","proxies":["REJECT","DIRECT"]},{"name":"🐟 漏网之鱼","type":"select","proxies":["🚀 节点选择","🎯 全球直连"]}]
 rules: ["DOMAIN-SUFFIX,localhost,DIRECT","IP-CIDR,127.0.0.0/8,DIRECT,no-resolve","IP-CIDR,10.0.0.0/8,DIRECT,no-resolve","IP-CIDR,172.16.0.0/12,DIRECT,no-resolve","IP-CIDR,192.168.0.0/16,DIRECT,no-resolve","IP-CIDR,169.254.0.0/16,DIRECT,no-resolve","IP-CIDR,100.64.0.0/10,DIRECT,no-resolve","IP-CIDR,224.0.0.0/4,DIRECT,no-resolve","IP-CIDR6,fc00::/7,DIRECT,no-resolve","IP-CIDR6,fe80::/10,DIRECT,no-resolve","DOMAIN-SUFFIX,7x24.alwaysdata.net,DIRECT","DOMAIN-SUFFIX,ad.doubleclick.net,🛑 广告拦截","DOMAIN-SUFFIX,doubleclick.net,🛑 广告拦截","DOMAIN-SUFFIX,googleadservices.com,🛑 广告拦截","DOMAIN-SUFFIX,googlesyndication.com,🛑 广告拦截","DOMAIN-SUFFIX,google-analytics.com,🛑 广告拦截","DOMAIN-SUFFIX,googletagmanager.com,🛑 广告拦截","DOMAIN-SUFFIX,umeng.com,🛑 广告拦截","DOMAIN-SUFFIX,cnzz.com,🛑 广告拦截","DOMAIN-SUFFIX,admaster.com.cn,🛑 广告拦截","DOMAIN-SUFFIX,miaozhen.com,🛑 广告拦截","DOMAIN-SUFFIX,alimama.com,🛑 广告拦截","DOMAIN-SUFFIX,tanx.com,🛑 广告拦截","DOMAIN-SUFFIX,cpro.baidu.com,🛑 广告拦截","DOMAIN-SUFFIX,pos.baidu.com,🛑 广告拦截","DOMAIN-SUFFIX,union.baidu.com,🛑 广告拦截","DOMAIN-SUFFIX,mmstat.com,🛑 广告拦截","DOMAIN-SUFFIX,ads.youtube.com,🛑 广告拦截","DOMAIN-SUFFIX,openai.com,🤖 AI平台","DOMAIN-SUFFIX,chatgpt.com,🤖 AI平台","DOMAIN-SUFFIX,oaistatic.com,🤖 AI平台","DOMAIN-SUFFIX,oaiusercontent.com,🤖 AI平台","DOMAIN-SUFFIX,anthropic.com,🤖 AI平台","DOMAIN-SUFFIX,claude.ai,🤖 AI平台","DOMAIN-SUFFIX,gemini.google.com,🤖 AI平台","DOMAIN-SUFFIX,ai.google.dev,🤖 AI平台","DOMAIN-SUFFIX,aistudio.google.com,🤖 AI平台","DOMAIN-SUFFIX,perplexity.ai,🤖 AI平台","DOMAIN-SUFFIX,poe.com,🤖 AI平台","DOMAIN-SUFFIX,midjourney.com,🤖 AI平台","DOMAIN-SUFFIX,openrouter.ai,🤖 AI平台","DOMAIN-SUFFIX,youtube.com,📹 油管视频","DOMAIN-SUFFIX,youtu.be,📹 油管视频","DOMAIN-SUFFIX,ytimg.com,📹 油管视频","DOMAIN-SUFFIX,googlevideo.com,📹 油管视频","DOMAIN-SUFFIX,ggpht.com,📹 油管视频","DOMAIN-SUFFIX,youtubekids.com,📹 油管视频","DOMAIN-SUFFIX,youtubemusic.com,📹 油管视频","DOMAIN-SUFFIX,netflix.com,🎥 奈飞视频","DOMAIN-SUFFIX,netflix.net,🎥 奈飞视频","DOMAIN-SUFFIX,nflxext.com,🎥 奈飞视频","DOMAIN-SUFFIX,nflximg.com,🎥 奈飞视频","DOMAIN-SUFFIX,nflxso.net,🎥 奈飞视频","DOMAIN-SUFFIX,nflxvideo.net,🎥 奈飞视频","DOMAIN-SUFFIX,fast.com,🎥 奈飞视频","DOMAIN-SUFFIX,telegram.org,📲 电报消息","DOMAIN-SUFFIX,telegram.me,📲 电报消息","DOMAIN-SUFFIX,t.me,📲 电报消息","DOMAIN-SUFFIX,telegra.ph,📲 电报消息","DOMAIN-SUFFIX,telesco.pe,📲 电报消息","DOMAIN-SUFFIX,telegram.dog,📲 电报消息","GEOIP,CN,🎯 全球直连","MATCH,🐟 漏网之鱼"]
