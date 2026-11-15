@@ -1,25 +1,24 @@
 {
-  "updatedAt": 1794742708,
-  "updatedAtISO": "2026-11-15T11:38:28Z",
-  "frontCount": 140,
+  "updatedAt": 1794745650,
+  "updatedAtISO": "2026-11-15T12:27:30Z",
+  "frontCount": 134,
   "stats": {
-    "raw": 301,
-    "kept": 301,
+    "raw": 291,
+    "kept": 291,
     "byType": {
-      "vless": 24,
+      "vless": 20,
       "trojan": 2,
-      "vmess": 2,
       "hysteria2": 1,
-      "ss": 11,
-      "anytls": 4,
+      "anytls": 5,
+      "ss": 8,
       "hysteria": 1,
       "http": 225,
-      "socks5": 31
+      "socks5": 29
     },
-    "l2Tested": 301,
-    "l2Passed": 205,
-    "stablePassed": 140,
-    "poolKept": 140
+    "l2Tested": 291,
+    "l2Passed": 161,
+    "stablePassed": 134,
+    "poolKept": 134
   },
   "note": "Node pool only. Landing credentials are not published.",
   "endpoints": {
