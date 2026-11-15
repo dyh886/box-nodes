@@ -1,350 +1,39 @@
 proxies:
-- name: US-Atlanta-h-610923-ujbv
+- name: US-Atlanta-h-610923-nqqe
   type: http
   server: 118.184.140.90
   port: 58764
   tls: true
-  sni: 118.184.140.90
   skip-cert-verify: true
-- name: KR-Chuncheon-26923022-upfi
-  type: http
-  server: 152.69.230.221
-  port: 443
-  tls: true
-  skip-cert-verify: true
-- name: TW-Taichung-433615-usuj
-  type: http
-  server: 114.33.6.158
-  port: 443
-  tls: true
-  skip-cert-verify: true
-- name: 🇺🇸 US 554 | 2.2M | http
-  type: http
-  server: 137.175.22.56
-  port: 443
-  skip-cert-verify: true
-  tls: true
-- name: US-Phoenix-91539318-usbs
-  type: http
-  server: 129.153.93.183
-  port: 443
-  username: 'null'
-  password: 'null'
-  tls: true
-  sni: 129.153.93.183
-  skip-cert-verify: true
-- name: US-Santa Clara-h-2302007-uusg
-  type: socks5
-  server: 23.230.200.70
-  port: 62000
-  username: uuxvxc1w
-  password: aecxrj9p
-- name: US-San Jose-822108-urpb
-  type: http
-  server: 9420e530-te8ao0-tfnl0i-au6.fmtdc1.sghuawei.com
-  port: 443
-  username: 1b609740-eec2-11ef-8543-f23c93136cb3
-  password: 1b609740-eec2-11ef-8543-f23c93136cb3
-  tls: true
-  sni: 9420e530-te8ao0-tfnl0i-au6.fmtdc1.sghuawei.com
-  skip-cert-verify: true
-- name: 🇺🇸 US 1221 | 参考4.0M | http
-  server: 23.133.176.14
-  port: 443
-  type: http
-  password: None
-  tls: true
-  skip-cert-verify: true
-- name: HK-Hong Kong-2431818-uijp
+- name: HK-Hong Kong-2431818-nueu
   type: http
   server: 47.243.181.85
   port: 28085
   tls: true
   skip-cert-verify: true
-- name: US-San Francisco-224314624-ufpg
+- name: 🇺🇸 US 1063 | 参考5.6M | http
+  password: gs4BXwT6SW
+  port: 10988
+  server: 154.26.192.123
+  sub_tag: R002-260618
+  tls: false
   type: http
-  server: 162.243.146.243
-  port: 443
-  username: testuser1
-  password: e4b72b531a2d10900519
-  tls: true
-  sni: a2f392f3.acsnet.co
-- name: US-Santa Clara-h-23020024-uugu
-  type: socks5
-  server: 23.230.200.249
-  port: 62000
-  username: kingstar123
-  password: kingstar123++
-- name: US-Santa Clara-h-2302003-uupb
-  type: socks5
-  server: 23.230.200.36
-  port: 62000
-  username: uoca86uz
-  password: 84tmvo2o
-- name: US-Santa Clara-h-23020015-uusf
-  type: socks5
-  server: 23.230.200.154
-  port: 62000
-  username: utzc2qel
-  password: npnzm1u1
-- name: JP-Tokyo-1372379-upur
-  type: http
-  server: fan.571589.xyz
-  port: 443
-  username: 'null'
-  password: 'null'
-  tls: true
-- name: US-Santa Clara-h-23020010-uugs
-  type: socks5
-  server: 23.230.200.100
-  port: 62000
-  username: ujs1mpuy
-  password: v2975enn
-- name: US-Santa Clara-h-23020013-uugp
-  type: socks5
-  server: 23.230.200.136
-  port: 62000
-  username: uqywawrz
-  password: tta09q3b
-- name: US-Dallas-1331761-usjf
-  type: http
-  server: 23.133.176.14
-  port: 443
-  tls: true
-  sni: 23.133.176.14
-  skip-cert-verify: true
-- name: 🇺🇸 US 1069 | 参考5.8M | http
-  type: http
-  server: 54.190.176.228
-  port: 8443
-  username: 'null'
-  password: 'null'
-  tls: true
-  skip-cert-verify: true
-- name: US-San Jose-82005715-ujuf
-  type: http
-  server: 38.28.185.166
-  port: 443
-  tls: true
-  skip-cert-verify: true
-- name: US-Santa Clara-h-23020015-uugj
-  type: socks5
-  server: 23.230.200.152
-  port: 62000
-  username: ug2fbet7
-  password: x5i73bx7
-- name: 🇺🇸 US 1048 | http
-  type: http
-  server: 96.5.129.85
-  port: 443
-  username: ''
-  password: ''
-  tls: true
-  sni: 96.5.129.85
-  skip-cert-verify: true
-- name: US-Santa Clara-h-2302009-uugi
-  type: socks5
-  server: 23.230.200.95
-  port: 62000
-  username: uqcchplu
-  password: rvltqqxy
-- name: DE-Falkenstein-62021729-uvbu
-  type: http
-  server: 116.202.172.99
-  port: 443
-  tls: true
-  skip-cert-verify: true
-- name: US-San Jose-82005715-ujvj
-  type: http
-  server: 38.28.185.130
-  port: 443
-  tls: true
-  sni: 38.28.185.130
-  skip-cert-verify: true
-- name: US-Los Angeles-28193-ufpp
-  type: http
-  server: fan.226278.xyz
-  port: 443
-  tls: true
-- name: 🇩🇪 DE 01 | 参考4.6M | http
-  type: http
-  server: 116.202.172.99
-  port: 443
-  username: 'null'
-  password: 'null'
-  tls: true
-  sni: 116.202.172.99
-  skip-cert-verify: true
-- name: DE-Frankfurt am Main-5791265-uufp
-  type: http
-  server: fan.973511.xyz
-  port: 443
-  username: 'null'
-  password: 'null'
-  tls: true
-- name: DE-Frankfurt am Main-5791265-uvbi
-  type: http
-  server: fan.973511.xyz
-  port: 443
-  username: bnVsbDpudWxs
-  tls: true
-- name: AL-Tirana-922503-upbf
-  type: http
-  server: 91.92.250.33
-  port: 443
-  username: 'null'
-  password: 'null'
-  tls: true
-  skip-cert-verify: true
-- name: US-Los Angeles-264216-usfi
-  type: http
-  server: 172.64.68.89
-  port: 443
-  username: 'null'
-  password: 'null'
-  tls: true
-  sni: 172.64.68.89
-  skip-cert-verify: true
-- name: HK-Hong Kong-9282423-uvjj
-  type: http
-  server: 119.28.24.235
-  port: 3128
-  tls: true
-  sni: 119.28.24.235
-  skip-cert-verify: true
-- name: US-Sanford-h-432623-usrf
-  type: http
-  server: 71.43.26.234
-  port: 443
-  tls: true
-  sni: 71.43.26.234
-  skip-cert-verify: true
-- name: 自建·加拿大-03
+  udp: true
+  username: fQ67Dpe5dU
+- name: 自建·香港-01
   type: vless
-  server: 192.204.33.19
-  port: 443
+  server: 154.19.186.229
+  port: 8443
   uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
   udp: false
   tls: true
-  servername: us1.1am.cc.cd
+  servername: h1.1free.us.ci
   network: ws
   ws-opts:
-    path: /492fbb0e1ab5996d
+    path: /3b8d5443f5bce520
     headers:
-      Host: us1.1am.cc.cd
+      Host: h1.1free.us.ci
   client-fingerprint: chrome
-- name: US-Los Angeles-28193-urpu
-  type: http
-  server: 38.28.193.188
-  port: 443
-  tls: true
-  sni: 38.28.193.188
-  skip-cert-verify: true
-- name: 🇩🇪 DE 03 | 参考4.0M | http
-  server: 87.106.223.158
-  port: 443
-  type: http
-  password: None
-  tls: true
-  skip-cert-verify: true
-- name: DE-Berlin-10622315-uiub
-  type: http
-  server: 87.106.223.158
-  port: 443
-  tls: true
-  sni: 87.106.223.158
-  skip-cert-verify: true
-- name: FR-Gravelines-9817415-uvrs
-  type: http
-  server: 87.98.174.157
-  port: 6103
-  tls: true
-  skip-cert-verify: true
-- name: US-Ashburn-h-2084922-usbr
-  type: http
-  server: 44.217.145.28
-  port: 8443
-  username: 'null'
-  password: 'null'
-  tls: true
-  sni: 44.217.145.28
-  skip-cert-verify: true
-- name: IT-Milan-h-17411815-uvsf
-  type: ss
-  server: 202.50.253.36
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇫🇷 FR 159 | 参考4.1M | http
-  type: http
-  server: 87.98.174.157
-  port: 6103
-  username: 'null'
-  password: 'null'
-  tls: true
-  skip-cert-verify: true
-- name: 自建·加拿大-05
-  type: vless
-  server: 140.82.49.187
-  port: 443
-  uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
-  udp: false
-  tls: true
-  servername: us1.1am.cc.cd
-  network: ws
-  ws-opts:
-    path: /492fbb0e1ab5996d
-    headers:
-      Host: us1.1am.cc.cd
-  client-fingerprint: chrome
-- name: US-Los Angeles-2642163-uffr
-  type: http
-  server: 172.64.69.89
-  port: 443
-  username: 'null'
-  password: 'null'
-  tls: true
-  skip-cert-verify: true
-- name: DE-Berlin-10622315-ufbf
-  type: http
-  server: 87.106.223.158
-  port: 443
-  username: 'null'
-  password: 'null'
-  tls: true
-  skip-cert-verify: true
-- name: DE-Nuremberg-310916311-uvsp
-  type: http
-  server: 213.109.163.119
-  port: 443
-  tls: true
-  skip-cert-verify: true
-- name: JP-Tokyo-1372379-upfu
-  type: http
-  server: fan.571589.xyz
-  port: 443
-  tls: true
-  sni: fan.571589.xyz
-  skip-cert-verify: true
-- name: JP-Tokyo-1372379-upub
-  type: http
-  server: fan.587475.xyz
-  port: 443
-  tls: true
-  skip-cert-verify: true
-- name: 🇭🇰 HK 367 | 参考18.3M | http
-  type: http
-  server: 38.76.140.254
-  port: 8443
-  skip-cert-verify: true
-  tls: true
-- name: US-Sabetha-22442273-ujiu
-  type: http
-  server: 162.244.227.36
-  port: 443
-  tls: true
-  sni: 162.244.227.36
-  skip-cert-verify: true
 - name: 自建·加拿大-02
   type: vless
   server: 69.8.129.43
@@ -359,43 +48,178 @@ proxies:
     headers:
       Host: us1.1am.cc.cd
   client-fingerprint: chrome
-- name: LT-Vilnius-12411-uups
-  type: http
-  server: 89.124.11.9
+- name: 自建·加拿大-01
+  type: vless
+  server: 68.164.13.208
   port: 443
+  uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
+  udp: false
   tls: true
+  servername: us1.1am.cc.cd
+  network: ws
+  ws-opts:
+    path: /492fbb0e1ab5996d
+    headers:
+      Host: us1.1am.cc.cd
+  client-fingerprint: chrome
+- name: 🇺🇸 US 1107 | http
+  password: 'null'
+  port: 443
+  server: 38.28.193.188
   skip-cert-verify: true
-- name: US-Las Vegas-791887-ujjs
+  sub_tag: R002-260618
+  tls: true
   type: http
-  server: 107.91.88.70
+  udp: true
+  username: 'null'
+- name: 自建·香港-04
+  type: vless
+  server: 103.85.27.100
   port: 8443
+  uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
+  udp: false
   tls: true
-  skip-cert-verify: true
-- name: DE-Berlin-79213223-uiup
+  servername: h1.1free.us.ci
+  network: ws
+  ws-opts:
+    path: /3b8d5443f5bce520
+    headers:
+      Host: h1.1free.us.ci
+  client-fingerprint: chrome
+- name: US-Los Angeles-28193-nrou
   type: http
-  server: 217.92.132.233
+  server: 38.28.193.39
   port: 443
   tls: true
-  sni: 217.92.132.233
   skip-cert-verify: true
-- name: HK-Tai Po-285532-uiji
+- name: US-San Jose-82214-nfze
   type: http
-  server: fan.240104.xyz
+  server: 137.175.22.29
   port: 443
   tls: true
-- name: US-Ashburn-61321142-uurr
-  type: socks5
-  server: 216.132.114.27
-  port: 62000
-  username: JzufiJ62
-  password: 75bPoRcB
-- name: FR-Saint-Denis-6623522-uigf
+  skip-cert-verify: true
+- name: JP-Tokyo-1372379-naui
   type: http
-  server: 82.66.235.221
+  server: fan.571589.xyz
+  port: 443
+  tls: true
+  sni: fan.571589.xyz
+- name: 🇺🇸 US 554 | 2.2M | http
+  type: http
+  server: 137.175.22.56
+  port: 443
+  skip-cert-verify: true
+  tls: true
+- name: US-San Jose-82214-nauu
+  type: http
+  server: fan.365747.xyz
   port: 443
   username: 'null'
   password: 'null'
   tls: true
+  sni: fan.365747.xyz
+- name: US-Seattle-1457212-nqzr
+  type: http
+  server: 45.150.164.18
+  port: 8443
+  tls: true
+  sni: 45.150.164.18
+  skip-cert-verify: true
+- name: 🇭🇰 HK 304 | 参考7.9M | http
+  port: 3128
+  server: 119.28.24.235
+  skip-cert-verify: true
+  sub_tag: P002-260618
+  tls: true
+  type: http
+  udp: true
+- name: US-San Jose-82214-nfre
+  type: http
+  server: 137.175.22.52
+  port: 443
+  tls: true
+  skip-cert-verify: true
+- name: 自建·香港-05
+  type: vless
+  server: 45.45.217.192
+  port: 444
+  uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
+  udp: false
+  tls: true
+  servername: h1.1free.us.ci
+  network: ws
+  ws-opts:
+    path: /3b8d5443f5bce520
+    headers:
+      Host: h1.1free.us.ci
+  client-fingerprint: chrome
+- name: TH-Bangkok-h-844920-nnqi
+  type: socks5
+  server: 87.84.49.206
+  port: 62000
+  username: ks878449260d
+  password: YlRoWvE0dL_cUqS94wPeKnA4
+- name: JP-Tokyo-1372379-nuzf
+  type: http
+  server: fan.571589.xyz
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  sni: fan.571589.xyz
+  skip-cert-verify: true
+- name: RU-Moscow-2916613-nque
+  type: http
+  server: 46.29.166.134
+  port: 1446
+  username: 'null'
+  password: 'null'
+  tls: true
+  skip-cert-verify: true
+- name: NL-Amsterdam-h-22392389-neqn
+  type: vless
+  server: www.visa.com.hk
+  port: 443
+  uuid: 8806913a-d46b-46d0-9080-61fbc8266c37
+  tls: true
+  servername: nl-ams.862400.xyz
+  skip-cert-verify: true
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /announcement
+    headers:
+      Host: nl-ams.862400.xyz
+- name: NL-Dronten-551188-neae
+  type: http
+  server: 5.255.118.82
+  port: 443
+  tls: true
+  sni: 5.255.118.82
+  skip-cert-verify: true
+- name: US-Ashburn-h-9013921-naef
+  type: ss
+  server: 52.90.139.219
+  port: 443
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: DE-Frankfurt am Main-5791265-nazn
+  type: http
+  server: fan.973511.xyz
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  sni: fan.973511.xyz
+  skip-cert-verify: true
+- name: NL-Dronten-551188-neau
+  type: http
+  server: 5.255.118.82
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  sni: 5.255.118.82
   skip-cert-verify: true
 - name: 自建·加拿大-04
   type: vless
@@ -411,162 +235,113 @@ proxies:
     headers:
       Host: us1.1am.cc.cd
   client-fingerprint: chrome
-- name: 🇺🇸 US 06 | 参考2.9M | http
-  type: http
-  server: 184.188.139.2
-  port: 8090
-  username: 'null'
-  password: 'null'
+- name: US-Hillsboro-h-2045024-niqa
+  type: vmess
+  server: US122207.ssgreen.org
+  port: 443
+  uuid: c8b5c78c-e3b2-4f52-bcbf-dabb9d03150a
+  alterId: 0
+  cipher: auto
   tls: true
-  sni: 184.188.139.2
-  skip-cert-verify: true
-- name: NL-Haarlem-1582439-uupf
+  servername: US122207.ssgreen.org
+  network: ws
+  ws-opts:
+    path: /wes
+    headers:
+      Host: US122207.ssgreen.org
+- name: US-Los Angeles-27020519-nrar
   type: http
-  server: 51.158.243.91
+  server: 172.64.69.89
   port: 443
   tls: true
+  sni: 172.64.69.89
   skip-cert-verify: true
-- name: CA-Beauharnois-h-24421012-ufsu
+- name: US-San Jose-82214-nzur
   type: http
-  server: 142.44.210.129
+  server: 137.175.22.116
   port: 443
   tls: true
-  sni: 142.44.210.129
+  sni: 137.175.22.116
   skip-cert-verify: true
-- name: IE-Dublin-7611712-ubui
+- name: DE-Frankfurt am Main-5791265-nioo
   type: http
-  server: 34.249.214.108
+  server: fan.973511.xyz
   port: 443
-  username: 'null'
-  password: 'null'
+  username: bnVsbDpudWxs
   tls: true
   skip-cert-verify: true
-- name: 🇮🇪 IE 01 | 参考3.8M | http
-  type: http
-  server: 18.200.158.139
-  port: 443
-  username: 'null'
-  password: 'null'
-  tls: true
-  sni: 18.200.158.139
-  skip-cert-verify: true
-- name: US-Conway-1531879-usvi
-  type: http
-  server: 66.153.187.90
-  port: 8090
-  tls: true
-  sni: 66.153.187.90
-  skip-cert-verify: true
-- name: 🇳🇱 NL 04 | 参考4.7M | http
-  port: 19362
-  server: 51.159.225.197
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-- name: NL-Alkmaar-7311-ufub
-  type: http
-  server: 5.2.73.112
-  port: 443
-  username: 'null'
-  password: 'null'
-  tls: true
-  sni: 5.2.73.112
-  skip-cert-verify: true
-- name: FR-Lyon-206122-uipg
-  type: http
-  server: 83.206.1.225
-  port: 8090
-  username: 'null'
-  password: 'null'
-  tls: true
-  sni: 83.206.1.225
-  skip-cert-verify: true
-- name: 🇫🇷 FR 162 | http
-  type: http
-  server: 141.94.16.4
-  port: 443
-  username: ''
-  password: ''
-  tls: true
-  sni: 141.94.16.4
-  skip-cert-verify: true
-- name: 🇫🇷 FR 03 | 参考5.8M | http
-  type: http
-  server: 103.82.101.44
-  port: 443
-  username: ''
-  password: ''
-  tls: true
-  sni: f3a61d8406d537345747f99f8a281007-3f754ed5da1bba09.apache-iv.com
-  skip-cert-verify: true
-- name: IT-Milan-h-1741183-uvsu
-  type: ss
-  server: 202.50.253.45
-  port: 19999
-  cipher: aes-256-gcm
+- cipher: aes-256-gcm
+  delay: 1596
+  name: 🇮🇹 IT 24 | ss
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: FR-Marseille-23522815-uigu
-  type: http
-  server: 84.235.228.156
-  port: 443
-  tls: true
-  skip-cert-verify: true
-- name: 🇺🇸 US 1063 | 参考1.6M | http
-  password: gs4BXwT6SW
-  port: 10988
-  server: 154.26.192.123
-  sub_tag: R002-260618
-  tls: false
-  type: http
+  port: 19999
+  server: 202.50.253.27
+  type: ss
   udp: true
-  username: fQ67Dpe5dU
-- name: US-West Columbia-h-10122921-usrr
-  type: http
-  server: 98.101.229.212
-  port: 8090
+  x-toolall-mihomo: true
+- name: US-Hillsboro-h-2045412-niqu
+  type: vmess
+  server: US032019.ssgreen.org
+  port: 443
+  uuid: 100a15ff-fe8a-4b26-8488-c6b82c24e222
+  alterId: 0
+  cipher: auto
   tls: true
-  skip-cert-verify: true
-- name: IE-Dublin-20320422-ufvr
+  servername: US032019.ssgreen.org
+  network: ws
+  ws-opts:
+    path: /wes
+    headers:
+      Host: US032019.ssgreen.org
+- name: US-San Jose-82214-nqqu
   type: http
-  server: 18.200.158.139
+  server: 137.175.22.96
   port: 443
   tls: true
-  sni: 18.200.158.139
+  sni: 137.175.22.96
   skip-cert-verify: true
-- name: RU-Moscow-2916613-ufiu
+- cipher: aes-256-gcm
+  delay: 600
+  name: 🇮🇹 IT 23 | ss
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.63
+  type: ss
+  udp: true
+  x-toolall-mihomo: true
+- name: US-San Jose-82214-nqio
   type: http
-  server: 46.29.166.134
-  port: 1446
-  username: 'null'
-  password: 'null'
-  tls: true
-  skip-cert-verify: true
-- name: 🇷🇺 RU 142 | http
-  server: 46.29.166.134
-  port: 1446
-  type: http
-  tls: true
-  sni: 46.29.166.134
-  skip-cert-verify: true
-- name: FR-Paris-718120125-uigs
-  type: http
-  server: 217.181.201.254
-  port: 8090
-  tls: true
-  sni: 217.181.201.254
-  skip-cert-verify: true
-- name: FR-Marseille-23522815-uigi
-  type: http
-  server: 84.235.228.156
+  server: 137.175.22.88
   port: 443
-  username: 'null'
-  password: 'null'
   tls: true
   skip-cert-verify: true
-- name: 自建·加拿大-01
+- name: US-Harrison-25326-nnzr
+  type: socks5
+  server: 66.253.2.69
+  port: 62000
+  username: u_rb1dba2
+  password: l1tlrdx52v
+- name: 🇭🇰 HK 311 | http
+  type: http
+  server: 38.76.140.254
+  port: 8443
+  tls: true
+  skip-cert-verify: true
+- name: US-New York-h-62199213-nffq
   type: vless
-  server: 68.164.13.208
+  server: 162.35.38.156
+  port: 443
+  uuid: a88d4614-2134-404c-9479-6aba1ca9cdfd
+  flow: xtls-rprx-vision
+  tls: true
+  servername: 2499dbt.us12.h1clayd.click
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: UkUbCx7k5ykWTJTr1jqCOxns6TwvTAbfR0JvJzuALjM
+    short-id: a62b22480f962a1d
+- name: 自建·加拿大-05
+  type: vless
+  server: 140.82.49.187
   port: 443
   uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
   udp: false
@@ -578,185 +353,690 @@ proxies:
     headers:
       Host: us1.1am.cc.cd
   client-fingerprint: chrome
-- name: CZ-Praha 7-h-786616-ufsg
+- name: US-San Jose-82214-nraa
   type: http
-  server: 193.35.104.196
+  server: 137.175.22.16
   port: 443
   tls: true
-  sni: 193.35.104.196
+  sni: 137.175.22.16
   skip-cert-verify: true
-- name: NL-Amsterdam-150359-uuvi
+- name: 🇭🇰 HK 302 | 参考106.8M | http
   type: http
-  server: 89.150.35.94
-  port: 443
-  tls: true
-  skip-cert-verify: true
-- name: LV-Riga-52191591-uvsr
-  type: http
-  server: 185.219.159.16
-  port: 443
-  tls: true
-  skip-cert-verify: true
-- name: LT-Vilnius-12411-upfs
-  type: http
-  server: 89.124.11.9
+  server: 172.64.68.89
   port: 443
   username: 'null'
   password: 'null'
   tls: true
+  sni: 172.64.68.89
   skip-cert-verify: true
-- name: LV-Riga-52191591-upiu
-  type: http
-  server: 185.219.159.15
-  port: 443
-  username: 'null'
-  password: 'null'
-  tls: true
-  skip-cert-verify: true
-- name: 🇫🇷 FR 160 | http
-  server: 31.32.19.111
-  port: 8081
-  type: http
-  password: None
-  tls: true
-  skip-cert-verify: true
-- name: LV-Riga-52191591-uvsj
-  type: http
-  server: 185.219.159.15
-  port: 443
-  tls: true
-  skip-cert-verify: true
-- name: US-Los Angeles-32521518-vusr
-  type: socks5
-  server: 193.25.215.182
-  port: 22222
-  username: Ok5vbmU=
-- name: VN-Kiến Hưng-h-318411319-uvfb
-  type: socks5
-  server: 103.184.113.190
-  port: 62000
-  username: qT46DZLv
-  password: jHsK2gqs
-- name: DE-Frankfurt am Main-717217219-ufbb
-  type: http
-  server: 167.172.172.190
-  port: 443
-  username: testuser1
-  password: e4b72b531a2d10900519
-  tls: true
-  skip-cert-verify: true
-- name: VN-Kiến Hưng-h-318411316-uurj
-  type: socks5
-  server: 103.184.113.164
-  port: 62000
-  username: qT46DZLv
-  password: jHsK2gqs
-- name: IL-Tel Aviv-h-90771-uirr
-  type: http
-  server: 62.90.77.30
-  port: 443
-  username: 'null'
-  password: 'null'
-  tls: true
-  sni: 62.90.77.30
-  skip-cert-verify: true
-- name: 🇻🇳 VN 01 | 参考8.8M | http
-  server: 14.225.19.28
-  port: 8443
-  type: http
-  tls: true
-  sni: 14.225.19.28
-  skip-cert-verify: true
-- name: IT-Milan-1741187-uvsv
-  type: ss
-  server: 202.50.253.81
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: HK-Hong Kong-9331679-uisf
-  type: http
-  server: 209.33.167.96
-  port: 8443
-  tls: true
-  skip-cert-verify: true
-- name: SE-Stockholm-2211366-uvrj
+- name: 🇬🇧 GB 84 | 参考2.5M | http
   type: http
   server: 77.221.136.60
-  port: 8443
-  tls: true
-  skip-cert-verify: true
-- name: 🇺🇸 US 07 | 参考3.6M | http
-  type: http
-  server: 44.248.167.117
   port: 8443
   username: ''
   password: ''
   tls: true
-  sni: 44.248.167.117
+  sni: 77.221.136.60
   skip-cert-verify: true
-- name: TH-Huai Khwang-h-31416420-uujf
-  type: socks5
-  server: 103.14.164.202
-  port: 42000
-  username: route164JIa2CBPxfy
-  password: VAwyJQX0iKMJiyCw5UVK9wGH
-- name: TH-Huai Khwang-h-3141643-uvff
-  type: socks5
-  server: 103.14.164.30
-  port: 42000
-  username: route164JIa2CBPxfy
-  password: VAwyJQX0iKMJiyCw5UVK9wGH
-- name: VN-Kiến Hưng-h-31841138-uvfs
-  type: socks5
-  server: 103.184.113.84
-  port: 62000
-  username: qT46DZLv
-  password: jHsK2gqs
-- name: US-San Jose-82005715-ujir
+- name: 🇸🇬 SG 282 | 3.4M | http
+  port: 9090
+  server: 152.42.170.187
+  type: http
+- name: DE-Frankfurt Am Main-h-1071762-nuof
+  type: vless
+  server: ir2.cryptojakiro.com
+  port: 443
+  uuid: 8a1a991a-f206-447a-adaf-37a57c133418
+  tls: true
+  servername: ir2.cryptojakiro.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: ir2.cryptojakiro.com
+- name: RU-Moscow-2916613-noqr
+  type: http
+  server: 46.29.166.134
+  port: 1446
+  tls: true
+  skip-cert-verify: true
+- name: US-San Jose-82214-onnf
+  type: http
+  server: fan.365747.xyz
+  port: 443
+  username: bnVsbDpudWxs
+  tls: true
+  sni: fan.365747.xyz
+  skip-cert-verify: true
+- name: US-San Jose-82005715-nqro
+  type: http
+  server: 38.28.185.143
+  port: 443
+  tls: true
+  sni: 38.28.185.143
+  skip-cert-verify: true
+- name: HK-Tai Po-285532-nfin
+  type: http
+  server: 202.85.53.25
+  port: 443
+  tls: true
+  skip-cert-verify: true
+- name: US-San Jose-82005715-nzze
+  type: http
+  server: 38.28.185.207
+  port: 443
+  tls: true
+  sni: 38.28.185.207
+  skip-cert-verify: true
+- name: JP-Tokyo-1372379-nuza
+  type: http
+  server: fan.587475.xyz
+  port: 443
+  tls: true
+  skip-cert-verify: true
+- name: US-San Jose-82005715-nzor
   type: http
   server: fan.596189.xyz
   port: 443
-  username: 'null'
-  password: 'null'
   tls: true
   sni: fan.596189.xyz
   skip-cert-verify: true
-- name: BR-Vinhedo-465177-ufgp
+- name: HK-Tai Po-285532-nfzi
   type: http
-  server: 134.65.17.77
+  server: fan.240104.xyz
   port: 443
   tls: true
-  sni: 134.65.17.77
+  sni: fan.240104.xyz
   skip-cert-verify: true
-- name: IT-Milan-h-1741189-uvgg
-  type: ss
-  server: 202.50.253.99
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇰🇷 KR 66 | http
-  type: http
-  server: 64.110.88.200
-  port: 30000
-  skip-cert-verify: true
-  tls: true
-- name: ES-Madrid-243410-uiiu
-  type: http
-  server: 80.24.34.107
-  port: 8090
-  username: 'null'
-  password: 'null'
-  tls: true
-  sni: 80.24.34.107
-  skip-cert-verify: true
-- name: US-San Jose-82005715-ujsr
+- name: US-San Jose-82005715-nrio
   type: http
   server: 38.28.185.222
   port: 443
   tls: true
   sni: 38.28.185.222
   skip-cert-verify: true
-- name: NL-Amsterdam-514020923-upru
+- name: 🇨🇦 CA 111 | http
+  port: 443
+  server: 4.172.245.121
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- name: TH-Bangkok-h-42347013-nnzf
+  type: socks5
+  server: 104.234.70.136
+  port: 42000
+  username: rnt2L4XO
+  password: KT5hiU8o
+- name: BR-São Paulo-h-1712913-nnqz
+  type: socks5
+  server: 191.7.129.133
+  port: 62000
+  username: uwrgfkwg
+  password: 0mvrt5jb
+- name: 🇮🇹 IT 27 | 参考3.9M | ss
+  type: ss
+  server: 202.50.253.36
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  tfo: false
+  udp: true
+- name: US-Salina-h-2251021-nrri
+  type: http
+  server: 24.225.10.211
+  port: 443
+  tls: true
+  sni: 24.225.10.211
+  skip-cert-verify: true
+- name: KR-Chuncheon-26923022-nfrn
+  type: http
+  server: 152.69.230.221
+  port: 443
+  tls: true
+  skip-cert-verify: true
+- name: HK-Hong Kong-h-2432251-nueq
+  type: socks5
+  server: 47.243.225.10
+  port: 8888
+  username: '123'
+  password: '123'
+- name: 自建·香港-02
+  type: vless
+  server: 39.109.57.230
+  port: 8443
+  uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
+  udp: false
+  tls: true
+  servername: h1.1free.us.ci
+  network: ws
+  ws-opts:
+    path: /3b8d5443f5bce520
+    headers:
+      Host: h1.1free.us.ci
+  client-fingerprint: chrome
+- name: US-San Francisco-224314624-nzoe
+  type: http
+  server: 162.243.146.243
+  port: 443
+  username: testuser1
+  password: e4b72b531a2d10900519
+  tls: true
+  sni: a2f392f3.acsnet.co
+  skip-cert-verify: true
+- name: US-Santa Clara-h-23020015-nneq
+  type: socks5
+  server: 23.230.200.157
+  port: 62000
+  username: uw2u8ysi
+  password: uclirp9v
+- name: US-San Jose-82005715-nrze
+  type: http
+  server: 38.28.185.224
+  port: 443
+  tls: true
+  sni: 38.28.185.224
+  skip-cert-verify: true
+- name: DE-Falkenstein-62021729-naio
+  type: http
+  server: 116.202.172.99
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  skip-cert-verify: true
+- name: MX-Mexico City-h-42254716-nona
+  type: socks5
+  server: 144.225.47.161
+  port: 42000
+  username: Tek2x6av
+  password: DJy1T0dt
+- name: DE-Berlin-10622315-nune
+  type: http
+  server: 87.106.223.158
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  sni: 87.106.223.158
+  skip-cert-verify: true
+- name: DE-Falkenstein-62021729-nuna
+  type: http
+  server: 116.202.172.99
+  port: 443
+  tls: true
+  sni: 116.202.172.99
+  skip-cert-verify: true
+- name: US-Hilton Head Island-7530-nzfa
+  type: http
+  server: 207.5.30.9
+  port: 443
+  tls: true
+  sni: 207.5.30.9
+  skip-cert-verify: true
+- name: 🇺🇸 US 1043 | 参考4.4M | http
+  type: http
+  server: 129.153.93.183
+  port: 443
+  username: 'null'
+  password: 'null'
+  skip-cert-verify: true
+  tls: true
+  sni: 129.153.93.183
+- name: FR-Saint-Denis-6623522-nuaz
+  type: http
+  server: 82.66.235.221
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  skip-cert-verify: true
+- name: SG-Singapore-23616824-noif
+  type: socks5
+  server: 47.236.168.243
+  port: 1080
+  username: '8888'
+  password: '8888'
+- name: 🇺🇸 US 1050 | 参考5.4M | http
+  server: 23.133.176.14
+  port: 443
+  type: http
+  password: None
+  tls: true
+  skip-cert-verify: true
+- name: 🇨🇿 CZ 17 | http (2)
+  type: http
+  server: 193.35.104.196
+  port: 443
+  username: ''
+  password: ''
+  tls: true
+  skip-cert-verify: true
+- name: US-New York-91485315-nafu
+  type: http
+  server: 209.148.53.153
+  port: 8090
+  tls: true
+  sni: 209.148.53.153
+  skip-cert-verify: true
+- name: 🇫🇷 FR 141 | 参考4.5M | http
+  type: http
+  server: 87.98.174.157
+  port: 6103
+  username: 'null'
+  password: 'null'
+  tls: true
+  skip-cert-verify: true
+- name: 🇫🇷 FR 142 | http
+  server: 31.32.19.111
+  port: 8081
+  type: http
+  password: None
+  tls: true
+  skip-cert-verify: true
+- name: US-Las Vegas-791887-nriz
+  type: http
+  server: 107.91.88.70
+  port: 8443
+  tls: true
+  skip-cert-verify: true
+- name: 🇩🇪 DE 272 | http
+  server: 87.106.223.158
+  port: 443
+  type: http
+  password: None
+  tls: true
+  skip-cert-verify: true
+- name: 🇳🇱 NL 320 | 参考5.8M | http
+  port: 19362
+  server: 51.159.225.197
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+- name: 自建·香港-03
+  type: vless
+  server: 23.106.143.50
+  port: 8443
+  uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
+  udp: false
+  tls: true
+  servername: h1.1free.us.ci
+  network: ws
+  ws-opts:
+    path: /3b8d5443f5bce520
+    headers:
+      Host: h1.1free.us.ci
+  client-fingerprint: chrome
+- name: 🇳🇱 NL 331 | 参考3.9M | http
+  type: http
+  server: 185.246.153.28
+  port: 443
+  skip-cert-verify: true
+  tls: true
+  sni: 4a8c2906c96058315dffbc2b0e7ff19b-0c66a58858a795df.apache-iv.com
+- name: NL-Alkmaar-7311-neai
+  type: http
+  server: 5.2.73.112
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  skip-cert-verify: true
+- name: 自建·加拿大-03
+  type: vless
+  server: 192.204.33.19
+  port: 443
+  uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
+  udp: false
+  tls: true
+  servername: us1.1am.cc.cd
+  network: ws
+  ws-opts:
+    path: /492fbb0e1ab5996d
+    headers:
+      Host: us1.1am.cc.cd
+  client-fingerprint: chrome
+- name: US-Chicago-21918711-nqin
+  type: http
+  server: 162.191.87.112
+  port: 8443
+  tls: true
+  skip-cert-verify: true
+- name: MX-Mexico City-h-572283-nofr
+  type: socks5
+  server: 72.57.228.30
+  port: 62000
+  username: UBXich0K
+  password: VvUAFi2E
+- name: 🇱🇹 LT 22 | 参考4.1M | http
+  server: 89.124.11.9
+  port: 443
+  type: http
+  tls: true
+  sni: 89.124.11.9
+  skip-cert-verify: true
+- name: FR-Angers-1241092-nnoe
+  type: http
+  server: 80.124.109.22
+  port: 8090
+  tls: true
+  skip-cert-verify: true
+- name: US-Santa Clara-h-23020015-nner
+  type: socks5
+  server: 23.230.200.158
+  port: 62000
+  username: ubmsqdwy
+  password: 3nd2p008
+- name: LV-Riga-52191591-noei
+  type: http
+  server: 185.219.159.16
+  port: 443
+  tls: true
+  skip-cert-verify: true
+- name: LV-Riga-52191591-nenn
+  type: http
+  server: 185.219.159.16
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  sni: 185.219.159.16
+  skip-cert-verify: true
+- name: NL-Amsterdam-150359-neoi
+  type: http
+  server: 89.150.35.94
+  port: 443
+  tls: true
+  sni: 89.150.35.94
+  skip-cert-verify: true
+- name: MX-Mexico City-h-19416420-nofa
+  type: socks5
+  server: 94.194.164.203
+  port: 62000
+  username: rVkkraqT
+  password: 2j7CCZQb
+- name: US-Sabetha-22442273-nffe
+  type: http
+  server: 162.244.227.36
+  port: 443
+  tls: true
+  skip-cert-verify: true
+- name: NL-Haarlem-15922519-neef
+  type: http
+  server: 51.159.225.196
+  port: 23856
+  username: 'null'
+  password: 'null'
+  tls: true
+  sni: 51.159.225.196
+  skip-cert-verify: true
+- name: US-Columbia-14222917-nrfa
+  type: http
+  server: 24.142.229.178
+  port: 8090
+  username: 'null'
+  password: 'null'
+  tls: true
+  sni: 24.142.229.178
+  skip-cert-verify: true
+- name: DE-Frankfurt am Main-717217219-nazr
+  type: http
+  server: 167.172.172.190
+  port: 443
+  username: testuser1
+  password: e4b72b531a2d10900519
+  tls: true
+  sni: a7acacbe.acsnet.co
+  skip-cert-verify: true
+- name: LV-Riga-52191591-nuir
+  type: http
+  server: 185.219.159.15
+  port: 443
+  tls: true
+  sni: 185.219.159.15
+  skip-cert-verify: true
+- name: 🇫🇷 FR 139 | http
+  type: http
+  server: 103.82.101.44
+  port: 443
+  username: ''
+  password: ''
+  tls: true
+  sni: f3a61d8406d537345747f99f8a281007-3f754ed5da1bba09.apache-iv.com
+  skip-cert-verify: true
+- name: US-Boardman-19017622-naoz
+  type: http
+  server: 54.190.176.228
+  port: 8443
+  username: 'null'
+  password: 'null'
+  tls: true
+  sni: 54.190.176.228
+  skip-cert-verify: true
+- name: US-Miami-71512382-nriu
+  type: http
+  server: 107.151.238.27
+  port: 443
+  username: testuser1
+  password: e4b72b531a2d10900519
+  tls: true
+  sni: 6b97ee1b.acsnet.co
+- name: 🇮🇩 ID 07 | 参考25.4M | http
+  server: 103.86.116.118
+  port: 443
+  type: http
+  tls: true
+  sni: 103.86.116.118
+  skip-cert-verify: true
+- name: TH-Bangkok-h-471533-nnzi
+  type: socks5
+  server: 82.47.153.33
+  port: 42000
+  username: userZIsE
+  password: KsLwF8uu
+- name: TH-Bangkok-h-817015-noaa
+  type: socks5
+  server: 87.81.70.159
+  port: 42000
+  username: user2523
+  password: Ksnervw2
+- name: NL-Amsterdam-150359-nfzz
+  type: http
+  server: 89.150.35.94
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  skip-cert-verify: true
+- name: 🇷🇺 RU 89 | 参考4.0M | http
+  type: http
+  server: 87.242.85.187
+  port: 8443
+  username: 'null'
+  password: 'null'
+  skip-cert-verify: true
+  tls: true
+- name: NL-Alkmaar-7311-neni
+  type: http
+  server: 5.2.73.112
+  port: 443
+  tls: true
+  sni: 5.2.73.112
+  skip-cert-verify: true
+- name: RU-Moscow-82194322-nqur
+  type: http
+  server: 178.219.43.226
+  port: 443
+  tls: true
+  sni: 178.219.43.226
+  skip-cert-verify: true
+- name: DE-Frankfurt am Main-0171323-oone
+  type: http
+  server: 130.17.13.234
+  port: 8443
+  tls: true
+  skip-cert-verify: true
+- name: US-Ashburn-h-2084922-nraf
+  type: http
+  server: 44.217.145.28
+  port: 8443
+  username: 'null'
+  password: 'null'
+  tls: true
+  sni: 44.217.145.28
+  skip-cert-verify: true
+- name: NL-Haarlem-1582439-neuu
+  type: http
+  server: 51.158.243.91
+  port: 443
+  tls: true
+  sni: 51.158.243.91
+  skip-cert-verify: true
+- name: US-San Jose-82005715-nrfn
+  type: http
+  server: 38.28.185.152
+  port: 443
+  tls: true
+  skip-cert-verify: true
+- name: US-McLean-4188139-niqn
+  type: http
+  server: 184.188.139.2
+  port: 8090
+  username: 'null'
+  password: 'null'
+  tls: true
+  skip-cert-verify: true
+- name: 🇳🇱 NL 336 | 参考4.1M | http
+  type: http
+  server: 82.196.9.7
+  port: 443
+  username: testuser1
+  password: e4b72b531a2d10900519
+  tls: true
+  sni: 82.196.9.7
+  skip-cert-verify: true
+- name: BR-Vinhedo-465177-naqe
+  type: http
+  server: 134.65.17.77
+  port: 443
+  tls: true
+  skip-cert-verify: true
+- name: US-Chicago-219123519-nrnf
+  type: http
+  server: 162.191.235.197
+  port: 8443
+  tls: true
+  skip-cert-verify: true
+- name: FR-Marseille-23522815-nfnn
+  type: http
+  server: 84.235.228.156
+  port: 443
+  tls: true
+  skip-cert-verify: true
+- name: TH-Bangkok-h-96613619-nnzo
+  type: socks5
+  server: 109.66.136.194
+  port: 62000
+  username: r3ZzP8WW
+  password: zdnivBaI
+- name: 🇮🇹 IT 28 | ss
+  type: ss
+  server: 202.50.253.81
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  tfo: false
+  udp: true
+- name: HK-Tai Po-285532-nauz
+  type: http
+  server: fan.240104.xyz
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+- name: TH-Bangkok-h-42347012-nnzu
+  type: socks5
+  server: 104.234.70.121
+  port: 42000
+  username: rnt2L4XO
+  password: KT5hiU8o
+- name: DE-Frankfurt am Main-203352-naun
+  type: http
+  server: 37.203.35.27
+  port: 443
+  tls: true
+  skip-cert-verify: true
+- name: GB-Slough-618911821-nuuf
+  type: http
+  server: 206.189.118.214
+  port: 443
+  username: testuser1
+  password: e4b72b531a2d10900519
+  tls: true
+  sni: cebd76d6.acsnet.co
+- name: 🇮🇱 IL 03 | 参考2.6M | http
+  type: http
+  server: 62.90.77.30
+  port: 443
+  skip-cert-verify: true
+  tls: true
+  sni: 62.90.77.30
+- name: MX-Mexico City-h-42254710-noun
+  type: socks5
+  server: 144.225.47.106
+  port: 42000
+  username: DJy1T0dt
+  password: sZnD8GTz
+- name: US-Boardman-24816711-noqn
+  type: http
+  server: 44.248.167.117
+  port: 8443
+  tls: true
+  skip-cert-verify: true
+- name: DE-Wuppertal-694742-norq
+  type: http
+  server: 176.94.74.21
+  port: 443
+  tls: true
+  skip-cert-verify: true
+- name: US-Reston-h-1601411-nzei
+  type: vless
+  server: 199.232.78.120
+  port: 443
+  uuid: 8d2cbffd-43d0-458d-906b-7c54b7b51f38
+  tls: true
+  servername: cdn.akamai.steamstatic.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: ushetzijji.global.ssl.fastly.net.
+- name: SG-Singapore-h-9389-nqeo
+  type: vless
+  server: zfapi.zalolink.com
+  port: 30322
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  flow: xtls-rprx-vision
+  tls: true
+  servername: psstatic.cdn.bcebos.com
+  client-fingerprint: ios
+  reality-opts:
+    public-key: 5gncThwqPFzLu23WO3mPTEhG7-KgVYlGVvveHjM2SUo
+    short-id: 6a60e7e382d6
+- name: 🇺🇸 US 1049 | 参考3.1M | http
+  type: http
+  server: 96.5.129.85
+  port: 443
+  username: ''
+  password: ''
+  tls: true
+  sni: 96.5.129.85
+  skip-cert-verify: true
+- name: NL-Amsterdam-514020923-neui
   type: http
   server: 185.140.209.235
   port: 443
@@ -765,295 +1045,66 @@ proxies:
   tls: true
   sni: 185.140.209.235
   skip-cert-verify: true
-- name: ID-Lenteng-38611611-urbg
-  type: http
-  server: 103.86.116.118
-  port: 443
-  tls: true
-  skip-cert-verify: true
-- name: BR-São Paulo-h-1712918-uugb
-  type: socks5
-  server: 191.7.129.186
-  port: 62000
-  username: uf3on6k8
-  password: anlxq4mb
-- name: IL-Tel Aviv-h-90771-uuui
-  type: http
-  server: 62.90.77.30
-  port: 443
-  tls: true
-  skip-cert-verify: true
-- name: TH-Ban Khok-h-12461087-uubj
-  type: socks5
-  server: 151.246.108.70
-  port: 42000
-  username: h87527jJ
-  password: fAgE2jqK
-- name: TH-Bang Kapi-h-11431422-uubs
-  type: socks5
-  server: 131.143.142.21
-  port: 62000
-  username: uhugtm4f
-  password: oogf0v53
-- name: TH-Ratchathewi-h-31321318-uvgi
-  type: socks5
-  server: 103.13.213.185
-  port: 42000
-  username: usercd7b
-  password: 7b2958
-- name: TH-Bangkok-h-96613517-uujj
-  type: socks5
-  server: 109.66.135.179
-  port: 62000
-  username: BKE6uict
-  password: iPCfwOuw
-- name: IT-Milan-1741186-uvgp
-  type: ss
-  server: 202.50.253.72
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: TH-Bangkok-h-96613619-uurv
-  type: socks5
-  server: 109.66.136.194
-  port: 62000
-  username: r3ZzP8WW
-  password: zdnivBaI
-- name: DE-Frankfurt am Main-54410716-ufsb
-  type: http
-  server: 185.44.107.166
-  port: 443
-  tls: true
-  skip-cert-verify: true
-- name: US-San Jose-82214-ubfv
-  type: http
-  server: 137.175.22.52
-  port: 443
-  tls: true
-  skip-cert-verify: true
-- name: TH-Bangkok-h-96613624-uvib
-  type: socks5
-  server: 109.66.136.242
-  port: 62000
-  username: r3ZzP8WW
-  password: zdnivBaI
-- name: TH-Ban Khok-h-12461089-uvpr
-  type: socks5
-  server: 151.246.108.99
-  port: 42000
-  username: h87527jJ
-  password: fAgE2jqK
-- name: US-San Jose-82214-ubiu
-  type: http
-  server: 137.175.22.16
-  port: 443
-  tls: true
-  skip-cert-verify: true
-- name: 🇸🇬 SG 191 | 参考30.8M | http
-  type: http
-  server: 66.42.49.247
-  port: 8443
-  skip-cert-verify: true
-  tls: true
-- name: PL-Warsaw-11155413-upbs
-  type: http
-  server: 151.115.54.133
-  port: 443
-  username: 'null'
-  password: 'null'
-  tls: true
-  skip-cert-verify: true
-- name: US-San Jose-82214-ufus
-  type: http
-  server: 137.175.22.40
-  port: 443
-  tls: true
-  skip-cert-verify: true
-- name: JP-Tsukuba-324815023-uvui
-  type: socks5
-  server: 103.248.150.238
-  port: 42000
-  username: tB4vN7qP
-  password: J5rM2xL9
-- name: MX-Mexico City-h-19416513-uurs
-  type: socks5
-  server: 94.194.165.131
-  port: 62000
-  username: QyVdo5ks
-  password: lcFa8dTH
-- name: TH-Bangkok-h-81718-uvfj
-  type: socks5
-  server: 87.81.71.89
-  port: 42000
-  username: user9353
-  password: KsIJdV2U
-- name: MX-Mexico City-h-1941659-uujg
-  type: socks5
-  server: 94.194.165.96
-  port: 62000
-  username: QyVdo5ks
-  password: lcFa8dTH
-- name: MX-Mexico City-h-572288-uvvg
-  type: socks5
-  server: 72.57.228.87
-  port: 62000
-  username: UBXich0K
-  password: VvUAFi2E
-- name: SG-Singapore-33510711-usup
-  type: http
-  server: 213.35.107.110
-  port: 443
-  tls: true
-  skip-cert-verify: true
-- name: MX-Mexico City-h-4225478-uusr
-  type: socks5
-  server: 144.225.47.82
-  port: 42000
-  username: Tek2x6av
-  password: DJy1T0dt
-- name: MX-Mexico City-h-4225472-uvfv
-  type: socks5
-  server: 144.225.47.25
-  port: 42000
-  username: DJy1T0dt
-  password: sZnD8GTz
-- name: US-Seattle-1457212-usgv
-  type: http
-  server: 45.150.164.18
-  port: 8443
-  tls: true
-  skip-cert-verify: true
-- name: US-Columbia-3424910-uruu
-  type: http
-  server: 173.42.49.102
-  port: 8090
-  username: 'null'
-  password: 'null'
-  tls: true
-  skip-cert-verify: true
-- name: US-Seattle-1457212-ujij
-  type: http
-  server: 45.145.72.122
-  port: 8443
-  tls: true
-  skip-cert-verify: true
-- name: 🇯🇵 JP 199 | 参考6.2M | http
-  server: 133.18.200.207
-  port: 343
-  type: http
-  password: None
-  tls: true
-  skip-cert-verify: true
-- name: US-San Jose-82214-ujsg
-  type: http
-  server: 137.175.22.89
-  port: 443
-  tls: true
-  sni: 137.175.22.89
-  skip-cert-verify: true
-- name: US-San Jose-82214-ujii
-  type: http
-  server: 137.175.22.85
-  port: 443
-  tls: true
-  sni: 137.175.22.85
-  skip-cert-verify: true
-- name: IN-Mumbai-017318822-ufug
-  type: http
-  server: 110.173.188.221
-  port: 443
-  tls: true
-  skip-cert-verify: true
-- name: TH-Bangkok-h-8323622-uubf
+- name: TH-Bangkok-h-8323622-nnin
   type: socks5
   server: 87.83.236.228
   port: 62000
   username: ks8783236c597
   password: -D3s0GRfhYcd9Z4vaBy04ina
-- name: IT-Rome-229158-uibr
+- name: NL-Haarlem-1582439-neof
   type: http
-  server: 95.229.15.89
+  server: 51.158.243.91
+  port: 443
+  username: 'null'
+  password: None
+  tls: true
+  sni: 51.158.243.91
+  skip-cert-verify: true
+- name: US-San Jose-82005715-nrae
+  type: http
+  server: 38.28.185.166
   port: 443
   tls: true
-  sni: 95.229.15.89
   skip-cert-verify: true
-- name: US-San Jose-82214-ujpg
-  type: http
-  server: 137.175.22.88
-  port: 443
-  tls: true
-  sni: 137.175.22.88
-  skip-cert-verify: true
-- name: US-San Jose-82214-usvr
-  type: http
-  server: 137.175.22.96
-  port: 443
-  tls: true
-  sni: 137.175.22.96
-  skip-cert-verify: true
-- name: US-San Jose-82214-usjs
-  type: http
-  server: fan.365747.xyz
-  port: 443
-  tls: true
-  sni: fan.365747.xyz
-  skip-cert-verify: true
-- name: TH-Bangkok-h-42347013-uurf
+- name: MX-Mexico City-h-422547-nooo
   type: socks5
-  server: 104.234.70.136
+  server: 144.225.47.8
   port: 42000
-  username: rnt2L4XO
-  password: KT5hiU8o
-- name: US-San Jose-82214-uvjs
+  username: Tek2x6av
+  password: DJy1T0dt
+- name: ID-Lenteng-38611611-nuqu
   type: http
-  server: 137.175.22.29
+  server: 103.86.117.202
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  skip-cert-verify: true
+- name: US-San Jose-82005715-nrfz
+  type: http
+  server: 137.175.77.35
   port: 443
   tls: true
   skip-cert-verify: true
-- name: US-Seattle-1457324-usjr
+- name: 🇮🇪 IE 11 | 参考3.8M | http
   type: http
-  server: 45.145.73.240
-  port: 8443
-  tls: true
-  sni: 45.145.73.240
+  server: 18.200.158.139
+  port: 443
+  username: 'null'
+  password: 'null'
   skip-cert-verify: true
-- name: HK-Hong Kong-h-2421921-uufi
+  tls: true
+  sni: 18.200.158.139
+- name: US-Seattle-41682158-niei
   type: socks5
-  server: 47.242.19.215
-  port: 8899
-  username: admin
-  password: admin
-- name: SG-Singapore-h-938919-uvbf
-  type: vless
-  server: zfapi.zalolink.com
-  port: 46957
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  flow: xtls-rprx-vision
-  tls: true
-  servername: psstatic.cdn.bcebos.com
-  client-fingerprint: safari
-  reality-opts:
-    public-key: 1SefqLQXrqkiUdf7cTMF53hrMZyo684_uneRC8-qTxI
-    short-id: 8f6683a234d3
-- name: US-San Jose-82214-uvjb
+  server: 104.168.249.36
+  port: 1080
+  username: test123
+  password: test123
+- name: FR-La Bazoge-15995-nuaf
   type: http
-  server: 137.175.22.45
-  port: 443
+  server: 80.15.99.54
+  port: 8090
   tls: true
+  sni: 80.15.99.54
   skip-cert-verify: true
-- name: SG-Singapore-424814824-usuu
-  type: http
-  server: 104.248.148.240
-  port: 443
-  username: testuser1
-  password: e4b72b531a2d10900519
-  tls: true
-  sni: us.acskey.co
-- name: JP-Shibuya City-h-31227424-upvg
-  type: http
-  server: jpgmo102-cdn-route.couldflare-cdn.com
-  port: 443
-  username: mrwdfNTD8M79LCukCieldrqZWqs=
-  password: exaxgqkKkd0TAMrCxeonWg==
-  tls: true
-  sni: jpgmo102-cdn-route.couldflare-cdn.com
