@@ -1,0 +1,689 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+ipv6: false
+proxies:
+- name: 🇺🇸 US 1053 | 参考3.8M | http
+  type: http
+  server: 129.153.93.183
+  port: 443
+  username: 'null'
+  password: 'null'
+  skip-cert-verify: true
+  tls: true
+  sni: 129.153.93.183
+- name: US-Los Angeles-28193-rhnh
+  type: http
+  server: 38.28.193.188
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  skip-cert-verify: true
+- name: US-San Jose-82005715-rqur
+  type: http
+  server: 38.28.185.143
+  port: 443
+  tls: true
+  sni: 38.28.185.143
+  skip-cert-verify: true
+- name: US-Los Angeles-28193-rtsa
+  type: http
+  server: 38.28.193.188
+  port: 443
+  tls: true
+  sni: 38.28.193.188
+  skip-cert-verify: true
+- name: US-San Jose-82214-rnqs
+  type: http
+  server: fan.365747.xyz
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  sni: fan.365747.xyz
+  skip-cert-verify: true
+- name: US-San Jose-82005715-rqtn
+  type: http
+  server: 38.28.185.205
+  port: 443
+  tls: true
+  sni: 38.28.185.205
+  skip-cert-verify: true
+- name: US-Los Angeles-28193-rhea
+  type: http
+  server: fan.226278.xyz
+  port: 443
+  tls: true
+  sni: fan.226278.xyz
+- name: US-San Jose-82214-rhqq
+  type: http
+  server: 137.175.22.98
+  port: 443
+  tls: true
+  skip-cert-verify: true
+- name: 🇺🇸 US 586 | 1.5M | http
+  password: gs4BXwT6SW
+  port: 10988
+  server: 154.26.192.123
+  tls: false
+  type: http
+  username: fQ67Dpe5dU
+- name: US-San Jose-82005715-rthh
+  type: http
+  server: 38.28.185.178
+  port: 443
+  tls: true
+  skip-cert-verify: true
+- name: US-San Jose-82005715-rnse
+  type: http
+  server: 38.28.185.222
+  port: 443
+  tls: true
+  skip-cert-verify: true
+- name: US-San Jose-82214-rnnq
+  type: http
+  server: 137.175.22.89
+  port: 443
+  tls: true
+  sni: 137.175.22.89
+  skip-cert-verify: true
+- name: US-San Jose-82005715-rqna
+  type: http
+  server: fan.596189.xyz
+  port: 443
+  tls: true
+  skip-cert-verify: true
+- name: IE-Dublin-7611712-rsaq
+  type: http
+  server: 34.249.214.108
+  port: 443
+  tls: true
+  sni: 34.249.214.108
+  skip-cert-verify: true
+- name: US-San Jose-82005715-rnua
+  type: http
+  server: fan.596189.xyz
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  sni: fan.596189.xyz
+  skip-cert-verify: true
+- name: IT-Milan-h-17411815-rteu
+  type: ss
+  server: 202.50.253.36
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: US-San Jose-82005715-rnqu
+  type: http
+  server: 38.28.185.207
+  port: 443
+  tls: true
+  skip-cert-verify: true
+- name: HK-Tai Po-285532-rshz
+  type: http
+  server: 151.242.183.28
+  port: 443
+  tls: true
+  sni: 151.242.183.28
+  skip-cert-verify: true
+- name: US-San Jose-82214-rqnz
+  type: http
+  server: 137.175.22.88
+  port: 443
+  tls: true
+  skip-cert-verify: true
+- name: DE-Frankfurt am Main-h-91621534-rerz
+  type: vless
+  server: www.visa.com.hk
+  port: 443
+  uuid: 12d32e9b-d41f-4677-aa51-83e21d2837f2
+  tls: true
+  servername: eu-central.862400.xyz
+  skip-cert-verify: true
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /announcement
+    headers:
+      Host: eu-central.862400.xyz
+- name: US-Sabetha-22442273-rhzh
+  type: http
+  server: 162.244.227.36
+  port: 443
+  tls: true
+  skip-cert-verify: true
+- name: 🇺🇸 US 1058 | 参考3.9M | http
+  server: 23.133.176.14
+  port: 443
+  type: http
+  password: None
+  tls: true
+  skip-cert-verify: true
+- name: US-San Jose-82214-rnst
+  type: http
+  server: 137.175.22.85
+  port: 443
+  tls: true
+  sni: 137.175.22.85
+  skip-cert-verify: true
+- name: US-San Jose-82214-rnut
+  type: http
+  server: 137.175.22.72
+  port: 443
+  tls: true
+  sni: 137.175.22.72
+  skip-cert-verify: true
+- name: IT-Milan-h-1741183-rzsr
+  type: ss
+  server: 202.50.253.45
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 自建·香港-01
+  type: vless
+  server: 154.19.186.229
+  port: 8443
+  uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
+  udp: false
+  tls: true
+  servername: h1.1free.us.ci
+  network: ws
+  ws-opts:
+    path: /3b8d5443f5bce520
+    headers:
+      Host: h1.1free.us.ci
+  client-fingerprint: chrome
+- name: 自建·加拿大-05
+  type: vless
+  server: 140.82.49.187
+  port: 443
+  uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
+  udp: false
+  tls: true
+  servername: us1.1am.cc.cd
+  network: ws
+  ws-opts:
+    path: /492fbb0e1ab5996d
+    headers:
+      Host: us1.1am.cc.cd
+  client-fingerprint: chrome
+- name: 🇮🇹 IT 31 | ss
+  type: ss
+  server: 202.50.253.81
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  tfo: false
+  udp: true
+- name: TH-Huai Khwang-h-31416412-rzhs
+  type: socks5
+  server: 103.14.164.126
+  port: 42000
+  username: route164JIa2CBPxfy
+  password: VAwyJQX0iKMJiyCw5UVK9wGH
+- name: DE-Falkenstein-62021729-rans
+  type: http
+  server: 116.202.172.99
+  port: 443
+  tls: true
+  sni: 116.202.172.99
+  skip-cert-verify: true
+- name: CA-Beauharnois-h-24421012-rasz
+  type: http
+  server: 142.44.210.129
+  port: 443
+  tls: true
+  sni: 142.44.210.129
+  skip-cert-verify: true
+- name: NL-Amsterdam-150359-rrzh
+  type: http
+  server: 89.150.35.94
+  port: 443
+  tls: true
+  skip-cert-verify: true
+- name: 🇻🇳 VN 18 | 参考18.1M | http
+  server: 14.225.19.28
+  port: 8443
+  type: http
+  tls: true
+  sni: 14.225.19.28
+  skip-cert-verify: true
+- name: MX-Mexico City-h-1941665-rreu
+  type: socks5
+  server: 94.194.166.52
+  port: 42000
+  username: userLRgK
+  password: KsPAxZGn
+- name: HK-Hong Kong-9282423-rsze
+  type: http
+  server: 119.28.24.235
+  port: 3128
+  tls: true
+  sni: 119.28.24.235
+  skip-cert-verify: true
+- name: HK-Hong Kong-2431818-rshu
+  type: http
+  server: 47.243.181.85
+  port: 28085
+  tls: true
+  skip-cert-verify: true
+- name: DE-Frankfurt am Main-203352-raqe
+  type: http
+  server: 37.203.35.27
+  port: 443
+  tls: true
+  sni: 37.203.35.27
+  skip-cert-verify: true
+- name: FR-Saint-Denis-6623522-rztu
+  type: http
+  server: 82.66.235.221
+  port: 443
+  tls: true
+  skip-cert-verify: true
+- name: US-Santa Clara-h-23020024-rrse
+  type: socks5
+  server: 23.230.200.249
+  port: 62000
+  username: kingstar123
+  password: kingstar123++
+- name: HK-Tai Po-285532-rszu
+  type: http
+  server: fan.240104.xyz
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  skip-cert-verify: true
+- name: US-Dallas-1331761-rzua
+  type: http
+  server: 23.133.176.14
+  port: 443
+  tls: true
+  skip-cert-verify: true
+- name: US-Seattle-1457212-rqtz
+  type: http
+  server: 45.145.72.122
+  port: 8443
+  tls: true
+  sni: 45.145.72.122
+  skip-cert-verify: true
+- name: DE-Berlin-10622315-ranq
+  type: http
+  server: 87.106.223.158
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  sni: 87.106.223.158
+  skip-cert-verify: true
+- name: TH-Bangkok-h-8323622-rrth
+  type: socks5
+  server: 87.83.236.228
+  port: 62000
+  username: ks8783236c597
+  password: -D3s0GRfhYcd9Z4vaBy04ina
+- name: 🇫🇷 FR 136 | 参考2.0M | http
+  server: 31.32.19.111
+  port: 8081
+  type: http
+  password: None
+  tls: true
+  skip-cert-verify: true
+- name: 🇩🇪 DE 278 | 参考4.1M | http
+  server: 87.106.223.158
+  port: 443
+  type: http
+  password: None
+  tls: true
+  skip-cert-verify: true
+- name: US-San Jose-82214-rnuz
+  type: http
+  server: 137.175.22.40
+  port: 443
+  tls: true
+  sni: 137.175.22.40
+  skip-cert-verify: true
+- name: IT-Milan-1741186-rzau
+  type: ss
+  server: 202.50.253.72
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: US-Ashburn-h-2084922-rzuu
+  type: http
+  server: 44.217.145.28
+  port: 8443
+  tls: true
+  skip-cert-verify: true
+- name: IE-Dublin-20320422-rsae
+  type: http
+  server: 18.200.158.139
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  sni: 18.200.158.139
+  skip-cert-verify: true
+- name: US-Boardman-24816711-rzur
+  type: http
+  server: 44.248.167.117
+  port: 8443
+  tls: true
+  skip-cert-verify: true
+- name: 🇺🇸 US 1073 | 参考2.0M | http
+  type: http
+  server: 71.43.26.234
+  port: 443
+  tls: true
+  sni: 71.43.26.234
+  skip-cert-verify: true
+- name: VN-Hanoi-2257112-rtse
+  type: http
+  server: 14.225.71.128
+  port: 443
+  tls: true
+  sni: 14.225.71.128
+  skip-cert-verify: true
+- name: US-Ashburn-61321142-rrnt
+  type: socks5
+  server: 216.132.114.27
+  port: 62000
+  username: JzufiJ62
+  password: 75bPoRcB
+- name: US-McLean-4188139-reen
+  type: http
+  server: 184.188.139.2
+  port: 8090
+  username: 'null'
+  password: 'null'
+  tls: true
+  skip-cert-verify: true
+- name: US-Columbia-14222917-rraq
+  type: http
+  server: 24.142.229.178
+  port: 8090
+  tls: true
+  skip-cert-verify: true
+- name: 🇳🇱 NL 324 | 参考5.6M | http
+  port: 19362
+  server: 51.159.225.197
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+- name: JP-Tokyo-h-21051972-rtne
+  type: vless
+  server: 172.105.197.24
+  port: 443
+  uuid: 81f4e114-5a60-41b5-9038-8d742380c84f
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+  reality-opts:
+    public-key: EfNOl6-YAuW-WSg7Op-1YOqKZV9emIuLwH8YPhzc7ms
+    short-id: 772bef67
+- name: 🇫🇷 FR 138 | http
+  server: 84.235.228.156
+  port: 443
+  type: http
+  tls: true
+  sni: 84.235.228.156
+  skip-cert-verify: true
+- name: 🇺🇸 US 1069 | 参考4.1M | http
+  type: http
+  server: 54.190.176.228
+  port: 8443
+  username: 'null'
+  password: 'null'
+  tls: true
+  skip-cert-verify: true
+- name: TH-Bangkok-h-4715217-rzhe
+  type: socks5
+  server: 82.47.152.174
+  port: 42000
+  username: userLjVB
+  password: Ks4Iab43
+- name: 🇰🇷 KR 51 | http
+  type: http
+  server: 64.110.88.200
+  port: 30000
+  skip-cert-verify: true
+  tls: true
+- name: US-Ashburn-h-2084922-rqqu
+  type: http
+  server: 18.206.28.143
+  port: 8443
+  username: 'null'
+  password: 'null'
+  tls: true
+  skip-cert-verify: true
+- name: US-Boardman-19017622-rqnn
+  type: http
+  server: 54.190.176.228
+  port: 8443
+  tls: true
+  sni: 54.190.176.228
+  skip-cert-verify: true
+- name: US-Ashburn-h-2084922-rhzs
+  type: http
+  server: 18.206.28.143
+  port: 8443
+  tls: true
+  skip-cert-verify: true
+- name: US-Boardman-24816711-rqqa
+  type: http
+  server: 44.248.167.117
+  port: 8443
+  username: 'null'
+  password: 'null'
+  tls: true
+  sni: 44.248.167.117
+  skip-cert-verify: true
+- name: TH-Bangkok-h-4234708-rzru
+  type: socks5
+  server: 104.234.70.82
+  port: 42000
+  username: rnt2L4XO
+  password: KT5hiU8o
+- name: JP-Tokyo-h-11814521-zzhu
+  type: http
+  server: 120.232.204.58
+  port: 40583
+  username: 'null'
+  password: 'null'
+  tls: true
+  sni: 120.232.204.58
+  skip-cert-verify: true
+- name: 自建·加拿大-03
+  type: vless
+  server: 192.204.33.19
+  port: 443
+  uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
+  udp: false
+  tls: true
+  servername: us1.1am.cc.cd
+  network: ws
+  ws-opts:
+    path: /492fbb0e1ab5996d
+    headers:
+      Host: us1.1am.cc.cd
+  client-fingerprint: chrome
+- name: DediRock-LA
+  type: ss
+  server: 107.172.186.223
+  port: 19443
+  cipher: chacha20-ietf-poly1305
+  password: f163442cc351131b8b63ade346274652
+  udp: true
+  dialer-proxy: 前置总控
+proxy-groups:
+- name: 前置
+  type: select
+  proxies: &id001
+  - 🇺🇸 US 1053 | 参考3.8M | http
+  - US-Los Angeles-28193-rhnh
+  - US-San Jose-82005715-rqur
+  - US-Los Angeles-28193-rtsa
+  - US-San Jose-82214-rnqs
+  - US-San Jose-82005715-rqtn
+  - US-Los Angeles-28193-rhea
+  - US-San Jose-82214-rhqq
+  - 🇺🇸 US 586 | 1.5M | http
+  - US-San Jose-82005715-rthh
+  - US-San Jose-82005715-rnse
+  - US-San Jose-82214-rnnq
+  - US-San Jose-82005715-rqna
+  - IE-Dublin-7611712-rsaq
+  - US-San Jose-82005715-rnua
+  - IT-Milan-h-17411815-rteu
+  - US-San Jose-82005715-rnqu
+  - HK-Tai Po-285532-rshz
+  - US-San Jose-82214-rqnz
+  - DE-Frankfurt am Main-h-91621534-rerz
+  - US-Sabetha-22442273-rhzh
+  - 🇺🇸 US 1058 | 参考3.9M | http
+  - US-San Jose-82214-rnst
+  - US-San Jose-82214-rnut
+  - IT-Milan-h-1741183-rzsr
+  - 自建·香港-01
+  - 自建·加拿大-05
+  - 🇮🇹 IT 31 | ss
+  - TH-Huai Khwang-h-31416412-rzhs
+  - DE-Falkenstein-62021729-rans
+  - CA-Beauharnois-h-24421012-rasz
+  - NL-Amsterdam-150359-rrzh
+  - 🇻🇳 VN 18 | 参考18.1M | http
+  - MX-Mexico City-h-1941665-rreu
+  - HK-Hong Kong-9282423-rsze
+  - HK-Hong Kong-2431818-rshu
+  - DE-Frankfurt am Main-203352-raqe
+  - FR-Saint-Denis-6623522-rztu
+  - US-Santa Clara-h-23020024-rrse
+  - HK-Tai Po-285532-rszu
+  - US-Dallas-1331761-rzua
+  - US-Seattle-1457212-rqtz
+  - DE-Berlin-10622315-ranq
+  - TH-Bangkok-h-8323622-rrth
+  - 🇫🇷 FR 136 | 参考2.0M | http
+  - 🇩🇪 DE 278 | 参考4.1M | http
+  - US-San Jose-82214-rnuz
+  - IT-Milan-1741186-rzau
+  - US-Ashburn-h-2084922-rzuu
+  - IE-Dublin-20320422-rsae
+  - US-Boardman-24816711-rzur
+  - 🇺🇸 US 1073 | 参考2.0M | http
+  - VN-Hanoi-2257112-rtse
+  - US-Ashburn-61321142-rrnt
+  - US-McLean-4188139-reen
+  - US-Columbia-14222917-rraq
+  - 🇳🇱 NL 324 | 参考5.6M | http
+  - JP-Tokyo-h-21051972-rtne
+  - 🇫🇷 FR 138 | http
+  - 🇺🇸 US 1069 | 参考4.1M | http
+  - TH-Bangkok-h-4715217-rzhe
+  - 🇰🇷 KR 51 | http
+  - US-Ashburn-h-2084922-rqqu
+  - US-Boardman-19017622-rqnn
+  - US-Ashburn-h-2084922-rhzs
+  - US-Boardman-24816711-rqqa
+  - TH-Bangkok-h-4234708-rzru
+  - JP-Tokyo-h-11814521-zzhu
+  - 自建·加拿大-03
+- name: 前置自动
+  type: url-test
+  proxies: *id001
+  url: https://www.google.com/generate_204
+  interval: 180
+  tolerance: 80
+- name: 前置总控
+  type: select
+  proxies:
+  - 前置自动
+  - 前置
+  - 🇺🇸 US 1053 | 参考3.8M | http
+  - US-Los Angeles-28193-rhnh
+  - US-San Jose-82005715-rqur
+  - US-Los Angeles-28193-rtsa
+  - US-San Jose-82214-rnqs
+  - US-San Jose-82005715-rqtn
+  - US-Los Angeles-28193-rhea
+  - US-San Jose-82214-rhqq
+  - 🇺🇸 US 586 | 1.5M | http
+  - US-San Jose-82005715-rthh
+  - US-San Jose-82005715-rnse
+  - US-San Jose-82214-rnnq
+  - US-San Jose-82005715-rqna
+  - IE-Dublin-7611712-rsaq
+  - US-San Jose-82005715-rnua
+  - IT-Milan-h-17411815-rteu
+  - US-San Jose-82005715-rnqu
+  - HK-Tai Po-285532-rshz
+  - US-San Jose-82214-rqnz
+  - DE-Frankfurt am Main-h-91621534-rerz
+  - US-Sabetha-22442273-rhzh
+  - 🇺🇸 US 1058 | 参考3.9M | http
+  - US-San Jose-82214-rnst
+  - US-San Jose-82214-rnut
+  - IT-Milan-h-1741183-rzsr
+  - 自建·香港-01
+  - 自建·加拿大-05
+  - 🇮🇹 IT 31 | ss
+  - TH-Huai Khwang-h-31416412-rzhs
+  - DE-Falkenstein-62021729-rans
+  - CA-Beauharnois-h-24421012-rasz
+  - NL-Amsterdam-150359-rrzh
+  - 🇻🇳 VN 18 | 参考18.1M | http
+  - MX-Mexico City-h-1941665-rreu
+  - HK-Hong Kong-9282423-rsze
+  - HK-Hong Kong-2431818-rshu
+  - DE-Frankfurt am Main-203352-raqe
+  - FR-Saint-Denis-6623522-rztu
+  - US-Santa Clara-h-23020024-rrse
+  - HK-Tai Po-285532-rszu
+  - US-Dallas-1331761-rzua
+  - US-Seattle-1457212-rqtz
+  - DE-Berlin-10622315-ranq
+  - TH-Bangkok-h-8323622-rrth
+  - 🇫🇷 FR 136 | 参考2.0M | http
+  - 🇩🇪 DE 278 | 参考4.1M | http
+  - US-San Jose-82214-rnuz
+  - IT-Milan-1741186-rzau
+  - US-Ashburn-h-2084922-rzuu
+  - IE-Dublin-20320422-rsae
+  - US-Boardman-24816711-rzur
+  - 🇺🇸 US 1073 | 参考2.0M | http
+  - VN-Hanoi-2257112-rtse
+  - US-Ashburn-61321142-rrnt
+  - US-McLean-4188139-reen
+  - US-Columbia-14222917-rraq
+  - 🇳🇱 NL 324 | 参考5.6M | http
+  - JP-Tokyo-h-21051972-rtne
+  - 🇫🇷 FR 138 | http
+  - 🇺🇸 US 1069 | 参考4.1M | http
+  - TH-Bangkok-h-4715217-rzhe
+  - 🇰🇷 KR 51 | http
+  - US-Ashburn-h-2084922-rqqu
+  - US-Boardman-19017622-rqnn
+  - US-Ashburn-h-2084922-rhzs
+  - US-Boardman-24816711-rqqa
+  - TH-Bangkok-h-4234708-rzru
+  - JP-Tokyo-h-11814521-zzhu
+  - 自建·加拿大-03
+- name: 代理
+  type: select
+  proxies:
+  - DediRock-LA
+  - 前置总控
+  - DIRECT
+rules:
+- GEOIP,PRIVATE,DIRECT,no-resolve
+- MATCH,代理
