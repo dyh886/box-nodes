@@ -1,0 +1,1866 @@
+# ============================================================
+# box-nodes 链式代理订阅
+# 生成: 2026-11-17T00:20:14Z
+# 候选: 304 个 → 初筛 304 → 精选 152 个
+# 端到端验证: 304 个实测 → 193 个通过（Google 204 + GitHub 200）
+# 唯一出口: 107.172.186.223:19443  (ss)
+#
+#   本机 -> 前置(前置总控) -> 落地 -> 外网
+#
+# 说明: L2 端到端验证在本机完成（云机出口只放行 443/22，落地 9443 不可达）。
+#       「前置自动」用 https://www.google.com/generate_204 严格测速，
+#       能过测速的节点即真正具备国际出口能力。
+#       本订阅不含 dns 段：DNS 交由客户端管理，避免订阅覆盖后解析异常。
+#
+# 界面:
+#   前置      手动选前置
+#   前置自动 自动测速（推荐；节点名每次更新都会变，固定选择会失效）
+#   前置总控 链式锚点，默认指向「前置自动」
+#   代理      最终出口，选「DediRock-LA」走完整链路
+# ============================================================
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+ipv6: false
+external-controller: 127.0.0.1:9090
+proxies:
+- name: 🇺🇸 US 1054 | http
+  server: 118.184.140.90
+  port: 58764
+  type: http
+  tls: true
+  sni: 118.184.140.90
+  skip-cert-verify: true
+  l2Bonus: true
+- name: TW-Chang-hua-h-1246548-rklf
+  type: http
+  server: twmoon1-cdn-route.couldflare-cdn.com
+  port: 1443
+  username: mrwdfNTD8M79LCukCieldrqZWqs=
+  password: exaxgqkKkd0TAMrCxeonWg==
+  tls: true
+  sni: twmoon1-cdn-route.couldflare-cdn.com
+  skip-cert-verify: true
+  l2Bonus: true
+- name: TW-Taichung-433615-ryob
+  type: http
+  server: 114.33.6.158
+  port: 443
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: 自建·香港-01
+  type: vless
+  server: 154.19.186.229
+  port: 8443
+  uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
+  udp: false
+  tls: true
+  servername: h1.1free.us.ci
+  network: ws
+  ws-opts:
+    path: /3b8d5443f5bce520
+    headers:
+      Host: h1.1free.us.ci
+  client-fingerprint: chrome
+  l2Bonus: true
+- name: 自建·香港-04
+  type: vless
+  server: 103.85.27.100
+  port: 8443
+  uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
+  udp: false
+  tls: true
+  servername: h1.1free.us.ci
+  network: ws
+  ws-opts:
+    path: /3b8d5443f5bce520
+    headers:
+      Host: h1.1free.us.ci
+  client-fingerprint: chrome
+  l2Bonus: true
+- name: VN-Kiến Hưng-h-318411319-rlly
+  type: socks5
+  server: 103.184.113.190
+  port: 62000
+  username: qT46DZLv
+  password: jHsK2gqs
+  l2Bonus: false
+- name: US-Boardman-24816711-rily
+  type: http
+  server: 44.248.167.117
+  port: 8443
+  tls: true
+  sni: 44.248.167.117
+  skip-cert-verify: true
+  l2Bonus: true
+- name: 🇺🇸 US 1055 | 参考2.0M | http
+  type: http
+  server: 129.153.93.183
+  port: 443
+  username: 'null'
+  password: 'null'
+  skip-cert-verify: true
+  tls: true
+  sni: 129.153.93.183
+  l2Bonus: true
+- name: US-Boardman-19017622-ribb
+  type: http
+  server: 54.190.176.228
+  port: 8443
+  username: 'null'
+  password: 'null'
+  tls: true
+  sni: 54.190.176.228
+  skip-cert-verify: true
+  l2Bonus: true
+- name: US-Santa Clara-h-23020024-rrpk
+  type: socks5
+  server: 23.230.200.249
+  port: 62000
+  username: kingstar123
+  password: kingstar123++
+  l2Bonus: true
+- name: 🇺🇸 US 1060 | 参考4.7M | http
+  server: 23.133.176.14
+  port: 443
+  type: http
+  password: None
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: 🇭🇰 HK 320 | 参考26.8M | http
+  type: http
+  server: 38.76.140.254
+  port: 8443
+  skip-cert-verify: true
+  tls: true
+  l2Bonus: true
+- name: US-Dallas-1331761-rfho
+  type: http
+  server: 23.133.176.14
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: US-Irvine-24714113-rfrh
+  type: http
+  server: 38.247.141.135
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: US-Irvine-24714113-rifl
+  type: http
+  server: 38.247.141.135
+  port: 443
+  tls: true
+  sni: 38.247.141.135
+  skip-cert-verify: true
+  l2Bonus: true
+- name: US-Harrison-25326-rrfl
+  type: socks5
+  server: 66.253.2.69
+  port: 62000
+  username: u_rb1dba2
+  password: l1tlrdx52v
+  l2Bonus: true
+- name: 自建·香港-03
+  type: vless
+  server: 23.106.143.50
+  port: 8443
+  uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
+  udp: false
+  tls: true
+  servername: h1.1free.us.ci
+  network: ws
+  ws-opts:
+    path: /3b8d5443f5bce520
+    headers:
+      Host: h1.1free.us.ci
+  client-fingerprint: chrome
+  l2Bonus: true
+- name: US-Santa Clara-h-23020017-rrbo
+  type: socks5
+  server: 23.230.200.176
+  port: 62000
+  username: u1f0cijj
+  password: ppyefe3k
+  l2Bonus: true
+- name: SG-Singapore-1602393-ryhi
+  type: http
+  server: 43.160.239.37
+  port: 443
+  tls: true
+  sni: 43.160.239.37
+  skip-cert-verify: true
+  l2Bonus: true
+- name: 🇺🇸 US 1059 | 参考2.6M | http
+  type: http
+  server: 96.5.129.85
+  port: 443
+  username: ''
+  password: ''
+  tls: true
+  sni: 96.5.129.85
+  skip-cert-verify: true
+  l2Bonus: true
+- name: US-Phoenix-114818114-ribl
+  type: http
+  server: 141.148.181.144
+  port: 443
+  tls: true
+  sni: 141.148.181.144
+  skip-cert-verify: true
+  l2Bonus: true
+- name: JP-Tokyo-1372379-rpii
+  type: http
+  server: fan.571589.xyz
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  sni: fan.571589.xyz
+  skip-cert-verify: true
+  l2Bonus: true
+- name: 自建·加拿大-02
+  type: vless
+  server: 69.8.129.43
+  port: 443
+  uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
+  udp: false
+  tls: true
+  servername: us1.1am.cc.cd
+  network: ws
+  ws-opts:
+    path: /492fbb0e1ab5996d
+    headers:
+      Host: us1.1am.cc.cd
+  client-fingerprint: chrome
+  l2Bonus: true
+- name: US-Boardman-19017622-ryif
+  type: http
+  server: 54.190.176.228
+  port: 8443
+  tls: true
+  sni: 54.190.176.228
+  skip-cert-verify: true
+  l2Bonus: true
+- name: 🇺🇸 US 1073 | 参考2.8M | http
+  type: http
+  server: 162.243.146.243
+  port: 443
+  username: testuser1
+  password: e4b72b531a2d10900519
+  tls: true
+  sni: a2f392f3.acsnet.co
+  l2Bonus: true
+- name: DE-Falkenstein-62021729-rlih
+  type: http
+  server: 116.202.172.99
+  port: 443
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: JP-Minamishinagawa-h-7622210-rfyi
+  type: vless
+  server: 45.76.222.108
+  port: 443
+  uuid: bd95a04e-e3e1-460e-b89d-e9a693d393e0
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+  reality-opts:
+    public-key: -_YzpVlKrn08il_kQdHxHTvJyWYAdetWN_IFRtvPgmE
+    short-id: b5c85d2d
+  l2Bonus: true
+- name: DE-Nuremberg-9699412-rlio
+  type: http
+  server: 159.69.94.125
+  port: 443
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: MX-Mexico City-h-1941653-rlhr
+  type: socks5
+  server: 94.194.165.32
+  port: 62000
+  username: QyVdo5ks
+  password: lcFa8dTH
+  l2Bonus: true
+- name: AL-Tirana-922503-rbib
+  type: http
+  server: 91.92.250.33
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: US-Los Angeles-63538-rfbk
+  type: vless
+  server: 45.63.53.81
+  port: 443
+  uuid: c512dcbd-1847-40a2-9c99-989c8bfe4717
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+  reality-opts:
+    public-key: 6nTROV2ELz-3vNUl0A00hp378QngpYABrPgjCpUknD0
+    short-id: f436f707
+  l2Bonus: true
+- name: FR-Gravelines-9817415-rplp
+  type: http
+  server: 87.98.174.157
+  port: 6103
+  username: 'null'
+  password: 'null'
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: IT-Milan-h-17411815-rlpf
+  type: ss
+  server: 202.50.253.36
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  l2Bonus: true
+- name: TH-Bangkok-h-8323618-rlll
+  type: socks5
+  server: 87.83.236.186
+  port: 62000
+  username: ks8783236c597
+  password: -D3s0GRfhYcd9Z4vaBy04ina
+  l2Bonus: true
+- name: 🇲🇽 MX 07 | 4.1M | http
+  port: 443
+  server: 45.134.9.41
+  skip-cert-verify: true
+  sni: 991cc80f13caf81d3426ddebb2da7f49-240d6105b6ef86f0.apache-iv.com
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+  l2Bonus: true
+- name: IT-Milan-h-1741189-rlpr
+  type: ss
+  server: 202.50.253.99
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  l2Bonus: true
+- name: 🇯🇵 JP 228 | 参考3.4M | http
+  server: 133.18.200.207
+  port: 343
+  type: http
+  password: None
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- type: ss
+  name: 🇮🇹 IT 26 | 参考3.7M | ss
+  server: 202.50.253.45
+  port: 19999
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  cipher: aes-256-gcm
+  udp: true
+  tls: false
+  skip-cert-verify: false
+  l2Bonus: true
+- name: JP-Tokyo-1372379-rpfk
+  type: http
+  server: fan.571589.xyz
+  port: 443
+  username: bnVsbDpudWxs
+  tls: true
+  l2Bonus: true
+- name: 🇭🇰 HK 310 | 参考153.9M | http
+  type: http
+  server: 172.64.68.89
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  sni: 172.64.68.89
+  skip-cert-verify: true
+  l2Bonus: true
+- name: 自建·加拿大-05
+  type: vless
+  server: 140.82.49.187
+  port: 443
+  uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
+  udp: false
+  tls: true
+  servername: us1.1am.cc.cd
+  network: ws
+  ws-opts:
+    path: /492fbb0e1ab5996d
+    headers:
+      Host: us1.1am.cc.cd
+  client-fingerprint: chrome
+  l2Bonus: true
+- name: 🇮🇹 IT 29 | ss
+  type: ss
+  server: 202.50.253.81
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  tfo: false
+  udp: true
+  l2Bonus: true
+- name: MX-Mexico City-h-4225476-rlli
+  type: socks5
+  server: 144.225.47.68
+  port: 42000
+  username: DJy1T0dt
+  password: sZnD8GTz
+  l2Bonus: true
+- name: IT-Milan-1741186-rlok
+  type: ss
+  server: 202.50.253.72
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  l2Bonus: true
+- name: US-Columbia-3424910-riyr
+  type: http
+  server: 173.42.49.102
+  port: 8090
+  username: 'null'
+  password: 'null'
+  tls: true
+  sni: 173.42.49.102
+  skip-cert-verify: true
+  l2Bonus: true
+- name: US-San Jose-82005715-rkff
+  type: http
+  server: fan.596189.xyz
+  port: 443
+  username: bnVsbDpudWxs
+  tls: true
+  l2Bonus: true
+- name: VN-Hanoi-2257112-rfbr
+  type: http
+  server: 14.225.71.128
+  port: 8443
+  tls: true
+  sni: 14.225.71.128
+  skip-cert-verify: true
+  l2Bonus: true
+- name: VN-Hanoi-225192-rfpp
+  type: http
+  server: 14.225.19.28
+  port: 8443
+  tls: true
+  sni: 14.225.19.28
+  skip-cert-verify: true
+  l2Bonus: true
+- name: US-San Jose-82005715-rybk
+  type: http
+  server: 137.175.77.35
+  port: 443
+  tls: true
+  sni: 137.175.77.35
+  skip-cert-verify: true
+  l2Bonus: true
+- name: DE-Nuremberg-310916311-robb
+  type: http
+  server: 213.109.163.119
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: IT-Milan-1741185-rlpp
+  type: ss
+  server: 202.50.253.63
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  l2Bonus: true
+- name: IE-Dublin-7611712-rpbk
+  type: http
+  server: 34.249.214.108
+  port: 443
+  tls: true
+  sni: 34.249.214.108
+  skip-cert-verify: true
+  l2Bonus: true
+- name: US-San Jose-82214-rihr
+  type: http
+  server: 137.175.22.16
+  port: 443
+  tls: true
+  sni: 137.175.22.16
+  skip-cert-verify: true
+  l2Bonus: true
+- name: US-Ashburn-h-2084922-rlyp
+  type: http
+  server: 44.217.145.28
+  port: 8443
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: NL-Haarlem-15922519-rbhy
+  type: http
+  server: 51.159.225.197
+  port: 19362
+  username: 'null'
+  password: 'null'
+  tls: true
+  sni: 51.159.225.197
+  skip-cert-verify: true
+  l2Bonus: true
+- name: FR-La Bazoge-15995-rphr
+  type: http
+  server: 80.15.99.54
+  port: 8090
+  tls: true
+  sni: 80.15.99.54
+  skip-cert-verify: true
+  l2Bonus: true
+- name: FR-Saint-Denis-6623522-rphi
+  type: http
+  server: 82.66.235.221
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: 🇫🇷 FR 136 | 参考4.1M | http
+  type: http
+  server: 103.82.101.44
+  port: 443
+  username: ''
+  password: ''
+  tls: true
+  sni: f3a61d8406d537345747f99f8a281007-3f754ed5da1bba09.apache-iv.com
+  skip-cert-verify: true
+  l2Bonus: true
+- name: 🇮🇪 IE 12 | 参考4.1M | http
+  type: http
+  server: 18.200.158.139
+  port: 443
+  username: 'null'
+  password: 'null'
+  skip-cert-verify: true
+  tls: true
+  sni: 18.200.158.139
+  l2Bonus: true
+- name: IT-Milan-h-17411814-rlpo
+  type: ss
+  server: 202.50.253.18
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  l2Bonus: true
+- name: 🇩🇪 DE 293 | 参考4.6M | http
+  server: 87.106.223.158
+  port: 443
+  type: http
+  password: None
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: NL-Haarlem-15922519-rlbo
+  type: http
+  server: 51.159.225.197
+  port: 19362
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: US-Los Angeles-4225014-rlpk
+  type: http
+  server: 172.64.69.89
+  port: 443
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: 🇷🇺 RU 92 | 参考2.7M | http
+  server: 46.29.166.134
+  port: 1446
+  type: http
+  tls: true
+  sni: 46.29.166.134
+  skip-cert-verify: true
+  l2Bonus: true
+- name: US-Ashburn-h-2084922-riok
+  type: http
+  server: 18.206.28.143
+  port: 8443
+  username: 'null'
+  password: 'null'
+  tls: true
+  sni: 18.206.28.143
+  skip-cert-verify: true
+  l2Bonus: true
+- name: US-Ashburn-h-2084922-rhhi
+  type: http
+  server: 18.206.28.143
+  port: 8443
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: 🇳🇱 NL 346 | 参考5.2M | http
+  type: http
+  server: 82.196.9.7
+  port: 443
+  username: testuser1
+  password: e4b72b531a2d10900519
+  tls: true
+  sni: 82.196.9.7
+  skip-cert-verify: true
+  l2Bonus: true
+- name: DE-Frankfurt am Main-5791265-rrhp
+  type: http
+  server: fan.973511.xyz
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  l2Bonus: true
+- name: DE-Berlin-79213223-rofl
+  type: http
+  server: 217.92.132.233
+  port: 443
+  tls: true
+  sni: 217.92.132.233
+  skip-cert-verify: true
+  l2Bonus: true
+- name: 自建·香港-02
+  type: vless
+  server: 39.109.57.230
+  port: 8443
+  uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
+  udp: false
+  tls: true
+  servername: h1.1free.us.ci
+  network: ws
+  ws-opts:
+    path: /3b8d5443f5bce520
+    headers:
+      Host: h1.1free.us.ci
+  client-fingerprint: chrome
+  l2Bonus: true
+- name: RU-Moscow-2916613-ryhh
+  type: http
+  server: 46.29.166.134
+  port: 1446
+  username: 'null'
+  password: 'null'
+  tls: true
+  sni: 46.29.166.134
+  skip-cert-verify: true
+  l2Bonus: true
+- name: 自建·香港-05
+  type: vless
+  server: 45.45.217.192
+  port: 444
+  uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
+  udp: false
+  tls: true
+  servername: h1.1free.us.ci
+  network: ws
+  ws-opts:
+    path: /3b8d5443f5bce520
+    headers:
+      Host: h1.1free.us.ci
+  client-fingerprint: chrome
+  l2Bonus: true
+- name: MX-Mexico City-h-42254710-rloi
+  type: socks5
+  server: 144.225.47.106
+  port: 42000
+  username: DJy1T0dt
+  password: sZnD8GTz
+  l2Bonus: true
+- name: SG-Singapore-23616824-rlkp
+  type: socks5
+  server: 47.236.168.243
+  port: 1080
+  username: '8888'
+  password: '8888'
+  l2Bonus: true
+- name: US-Chicago-219123519-riik
+  type: http
+  server: 162.191.235.197
+  port: 8443
+  tls: true
+  sni: 162.191.235.197
+  skip-cert-verify: true
+  l2Bonus: true
+- name: 自建·加拿大-04
+  type: vless
+  server: 45.63.37.196
+  port: 443
+  uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
+  udp: false
+  tls: true
+  servername: us1.1am.cc.cd
+  network: ws
+  ws-opts:
+    path: /492fbb0e1ab5996d
+    headers:
+      Host: us1.1am.cc.cd
+  client-fingerprint: chrome
+  l2Bonus: true
+- name: JP-Tokyo-h-210410521-rfyl
+  type: vless
+  server: 172.104.105.212
+  port: 443
+  uuid: e8212bb6-b962-4c68-83e6-c2dbc81829a0
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+  reality-opts:
+    public-key: kiBL725AePA3-FPNDKwUgMrolmGl_P8YBRAwFj-_yzM
+    short-id: cdfc4883
+  l2Bonus: true
+- name: US-San Jose-82005715-rifh
+  type: http
+  server: fan.596189.xyz
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  l2Bonus: true
+- name: PL-Warsaw-11155413-rbik
+  type: http
+  server: 151.115.54.133
+  port: 443
+  username: 'null'
+  password: None
+  tls: true
+  sni: 151.115.54.133
+  skip-cert-verify: true
+  l2Bonus: true
+- name: US-San Jose-82005715-rkfl
+  type: http
+  server: 38.28.185.166
+  port: 443
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: IT-Vigevano-24311821-rlff
+  type: http
+  server: 91.243.118.217
+  port: 443
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: 🇷🇺 RU 93 | http
+  type: http
+  server: 87.242.85.187
+  port: 8443
+  username: 'null'
+  password: 'null'
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: US-San Jose-82005715-rkfi
+  type: http
+  server: 38.28.185.207
+  port: 443
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: 🇺🇸 US 586 | 1.5M | http
+  password: gs4BXwT6SW
+  port: 10988
+  server: 154.26.192.123
+  tls: false
+  type: http
+  username: fQ67Dpe5dU
+  l2Bonus: true
+- name: HK-Hong Kong-9282423-rhih
+  type: http
+  server: 119.28.24.235
+  port: 3128
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: 🇱🇻 LV 23 | 参考3.7M | http
+  type: http
+  server: 185.219.159.16
+  port: 443
+  username: ''
+  password: ''
+  tls: true
+  sni: 185.219.159.16
+  skip-cert-verify: true
+  l2Bonus: true
+- name: 🇫🇷 FR 139 | 参考3.0M | http
+  server: 31.32.19.111
+  port: 8081
+  type: http
+  password: None
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: 🇰🇷 KR 57 | http
+  server: 64.110.88.200
+  port: 30000
+  type: http
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: DE-Hildesheim-4361081-rkro
+  type: ss
+  server: dlc.deltapc.digital
+  port: 8080
+  cipher: xchacha20-ietf-poly1305
+  password: XslosfcUJO5KI0aMKrZopPkKsZG0R3e+q5MUA6Wb3a8=
+  l2Bonus: true
+- name: US-Los Angeles-28193-rrhy
+  type: http
+  server: 38.28.193.188
+  port: 443
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: IT-Milan-1615724-rlkr
+  type: socks5
+  server: 69.16.157.244
+  port: 1080
+  username: ufCobhydz4Wd
+  password: JdFlrZhqHP
+  l2Bonus: true
+- name: LV-Riga-52191591-rbrk
+  type: http
+  server: 185.219.159.16
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: FR-Lyon-206122-rhrh
+  type: http
+  server: 83.206.1.225
+  port: 8090
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: HK-Tai Po-285532-rpof
+  type: http
+  server: fan.240104.xyz
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  sni: fan.240104.xyz
+  l2Bonus: true
+- name: JP-Osaka-31820020-rpko
+  type: http
+  server: 133.18.200.207
+  port: 343
+  tls: true
+  sni: 133.18.200.207
+  skip-cert-verify: true
+  l2Bonus: true
+- name: PL-Warsaw-11155413-rbfl
+  type: http
+  server: 151.115.54.133
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  sni: 151.115.54.133
+  skip-cert-verify: true
+  l2Bonus: true
+- name: JP-Osaka-176518-rpkr
+  type: http
+  server: 64.176.51.83
+  port: 8443
+  tls: true
+  sni: 64.176.51.83
+  skip-cert-verify: true
+  l2Bonus: true
+- name: NL-Amsterdam-514020923-rbpr
+  type: http
+  server: 185.140.209.235
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: 🇸🇬 SG 282 | 3.4M | http
+  port: 9090
+  server: 152.42.170.187
+  type: http
+  l2Bonus: true
+- name: TH-Bangkok-h-4715217-rloo
+  type: socks5
+  server: 82.47.152.174
+  port: 42000
+  username: userLjVB
+  password: Ks4Iab43
+  l2Bonus: true
+- name: ID-Lenteng-38611611-rkhk
+  type: http
+  server: 103.86.117.202
+  port: 443
+  tls: true
+  sni: 103.86.117.202
+  skip-cert-verify: true
+  l2Bonus: true
+- name: US-Los Angeles-28193-rirb
+  type: http
+  server: fan.226278.xyz
+  port: 443
+  tls: true
+  sni: fan.226278.xyz
+  skip-cert-verify: true
+  l2Bonus: true
+- name: TH-Bangkok-h-2204145-rrfb
+  type: socks5
+  server: 192.204.14.58
+  port: 42000
+  username: 2FYbAx8H
+  password: 3ahWX7l1
+  l2Bonus: true
+- name: TH-Bangkok-h-822287-rryk
+  type: socks5
+  server: 168.222.8.78
+  port: 42000
+  username: JPjarpW3
+  password: ao3W5ZML
+  l2Bonus: true
+- name: TH-Bangkok-h-82228-rlrf
+  type: socks5
+  server: 168.222.8.4
+  port: 42000
+  username: JPjarpW3
+  password: ao3W5ZML
+  l2Bonus: true
+- name: HK-Tai Po-285532-rhkl
+  type: http
+  server: fan.240104.xyz
+  port: 443
+  tls: true
+  sni: fan.240104.xyz
+  skip-cert-verify: true
+  l2Bonus: true
+- name: PL-Warsaw-11155413-rbif
+  type: http
+  server: 151.115.54.133
+  port: 443
+  tls: true
+  sni: 151.115.54.133
+  skip-cert-verify: true
+  l2Bonus: true
+- name: ID-Jakarta-h-917617-rpbb
+  type: http
+  server: 178.248.73.58
+  port: 443
+  tls: true
+  sni: 178.248.73.58
+  skip-cert-verify: true
+  l2Bonus: true
+- name: TH-Bangkok-h-4715211-rryi
+  type: socks5
+  server: 82.47.152.113
+  port: 42000
+  username: userLjVB
+  password: Ks4Iab43
+  l2Bonus: true
+- name: SG-Singapore-80225-rrfi
+  type: socks5
+  server: 66.80.2.252
+  port: 62000
+  username: usereb7d
+  password: c0a34a
+  l2Bonus: true
+- name: US-Los Angeles-28193-rkkl
+  type: http
+  server: 38.28.193.1
+  port: 443
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: ID-Lenteng-38611611-rlir
+  type: http
+  server: 103.86.116.118
+  port: 443
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: KR-Suwon-11694611-rohb
+  type: socks5
+  server: 121.169.46.116
+  port: 1090
+  username: Og%3D%3D
+  password: Og%3D%3D
+  l2Bonus: true
+- name: KR-Suwon-11694611-rrrb
+  type: socks5
+  server: 121.169.46.116
+  port: 1090
+  l2Bonus: true
+- name: 自建·加拿大-03
+  type: vless
+  server: 192.204.33.19
+  port: 443
+  uuid: 0bc7c8a1-fd2b-4346-8544-cb683278b8e5
+  udp: false
+  tls: true
+  servername: us1.1am.cc.cd
+  network: ws
+  ws-opts:
+    path: /492fbb0e1ab5996d
+    headers:
+      Host: us1.1am.cc.cd
+  client-fingerprint: chrome
+  l2Bonus: true
+- name: BR-Costa Rica-h-6233621-rryr
+  type: socks5
+  server: 186.233.6.210
+  port: 44000
+  username: u5b8terq
+  password: vvz1ivmx
+  l2Bonus: true
+- name: TH-Bangkok-h-201397-rrff
+  type: socks5
+  server: 45.201.39.74
+  port: 62000
+  username: y2stTQnf
+  password: wj2sNvDu
+  l2Bonus: true
+- name: TH-Bangkok-h-22041513-rriy
+  type: socks5
+  server: 192.204.15.138
+  port: 42000
+  username: X3s3JteD
+  password: mpbK00Pl
+  l2Bonus: true
+- name: TH-Bangkok-h-9661363-rlro
+  type: socks5
+  server: 109.66.136.35
+  port: 62000
+  username: r3ZzP8WW
+  password: zdnivBaI
+  l2Bonus: true
+- name: 🇮🇱 IL 05 | 参考3.6M | http
+  type: http
+  server: 62.90.77.30
+  port: 443
+  tls: true
+  sni: 62.90.77.30
+  skip-cert-verify: true
+  l2Bonus: true
+- name: JP-Tokyo-h-91629113-rfif
+  type: vless
+  server: 139.162.91.137
+  port: 443
+  uuid: 5e6575a1-459c-4077-ac3d-92dea966ad7c
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+  reality-opts:
+    public-key: 4LfX16VwHkHQzoZ04o2VnO85N1o_Y8OcoJwfYdfaIGw
+    short-id: 0c0c806b
+  l2Bonus: true
+- name: LV-Riga-52191591-rlby
+  type: http
+  server: 185.219.159.15
+  port: 443
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: US-San Jose-82214-rypp
+  type: http
+  server: 137.175.22.96
+  port: 443
+  tls: true
+  sni: 137.175.22.96
+  skip-cert-verify: true
+  l2Bonus: true
+- name: US-San Jose-82214-rhii
+  type: http
+  server: 137.175.22.56
+  port: 443
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: DE-Frankfurt am Main-109479-rlor
+  type: socks5
+  server: 91.109.47.96
+  port: 42000
+  username: u7feiej0
+  password: iq1884wz
+  l2Bonus: true
+- name: JP-Tsukuba-32481505-rfkk
+  type: socks5
+  server: 103.248.150.50
+  port: 42000
+  username: paZFN3JA
+  password: EGJDy5Kg
+  l2Bonus: true
+- name: MX-Mexico City-h-42254715-rrkf
+  type: socks5
+  server: 144.225.47.158
+  port: 42000
+  username: DJy1T0dt
+  password: sZnD8GTz
+  l2Bonus: true
+- name: US-Los Angeles-28193-rykf
+  type: http
+  server: 38.28.193.39
+  port: 443
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: US-San Jose-82214-rifk
+  type: http
+  server: 137.175.22.120
+  port: 443
+  tls: true
+  sni: 137.175.22.120
+  skip-cert-verify: true
+  l2Bonus: true
+- name: 🇬🇧 GB 90 | 参考2.0M | http
+  type: http
+  server: 77.221.136.60
+  port: 8443
+  username: ''
+  password: ''
+  tls: true
+  sni: 77.221.136.60
+  skip-cert-verify: true
+  l2Bonus: true
+- name: US-San Jose-82005715-ripb
+  type: http
+  server: 38.28.185.205
+  port: 443
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: US-Ashburn-h-2084922-rkkb
+  type: http
+  server: 44.217.145.28
+  port: 8443
+  username: 'null'
+  password: 'null'
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: US-Los Angeles-28193-rhff
+  type: http
+  server: 38.28.193.188
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: FR-Gravelines-19416-rlky
+  type: http
+  server: 141.94.16.4
+  port: 443
+  tls: true
+  skip-cert-verify: true
+  l2Bonus: true
+- name: 🇩🇪 DE 290 | 参考4.0M | http
+  type: http
+  server: 116.202.172.99
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  sni: 116.202.172.99
+  skip-cert-verify: true
+  l2Bonus: true
+- name: US-Sanford-h-432623-riry
+  type: http
+  server: 71.43.26.234
+  port: 443
+  tls: true
+  sni: 71.43.26.234
+  skip-cert-verify: true
+  l2Bonus: true
+- name: US-San Jose-82214-ribh
+  type: http
+  server: 137.175.22.72
+  port: 443
+  tls: true
+  sni: 137.175.22.72
+  skip-cert-verify: true
+  l2Bonus: true
+- name: 🇳🇱 NL 341 | http
+  type: http
+  server: 185.246.153.28
+  port: 443
+  skip-cert-verify: true
+  tls: true
+  sni: 4a8c2906c96058315dffbc2b0e7ff19b-0c66a58858a795df.apache-iv.com
+  l2Bonus: true
+- name: NL-Haarlem-1582439-rbyb
+  type: http
+  server: 51.158.243.91
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  sni: 51.158.243.91
+  skip-cert-verify: true
+  l2Bonus: true
+- name: 🇸🇬 SG 195 | 参考10.4M | http
+  type: http
+  server: 66.42.49.247
+  port: 8443
+  skip-cert-verify: true
+  tls: true
+  l2Bonus: true
+- name: CZ-Praha 7-h-786616-ropk
+  type: http
+  server: 193.35.104.196
+  port: 443
+  tls: true
+  sni: 193.35.104.196
+  skip-cert-verify: true
+  l2Bonus: true
+- name: SG-Singapore-h-91802215-rfyk
+  type: vless
+  server: 139.180.221.53
+  port: 443
+  uuid: 2b30d0df-6ebe-4aed-9bad-b7c554e35e1d
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+  reality-opts:
+    public-key: plfXwkb-ewI6iibJBTRmPnf8eqPId1BfdArMIm3_mB4
+    short-id: 2f6f6f87
+  l2Bonus: true
+- name: HK-Hong Kong-35821917-rpbr
+  type: socks5
+  server: 123.58.219.171
+  port: 10808
+  l2Bonus: true
+- name: US-San Jose-82214-lrbi
+  type: http
+  server: fan.365747.xyz
+  port: 443
+  username: bnVsbDpudWxs
+  tls: true
+  sni: fan.365747.xyz
+  skip-cert-verify: true
+  l2Bonus: true
+- name: US-San Jose-82214-rfhi
+  type: http
+  server: 137.175.22.84
+  port: 443
+  tls: true
+  sni: 137.175.22.84
+  skip-cert-verify: true
+  l2Bonus: true
+- name: HK-Hong Kong-h-2421921-rrho
+  type: socks5
+  server: 47.242.19.215
+  port: 8899
+  username: admin
+  password: admin
+  l2Bonus: true
+- name: JP-Tokyo-h-91629123-rfbf
+  type: vless
+  server: 139.162.91.232
+  port: 443
+  uuid: ea2e7ce8-60c3-4fab-945c-6ae3e0066c3b
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+  reality-opts:
+    public-key: bApi9lB94L-fIb5WoLVR_0WPknU6tICCFoiiWgD_73c
+    short-id: dee2fdee
+  l2Bonus: true
+- name: TH-Bangkok-h-96613517-rrir
+  type: socks5
+  server: 109.66.135.179
+  port: 62000
+  username: BKE6uict
+  password: iPCfwOuw
+  l2Bonus: true
+- name: 🇭🇰 HK 319 | socks5
+  server: 47.76.186.28
+  port: 11408
+  type: socks5
+  udp: true
+  username: '111'
+  password: '111'
+  l2Bonus: true
+- name: JP-Tokyo-h-91629125-rfyh
+  type: vless
+  server: 139.162.91.250
+  port: 443
+  uuid: 48921d5f-cbbb-481f-b0a3-365deafd746f
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+  reality-opts:
+    public-key: 7_aY3baCmhZd-71BjylzAHIy6glYGEP_Aj6D2xZMTD0
+    short-id: cf23e817
+  l2Bonus: true
+- name: JP-Tokyo-h-91629124-rfbi
+  type: vless
+  server: 139.162.91.249
+  port: 443
+  uuid: 2528315f-1eab-4eaa-8bba-608ce3176a4f
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+  reality-opts:
+    public-key: cSxkR0fZz1l31vU65UDHVkK7vB4pfcgU4Hxff5rLFH8
+    short-id: ee000e5e
+  l2Bonus: true
+- name: JP-Tokyo-h-91629122-rffl
+  type: vless
+  server: 139.162.91.224
+  port: 443
+  uuid: ff3038b1-a2f5-428f-89cd-5d5e4efba8e7
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+  reality-opts:
+    public-key: wmbc3kcjbG9-A9Fi7zaHuRVPH7A7UQkKNNvqyqJtMEk
+    short-id: e5b03494
+  l2Bonus: true
+- name: DediRock-LA
+  type: ss
+  server: 107.172.186.223
+  port: 19443
+  cipher: chacha20-ietf-poly1305
+  password: f163442cc351131b8b63ade346274652
+  udp: true
+  dialer-proxy: 前置总控
+proxy-groups:
+- name: 前置
+  type: select
+  proxies:
+  - 🇺🇸 US 1054 | http
+  - TW-Chang-hua-h-1246548-rklf
+  - TW-Taichung-433615-ryob
+  - 自建·香港-01
+  - 自建·香港-04
+  - VN-Kiến Hưng-h-318411319-rlly
+  - US-Boardman-24816711-rily
+  - 🇺🇸 US 1055 | 参考2.0M | http
+  - US-Boardman-19017622-ribb
+  - US-Santa Clara-h-23020024-rrpk
+  - 🇺🇸 US 1060 | 参考4.7M | http
+  - 🇭🇰 HK 320 | 参考26.8M | http
+  - US-Dallas-1331761-rfho
+  - US-Irvine-24714113-rfrh
+  - US-Irvine-24714113-rifl
+  - US-Harrison-25326-rrfl
+  - 自建·香港-03
+  - US-Santa Clara-h-23020017-rrbo
+  - SG-Singapore-1602393-ryhi
+  - 🇺🇸 US 1059 | 参考2.6M | http
+  - US-Phoenix-114818114-ribl
+  - JP-Tokyo-1372379-rpii
+  - 自建·加拿大-02
+  - US-Boardman-19017622-ryif
+  - 🇺🇸 US 1073 | 参考2.8M | http
+  - DE-Falkenstein-62021729-rlih
+  - JP-Minamishinagawa-h-7622210-rfyi
+  - DE-Nuremberg-9699412-rlio
+  - MX-Mexico City-h-1941653-rlhr
+  - AL-Tirana-922503-rbib
+  - US-Los Angeles-63538-rfbk
+  - FR-Gravelines-9817415-rplp
+  - IT-Milan-h-17411815-rlpf
+  - TH-Bangkok-h-8323618-rlll
+  - 🇲🇽 MX 07 | 4.1M | http
+  - IT-Milan-h-1741189-rlpr
+  - 🇯🇵 JP 228 | 参考3.4M | http
+  - 🇮🇹 IT 26 | 参考3.7M | ss
+  - JP-Tokyo-1372379-rpfk
+  - 🇭🇰 HK 310 | 参考153.9M | http
+  - 自建·加拿大-05
+  - 🇮🇹 IT 29 | ss
+  - MX-Mexico City-h-4225476-rlli
+  - IT-Milan-1741186-rlok
+  - US-Columbia-3424910-riyr
+  - US-San Jose-82005715-rkff
+  - VN-Hanoi-2257112-rfbr
+  - VN-Hanoi-225192-rfpp
+  - US-San Jose-82005715-rybk
+  - DE-Nuremberg-310916311-robb
+  - IT-Milan-1741185-rlpp
+  - IE-Dublin-7611712-rpbk
+  - US-San Jose-82214-rihr
+  - US-Ashburn-h-2084922-rlyp
+  - NL-Haarlem-15922519-rbhy
+  - FR-La Bazoge-15995-rphr
+  - FR-Saint-Denis-6623522-rphi
+  - 🇫🇷 FR 136 | 参考4.1M | http
+  - 🇮🇪 IE 12 | 参考4.1M | http
+  - IT-Milan-h-17411814-rlpo
+  - 🇩🇪 DE 293 | 参考4.6M | http
+  - NL-Haarlem-15922519-rlbo
+  - US-Los Angeles-4225014-rlpk
+  - 🇷🇺 RU 92 | 参考2.7M | http
+  - US-Ashburn-h-2084922-riok
+  - US-Ashburn-h-2084922-rhhi
+  - 🇳🇱 NL 346 | 参考5.2M | http
+  - DE-Frankfurt am Main-5791265-rrhp
+  - DE-Berlin-79213223-rofl
+  - 自建·香港-02
+  - RU-Moscow-2916613-ryhh
+  - 自建·香港-05
+  - MX-Mexico City-h-42254710-rloi
+  - SG-Singapore-23616824-rlkp
+  - US-Chicago-219123519-riik
+  - 自建·加拿大-04
+  - JP-Tokyo-h-210410521-rfyl
+  - US-San Jose-82005715-rifh
+  - PL-Warsaw-11155413-rbik
+  - US-San Jose-82005715-rkfl
+  - IT-Vigevano-24311821-rlff
+  - 🇷🇺 RU 93 | http
+  - US-San Jose-82005715-rkfi
+  - 🇺🇸 US 586 | 1.5M | http
+  - HK-Hong Kong-9282423-rhih
+  - 🇱🇻 LV 23 | 参考3.7M | http
+  - 🇫🇷 FR 139 | 参考3.0M | http
+  - 🇰🇷 KR 57 | http
+  - DE-Hildesheim-4361081-rkro
+  - US-Los Angeles-28193-rrhy
+  - IT-Milan-1615724-rlkr
+  - LV-Riga-52191591-rbrk
+  - FR-Lyon-206122-rhrh
+  - HK-Tai Po-285532-rpof
+  - JP-Osaka-31820020-rpko
+  - PL-Warsaw-11155413-rbfl
+  - JP-Osaka-176518-rpkr
+  - NL-Amsterdam-514020923-rbpr
+  - 🇸🇬 SG 282 | 3.4M | http
+  - TH-Bangkok-h-4715217-rloo
+  - ID-Lenteng-38611611-rkhk
+  - US-Los Angeles-28193-rirb
+  - TH-Bangkok-h-2204145-rrfb
+  - TH-Bangkok-h-822287-rryk
+  - TH-Bangkok-h-82228-rlrf
+  - HK-Tai Po-285532-rhkl
+  - PL-Warsaw-11155413-rbif
+  - ID-Jakarta-h-917617-rpbb
+  - TH-Bangkok-h-4715211-rryi
+  - SG-Singapore-80225-rrfi
+  - US-Los Angeles-28193-rkkl
+  - ID-Lenteng-38611611-rlir
+  - KR-Suwon-11694611-rohb
+  - KR-Suwon-11694611-rrrb
+  - 自建·加拿大-03
+  - BR-Costa Rica-h-6233621-rryr
+  - TH-Bangkok-h-201397-rrff
+  - TH-Bangkok-h-22041513-rriy
+  - TH-Bangkok-h-9661363-rlro
+  - 🇮🇱 IL 05 | 参考3.6M | http
+  - JP-Tokyo-h-91629113-rfif
+  - LV-Riga-52191591-rlby
+  - US-San Jose-82214-rypp
+  - US-San Jose-82214-rhii
+  - DE-Frankfurt am Main-109479-rlor
+  - JP-Tsukuba-32481505-rfkk
+  - MX-Mexico City-h-42254715-rrkf
+  - US-Los Angeles-28193-rykf
+  - US-San Jose-82214-rifk
+  - 🇬🇧 GB 90 | 参考2.0M | http
+  - US-San Jose-82005715-ripb
+  - US-Ashburn-h-2084922-rkkb
+  - US-Los Angeles-28193-rhff
+  - FR-Gravelines-19416-rlky
+  - 🇩🇪 DE 290 | 参考4.0M | http
+  - US-Sanford-h-432623-riry
+  - US-San Jose-82214-ribh
+  - 🇳🇱 NL 341 | http
+  - NL-Haarlem-1582439-rbyb
+  - 🇸🇬 SG 195 | 参考10.4M | http
+  - CZ-Praha 7-h-786616-ropk
+  - SG-Singapore-h-91802215-rfyk
+  - HK-Hong Kong-35821917-rpbr
+  - US-San Jose-82214-lrbi
+  - US-San Jose-82214-rfhi
+  - HK-Hong Kong-h-2421921-rrho
+  - JP-Tokyo-h-91629123-rfbf
+  - TH-Bangkok-h-96613517-rrir
+  - 🇭🇰 HK 319 | socks5
+  - JP-Tokyo-h-91629125-rfyh
+  - JP-Tokyo-h-91629124-rfbi
+  - JP-Tokyo-h-91629122-rffl
+- name: 前置自动
+  type: url-test
+  proxies:
+  - 🇺🇸 US 1054 | http
+  - TW-Chang-hua-h-1246548-rklf
+  - TW-Taichung-433615-ryob
+  - 自建·香港-01
+  - 自建·香港-04
+  - VN-Kiến Hưng-h-318411319-rlly
+  - US-Boardman-24816711-rily
+  - 🇺🇸 US 1055 | 参考2.0M | http
+  - US-Boardman-19017622-ribb
+  - US-Santa Clara-h-23020024-rrpk
+  - 🇺🇸 US 1060 | 参考4.7M | http
+  - 🇭🇰 HK 320 | 参考26.8M | http
+  - US-Dallas-1331761-rfho
+  - US-Irvine-24714113-rfrh
+  - US-Irvine-24714113-rifl
+  - US-Harrison-25326-rrfl
+  - 自建·香港-03
+  - US-Santa Clara-h-23020017-rrbo
+  - SG-Singapore-1602393-ryhi
+  - 🇺🇸 US 1059 | 参考2.6M | http
+  - US-Phoenix-114818114-ribl
+  - JP-Tokyo-1372379-rpii
+  - 自建·加拿大-02
+  - US-Boardman-19017622-ryif
+  - 🇺🇸 US 1073 | 参考2.8M | http
+  - DE-Falkenstein-62021729-rlih
+  - JP-Minamishinagawa-h-7622210-rfyi
+  - DE-Nuremberg-9699412-rlio
+  - MX-Mexico City-h-1941653-rlhr
+  - AL-Tirana-922503-rbib
+  - US-Los Angeles-63538-rfbk
+  - FR-Gravelines-9817415-rplp
+  - IT-Milan-h-17411815-rlpf
+  - TH-Bangkok-h-8323618-rlll
+  - 🇲🇽 MX 07 | 4.1M | http
+  - IT-Milan-h-1741189-rlpr
+  - 🇯🇵 JP 228 | 参考3.4M | http
+  - 🇮🇹 IT 26 | 参考3.7M | ss
+  - JP-Tokyo-1372379-rpfk
+  - 🇭🇰 HK 310 | 参考153.9M | http
+  - 自建·加拿大-05
+  - 🇮🇹 IT 29 | ss
+  - MX-Mexico City-h-4225476-rlli
+  - IT-Milan-1741186-rlok
+  - US-Columbia-3424910-riyr
+  - US-San Jose-82005715-rkff
+  - VN-Hanoi-2257112-rfbr
+  - VN-Hanoi-225192-rfpp
+  - US-San Jose-82005715-rybk
+  - DE-Nuremberg-310916311-robb
+  - IT-Milan-1741185-rlpp
+  - IE-Dublin-7611712-rpbk
+  - US-San Jose-82214-rihr
+  - US-Ashburn-h-2084922-rlyp
+  - NL-Haarlem-15922519-rbhy
+  - FR-La Bazoge-15995-rphr
+  - FR-Saint-Denis-6623522-rphi
+  - 🇫🇷 FR 136 | 参考4.1M | http
+  - 🇮🇪 IE 12 | 参考4.1M | http
+  - IT-Milan-h-17411814-rlpo
+  - 🇩🇪 DE 293 | 参考4.6M | http
+  - NL-Haarlem-15922519-rlbo
+  - US-Los Angeles-4225014-rlpk
+  - 🇷🇺 RU 92 | 参考2.7M | http
+  - US-Ashburn-h-2084922-riok
+  - US-Ashburn-h-2084922-rhhi
+  - 🇳🇱 NL 346 | 参考5.2M | http
+  - DE-Frankfurt am Main-5791265-rrhp
+  - DE-Berlin-79213223-rofl
+  - 自建·香港-02
+  - RU-Moscow-2916613-ryhh
+  - 自建·香港-05
+  - MX-Mexico City-h-42254710-rloi
+  - SG-Singapore-23616824-rlkp
+  - US-Chicago-219123519-riik
+  - 自建·加拿大-04
+  - JP-Tokyo-h-210410521-rfyl
+  - US-San Jose-82005715-rifh
+  - PL-Warsaw-11155413-rbik
+  - US-San Jose-82005715-rkfl
+  - IT-Vigevano-24311821-rlff
+  - 🇷🇺 RU 93 | http
+  - US-San Jose-82005715-rkfi
+  - 🇺🇸 US 586 | 1.5M | http
+  - HK-Hong Kong-9282423-rhih
+  - 🇱🇻 LV 23 | 参考3.7M | http
+  - 🇫🇷 FR 139 | 参考3.0M | http
+  - 🇰🇷 KR 57 | http
+  - DE-Hildesheim-4361081-rkro
+  - US-Los Angeles-28193-rrhy
+  - IT-Milan-1615724-rlkr
+  - LV-Riga-52191591-rbrk
+  - FR-Lyon-206122-rhrh
+  - HK-Tai Po-285532-rpof
+  - JP-Osaka-31820020-rpko
+  - PL-Warsaw-11155413-rbfl
+  - JP-Osaka-176518-rpkr
+  - NL-Amsterdam-514020923-rbpr
+  - 🇸🇬 SG 282 | 3.4M | http
+  - TH-Bangkok-h-4715217-rloo
+  - ID-Lenteng-38611611-rkhk
+  - US-Los Angeles-28193-rirb
+  - TH-Bangkok-h-2204145-rrfb
+  - TH-Bangkok-h-822287-rryk
+  - TH-Bangkok-h-82228-rlrf
+  - HK-Tai Po-285532-rhkl
+  - PL-Warsaw-11155413-rbif
+  - ID-Jakarta-h-917617-rpbb
+  - TH-Bangkok-h-4715211-rryi
+  - SG-Singapore-80225-rrfi
+  - US-Los Angeles-28193-rkkl
+  - ID-Lenteng-38611611-rlir
+  - KR-Suwon-11694611-rohb
+  - KR-Suwon-11694611-rrrb
+  - 自建·加拿大-03
+  - BR-Costa Rica-h-6233621-rryr
+  - TH-Bangkok-h-201397-rrff
+  - TH-Bangkok-h-22041513-rriy
+  - TH-Bangkok-h-9661363-rlro
+  - 🇮🇱 IL 05 | 参考3.6M | http
+  - JP-Tokyo-h-91629113-rfif
+  - LV-Riga-52191591-rlby
+  - US-San Jose-82214-rypp
+  - US-San Jose-82214-rhii
+  - DE-Frankfurt am Main-109479-rlor
+  - JP-Tsukuba-32481505-rfkk
+  - MX-Mexico City-h-42254715-rrkf
+  - US-Los Angeles-28193-rykf
+  - US-San Jose-82214-rifk
+  - 🇬🇧 GB 90 | 参考2.0M | http
+  - US-San Jose-82005715-ripb
+  - US-Ashburn-h-2084922-rkkb
+  - US-Los Angeles-28193-rhff
+  - FR-Gravelines-19416-rlky
+  - 🇩🇪 DE 290 | 参考4.0M | http
+  - US-Sanford-h-432623-riry
+  - US-San Jose-82214-ribh
+  - 🇳🇱 NL 341 | http
+  - NL-Haarlem-1582439-rbyb
+  - 🇸🇬 SG 195 | 参考10.4M | http
+  - CZ-Praha 7-h-786616-ropk
+  - SG-Singapore-h-91802215-rfyk
+  - HK-Hong Kong-35821917-rpbr
+  - US-San Jose-82214-lrbi
+  - US-San Jose-82214-rfhi
+  - HK-Hong Kong-h-2421921-rrho
+  - JP-Tokyo-h-91629123-rfbf
+  - TH-Bangkok-h-96613517-rrir
+  - 🇭🇰 HK 319 | socks5
+  - JP-Tokyo-h-91629125-rfyh
+  - JP-Tokyo-h-91629124-rfbi
+  - JP-Tokyo-h-91629122-rffl
+  url: https://www.google.com/generate_204
+  interval: 180
+  tolerance: 80
+- name: 前置总控
+  type: select
+  proxies:
+  - 前置自动
+  - 前置
+  - 🇺🇸 US 1054 | http
+  - TW-Chang-hua-h-1246548-rklf
+  - TW-Taichung-433615-ryob
+  - 自建·香港-01
+  - 自建·香港-04
+  - VN-Kiến Hưng-h-318411319-rlly
+  - US-Boardman-24816711-rily
+  - 🇺🇸 US 1055 | 参考2.0M | http
+  - US-Boardman-19017622-ribb
+  - US-Santa Clara-h-23020024-rrpk
+  - 🇺🇸 US 1060 | 参考4.7M | http
+  - 🇭🇰 HK 320 | 参考26.8M | http
+  - US-Dallas-1331761-rfho
+  - US-Irvine-24714113-rfrh
+  - US-Irvine-24714113-rifl
+  - US-Harrison-25326-rrfl
+  - 自建·香港-03
+  - US-Santa Clara-h-23020017-rrbo
+  - SG-Singapore-1602393-ryhi
+  - 🇺🇸 US 1059 | 参考2.6M | http
+  - US-Phoenix-114818114-ribl
+  - JP-Tokyo-1372379-rpii
+  - 自建·加拿大-02
+  - US-Boardman-19017622-ryif
+  - 🇺🇸 US 1073 | 参考2.8M | http
+  - DE-Falkenstein-62021729-rlih
+  - JP-Minamishinagawa-h-7622210-rfyi
+  - DE-Nuremberg-9699412-rlio
+  - MX-Mexico City-h-1941653-rlhr
+  - AL-Tirana-922503-rbib
+  - US-Los Angeles-63538-rfbk
+  - FR-Gravelines-9817415-rplp
+  - IT-Milan-h-17411815-rlpf
+  - TH-Bangkok-h-8323618-rlll
+  - 🇲🇽 MX 07 | 4.1M | http
+  - IT-Milan-h-1741189-rlpr
+  - 🇯🇵 JP 228 | 参考3.4M | http
+  - 🇮🇹 IT 26 | 参考3.7M | ss
+  - JP-Tokyo-1372379-rpfk
+  - 🇭🇰 HK 310 | 参考153.9M | http
+  - 自建·加拿大-05
+  - 🇮🇹 IT 29 | ss
+  - MX-Mexico City-h-4225476-rlli
+  - IT-Milan-1741186-rlok
+  - US-Columbia-3424910-riyr
+  - US-San Jose-82005715-rkff
+  - VN-Hanoi-2257112-rfbr
+  - VN-Hanoi-225192-rfpp
+  - US-San Jose-82005715-rybk
+  - DE-Nuremberg-310916311-robb
+  - IT-Milan-1741185-rlpp
+  - IE-Dublin-7611712-rpbk
+  - US-San Jose-82214-rihr
+  - US-Ashburn-h-2084922-rlyp
+  - NL-Haarlem-15922519-rbhy
+  - FR-La Bazoge-15995-rphr
+  - FR-Saint-Denis-6623522-rphi
+  - 🇫🇷 FR 136 | 参考4.1M | http
+  - 🇮🇪 IE 12 | 参考4.1M | http
+  - IT-Milan-h-17411814-rlpo
+  - 🇩🇪 DE 293 | 参考4.6M | http
+  - NL-Haarlem-15922519-rlbo
+  - US-Los Angeles-4225014-rlpk
+  - 🇷🇺 RU 92 | 参考2.7M | http
+  - US-Ashburn-h-2084922-riok
+  - US-Ashburn-h-2084922-rhhi
+  - 🇳🇱 NL 346 | 参考5.2M | http
+  - DE-Frankfurt am Main-5791265-rrhp
+  - DE-Berlin-79213223-rofl
+  - 自建·香港-02
+  - RU-Moscow-2916613-ryhh
+  - 自建·香港-05
+  - MX-Mexico City-h-42254710-rloi
+  - SG-Singapore-23616824-rlkp
+  - US-Chicago-219123519-riik
+  - 自建·加拿大-04
+  - JP-Tokyo-h-210410521-rfyl
+  - US-San Jose-82005715-rifh
+  - PL-Warsaw-11155413-rbik
+  - US-San Jose-82005715-rkfl
+  - IT-Vigevano-24311821-rlff
+  - 🇷🇺 RU 93 | http
+  - US-San Jose-82005715-rkfi
+  - 🇺🇸 US 586 | 1.5M | http
+  - HK-Hong Kong-9282423-rhih
+  - 🇱🇻 LV 23 | 参考3.7M | http
+  - 🇫🇷 FR 139 | 参考3.0M | http
+  - 🇰🇷 KR 57 | http
+  - DE-Hildesheim-4361081-rkro
+  - US-Los Angeles-28193-rrhy
+  - IT-Milan-1615724-rlkr
+  - LV-Riga-52191591-rbrk
+  - FR-Lyon-206122-rhrh
+  - HK-Tai Po-285532-rpof
+  - JP-Osaka-31820020-rpko
+  - PL-Warsaw-11155413-rbfl
+  - JP-Osaka-176518-rpkr
+  - NL-Amsterdam-514020923-rbpr
+  - 🇸🇬 SG 282 | 3.4M | http
+  - TH-Bangkok-h-4715217-rloo
+  - ID-Lenteng-38611611-rkhk
+  - US-Los Angeles-28193-rirb
+  - TH-Bangkok-h-2204145-rrfb
+  - TH-Bangkok-h-822287-rryk
+  - TH-Bangkok-h-82228-rlrf
+  - HK-Tai Po-285532-rhkl
+  - PL-Warsaw-11155413-rbif
+  - ID-Jakarta-h-917617-rpbb
+  - TH-Bangkok-h-4715211-rryi
+  - SG-Singapore-80225-rrfi
+  - US-Los Angeles-28193-rkkl
+  - ID-Lenteng-38611611-rlir
+  - KR-Suwon-11694611-rohb
+  - KR-Suwon-11694611-rrrb
+  - 自建·加拿大-03
+  - BR-Costa Rica-h-6233621-rryr
+  - TH-Bangkok-h-201397-rrff
+  - TH-Bangkok-h-22041513-rriy
+  - TH-Bangkok-h-9661363-rlro
+  - 🇮🇱 IL 05 | 参考3.6M | http
+  - JP-Tokyo-h-91629113-rfif
+  - LV-Riga-52191591-rlby
+  - US-San Jose-82214-rypp
+  - US-San Jose-82214-rhii
+  - DE-Frankfurt am Main-109479-rlor
+  - JP-Tsukuba-32481505-rfkk
+  - MX-Mexico City-h-42254715-rrkf
+  - US-Los Angeles-28193-rykf
+  - US-San Jose-82214-rifk
+  - 🇬🇧 GB 90 | 参考2.0M | http
+  - US-San Jose-82005715-ripb
+  - US-Ashburn-h-2084922-rkkb
+  - US-Los Angeles-28193-rhff
+  - FR-Gravelines-19416-rlky
+  - 🇩🇪 DE 290 | 参考4.0M | http
+  - US-Sanford-h-432623-riry
+  - US-San Jose-82214-ribh
+  - 🇳🇱 NL 341 | http
+  - NL-Haarlem-1582439-rbyb
+  - 🇸🇬 SG 195 | 参考10.4M | http
+  - CZ-Praha 7-h-786616-ropk
+  - SG-Singapore-h-91802215-rfyk
+  - HK-Hong Kong-35821917-rpbr
+  - US-San Jose-82214-lrbi
+  - US-San Jose-82214-rfhi
+  - HK-Hong Kong-h-2421921-rrho
+  - JP-Tokyo-h-91629123-rfbf
+  - TH-Bangkok-h-96613517-rrir
+  - 🇭🇰 HK 319 | socks5
+  - JP-Tokyo-h-91629125-rfyh
+  - JP-Tokyo-h-91629124-rfbi
+  - JP-Tokyo-h-91629122-rffl
+- name: 代理
+  type: select
+  proxies:
+  - DediRock-LA
+  - 前置总控
+  - DIRECT
+rules:
+- GEOIP,PRIVATE,DIRECT,no-resolve
+- MATCH,代理
