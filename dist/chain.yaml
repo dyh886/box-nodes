@@ -1208,7 +1208,7 @@ proxies:
   server: 107.172.186.223
   port: 19443
   cipher: chacha20-ietf-poly1305
-  password: f163442cc351131b8b63ade346274652
+  password: dcf866cff7b6d032c727c2756f0a45c9
   udp: true
   dialer-proxy: 前置总控
 proxy-groups:
